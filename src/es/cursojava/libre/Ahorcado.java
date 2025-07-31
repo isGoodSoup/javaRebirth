@@ -19,13 +19,24 @@ public class Ahorcado {
             switch (option) {
                 case 1: 
                         break;
+                        
                 case 2: 
                         break;
-                case 3: 
+                       
+                case 3: System.out.println("Adios!");
                         break;
+                        
                 default: 
                          break;
             }
         } while (option < 5);
+    }
+    
+    public static void player1() {
+    	
+    }
+    
+    public static void player2() {
+    	
     }
 }
