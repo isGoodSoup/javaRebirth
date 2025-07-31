@@ -1,0 +1,12 @@
+	Herramientas control de versiones
++ Centralizadas: CVS, SVN, etc.
++ Distribuidas: GIT (GitHub).
+
+************	     ************
+*	   *	     *		*
+*	   *	     *		*
+*	   *	     *		*
+* offline  *    -->  * (github) *
+*	   *	     *		*
+*	   +         *		*
+************	     ************

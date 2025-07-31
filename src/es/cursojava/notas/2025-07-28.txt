@@ -1,0 +1,17 @@
+	Pilares de la Orientación a Objetos
++ Herencia
+	++ Para representar un objeto, hay que crear una clase.
+	++ Atributos en común.
+	++ Métodos que comparten dichas clases.
+		Ej. Todos los animales del zoo pueden comer(), todos pueden 
+		caminar().
++ Poliformismo
+	++ Características que las clases NO comparten.
+		Ej. Los animales de un zoo tendrían todos el método comer(), 
+		pero no todos se comporta igual.
++ Encapsulación
+	++ Modificadores de acceso a las clases.
++ Abstracción
+	++ Infinitas propiedades, dependiendo de la funcionalidad y su 
+	relevancia.
+		Ej. El color de ojos, el color de pelo, tu altura, etc.

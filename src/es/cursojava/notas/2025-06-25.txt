@@ -1,0 +1,16 @@
+IDE: Integrated Development Environment
+	Es un entorno controlado y viable al desarrollo de aplicaciones y programas en 
+	distintos lenguajes.
+
+Existe por ejemplo:
++ Eclipse
+	Eclipse es la primera herramienta del curso, un entorno open source destinado 
+	al trabajo con Java. 
++ Visual Studio Code
++ NetBeans
++ Intellij
+
+Distribuciones de Java
++ JSE -- Java Standard Edition
++ JEE -- Java Enterprise Edition
++ JME -- Java Micro Edition

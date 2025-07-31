@@ -1,0 +1,14 @@
+	Métodos
++ modificadorDeAcceso
+	public
+	protected
+	[]
+	private
++ static (on/off) (opcional)
++ tipoDeRetorno
+	variables (int, String, double, long, etc.)
+	void
++ nombreMetodo
+	main
++ ([parámetros])
++ return tipoDeRetorno;

@@ -1,0 +1,63 @@
+LENGUAJES DE PROGRAMACIÓN
+
+	Un lenguaje de programación contiene
++ Léxico: Vocabulario, conjunto de palabras de un idioma, o de las que pertene
+cen al uso 
+de una región a una actividad determinada, etc.
++ Sintaxis: Gram+Inform. La estructura gramática en general del lenguaje
++ Semántica: asocia un significado.
+
+	Diferencia de error de compilación y ejecución.
+La ejecución es cuando la función es activa, cuando hay errores de compilación 
+los errores 
+se aislan y se pueden arreglan a tiempo.
+
+	Por cercanía del lenguaje humano.
++ Lenguaje máquina (programa objeto). Instrucciones directamente entendidas 
+por el ordenador.
++ Lenguaje de bajo nivel (esamblador). Las instrucciones se escriben en lengua
+jes alfabéticos.
++ Lenguaje de alto nivel (programa fuente). Instrucciones escritas con palabras 
+similares a las empleadas en lenguajes humanos. Son independientes de la máqui
+na y para su ejecución y necesitan ser traducidos a instrucciones en lenguaje 
+máquina.
+
+	------------------ 		 .................
+	------------------		 .................
+	------------------		 .................
+	------------------		 .................
+	------------------   Compilador	 .................
+	- Input usuario --   -------> 	 ... Programa ....
+	------------------		 .................
+	------------------		 .................
+	------------------		 .................
+	------------------		 .................
+	------------------	 	 .................
+
+	Paradigmas de programación.
+
+Otra forma de clasificar los lenguajes son programación imperativa y declarativa.
++ Imperativa: se deben detallar los pasos necesarios para realizar una tarea, el 
+cómo hacerlo.
+	-- Programación estructurada: Nacido del GOTO. (C y Cobol)
+	-- Programación Orientada a Objetos: Cambio del GOTO a la programación 
+	moderna (C++, Java, Python, C#)
++ Declarativa: se describe el resultado y los mecanismos disponibles, describe el 
+qué se debe hacer.
+	-- Programación lógica (SWI Prolog)
+	-- Programación funcional (Haskell, Scala, LisT)
+
+	Variables
++ Una variable asocia un valor único a una dirección de memoria donde puede almace
+  narse un valor determinado durante la ejecución del programa. El valor puede cam
+  biar.
+
++ Una variable, una vez creada tiene asociado no sólo u valr sino también un tipo de 
+  dato.
+
++ Tantos los caracteresque se pueden utilizar en un identificador como los tipos de 
+  datos con los que se pueden definir las variables, depende del lenguaje de progra
+  mación concreto.
+
++ En cualquier momento de la ejecución del programa se puede consultar el valor de 
+  la variable o bien cambiarlo.
