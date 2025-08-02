@@ -2,43 +2,41 @@ package es.java.juegos.ejercicios;
 
 import java.util.Random;
 import java.util.Scanner;
+
 import es.cursojava.utils.Tools;
 
 public class PiedraPapelTijera {
 	
-	static Scanner scan = new Scanner(System.in);
 	static Random random = new Random();
-	static int option;
-	static int points;
+	static Scanner scan = new Scanner(System.in);
+	static int prompt, pointsPlayer, pointsMachine;
 	
 	public static void main(String[] args) {
 		
-		System.out.println("Piedra, papel o tijera?");
-		String[] menu = {"Piedra", "Papel", "Tijera", "Puntuación", "Salir"};
-		Tools.printMenu(menu);
-		option = scan.nextInt();
-		scan.nextLine();
-		
 		do {
 			
-			switch (option) {
-				case 1: 
-						
+			System.out.println("Piedra, Papel o Tijera?");
+			String[] menu = {"Piedra", "Papel", "Tijera", "Puntuación", "Salir"};
+			Tools.printMenu(menu);
+			prompt = scan.nextInt();
+			scan.nextLine();
+			
+			switch (prompt) {
+				case 1: playerChoice("Piedra");
 						break;
 					
-				case 2: 
-						
+				case 2: playerChoice("Papel");
 						break;
 						
-				case 3: 
-					
+				case 3: playerChoice("Tijera");
 						break;
 				
-				case 4: 
-					
+				case 4: showPoints();
 						break;
 						
-				case 5: System.out.println("Adios!");
+				case 5: System.out.println("Resumen: ");
+						showPoints();
+						System.out.println("Adios!");
 						System.exit(0);
 						break;
 				
@@ -46,20 +44,76 @@ public class PiedraPapelTijera {
 						 break;
 			}
 			
-			int randomNumber = random.nextInt(100) + 1;
+		} while (prompt != 5);
+	}
+	
+	public static void playerChoice(String input) {
+		
+		String reply = "";
+		
+		if (input.equals("Piedra")) {
 			
-			if (randomNumber > 10 && randomNumber < 30) {
-				
-			}
+			reply = machineReply("Piedra");
 			
-			if (randomNumber >= 30 && randomNumber < 60) {
-				
-			}
+			if (reply.equals("Piedra")) { statusMessage(3); }
+			if (reply.equals("Papel")) { statusMessage(2); }
+			if (reply.equals("Tijera")) { statusMessage(1); }
+		}
+		
+		if (input.equals("Papel")) {
 			
-			if (randomNumber >= 60 && randomNumber < 100) {
-				
-			}
+			reply = machineReply("Papel");
 			
-		} while (option != 6);
+			if (reply.equals("Piedra")) { statusMessage(1); }
+			if (reply.equals("Papel")) { statusMessage(3); }
+			if (reply.equals("Tijera")) { statusMessage(2); }
+		}
+		
+		if (input.equals("Tijera")) {
+			
+			reply = machineReply("Tijera");
+			
+			if (reply.equals("Piedra")) { statusMessage(2); }
+			if (reply.equals("Papel")) { statusMessage(1); }
+			if (reply.equals("Tijera")) { statusMessage(3); }
+		}
+	}
+	
+	public static String machineReply(String input) {
+		
+		String[] choices =  {"Piedra", "Papel", "Tijera"};
+		
+		int num = random.nextInt(3);
+		String machineChoice = choices[num];
+		input = machineChoice;
+		System.out.println("Máquina: " + input);
+		
+		return input;
+	}
+	
+	public static void statusMessage(int message) {
+		
+		switch (message) {
+		
+			case 1: System.out.println("Victoria. +3 Jugador");
+					pointsPlayer += 3;
+					showPoints();
+					break;
+					
+			case 2: System.out.println("Derrota. +3 Máquina");
+					pointsMachine += 3;
+					showPoints();
+					break;
+					
+			case 3: System.out.println("Empate! +1");
+					pointsPlayer++; pointsMachine++;
+					showPoints();
+					break;
+					
+		}
+	}
+	
+	public static void showPoints() {
+		System.out.println("Jugador: " + pointsPlayer + " | " + "Máquina: " + pointsMachine);
 	}
 }
