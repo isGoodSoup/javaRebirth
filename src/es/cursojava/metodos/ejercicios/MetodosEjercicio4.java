@@ -1,6 +1,8 @@
 package es.cursojava.metodos.ejercicios;
 
 import java.util.Scanner;
+
+import es.cursojava.utils.Menu;
 import es.cursojava.utils.Tools;
 
 public class MetodosEjercicio4 {
@@ -11,9 +13,9 @@ public class MetodosEjercicio4 {
 		
 		String[] menu = {"Aa", "Bb", "Cc", "Dd", "Ee"};
 		
-		Tools.printMenu(menu);
+		Menu.printMenu(menu);
 		String cadena = scan.nextLine();
-		Tools.printMenu(menu, cadena);
+//		Tools.printMenu(menu, cadena);
 		Tools.pideDatoNumerico(cadena);
 		int num = scan.nextInt();
 		Tools.pideDatoNumerico(cadena, num);

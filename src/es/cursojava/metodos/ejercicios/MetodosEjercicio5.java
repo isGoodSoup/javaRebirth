@@ -1,7 +1,8 @@
 package es.cursojava.metodos.ejercicios;
 
 import java.util.Scanner;
-import es.cursojava.utils.Tools;
+
+import es.cursojava.utils.Menu;
 
 public class MetodosEjercicio5 {
 	
@@ -13,7 +14,7 @@ public class MetodosEjercicio5 {
 		do {
 			
 			String[] menu = {"Pintar cuadrado", "Validar email", "Alumnos", "Salir"};
-			Tools.printMenu(menu);
+			Menu.printMenu(menu);
 			option = scan.nextInt();
 			scan.nextLine();
 			
@@ -128,7 +129,7 @@ public class MetodosEjercicio5 {
 
 			String[] menu = {"Insertar Alumno", "Mostrar Alumnos", "Buscar Alumno", "Borrar Alumno", "Salir"};
 
-			Tools.printMenu(menu);
+			Menu.printMenu(menu);
 			option = scan.nextInt();
 			scan.nextLine();
 			

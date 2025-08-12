@@ -1,7 +1,8 @@
 package es.cursojava.libre;
 
 import java.util.Scanner;
-import es.cursojava.utils.Tools;
+
+import es.cursojava.utils.Menu;
 
 public class PintarFormas {
 	
@@ -14,7 +15,7 @@ public class PintarFormas {
 		do {
 			System.out.println("Pintar: ");
 			String[] menu = {"Circulo", "Cuadrado", "Triángulo", "Salir"};
-			Tools.printMenu(menu);
+			Menu.printMenu(menu);
 			option = scan.nextInt();
 			scan.nextLine();
 			

@@ -15,20 +15,6 @@ public class Tools {
 		return reply;
 	}
 	
-	public static void printMenu(String[] menu) {
-		
-		for (int i = 0, j = 1; i < menu.length; i++, j++) {
-			System.out.println(j + ") " + menu[i]);
-		}
-		System.out.println("Introduce una opción");
-	}
-	
-	public static void printMenu(String[] texto, String cadena) {
-		
-		printMenu(texto);
-		System.out.println(cadena);
-	}
-	
 	public static int pideDatoNumerico(String texto) {
 		
 		System.out.println(texto);

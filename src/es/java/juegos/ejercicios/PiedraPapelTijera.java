@@ -3,7 +3,7 @@ package es.java.juegos.ejercicios;
 import java.util.Random;
 import java.util.Scanner;
 
-import es.cursojava.utils.Tools;
+import es.cursojava.utils.Menu;
 
 public class PiedraPapelTijera {
 	
@@ -15,9 +15,9 @@ public class PiedraPapelTijera {
 		
 		do {
 			
-			System.out.println("Piedra, Papel o Tijera?");
+			System.out.println("PIEDRA, PAPEL O TIJERA?");
 			String[] menu = {"Piedra", "Papel", "Tijera", "Puntuación", "Salir"};
-			Tools.printMenu(menu);
+			Menu.printMenu(menu);
 			prompt = scan.nextInt();
 			scan.nextLine();
 			
