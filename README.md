@@ -1,18 +1,25 @@
-## Getting Started
+# javaRebirth
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Repositorio de apoyo para teoría y ejercicios prácticos de Java incluidos en el curso.
 
-## Folder Structure
+##  Propósito
+Este proyecto centraliza los conceptos fundamentales de Java (teoría) junto con ejercicios prácticos. Ideal para aprender, practicar y reforzar conocimientos de manera estructurada.
 
-The workspace contains two folders by default, where:
+##  Contenidos
+- **src/** – Código fuente (.java), separado por módulos o temas.
+- **bin/** – Ejecutables compilados (.class) generados automáticamente.
+- **lib/** – Dependencias externas necesarias para los ejercicios (si las hay).
+- **.gitignore**, **.classpath**, **.project** – Configuración para integración con IDEs como VS Code o Eclipse.
+- **README.md** – Este archivo, con instrucciones claras para arrancar rápidamente.
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+##  Comenzando
+### Prerrequisitos
+- Java JDK (versión 8 o superior).
+- IDE recomendado: Visual Studio Code (con extensión Java) o Eclipse.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+### Clonar el repositorio
+```
+git clone https://github.com/isGoodSoup/javaRebirth.git
+cd javaRebirth
+```
+Proyecto entero escrito en Java 21
