@@ -59,10 +59,6 @@ public class Alumno {
 		this.asignaturas = asignaturas;
 	}
 	
-	public void metodo1() {
-		
-	}
-	
 	public void estudiar() {
 		
 		System.out.println("El estudiante " + nombre + 
