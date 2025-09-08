@@ -11,7 +11,8 @@ public class Maniqui {
 		
 	}
 	
-	public Maniqui(Camisa camisa, Pantalon pantalon) {
+	public Maniqui(String id, Camisa camisa, Pantalon pantalon) {
+		this.id = id;
 		this.camisa = camisa;
 		this.pantalon = pantalon;
 	}
@@ -20,7 +21,11 @@ public class Maniqui {
 		this.vestido = vestido;
 	}
 	
-	public void maniquiVestir(Vestido vestido, boolean estaVestido) {
-		
+	public void maniquiVestir(Camisa camisa, Pantalon pantalon, Vestido vestido) {
+		this.maniquiVestir(camisa, pantalon, vestido);
+	}
+	
+	public void maniquiDesvestir(Camisa camisa, Pantalon pantalon, Vestido vestido) {
+		this.maniquiDesvestir(camisa, pantalon, vestido);
 	}
 }
