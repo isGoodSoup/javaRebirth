@@ -14,8 +14,6 @@ public class Persona {
 		this.apellidos = apellidos;
 		this.dni = dni;
 		this.edad = edad;
-		
-		System.out.println(nombre + " " + apellidos + ", " + dni + ", " + edad);
 	}
 	
 	public String getNombre() {
@@ -48,9 +46,5 @@ public class Persona {
 	
 	public void setEdad(int edad) {
 		this.edad = edad;
-	}
-	
-	public static void main(String[] args) {
-		new Persona("Jose", "Martín", "49235849H", 63);
 	}
 }
