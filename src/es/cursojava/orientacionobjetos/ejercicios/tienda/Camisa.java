@@ -11,10 +11,14 @@ public class Camisa {
 		
 	}
 	
-	public Camisa(String color, int precio, int talla, Boton[] boton) {
+	public Camisa(String color, int precio, int talla) {
+		super();
 		this.color = color;
 		this.precio = precio;
 		this.talla = talla;
+	}
+	
+	public Camisa(Boton[] boton) {
 		this.boton = boton;
 	}
 	

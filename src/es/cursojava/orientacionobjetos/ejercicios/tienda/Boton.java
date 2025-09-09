@@ -11,6 +11,7 @@ public class Boton {
 	}
 	
 	public Boton(String color, int tamanho, String forma) {
+		super();
 		this.color = color;
 		this.tamanho = tamanho;
 		this.forma = forma;

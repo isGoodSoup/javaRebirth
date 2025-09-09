@@ -11,6 +11,7 @@ public class Vestido {
 	}
 	
 	public Vestido(String color, int precio, int talla) {
+		super();
 		this.color = color;
 		this.precio = precio;
 		this.talla = talla;
