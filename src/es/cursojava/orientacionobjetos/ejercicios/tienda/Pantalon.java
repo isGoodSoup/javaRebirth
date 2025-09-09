@@ -11,14 +11,11 @@ public class Pantalon {
 		
 	}
 	
-	public Pantalon(String color, double precio, int talla) {
+	public Pantalon(String color, double precio, int talla, Boton boton) {
 		super();
 		this.color = color;
 		this.precio = precio;
 		this.talla = talla;
-	}
-	
-	public Pantalon(Boton boton) {
 		this.boton = boton;
 	}
 	

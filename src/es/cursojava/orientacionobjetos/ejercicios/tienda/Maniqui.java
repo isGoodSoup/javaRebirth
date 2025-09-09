@@ -2,31 +2,31 @@ package es.cursojava.orientacionobjetos.ejercicios.tienda;
 
 public class Maniqui {
 	
-	private String id;
+	private int id;
 	private Pantalon pantalon;
 	private Camisa camisa;
 	private Vestido vestido;
 	
-	public Maniqui() {
-		
+	public Maniqui(int id) {
+		this.id = id;
 	}
 	
-	public Maniqui(String id, Camisa camisa, Pantalon pantalon) {
+	public Maniqui(int id, Camisa camisa, Pantalon pantalon) {
 		this.id = id;
 		this.camisa = camisa;
 		this.pantalon = pantalon;
 	}
 	
-	public Maniqui(String id, Vestido vestido) {
+	public Maniqui(int id, Vestido vestido) {
 		this.id = id;
 		this.vestido = vestido;
 	}
 	
-	public String getID() {
+	public int getID() {
 		return id;
 	}
 
-	public void setID(String id) {
+	public void setID(int id) {
 		this.id = id;
 	}
 
@@ -66,7 +66,7 @@ public class Maniqui {
 		this.vestido = vestido;
 	}
 
-	public void maniquiDesvestir(Camisa camisa, Pantalon pantalon, Vestido vestido) {
+	public void maniquiDesvestir() {
 		this.camisa = null;
 		this.pantalon = null;
 		this.vestido = null;
