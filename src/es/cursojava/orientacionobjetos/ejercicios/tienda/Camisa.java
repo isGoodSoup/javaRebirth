@@ -3,7 +3,7 @@ package es.cursojava.orientacionobjetos.ejercicios.tienda;
 public class Camisa {
 	
 	private String color;
-	private int precio;
+	private double precio;
 	private int talla;
 	private Boton[] boton;
 	
@@ -30,7 +30,7 @@ public class Camisa {
 		this.color = color;
 	}
 	
-	public int getPrecio() {
+	public double getPrecio() {
 		return precio;
 	}
 	
