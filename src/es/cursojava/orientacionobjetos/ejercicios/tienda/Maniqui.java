@@ -54,19 +54,22 @@ public class Maniqui {
 		this.vestido = vestido;
 	}
 
-	public void maniquiVestir(Camisa camisa) {
+	public void vestir(Camisa camisa) {
+		desvestir();
 		this.camisa = camisa;
 	}
 	
-	public void maniquiVestir(Pantalon pantalon) {
+	public void vestir(Pantalon pantalon) {
+		desvestir();
 		this.pantalon = pantalon;
 	}
 	
-	public void maniquiVestir(Vestido vestido) {
+	public void vestir(Vestido vestido) {
+		desvestir();
 		this.vestido = vestido;
 	}
 
-	public void maniquiDesvestir() {
+	public void desvestir() {
 		this.camisa = null;
 		this.pantalon = null;
 		this.vestido = null;

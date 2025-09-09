@@ -1,7 +1,5 @@
 package es.cursojava.orientacionobjetos.ejercicios.tienda;
 
-import java.util.Arrays;
-
 public class TiendaManiqui {
 	
 	private String nombre;
@@ -42,11 +40,18 @@ public class TiendaManiqui {
 		maniquies[2] = maniqui3;
 	}
 	
+	public void vestirManaquies() {
+		
+		for (Maniqui maniqui : maniquies) {
+			
+		}
+	}
+	
 	public void mostrarEscaparate() {
 		
-//		for (Maniqui maniqui : maniquies) {
-//			
-//		}
+		for (Maniqui maniqui : maniquies) {
+			
+		}
 	}
 	
 	public void cerrarTienda() {
@@ -56,6 +61,7 @@ public class TiendaManiqui {
 	public static void main(String[] args) {
 		TiendaManiqui tienda = new TiendaManiqui("Tienda");
 		tienda.abrirTienda();
+		tienda.vestirManaquies();
 		tienda.mostrarEscaparate();
 		tienda.cerrarTienda();
 	}
