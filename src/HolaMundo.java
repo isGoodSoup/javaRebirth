@@ -1,3 +1,5 @@
+import es.cursojava.utils.NameGen;
+
 public class HolaMundo {
     
     public static void main( String[] args ) {
