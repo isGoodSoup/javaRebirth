@@ -21,7 +21,6 @@ public class Instrumento {
 	}
 	
 	public void afinar() {
-		this.afinado = true;
 		if(getAfinado()) {
 			log.info("El instrumento " + this.getNombre() + " está afinado");
 		} else {

@@ -15,8 +15,6 @@ public class Piano extends Instrumento{
 	}
 	
 	public void afinar() {
-		Instrumento instrumento = new Instrumento("Piano", "piano", true);
-		instrumento.afinar();
 		
 	}
 

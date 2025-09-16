@@ -13,8 +13,6 @@ public class Guitarra extends Instrumento {
 	}
 	
 	public void afinar() {
-		Instrumento instrumento = new Instrumento("Guitarra", "guitarra acústica", true);
-		instrumento.afinar();
 		
 	}
 
