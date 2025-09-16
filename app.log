@@ -1,0 +1,12 @@
+17:01:37.158 [main] INFO   - Hola
+17:02:53.342 [main] INFO  Main - Hola
+17:07:32.113 [main] INFO  Main - Hola
+17:07:56.996 [main] INFO  Main - Hola
+17:08:48.922 [main] INFO  Main - Hola
+17:09:22.074 [main] INFO  Main - Hola
+17:11:43.601 [main] INFO  Main - Hola
+17:11:43.604 [main] WARN  Main - Hola mundo
+17:16:35.394 [main] ERROR Main - error
+17:16:35.397 [main] WARN  Main - warn
+17:16:35.397 [main] INFO  Main - info
+17:16:35.397 [main] DEBUG Main - debug
