@@ -1,4 +1,4 @@
-package es.cursojava.orientacionobjetos.herencia;
+package es.cursojava.oo.herencia;
 
 public class Vaca extends Animal {
 	private int numCuernos;

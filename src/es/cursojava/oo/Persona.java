@@ -1,4 +1,4 @@
-package es.cursojava.orientacionobjetos;
+package es.cursojava.oo;
 
 public class Persona {
 	

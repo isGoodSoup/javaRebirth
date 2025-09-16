@@ -1,4 +1,4 @@
-package es.cursojava.orientacionobjetos.herencia;
+package es.cursojava.oo.herencia;
 
 public class Animal {
 	private String nombre;

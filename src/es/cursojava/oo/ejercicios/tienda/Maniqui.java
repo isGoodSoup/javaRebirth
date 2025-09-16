@@ -1,4 +1,4 @@
-package es.cursojava.orientacionobjetos.ejercicios.tienda;
+package es.cursojava.oo.ejercicios.tienda;
 
 public class Maniqui {
 	

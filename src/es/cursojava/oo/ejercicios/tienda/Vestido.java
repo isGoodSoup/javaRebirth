@@ -1,22 +1,20 @@
-package es.cursojava.orientacionobjetos.ejercicios.tienda;
+package es.cursojava.oo.ejercicios.tienda;
 
-public class Pantalon {
+public class Vestido {
 	
 	private String color;
 	private double precio;
 	private int talla;
-	private Boton boton;
 	
-	public Pantalon() {
+	public Vestido() {
 		
 	}
 	
-	public Pantalon(String color, double precio, int talla, Boton boton) {
+	public Vestido(String color, int precio, int talla) {
 		super();
 		this.color = color;
 		this.precio = precio;
 		this.talla = talla;
-		this.boton = boton;
 	}
 	
 	public String getColor() {
@@ -41,13 +39,5 @@ public class Pantalon {
 	
 	public void setTalla(int talla) {
 		this.talla = talla;
-	}
-	
-	public Boton getBoton() {
-		return boton;
-	}
-	
-	public void setBoton(Boton boton) {
-		this.boton = boton;
 	}
 }

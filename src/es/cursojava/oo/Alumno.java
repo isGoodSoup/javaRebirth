@@ -1,4 +1,4 @@
-package es.cursojava.orientacionobjetos;
+package es.cursojava.oo;
 
 import java.util.Arrays;
 

@@ -1,4 +1,4 @@
-package es.cursojava.orientacionobjetos.herencia;
+package es.cursojava.oo.herencia;
 
 public class Lobo extends Animal {
 	private int numColmillos;
