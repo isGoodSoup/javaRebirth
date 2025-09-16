@@ -10,3 +10,7 @@
 17:16:35.397 [main] WARN  Main - warn
 17:16:35.397 [main] INFO  Main - info
 17:16:35.397 [main] DEBUG Main - debug
+19:27:55.056 [main] ERROR Main - error
+19:27:55.059 [main] WARN  Main - warn
+19:27:55.059 [main] INFO  Main - info
+19:27:55.059 [main] DEBUG Main - debug
