@@ -29,7 +29,7 @@ public class Instrumento {
 	}
 	
 	public void tocar() {
-		
+		log.info("El instrumento, " + this.getNombre() + " está tocando");
 	}
 
 	public String getNombre() {
