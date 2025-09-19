@@ -7,9 +7,7 @@ public class BandaMusica {
 		Instrumento i2 = new Instrumento("eléctrica", "cuerda pulsada", true);
 		Instrumento i3 = new Instrumento("piano", "cuerda percutida", true);
 		Instrumento i4 = new Instrumento("tambor", "percusión", true);
-		Instrumento[] orquesta = {i1, i2, i3, i4};
-		
-		
+		Instrumento[] banda = {i1, i2, i3, i4};
 	}
 	
 	public void afinarInstrumentos() {

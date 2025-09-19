@@ -1,8 +1,12 @@
 package es.cursojava.oo.herencia.ejercicios.banda;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 public class Piano extends Instrumento{
 	private int numOctavas;
 	private String tipoPiano;
+	private final static Logger log = LoggerFactory.getLogger(Piano.class);
 	
 	public Piano() {
 		
@@ -15,7 +19,9 @@ public class Piano extends Instrumento{
 	}
 	
 	public void afinar() {
-		
+		Instrumento instrumento = new Instrumento();
+		log.info("El piano está siendo afinado");
+		instrumento.afinar();
 	}
 
 	public int getNumOctavas() {

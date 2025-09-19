@@ -1,7 +1,11 @@
 package es.cursojava.oo.herencia.ejercicios.banda;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 public class Tambor extends Instrumento{
 	private String material;
+	private final static Logger log = LoggerFactory.getLogger(Tambor.class);
 	
 	public Tambor() {
 		
@@ -13,7 +17,9 @@ public class Tambor extends Instrumento{
 	}
 	
 	public void afinar() {
-		
+		Instrumento instrumento = new Instrumento();
+		log.info("El tambor está siendo afinado");
+		instrumento.afinar();
 	}
 	
 	public void aporrear() {
