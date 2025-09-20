@@ -11,19 +11,21 @@ public class Tambor extends Instrumento{
 		
 	}
 
-	public Tambor(String material) {
-		super();
+	public Tambor(String nombre, String tipo, boolean afinado, String material) {
+		super(nombre, tipo, afinado);
 		this.material = material;
 	}
 	
 	public void afinar() {
-		Instrumento instrumento = new Instrumento();
 		log.info("El tambor está siendo afinado");
-		instrumento.afinar();
+	}
+	
+	public void tocar() {
+		aporrear();
 	}
 	
 	public void aporrear() {
-		
+		log.info("El tambor está siendo aporreado");
 	}
 
 	public String getMaterial() {

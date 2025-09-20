@@ -21,12 +21,15 @@ public class Instrumento {
 	}
 	
 	public void afinar() {
-		if(getAfinado()) {
-			log.info("El instrumento " + this.getNombre() + " está afinado");
+		if (this.afinado) {
+			log.info("El instrumento " + this.nombre + " ya está afinado.");
 		} else {
-			log.error("El instrumento " + this.getNombre() + " no está afinado");
+			log.warn("El instrumento " + this.nombre + " no está afinado. Afinando...");
+			this.afinado = true;
+			log.info("El instrumento " + this.nombre + " ha sido afinado.");
 		}
 	}
+
 	
 	public void tocar() {
 		log.info("El instrumento, " + this.getNombre() + " está tocando");

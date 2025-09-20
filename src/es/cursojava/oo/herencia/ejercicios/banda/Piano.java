@@ -12,16 +12,19 @@ public class Piano extends Instrumento{
 		
 	}
 
-	public Piano(int numOctavas, String tipoPiano) {
-		super();
+	public Piano(String nombre, String tipo, boolean afinado, int numOctavas, String tipoPiano) {
+		super(nombre, tipo, afinado);
 		this.numOctavas = numOctavas;
 		this.tipoPiano = tipoPiano;
 	}
 	
 	public void afinar() {
-		Instrumento instrumento = new Instrumento();
-		log.info("El piano está siendo afinado");
-		instrumento.afinar();
+		if(!this.getAfinado()) {
+			log.error("El piano no está afinado");
+			super.afinar();
+		} else {
+			log.info("El piano está siendo afinado");
+		}
 	}
 
 	public int getNumOctavas() {

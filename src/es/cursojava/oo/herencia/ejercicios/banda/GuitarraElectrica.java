@@ -11,8 +11,8 @@ public class GuitarraElectrica extends Instrumento {
 		
 	}
 
-	public GuitarraElectrica(int potencia) {
-		super();
+	public GuitarraElectrica(String nombre, String tipo, boolean afinado, int potencia) {
+		super(nombre, tipo, afinado);
 		this.potencia = potencia;
 	}
 	

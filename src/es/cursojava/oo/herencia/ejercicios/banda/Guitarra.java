@@ -11,15 +11,18 @@ public class Guitarra extends Instrumento {
 		
 	}
 
-	public Guitarra(int numCuerdas) {
-		super();
+	public Guitarra(String nombre, String tipo, boolean afinado, int numCuerdas) {
+		super(nombre, tipo, afinado);
 		this.numCuerdas = numCuerdas;
 	}
 	
 	public void afinar() {
-		Instrumento instrumento = new Instrumento();
-		log.info("La guitarra está siendo afinada");
-		instrumento.afinar();
+		if(!this.getAfinado()) {
+			log.error("La guitarra no está afinada");
+			super.afinar();
+		} else {
+			log.info("La guitarra está siendo afinada");
+		}
 	}
 
 	public int getNumCuerdas() {
