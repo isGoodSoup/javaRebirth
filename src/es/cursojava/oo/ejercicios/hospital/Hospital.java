@@ -48,7 +48,8 @@ public class Hospital {
 				edad = random.nextInt(99);
 				Paciente paciente = new Paciente(NameGen.Name(), edad);
 				pacientes[i][j] = paciente;
-				log.trace("Nuevo paciente detectado: " + paciente.getNombre() + ", " + paciente.getEdad());
+				log.trace("Nuevo paciente detectado: " + paciente.getNombre() 
+				+ ", " + paciente.getEdad());
 			}
 		}
 		log.debug("Pacientes ingresados");
@@ -58,15 +59,16 @@ public class Hospital {
 		log.info("Bienvenido a " + getNombre());
 		boolean isVisitaActiva = true;
 		do {
-			log.info("Introduzca el piso (0-3) y la habitación del paciente (0-11)");
+			log.info("Introduzca el piso (0-2) y la habitación del paciente (0-11)");
 			int piso = scan.nextInt();
 			int hab = scan.nextInt();
 			
-			if (piso > 11 || hab > 3) {
-				log.error("Piso/hab inválido");
+			if (piso < 0 || piso >= pacientes.length || hab < 0 || hab >= pacientes[piso].length) {
+			    log.error("Piso/habitación inválido");
 			} else {
 				Paciente paciente = pacientes[piso][hab];
-				log.debug("Paciente " + piso + hab + ": " + paciente.getNombre());
+				log.debug("Piso " + piso + ", Hab. " + hab + ": " 
+				+ paciente.getNombre() + ", " + paciente.getEdad());
 				isVisitaActiva = false;
 			}
 		} while(isVisitaActiva);	
