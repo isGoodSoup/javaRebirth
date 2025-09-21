@@ -65,7 +65,8 @@ public class Hospital {
 			if (piso > 11 || hab > 3) {
 				log.error("Piso/hab inválido");
 			} else {
-				log.debug("");
+				Paciente paciente = pacientes[piso][hab];
+				log.debug("Paciente " + piso + hab + ": " + paciente.getNombre());
 				isVisitaActiva = false;
 			}
 		} while(isVisitaActiva);	
