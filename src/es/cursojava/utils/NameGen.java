@@ -65,8 +65,8 @@ public class NameGen {
 	            "Zimmerman", "Zamora"
 	    };
 	    
-	    int num = random.nextInt(first.length) + 1;
-	    int num2 = random.nextInt(last.length) + 1;
+	    int num = random.nextInt(first.length);
+	    int num2 = random.nextInt(last.length);
 	    String fnlfirst = first[num];
 	    String fnllast = last[num2];
 	    name = fnlfirst + " " + fnllast;
