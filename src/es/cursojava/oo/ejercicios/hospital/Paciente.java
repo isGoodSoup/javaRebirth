@@ -2,17 +2,23 @@ package es.cursojava.oo.ejercicios.hospital;
 
 public class Paciente {
 	private String nombre;
-	private String id;
+	private int id;
 	private int edad;
 	
 	public Paciente() {
 		
 	}
 
-	public Paciente(String nombre, String id, int edad) {
+	public Paciente(String nombre, int id, int edad) {
 		super();
 		this.nombre = nombre;
 		this.id = id;
+		this.edad = edad;
+	}
+	
+	public Paciente(String nombre, int edad) {
+		super();
+		this.nombre = nombre;
 		this.edad = edad;
 	}
 
@@ -24,11 +30,11 @@ public class Paciente {
 		this.nombre = nombre;
 	}
 
-	public String getId() {
+	public int getId() {
 		return id;
 	}
 
-	public void setId(String id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
