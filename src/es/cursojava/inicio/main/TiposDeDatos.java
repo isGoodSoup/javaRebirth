@@ -1,3 +1,4 @@
+package es.cursojava.inicio.main;
 import java.util.Scanner;
 
 public class TiposDeDatos {

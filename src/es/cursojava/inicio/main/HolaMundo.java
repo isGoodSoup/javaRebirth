@@ -1,3 +1,4 @@
+package es.cursojava.inicio.main;
 import es.cursojava.utils.NameGen;
 
 public class HolaMundo {

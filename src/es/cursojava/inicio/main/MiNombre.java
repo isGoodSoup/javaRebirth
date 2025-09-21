@@ -1,3 +1,4 @@
+package es.cursojava.inicio.main;
 
 public class MiNombre {
 
