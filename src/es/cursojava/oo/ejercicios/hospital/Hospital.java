@@ -48,7 +48,7 @@ public class Hospital {
 				edad = random.nextInt(99);
 				Paciente paciente = new Paciente(NameGen.Name(), edad);
 				pacientes[i][j] = paciente;
-				log.trace("Nuevo paciente detectado: " + paciente.getNombre() 
+				log.trace("Paciente en Hab " + i + j + ": " + paciente.getNombre() 
 				+ ", " + paciente.getEdad());
 			}
 		}

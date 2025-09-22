@@ -19704,3 +19704,58 @@
 23:08:46.554 [main] INFO  es.cursojava.oo.ejercicios.hospital.Hospital - Bienvenido a Hospital Santa María de Jesús
 23:08:46.554 [main] INFO  es.cursojava.oo.ejercicios.hospital.Hospital - Introduzca el piso (0-2) y la habitación del paciente (0-11)
 23:08:52.005 [main] DEBUG es.cursojava.oo.ejercicios.hospital.Hospital - Piso 1, Hab. 8: Ulises Valentine, 9
+17:14:47.429 [main] INFO  es.cursojava.oo.herencia.ejercicios.banda.BandaMusica - Afinando instrumentos...
+17:14:47.433 [main] INFO  es.cursojava.oo.herencia.ejercicios.banda.Guitarra - La guitarra está siendo afinada
+17:14:47.433 [main] ERROR es.cursojava.oo.herencia.ejercicios.banda.Guitarra - La guitarra no está afinada
+17:14:47.433 [main] WARN  es.cursojava.oo.herencia.ejercicios.banda.Instrumento - El instrumento guitarra eléctrica no está afinado. Afinando...
+17:14:47.433 [main] INFO  es.cursojava.oo.herencia.ejercicios.banda.Instrumento - El instrumento guitarra eléctrica ha sido afinado.
+17:14:47.433 [main] ERROR es.cursojava.oo.herencia.ejercicios.banda.Piano - El piano no está afinado
+17:14:47.433 [main] WARN  es.cursojava.oo.herencia.ejercicios.banda.Instrumento - El instrumento piano no está afinado. Afinando...
+17:14:47.433 [main] INFO  es.cursojava.oo.herencia.ejercicios.banda.Instrumento - El instrumento piano ha sido afinado.
+17:14:47.434 [main] INFO  es.cursojava.oo.herencia.ejercicios.banda.Tambor - El tambor está siendo afinado
+17:14:47.434 [main] INFO  es.cursojava.oo.herencia.ejercicios.banda.BandaMusica - Tocando instrumentos
+17:14:47.434 [main] INFO  es.cursojava.oo.herencia.ejercicios.banda.Instrumento - El instrumento, guitarra está tocando
+17:14:47.434 [main] INFO  es.cursojava.oo.herencia.ejercicios.banda.GuitarraElectrica - La guitarra eléctrica está tocando
+17:14:47.434 [main] INFO  es.cursojava.oo.herencia.ejercicios.banda.Instrumento - El instrumento, piano está tocando
+17:14:47.434 [main] INFO  es.cursojava.oo.herencia.ejercicios.banda.Tambor - El tambor está siendo aporreado
+17:18:15.195 [main] DEBUG es.cursojava.oo.ejercicios.hospital.Hospital - Ingresando pacientes...
+17:18:15.209 [main] INFO  es.cursojava.oo.ejercicios.hospital.Hospital - Paciente en Hab 00: Isla Ingram, 45
+17:18:15.210 [main] INFO  es.cursojava.oo.ejercicios.hospital.Hospital - Paciente en Hab 01: Karen González, 29
+17:18:15.210 [main] INFO  es.cursojava.oo.ejercicios.hospital.Hospital - Paciente en Hab 02: Alice Barrios, 65
+17:18:15.210 [main] INFO  es.cursojava.oo.ejercicios.hospital.Hospital - Paciente en Hab 03: Noah Navarro, 17
+17:18:15.210 [main] INFO  es.cursojava.oo.ejercicios.hospital.Hospital - Paciente en Hab 04: Zacarías Alonso, 27
+17:18:15.210 [main] INFO  es.cursojava.oo.ejercicios.hospital.Hospital - Paciente en Hab 05: Carmen González, 71
+17:18:15.210 [main] INFO  es.cursojava.oo.ejercicios.hospital.Hospital - Paciente en Hab 06: Paul Urbina, 64
+17:18:15.210 [main] INFO  es.cursojava.oo.ejercicios.hospital.Hospital - Paciente en Hab 07: Mateo Keller, 56
+17:18:15.210 [main] INFO  es.cursojava.oo.ejercicios.hospital.Hospital - Paciente en Hab 08: Paul Castillo, 6
+17:18:15.210 [main] INFO  es.cursojava.oo.ejercicios.hospital.Hospital - Paciente en Hab 09: Queralt Jiménez, 68
+17:18:15.210 [main] INFO  es.cursojava.oo.ejercicios.hospital.Hospital - Paciente en Hab 010: Thomas Esparza, 23
+17:18:15.210 [main] INFO  es.cursojava.oo.ejercicios.hospital.Hospital - Paciente en Hab 011: Ben Fernández, 63
+17:18:15.210 [main] INFO  es.cursojava.oo.ejercicios.hospital.Hospital - Paciente en Hab 10: Wilmer Iglesias, 13
+17:18:15.210 [main] INFO  es.cursojava.oo.ejercicios.hospital.Hospital - Paciente en Hab 11: Natalia Harris, 98
+17:18:15.210 [main] INFO  es.cursojava.oo.ejercicios.hospital.Hospital - Paciente en Hab 12: Valeria Foster, 76
+17:18:15.210 [main] INFO  es.cursojava.oo.ejercicios.hospital.Hospital - Paciente en Hab 13: Thomas Oliver, 90
+17:18:15.210 [main] INFO  es.cursojava.oo.ejercicios.hospital.Hospital - Paciente en Hab 14: Sophie Luna, 7
+17:18:15.210 [main] INFO  es.cursojava.oo.ejercicios.hospital.Hospital - Paciente en Hab 15: Daniel Young, 34
+17:18:15.211 [main] INFO  es.cursojava.oo.ejercicios.hospital.Hospital - Paciente en Hab 16: Natalia Ximénez, 83
+17:18:15.211 [main] INFO  es.cursojava.oo.ejercicios.hospital.Hospital - Paciente en Hab 17: Mateo Zamora, 69
+17:18:15.211 [main] INFO  es.cursojava.oo.ejercicios.hospital.Hospital - Paciente en Hab 18: Dolores Smith, 27
+17:18:15.211 [main] INFO  es.cursojava.oo.ejercicios.hospital.Hospital - Paciente en Hab 19: Lucía Torres, 22
+17:18:15.211 [main] INFO  es.cursojava.oo.ejercicios.hospital.Hospital - Paciente en Hab 110: Wilmer Evans, 76
+17:18:15.211 [main] INFO  es.cursojava.oo.ejercicios.hospital.Hospital - Paciente en Hab 111: Oscar Quinn, 92
+17:18:15.211 [main] INFO  es.cursojava.oo.ejercicios.hospital.Hospital - Paciente en Hab 20: Fernanda Young, 76
+17:18:15.211 [main] INFO  es.cursojava.oo.ejercicios.hospital.Hospital - Paciente en Hab 21: Alejandro Pérez, 1
+17:18:15.211 [main] INFO  es.cursojava.oo.ejercicios.hospital.Hospital - Paciente en Hab 22: Paul Parker, 68
+17:18:15.211 [main] INFO  es.cursojava.oo.ejercicios.hospital.Hospital - Paciente en Hab 23: Grace Barrios, 77
+17:18:15.212 [main] INFO  es.cursojava.oo.ejercicios.hospital.Hospital - Paciente en Hab 24: Noah Keller, 9
+17:18:15.212 [main] INFO  es.cursojava.oo.ejercicios.hospital.Hospital - Paciente en Hab 25: Sergio Alonso, 54
+17:18:15.212 [main] INFO  es.cursojava.oo.ejercicios.hospital.Hospital - Paciente en Hab 26: Ignacio Ximénez, 18
+17:18:15.212 [main] INFO  es.cursojava.oo.ejercicios.hospital.Hospital - Paciente en Hab 27: Wendy Santos, 75
+17:18:15.212 [main] INFO  es.cursojava.oo.ejercicios.hospital.Hospital - Paciente en Hab 28: Jack Johnson, 3
+17:18:15.212 [main] INFO  es.cursojava.oo.ejercicios.hospital.Hospital - Paciente en Hab 29: Carmen Martinez, 93
+17:18:15.212 [main] INFO  es.cursojava.oo.ejercicios.hospital.Hospital - Paciente en Hab 210: Victor Ingram, 68
+17:18:15.212 [main] INFO  es.cursojava.oo.ejercicios.hospital.Hospital - Paciente en Hab 211: Ben Brown, 27
+17:18:15.212 [main] DEBUG es.cursojava.oo.ejercicios.hospital.Hospital - Pacientes ingresados
+17:18:15.212 [main] INFO  es.cursojava.oo.ejercicios.hospital.Hospital - Bienvenido a Hospital Santa María de Jesús
+17:18:15.212 [main] INFO  es.cursojava.oo.ejercicios.hospital.Hospital - Introduzca el piso (0-2) y la habitación del paciente (0-11)
+17:18:34.786 [main] DEBUG es.cursojava.oo.ejercicios.hospital.Hospital - Piso 2, Hab. 11: Ben Brown, 27
