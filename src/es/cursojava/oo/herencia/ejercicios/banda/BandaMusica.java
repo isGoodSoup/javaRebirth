@@ -16,7 +16,7 @@ public class BandaMusica {
 	
 	public Instrumento[] empezarConcierto() {
 		Instrumento i1 = new Guitarra("guitarra", "cuerda pulsada", true, 4);
-		Instrumento i2 = new GuitarraElectrica("guitarra eléctrica", "cuerda pulsada", false, 6);
+		Instrumento i2 = new GuitarraElectrica("guitarra eléctrica", "cuerda pulsada", false, 6, 4);
 		Instrumento i3 = new Piano("piano", "cuerda percutida", false, 8, "de cola");
 		Instrumento i4 = new Tambor("tambor", "percusión", true, "tela");
 		Instrumento[] banda = {i1, i2, i3, i4};

@@ -3,7 +3,7 @@ package es.cursojava.oo.herencia.ejercicios.banda;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class GuitarraElectrica extends Instrumento {
+public class GuitarraElectrica extends Guitarra {
 	private int potencia;
 	private final static Logger log = LoggerFactory.getLogger(GuitarraElectrica.class);
 	
@@ -11,8 +11,8 @@ public class GuitarraElectrica extends Instrumento {
 		
 	}
 
-	public GuitarraElectrica(String nombre, String tipo, boolean afinado, int potencia) {
-		super(nombre, tipo, afinado);
+	public GuitarraElectrica(String nombre, String tipo, boolean afinado, int potencia, int numCuerdas) {
+		super(nombre, tipo, afinado, numCuerdas);
 		this.potencia = potencia;
 	}
 	
