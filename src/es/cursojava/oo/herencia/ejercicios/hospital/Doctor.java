@@ -12,8 +12,8 @@ public class Doctor extends EmpleadosHospital {
 	
 	public Doctor() {}
 	
-	public Doctor(String especialidad) {
-		super();
+	public Doctor(String nombre, int edad, String especialidad) {
+		super(nombre, edad);
 		this.especialidad = especialidad;
 	}
 	

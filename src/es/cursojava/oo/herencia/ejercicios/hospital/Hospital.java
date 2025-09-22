@@ -2,6 +2,9 @@ package es.cursojava.oo.herencia.ejercicios.hospital;
 
 import java.util.Random;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import es.cursojava.utils.NameGen;
 
 public class Hospital {
@@ -9,14 +12,16 @@ public class Hospital {
 	private Habitacion[] habitaciones;
 	private Paciente[] salaDeEspera;
 	private Enfermero[] enfermeros;
-	private static final Random r = new Random();
+	private Doctor[] doctores;
+	private final static Random r = new Random();
+	private final static Logger log = LoggerFactory.getLogger(Hospital.class);
 	
 	public static void main(String[] args) {
 		Hospital hospital = new Hospital();
 		hospital.abrirHospital();
 		hospital.ficharEmpleados();
 		hospital.horaDeComer();
-		hospital.pasarConsultas();
+//		hospital.pasarConsultas();
 	}
 	
 	public Hospital() {}
@@ -67,20 +72,41 @@ public class Hospital {
 		
 		enfermeros = new Enfermero[6];
 		for (int i = 0; i < enfermeros.length; i++) {
-			Enfermero enfermero = new Enfermero();
+			Enfermero enfermero = new Enfermero(NameGen.Name(), r.nextInt(100) + 1, r.nextInt(3));
 			enfermeros[i] = enfermero;
 		}
 		
-		Doctor d1 = new Doctor();
-		Doctor d2 = new Doctor();
+		doctores = new Doctor[3];
+		for (int i = 0; i < doctores.length; i++) {
+			Doctor doctor = new Doctor(NameGen.Name(), r.nextInt(100) + 1, "general");
+			doctores[i] = doctor;
+		}
 	}
 	
 	public void ficharEmpleados() {
+		log.debug("Fichando empleados");
+		for (Enfermero e : enfermeros) {
+			e.fichar();
+		}
 		
+		for (Doctor d : doctores) {
+			d.fichar();
+		}
 	}
 	
 	public void horaDeComer() {
+		log.debug("Hora de comer");
+		for (Paciente p: salaDeEspera) {
+			p.comer();
+		}
 		
+		for (Enfermero e : enfermeros) {
+			e.comer();
+		}
+		
+		for (Doctor d : doctores) {
+			d.comer();
+		}
 	}
 	
 	public void pasarConsultas() {

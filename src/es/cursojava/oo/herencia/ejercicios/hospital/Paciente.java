@@ -1,10 +1,13 @@
 package es.cursojava.oo.herencia.ejercicios.hospital;
 
+import java.util.Random;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class Paciente extends Persona {
 	private String[] sintomas;
+	private final static Random r = new Random();
 	private final static Logger log = LoggerFactory.getLogger(Paciente.class);
 	
 	public Paciente() {}
@@ -27,6 +30,11 @@ public class Paciente extends Persona {
 	}
 	
 	public void comer() {
-		log.info(super.getNombre() + " está comiendo en la cafetería");
+		log.info(super.getNombre() + " está comiendo en la cafetería a las 13:" + minutos());
+	}
+	
+	public int minutos() {
+		int minutos = r.nextInt(10, 60);
+		return minutos;
 	}
 }
