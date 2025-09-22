@@ -66,6 +66,9 @@ public class Hospital {
 			Enfermero enfermero = new Enfermero();
 			enfermeros[i] = enfermero;
 		}
+		
+		Doctor d1 = new Doctor();
+		Doctor d2 = new Doctor();
 	}
 	
 	public void ficharEmpleados() {
