@@ -12,7 +12,11 @@ public class Hospital {
 	private static final Random r = new Random();
 	
 	public static void main(String[] args) {
-		
+		Hospital hospital = new Hospital();
+		hospital.abrirHospital();
+		hospital.ficharEmpleados();
+		hospital.horaDeComer();
+		hospital.pasarConsultas();
 	}
 	
 	public Hospital() {}
