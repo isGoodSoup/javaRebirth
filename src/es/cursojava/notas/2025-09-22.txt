@@ -1,0 +1,5 @@
+Anotaciones
+Existen diferentes tipos de anotaciones:
+	+Compilación --> Principales
+	+Ejecución   --|
+	+Para pruebas
