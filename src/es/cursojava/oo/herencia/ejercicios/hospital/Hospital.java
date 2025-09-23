@@ -11,6 +11,7 @@ public class Hospital {
 	private String nombre;
 	private Habitacion[] habitaciones;
 	private Paciente[] salaDeEspera;
+	private Paciente[] atendidos;
 	private Enfermero[] enfermeros;
 	private Doctor[] doctores;
 	private final static Random r = new Random();
@@ -21,7 +22,7 @@ public class Hospital {
 		hospital.abrirHospital();
 		hospital.ficharEmpleados();
 		hospital.horaDeComer();
-//		hospital.pasarConsultas();
+		hospital.pasarConsultas();
 	}
 	
 	public Hospital() {}
@@ -110,6 +111,13 @@ public class Hospital {
 	}
 	
 	public void pasarConsultas() {
+		atendidos = new Paciente[salaDeEspera.length];
+		for (int i = 0; i < salaDeEspera.length; i++) {
+			Enfermero enfermeroAsignado = enfermeros[i % enfermeros.length];
+			atendidos[i] = salaDeEspera[i];
+			log.debug(salaDeEspera[i].getNombre() + " ha sido atendido por " + enfermeroAsignado.getNombre());
+			salaDeEspera[i] = null;
+		}
 		
 	}
 }

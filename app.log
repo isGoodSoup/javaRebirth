@@ -19931,3 +19931,121 @@
 01:03:44.181 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.EmpleadosHospital - El empleado Wendy Castillo está comiendo en el comedor a las 13:42
 01:03:44.181 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.EmpleadosHospital - El empleado Carmen Díaz está comiendo en el comedor a las 13:15
 01:03:44.181 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.EmpleadosHospital - El empleado Zoe Davis está comiendo en el comedor a las 13:48
+16:23:41.019 [main] DEBUG es.cursojava.oo.herencia.ejercicios.hospital.Hospital - Fichando empleados
+16:23:41.022 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.EmpleadosHospital - El empleado Xander Díaz está fichando al turno de mañana
+16:23:41.022 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.EmpleadosHospital - El empleado Valeria Barrios está fichando al turno de mañana
+16:23:41.022 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.EmpleadosHospital - El empleado Henry Urbina está fichando al turno de noche
+16:23:41.022 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.EmpleadosHospital - El empleado Valeria Barrios está fichando al turno de mañana
+16:23:41.022 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.EmpleadosHospital - El empleado Zacarías Brown está fichando al turno de noche
+16:23:41.022 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.EmpleadosHospital - El empleado Charlie Xavier está fichando al turno de noche
+16:23:41.022 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.EmpleadosHospital - El empleado Eduardo Quinn está fichando al turno de noche
+16:23:41.023 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.EmpleadosHospital - El empleado Mia Walker está fichando al turno de noche
+16:23:41.023 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.EmpleadosHospital - El empleado Beatriz Underwood está fichando al turno de tarde
+16:23:41.023 [main] DEBUG es.cursojava.oo.herencia.ejercicios.hospital.Hospital - Hora de comer
+16:23:41.026 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Paciente - Valeria Robinson está comiendo en la cafetería a las 13:28
+16:23:41.026 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Paciente - Mateo Anderson está comiendo en la cafetería a las 13:58
+16:23:41.026 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Paciente - Noah Iglesias está comiendo en la cafetería a las 13:15
+16:23:41.026 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Paciente - Zacarías Fernández está comiendo en la cafetería a las 13:53
+16:23:41.026 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Paciente - Queralt Díaz está comiendo en la cafetería a las 13:20
+16:23:41.026 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Paciente - Olivia Santos está comiendo en la cafetería a las 13:55
+16:23:41.026 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Paciente - Victor Smith está comiendo en la cafetería a las 13:35
+16:23:41.026 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Paciente - Alejandro Davis está comiendo en la cafetería a las 13:43
+16:23:41.026 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Paciente - Ursula Zimmerman está comiendo en la cafetería a las 13:36
+16:23:41.026 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Paciente - Guillermo Oliver está comiendo en la cafetería a las 13:17
+16:23:41.026 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Paciente - Valeria Herrera está comiendo en la cafetería a las 13:52
+16:23:41.027 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Paciente - Zacarías Wenceslao está comiendo en la cafetería a las 13:27
+16:23:41.027 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Paciente - Sergio Taylor está comiendo en la cafetería a las 13:49
+16:23:41.027 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Paciente - Mateo Davis está comiendo en la cafetería a las 13:19
+16:23:41.027 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Paciente - Thomas Oliver está comiendo en la cafetería a las 13:48
+16:23:41.027 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Paciente - Jimena Underwood está comiendo en la cafetería a las 13:57
+16:23:41.027 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Paciente - Tatiana Zimmerman está comiendo en la cafetería a las 13:37
+16:23:41.027 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Paciente - Valeria Xavier está comiendo en la cafetería a las 13:22
+16:23:41.027 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Paciente - Karen Esparza está comiendo en la cafetería a las 13:36
+16:23:41.027 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Paciente - Guillermo Garcia está comiendo en la cafetería a las 13:27
+16:23:41.027 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Paciente - Ulises Anderson está comiendo en la cafetería a las 13:49
+16:23:41.027 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Paciente - Valeria Valentine está comiendo en la cafetería a las 13:23
+16:23:41.027 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Paciente - Isla Underwood está comiendo en la cafetería a las 13:26
+16:23:41.027 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Paciente - Alice Quinn está comiendo en la cafetería a las 13:46
+16:23:41.028 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.EmpleadosHospital - El empleado Xander Díaz está comiendo en el comedor a las 13:37
+16:23:41.028 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.EmpleadosHospital - El empleado Valeria Barrios está comiendo en el comedor a las 13:41
+16:23:41.028 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.EmpleadosHospital - El empleado Henry Urbina está comiendo en el comedor a las 13:16
+16:23:41.028 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.EmpleadosHospital - El empleado Valeria Barrios está comiendo en el comedor a las 13:21
+16:23:41.028 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.EmpleadosHospital - El empleado Zacarías Brown está comiendo en el comedor a las 13:48
+16:23:41.028 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.EmpleadosHospital - El empleado Charlie Xavier está comiendo en el comedor a las 13:28
+16:23:41.028 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.EmpleadosHospital - El empleado Eduardo Quinn está comiendo en el comedor a las 13:59
+16:23:41.028 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.EmpleadosHospital - El empleado Mia Walker está comiendo en el comedor a las 13:23
+16:23:41.028 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.EmpleadosHospital - El empleado Beatriz Underwood está comiendo en el comedor a las 13:39
+16:23:41.028 [main] DEBUG es.cursojava.oo.herencia.ejercicios.hospital.Hospital - Valeria Robinson ha sido atendido por Xander Díaz
+16:23:41.028 [main] DEBUG es.cursojava.oo.herencia.ejercicios.hospital.Hospital - Mateo Anderson ha sido atendido por Valeria Barrios
+16:23:41.028 [main] DEBUG es.cursojava.oo.herencia.ejercicios.hospital.Hospital - Noah Iglesias ha sido atendido por Henry Urbina
+16:23:41.028 [main] DEBUG es.cursojava.oo.herencia.ejercicios.hospital.Hospital - Zacarías Fernández ha sido atendido por Valeria Barrios
+16:23:41.028 [main] DEBUG es.cursojava.oo.herencia.ejercicios.hospital.Hospital - Queralt Díaz ha sido atendido por Zacarías Brown
+16:23:41.029 [main] DEBUG es.cursojava.oo.herencia.ejercicios.hospital.Hospital - Olivia Santos ha sido atendido por Charlie Xavier
+16:29:06.729 [main] DEBUG es.cursojava.oo.herencia.ejercicios.hospital.Hospital - Fichando empleados
+16:29:06.732 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.EmpleadosHospital - El empleado Noah Young está fichando al turno de mañana
+16:29:06.732 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.EmpleadosHospital - El empleado Lucía Luna está fichando al turno de tarde
+16:29:06.732 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.EmpleadosHospital - El empleado Dolores Quinn está fichando al turno de noche
+16:29:06.732 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.EmpleadosHospital - El empleado Charlie Garcia está fichando al turno de noche
+16:29:06.733 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.EmpleadosHospital - El empleado Alice Davis está fichando al turno de mañana
+16:29:06.733 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.EmpleadosHospital - El empleado Sergio Taylor está fichando al turno de tarde
+16:29:06.733 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.EmpleadosHospital - El empleado Paul Parker está fichando al turno de mañana
+16:29:06.733 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.EmpleadosHospital - El empleado Rachel Foster está fichando al turno de noche
+16:29:06.733 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.EmpleadosHospital - El empleado Quinn Quinn está fichando al turno de mañana
+16:29:06.733 [main] DEBUG es.cursojava.oo.herencia.ejercicios.hospital.Hospital - Hora de comer
+16:29:06.736 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Paciente - Natalia Xavier está comiendo en la cafetería a las 13:29
+16:29:06.736 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Paciente - Yago Quijano está comiendo en la cafetería a las 13:38
+16:29:06.736 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Paciente - Mateo King está comiendo en la cafetería a las 13:18
+16:29:06.736 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Paciente - Mia Keller está comiendo en la cafetería a las 13:44
+16:29:06.736 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Paciente - Fernanda Robinson está comiendo en la cafetería a las 13:45
+16:29:06.736 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Paciente - Alejandro Alonso está comiendo en la cafetería a las 13:42
+16:29:06.736 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Paciente - Carmen Zamora está comiendo en la cafetería a las 13:31
+16:29:06.736 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Paciente - Fernanda Parker está comiendo en la cafetería a las 13:46
+16:29:06.737 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Paciente - Zoe Nelson está comiendo en la cafetería a las 13:34
+16:29:06.737 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Paciente - Olivia Ximénez está comiendo en la cafetería a las 13:34
+16:29:06.737 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Paciente - Lucía Díaz está comiendo en la cafetería a las 13:45
+16:29:06.737 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Paciente - Raúl Vargas está comiendo en la cafetería a las 13:12
+16:29:06.737 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Paciente - Guillermo Foster está comiendo en la cafetería a las 13:49
+16:29:06.737 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Paciente - Fernanda Oliver está comiendo en la cafetería a las 13:46
+16:29:06.737 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Paciente - Mia Torres está comiendo en la cafetería a las 13:54
+16:29:06.737 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Paciente - Dolores Zimmerman está comiendo en la cafetería a las 13:18
+16:29:06.737 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Paciente - Helena Wenceslao está comiendo en la cafetería a las 13:35
+16:29:06.737 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Paciente - Pilar Torres está comiendo en la cafetería a las 13:31
+16:29:06.737 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Paciente - Daniel Pérez está comiendo en la cafetería a las 13:34
+16:29:06.737 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Paciente - Rachel Pérez está comiendo en la cafetería a las 13:55
+16:29:06.737 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Paciente - Helena Garcia está comiendo en la cafetería a las 13:43
+16:29:06.737 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Paciente - Henry Smith está comiendo en la cafetería a las 13:30
+16:29:06.737 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Paciente - Mateo Zamora está comiendo en la cafetería a las 13:58
+16:29:06.737 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Paciente - Daniel Young está comiendo en la cafetería a las 13:25
+16:29:06.738 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.EmpleadosHospital - El empleado Noah Young está comiendo en el comedor a las 13:45
+16:29:06.738 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.EmpleadosHospital - El empleado Lucía Luna está comiendo en el comedor a las 13:44
+16:29:06.738 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.EmpleadosHospital - El empleado Dolores Quinn está comiendo en el comedor a las 13:30
+16:29:06.738 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.EmpleadosHospital - El empleado Charlie Garcia está comiendo en el comedor a las 13:17
+16:29:06.738 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.EmpleadosHospital - El empleado Alice Davis está comiendo en el comedor a las 13:20
+16:29:06.738 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.EmpleadosHospital - El empleado Sergio Taylor está comiendo en el comedor a las 13:15
+16:29:06.738 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.EmpleadosHospital - El empleado Paul Parker está comiendo en el comedor a las 13:44
+16:29:06.738 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.EmpleadosHospital - El empleado Rachel Foster está comiendo en el comedor a las 13:17
+16:29:06.738 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.EmpleadosHospital - El empleado Quinn Quinn está comiendo en el comedor a las 13:59
+16:29:06.738 [main] DEBUG es.cursojava.oo.herencia.ejercicios.hospital.Hospital - Natalia Xavier ha sido atendido por Noah Young
+16:29:06.738 [main] DEBUG es.cursojava.oo.herencia.ejercicios.hospital.Hospital - Yago Quijano ha sido atendido por Lucía Luna
+16:29:06.738 [main] DEBUG es.cursojava.oo.herencia.ejercicios.hospital.Hospital - Mateo King ha sido atendido por Dolores Quinn
+16:29:06.738 [main] DEBUG es.cursojava.oo.herencia.ejercicios.hospital.Hospital - Mia Keller ha sido atendido por Charlie Garcia
+16:29:06.739 [main] DEBUG es.cursojava.oo.herencia.ejercicios.hospital.Hospital - Fernanda Robinson ha sido atendido por Alice Davis
+16:29:06.739 [main] DEBUG es.cursojava.oo.herencia.ejercicios.hospital.Hospital - Alejandro Alonso ha sido atendido por Sergio Taylor
+16:29:06.739 [main] DEBUG es.cursojava.oo.herencia.ejercicios.hospital.Hospital - Carmen Zamora ha sido atendido por Noah Young
+16:29:06.739 [main] DEBUG es.cursojava.oo.herencia.ejercicios.hospital.Hospital - Fernanda Parker ha sido atendido por Lucía Luna
+16:29:06.739 [main] DEBUG es.cursojava.oo.herencia.ejercicios.hospital.Hospital - Zoe Nelson ha sido atendido por Dolores Quinn
+16:29:06.739 [main] DEBUG es.cursojava.oo.herencia.ejercicios.hospital.Hospital - Olivia Ximénez ha sido atendido por Charlie Garcia
+16:29:06.739 [main] DEBUG es.cursojava.oo.herencia.ejercicios.hospital.Hospital - Lucía Díaz ha sido atendido por Alice Davis
+16:29:06.739 [main] DEBUG es.cursojava.oo.herencia.ejercicios.hospital.Hospital - Raúl Vargas ha sido atendido por Sergio Taylor
+16:29:06.739 [main] DEBUG es.cursojava.oo.herencia.ejercicios.hospital.Hospital - Guillermo Foster ha sido atendido por Noah Young
+16:29:06.739 [main] DEBUG es.cursojava.oo.herencia.ejercicios.hospital.Hospital - Fernanda Oliver ha sido atendido por Lucía Luna
+16:29:06.739 [main] DEBUG es.cursojava.oo.herencia.ejercicios.hospital.Hospital - Mia Torres ha sido atendido por Dolores Quinn
+16:29:06.739 [main] DEBUG es.cursojava.oo.herencia.ejercicios.hospital.Hospital - Dolores Zimmerman ha sido atendido por Charlie Garcia
+16:29:06.739 [main] DEBUG es.cursojava.oo.herencia.ejercicios.hospital.Hospital - Helena Wenceslao ha sido atendido por Alice Davis
+16:29:06.739 [main] DEBUG es.cursojava.oo.herencia.ejercicios.hospital.Hospital - Pilar Torres ha sido atendido por Sergio Taylor
+16:29:06.739 [main] DEBUG es.cursojava.oo.herencia.ejercicios.hospital.Hospital - Daniel Pérez ha sido atendido por Noah Young
+16:29:06.739 [main] DEBUG es.cursojava.oo.herencia.ejercicios.hospital.Hospital - Rachel Pérez ha sido atendido por Lucía Luna
+16:29:06.740 [main] DEBUG es.cursojava.oo.herencia.ejercicios.hospital.Hospital - Helena Garcia ha sido atendido por Dolores Quinn
+16:29:06.740 [main] DEBUG es.cursojava.oo.herencia.ejercicios.hospital.Hospital - Henry Smith ha sido atendido por Charlie Garcia
+16:29:06.740 [main] DEBUG es.cursojava.oo.herencia.ejercicios.hospital.Hospital - Mateo Zamora ha sido atendido por Alice Davis
+16:29:06.740 [main] DEBUG es.cursojava.oo.herencia.ejercicios.hospital.Hospital - Daniel Young ha sido atendido por Sergio Taylor
