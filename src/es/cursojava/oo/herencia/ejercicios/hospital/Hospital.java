@@ -131,7 +131,17 @@ public class Hospital {
 				enfermos[i] = enfermo;
 				log.warn("Al paciente " + atendidos[i].getNombre() + 
 						" se le diagnosticó " + enfermos[i].getEnfermedad());
-				
+				for (int j = 0; j < habitaciones.length; j++) {
+					if(habitaciones[j].isLibre()) {
+						Habitacion habitacion = new Habitacion();
+						habitacion.setEnfermo(enfermo);
+						habitaciones[j] = habitacion;
+						log.info(atendidos[i].getNombre() + " tiene ahora habitación");
+						break;
+					} else {
+						log.info("La habitación está ocupada");
+					}
+				}
 			} else {
 				log.info("El paciente " + atendidos[i].getNombre() + " está sano");
 			}

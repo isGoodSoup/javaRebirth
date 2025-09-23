@@ -27,4 +27,8 @@ public class Habitacion {
 	public void setEnfermo(Enfermo enfermo) {
 		this.enfermo = enfermo;
 	}
+	
+	public boolean isLibre() {
+		return enfermo == null;
+	}
 }
