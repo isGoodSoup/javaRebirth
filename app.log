@@ -21013,3 +21013,116 @@
 18:24:01.621 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Hospital - Lucía Taylor tiene ahora habitación
 18:24:01.621 [main] DEBUG es.cursojava.oo.herencia.ejercicios.hospital.Hospital - Eduardo Davis ha sido atendido por Isla Barrios
 18:24:01.621 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Hospital - El paciente Eduardo Davis está sano
+01:30:41.156 [main] DEBUG es.cursojava.oo.herencia.ejercicios.hospital.Hospital - Fichando empleados
+01:30:41.158 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.EmpleadosHospital - El empleado Jimena Anderson está fichando al turno de mañana
+01:30:41.158 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.EmpleadosHospital - El empleado Daniel Luna está fichando al turno de mañana
+01:30:41.158 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.EmpleadosHospital - El empleado Oscar Garcia está fichando al turno de tarde
+01:30:41.158 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.EmpleadosHospital - El empleado Liam Taylor está fichando al turno de noche
+01:30:41.158 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.EmpleadosHospital - El empleado Guillermo Torres está fichando al turno de noche
+01:30:41.158 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.EmpleadosHospital - El empleado Thomas Quijano está fichando al turno de tarde
+01:30:41.158 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.EmpleadosHospital - El empleado Yasmin Esparza está fichando al turno de tarde
+01:30:41.158 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.EmpleadosHospital - El empleado Victor Smith está fichando al turno de mañana
+01:30:41.158 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.EmpleadosHospital - El empleado Ursula Navarro está fichando al turno de tarde
+01:30:41.158 [main] DEBUG es.cursojava.oo.herencia.ejercicios.hospital.Hospital - Hora de comer
+01:30:41.160 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Paciente - Yasmin Xavier está comiendo en la cafetería a las 13:43
+01:30:41.160 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Paciente - Pilar Ximénez está comiendo en la cafetería a las 13:48
+01:30:41.160 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Paciente - Noah Keller está comiendo en la cafetería a las 13:38
+01:30:41.160 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Paciente - Xander Ortiz está comiendo en la cafetería a las 13:58
+01:30:41.160 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Paciente - Jimena Quijano está comiendo en la cafetería a las 13:12
+01:30:41.160 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Paciente - Olivia Navarro está comiendo en la cafetería a las 13:42
+01:30:41.160 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Paciente - Paul King está comiendo en la cafetería a las 13:31
+01:30:41.160 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Paciente - Jack Díaz está comiendo en la cafetería a las 13:34
+01:30:41.161 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Paciente - Ignacio Alonso está comiendo en la cafetería a las 13:38
+01:30:41.161 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Paciente - Zacarías Davis está comiendo en la cafetería a las 13:47
+01:30:41.161 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Paciente - Sergio Esparza está comiendo en la cafetería a las 13:19
+01:30:41.161 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Paciente - Lucía Vargas está comiendo en la cafetería a las 13:39
+01:30:41.161 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Paciente - Karen King está comiendo en la cafetería a las 13:59
+01:30:41.161 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Paciente - Ximena Smith está comiendo en la cafetería a las 13:48
+01:30:41.161 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Paciente - Alice Garcia está comiendo en la cafetería a las 13:54
+01:30:41.161 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Paciente - Mateo Parker está comiendo en la cafetería a las 13:16
+01:30:41.161 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Paciente - Xander Robinson está comiendo en la cafetería a las 13:11
+01:30:41.161 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Paciente - Grace Santos está comiendo en la cafetería a las 13:21
+01:30:41.161 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Paciente - Oscar Garcia está comiendo en la cafetería a las 13:44
+01:30:41.161 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Paciente - Zoe Valentine está comiendo en la cafetería a las 13:55
+01:30:41.161 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Paciente - Grace Harris está comiendo en la cafetería a las 13:17
+01:30:41.161 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Paciente - Mia Alonso está comiendo en la cafetería a las 13:43
+01:30:41.161 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Paciente - Sophie Walker está comiendo en la cafetería a las 13:52
+01:30:41.161 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Paciente - Ben Walker está comiendo en la cafetería a las 13:21
+01:30:41.161 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.EmpleadosHospital - El empleado Jimena Anderson está comiendo en el comedor a las 13:22
+01:30:41.161 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.EmpleadosHospital - El empleado Daniel Luna está comiendo en el comedor a las 13:32
+01:30:41.161 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.EmpleadosHospital - El empleado Oscar Garcia está comiendo en el comedor a las 13:14
+01:30:41.161 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.EmpleadosHospital - El empleado Liam Taylor está comiendo en el comedor a las 13:50
+01:30:41.161 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.EmpleadosHospital - El empleado Guillermo Torres está comiendo en el comedor a las 13:23
+01:30:41.161 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.EmpleadosHospital - El empleado Thomas Quijano está comiendo en el comedor a las 13:20
+01:30:41.161 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.EmpleadosHospital - El empleado Yasmin Esparza está comiendo en el comedor a las 13:44
+01:30:41.161 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.EmpleadosHospital - El empleado Victor Smith está comiendo en el comedor a las 13:22
+01:30:41.161 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.EmpleadosHospital - El empleado Ursula Navarro está comiendo en el comedor a las 13:58
+01:30:41.168 [main] DEBUG es.cursojava.oo.herencia.ejercicios.hospital.Hospital - Yasmin Xavier ha sido atendido por Jimena Anderson
+01:30:41.168 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Hospital - El paciente Yasmin Xavier está sano
+01:30:41.168 [main] DEBUG es.cursojava.oo.herencia.ejercicios.hospital.Hospital - Pilar Ximénez ha sido atendido por Daniel Luna
+01:30:41.169 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Hospital - El paciente Pilar Ximénez está sano
+01:30:41.169 [main] DEBUG es.cursojava.oo.herencia.ejercicios.hospital.Hospital - Noah Keller ha sido atendido por Oscar Garcia
+01:30:41.169 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Hospital - El paciente Noah Keller está sano
+01:30:41.169 [main] DEBUG es.cursojava.oo.herencia.ejercicios.hospital.Hospital - Xander Ortiz ha sido atendido por Liam Taylor
+01:30:41.169 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Hospital - El paciente Xander Ortiz está sano
+01:30:41.169 [main] DEBUG es.cursojava.oo.herencia.ejercicios.hospital.Hospital - Jimena Quijano ha sido atendido por Guillermo Torres
+01:30:41.169 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Hospital - El paciente Jimena Quijano está sano
+01:30:41.169 [main] DEBUG es.cursojava.oo.herencia.ejercicios.hospital.Hospital - Olivia Navarro ha sido atendido por Thomas Quijano
+01:30:41.169 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Hospital - El paciente Olivia Navarro está sano
+01:30:41.169 [main] DEBUG es.cursojava.oo.herencia.ejercicios.hospital.Hospital - Paul King ha sido atendido por Jimena Anderson
+01:30:41.169 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Hospital - El paciente Paul King está sano
+01:30:41.169 [main] DEBUG es.cursojava.oo.herencia.ejercicios.hospital.Hospital - Jack Díaz ha sido atendido por Daniel Luna
+01:30:41.169 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Hospital - El paciente Jack Díaz está sano
+01:30:41.169 [main] DEBUG es.cursojava.oo.herencia.ejercicios.hospital.Hospital - Ignacio Alonso ha sido atendido por Oscar Garcia
+01:30:41.169 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Hospital - El paciente Ignacio Alonso está sano
+01:30:41.169 [main] DEBUG es.cursojava.oo.herencia.ejercicios.hospital.Hospital - Zacarías Davis ha sido atendido por Liam Taylor
+01:30:41.169 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Hospital - El paciente Zacarías Davis está sano
+01:30:41.169 [main] DEBUG es.cursojava.oo.herencia.ejercicios.hospital.Hospital - Sergio Esparza ha sido atendido por Guillermo Torres
+01:30:41.169 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Hospital - El paciente Sergio Esparza está sano
+01:30:41.169 [main] DEBUG es.cursojava.oo.herencia.ejercicios.hospital.Hospital - Lucía Vargas ha sido atendido por Thomas Quijano
+01:30:41.169 [main] WARN  es.cursojava.oo.herencia.ejercicios.hospital.Hospital - Al paciente Lucía Vargas se le diagnosticó lupus
+01:30:41.169 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Hospital - Lucía Vargas tiene ahora habitación
+01:30:41.170 [main] DEBUG es.cursojava.oo.herencia.ejercicios.hospital.Hospital - Karen King ha sido atendido por Jimena Anderson
+01:30:41.170 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Hospital - El paciente Karen King está sano
+01:30:41.170 [main] DEBUG es.cursojava.oo.herencia.ejercicios.hospital.Hospital - Ximena Smith ha sido atendido por Daniel Luna
+01:30:41.170 [main] WARN  es.cursojava.oo.herencia.ejercicios.hospital.Hospital - Al paciente Ximena Smith se le diagnosticó muerte
+01:30:41.170 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Hospital - La habitación está ocupada
+01:30:41.170 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Hospital - Ximena Smith tiene ahora habitación
+01:30:41.170 [main] DEBUG es.cursojava.oo.herencia.ejercicios.hospital.Hospital - Alice Garcia ha sido atendido por Oscar Garcia
+01:30:41.170 [main] WARN  es.cursojava.oo.herencia.ejercicios.hospital.Hospital - Al paciente Alice Garcia se le diagnosticó chron
+01:30:41.170 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Hospital - La habitación está ocupada
+01:30:41.170 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Hospital - La habitación está ocupada
+01:30:41.170 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Hospital - Alice Garcia tiene ahora habitación
+01:30:41.170 [main] DEBUG es.cursojava.oo.herencia.ejercicios.hospital.Hospital - Mateo Parker ha sido atendido por Liam Taylor
+01:30:41.170 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Hospital - El paciente Mateo Parker está sano
+01:30:41.170 [main] DEBUG es.cursojava.oo.herencia.ejercicios.hospital.Hospital - Xander Robinson ha sido atendido por Guillermo Torres
+01:30:41.170 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Hospital - El paciente Xander Robinson está sano
+01:30:41.170 [main] DEBUG es.cursojava.oo.herencia.ejercicios.hospital.Hospital - Grace Santos ha sido atendido por Thomas Quijano
+01:30:41.170 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Hospital - El paciente Grace Santos está sano
+01:30:41.170 [main] DEBUG es.cursojava.oo.herencia.ejercicios.hospital.Hospital - Oscar Garcia ha sido atendido por Jimena Anderson
+01:30:41.170 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Hospital - El paciente Oscar Garcia está sano
+01:30:41.170 [main] DEBUG es.cursojava.oo.herencia.ejercicios.hospital.Hospital - Zoe Valentine ha sido atendido por Daniel Luna
+01:30:41.170 [main] WARN  es.cursojava.oo.herencia.ejercicios.hospital.Hospital - Al paciente Zoe Valentine se le diagnosticó gripe
+01:30:41.170 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Hospital - La habitación está ocupada
+01:30:41.170 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Hospital - La habitación está ocupada
+01:30:41.170 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Hospital - La habitación está ocupada
+01:30:41.170 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Hospital - Zoe Valentine tiene ahora habitación
+01:30:41.170 [main] DEBUG es.cursojava.oo.herencia.ejercicios.hospital.Hospital - Grace Harris ha sido atendido por Oscar Garcia
+01:30:41.170 [main] WARN  es.cursojava.oo.herencia.ejercicios.hospital.Hospital - Al paciente Grace Harris se le diagnosticó chron
+01:30:41.170 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Hospital - La habitación está ocupada
+01:30:41.170 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Hospital - La habitación está ocupada
+01:30:41.170 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Hospital - La habitación está ocupada
+01:30:41.170 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Hospital - La habitación está ocupada
+01:30:41.170 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Hospital - Grace Harris tiene ahora habitación
+01:30:41.170 [main] DEBUG es.cursojava.oo.herencia.ejercicios.hospital.Hospital - Mia Alonso ha sido atendido por Liam Taylor
+01:30:41.170 [main] WARN  es.cursojava.oo.herencia.ejercicios.hospital.Hospital - Al paciente Mia Alonso se le diagnosticó gripe aviar
+01:30:41.170 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Hospital - La habitación está ocupada
+01:30:41.170 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Hospital - La habitación está ocupada
+01:30:41.170 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Hospital - La habitación está ocupada
+01:30:41.170 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Hospital - La habitación está ocupada
+01:30:41.170 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Hospital - La habitación está ocupada
+01:30:41.170 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Hospital - Mia Alonso tiene ahora habitación
+01:30:41.170 [main] DEBUG es.cursojava.oo.herencia.ejercicios.hospital.Hospital - Sophie Walker ha sido atendido por Guillermo Torres
+01:30:41.170 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Hospital - El paciente Sophie Walker está sano
+01:30:41.170 [main] DEBUG es.cursojava.oo.herencia.ejercicios.hospital.Hospital - Ben Walker ha sido atendido por Thomas Quijano
+01:30:41.170 [main] INFO  es.cursojava.oo.herencia.ejercicios.hospital.Hospital - El paciente Ben Walker está sano
