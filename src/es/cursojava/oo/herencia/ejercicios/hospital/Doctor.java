@@ -7,7 +7,7 @@ import org.slf4j.LoggerFactory;
 
 public class Doctor extends EmpleadosHospital {
 	private String especialidad;
-	private static final Random r = new Random();
+	private final static Random r = new Random();
 	private final static Logger log = LoggerFactory.getLogger(Doctor.class);
 	
 	public Doctor() {}
