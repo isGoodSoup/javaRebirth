@@ -125,6 +125,7 @@ public class Hospital {
 				for (int j = 0; j < atendidos.length; j++) {
 					Enfermo enfermo = new Enfermo(atendidos[i].getNombre(), 
 							atendidos[i].getEdad(), enfermos[i].enfermedadAleatoria());
+					enfermos[i] = enfermo;
 					log.warn("Al paciente " + atendidos[i].getNombre() + " se le diagnosticó " + enfermos[i].getEnfermedad());
 					
 				}
