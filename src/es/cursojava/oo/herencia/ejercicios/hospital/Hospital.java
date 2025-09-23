@@ -12,6 +12,7 @@ public class Hospital {
 	private Habitacion[] habitaciones;
 	private Paciente[] salaDeEspera;
 	private Paciente[] atendidos;
+	private Enfermo[] enfermos;
 	private Enfermero[] enfermeros;
 	private Doctor[] doctores;
 	private final static Random r = new Random();
@@ -112,14 +113,23 @@ public class Hospital {
 	
 	public void pasarConsultas() {
 		atendidos = new Paciente[salaDeEspera.length];
+		enfermos = new Enfermo[salaDeEspera.length];
 		for (int i = 0; i < salaDeEspera.length; i++) {
 			Enfermero enfermeroAsignado = enfermeros[i % enfermeros.length];
 			Doctor doctorAsignado = doctores[i % doctores.length];
 			atendidos[i] = salaDeEspera[i];
-			log.debug(salaDeEspera[i].getNombre() + " ha sido atendido por " + enfermeroAsignado.getNombre());
+			log.debug(salaDeEspera[i].getNombre() + " ha sido atendido por " 
+			+ enfermeroAsignado.getNombre());
 			salaDeEspera[i] = null;
-			if(doctores[i].diagnosticarPaciente(atendidos[i])) {
-				
+			if(doctorAsignado.diagnosticarPaciente(atendidos[i])) {
+				for (int j = 0; j < atendidos.length; j++) {
+					Enfermo enfermo = new Enfermo(atendidos[i].getNombre(), 
+							atendidos[i].getEdad(), enfermos[i].enfermedadAleatoria());
+					log.warn("Al paciente " + atendidos[i].getNombre() + " se le diagnosticó " + enfermos[i].getEnfermedad());
+					
+				}
+			} else {
+				log.info("El/la paciente " + atendidos[i].getNombre() + " está sano/a");
 			}
 		}
 		
