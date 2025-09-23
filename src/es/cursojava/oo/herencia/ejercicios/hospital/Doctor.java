@@ -28,7 +28,7 @@ public class Doctor extends EmpleadosHospital {
 	public boolean diagnosticarPaciente(Paciente paciente) {
 		int num = r.nextInt(10) + 1;
 		if(num > 8) {
-			log.debug(super.getNombre() + " está enfermo");
+			log.trace(super.getNombre() + " está enfermo");
 			return true;
 		}
 		return false;

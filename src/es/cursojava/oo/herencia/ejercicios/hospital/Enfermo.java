@@ -38,7 +38,7 @@ public class Enfermo extends Persona {
 		String[] enfermedades = {"covid-22", "muerte", "sifilis", "sida", 
 				"gripe aviar", "cáncer", "linfoma", "chron", "cáncer de páncreas", 
 				"rabia", "fiebre", "lupus", "gripe", "insuficiencia renal", "ligma"};
-		String enf = enfermedades[r.nextInt()];
+		String enf = enfermedades[r.nextInt(enfermedades.length)];
 		return enf;
 	}
 }

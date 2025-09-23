@@ -119,18 +119,21 @@ public class Hospital {
 			Doctor doctorAsignado = doctores[i % doctores.length];
 			atendidos[i] = salaDeEspera[i];
 			log.debug(salaDeEspera[i].getNombre() + " ha sido atendido por " 
-			+ enfermeroAsignado.getNombre());
+					+ enfermeroAsignado.getNombre());
 			salaDeEspera[i] = null;
 			if(doctorAsignado.diagnosticarPaciente(atendidos[i])) {
-				for (int j = 0; j < atendidos.length; j++) {
-					Enfermo enfermo = new Enfermo(atendidos[i].getNombre(), 
-							atendidos[i].getEdad(), enfermos[i].enfermedadAleatoria());
-					enfermos[i] = enfermo;
-					log.warn("Al paciente " + atendidos[i].getNombre() + " se le diagnosticó " + enfermos[i].getEnfermedad());
-					
-				}
+//				for (int j = 0; j < atendidos.length; j++) {
+//					
+//				}
+				Enfermo temp = new Enfermo();
+				String enfermedad = temp.enfermedadAleatoria();
+				Enfermo enfermo = new Enfermo(enfermedad);
+				enfermos[i] = enfermo;
+				log.warn("Al paciente " + atendidos[i].getNombre() + 
+						" se le diagnosticó " + enfermos[i].getEnfermedad());
+				
 			} else {
-				log.info("El/la paciente " + atendidos[i].getNombre() + " está sano/a");
+				log.info("El paciente " + atendidos[i].getNombre() + " está sano");
 			}
 		}
 		
