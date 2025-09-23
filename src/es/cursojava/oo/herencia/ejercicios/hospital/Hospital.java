@@ -114,9 +114,13 @@ public class Hospital {
 		atendidos = new Paciente[salaDeEspera.length];
 		for (int i = 0; i < salaDeEspera.length; i++) {
 			Enfermero enfermeroAsignado = enfermeros[i % enfermeros.length];
+			Doctor doctorAsignado = doctores[i % doctores.length];
 			atendidos[i] = salaDeEspera[i];
 			log.debug(salaDeEspera[i].getNombre() + " ha sido atendido por " + enfermeroAsignado.getNombre());
 			salaDeEspera[i] = null;
+			if(doctores[i].diagnosticarPaciente(atendidos[i])) {
+				
+			}
 		}
 		
 	}
