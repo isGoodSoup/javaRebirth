@@ -5,6 +5,8 @@ import java.util.Random;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import es.cursojava.utils.RandomArray;
+
 public class Enfermo extends Persona {
 	private String enfermedad;
 	private final static Random r = new Random();
@@ -38,7 +40,6 @@ public class Enfermo extends Persona {
 		String[] enfermedades = {"covid-22", "muerte", "sifilis", "sida", 
 				"gripe aviar", "cáncer", "linfoma", "chron", "cáncer de páncreas", 
 				"rabia", "fiebre", "lupus", "gripe", "insuficiencia renal", "ligma"};
-		String enf = enfermedades[r.nextInt(enfermedades.length)];
-		return enf;
+		return RandomArray.toGetString(enfermedades);
 	}
 }
