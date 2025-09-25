@@ -33,4 +33,8 @@ public class Doctor extends EmpleadosHospital {
 		}
 		return false;
 	}
+	
+	public void cobrar() {
+		log.info("El doctor, " + super.getNombre() + " está cobrando");
+	}
 }

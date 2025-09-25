@@ -1,7 +1,11 @@
 package es.cursojava.oo.herencia.ejercicios.hospital;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 public class Enfermero extends EmpleadosHospital {
 	private int planta;
+	private final static Logger log = LoggerFactory.getLogger(Enfermero.class);
 	
 	public Enfermero() {}
 	
@@ -16,6 +20,10 @@ public class Enfermero extends EmpleadosHospital {
 
 	public void setPlanta(int planta) {
 		this.planta = planta;
+	}
+	
+	public void cobrar() {
+		log.info("El sanitario, " + super.getNombre() + " está cobrando");
 	}
 
 	public void atenderPaciente() {}

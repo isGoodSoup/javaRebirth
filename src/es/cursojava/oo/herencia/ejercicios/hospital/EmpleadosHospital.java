@@ -5,7 +5,7 @@ import java.util.Random;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class EmpleadosHospital extends Persona {
+public abstract class EmpleadosHospital extends Persona {
 	private String turno;
 	private final static Random r = new Random();
 	private final static Logger log = LoggerFactory.getLogger(EmpleadosHospital.class);
@@ -36,6 +36,8 @@ public class EmpleadosHospital extends Persona {
 	public void comer() {
 		log.info("El empleado " + super.getNombre() + " está comiendo en el comedor a las 13:" + minutos());
 	}
+	
+	public abstract void cobrar();
 
 	public String turnoAleatorio() {
 		String[] turnos = {"mañana", "tarde", "noche"};

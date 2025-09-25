@@ -24,6 +24,7 @@ public class Hospital {
 		hospital.ficharEmpleados();
 		hospital.horaDeComer();
 		hospital.pasarConsultas();
+		hospital.horaDeCobrar();
 	}
 	
 	public Hospital() {}
@@ -147,5 +148,16 @@ public class Hospital {
 			}
 		}
 		
+	}
+	
+	public void horaDeCobrar() {
+		log.debug("Hora de cobrar");
+		for (Enfermero e : enfermeros) {
+			e.cobrar();
+		}
+		
+		for (Doctor d : doctores) {
+			d.cobrar();
+		}
 	}
 }
