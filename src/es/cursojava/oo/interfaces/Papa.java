@@ -1,7 +1,4 @@
-package es.cursojava.notas;
-
-import es.cursojava.oo.interfaces.Alpha;
-import es.cursojava.oo.interfaces.Bravo;
+package es.cursojava.oo.interfaces;
 
 public class Papa {
 	public static void main(String[] args) {
