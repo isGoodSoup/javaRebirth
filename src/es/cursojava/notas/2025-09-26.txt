@@ -1,0 +1,11 @@
+Interfaces de Java
+Se usan para determinar que las clases tengan una funcionalidad.
+
+¿Qué tiene una interfaz?
+Métodos abstractos, variables estáticas y finales, aunque no lo 
+pongamos.
+
+La clase que implemente una interfaz está obligada a sobreescribir 
+los métodos de la interfaz.
+
+Las variables estáticas finales se escriben en mayúscula.
