@@ -11,4 +11,9 @@ los métodos de la interfaz.
 Las variables estáticas finales se escriben en mayúscula.
 
 Sintaxis: public class Clase implements Interfaz
-Las interfaces pueden usar herencia también.
+Las interfaces pueden usar herencia y herencia múltiple.
+
+Los objetos tendrán la funcionalidad de las clases.
+
+¿Como se representa?
+Te obliga a tener los métodos.
