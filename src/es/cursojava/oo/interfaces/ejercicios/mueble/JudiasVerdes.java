@@ -2,7 +2,7 @@ package es.cursojava.oo.interfaces.ejercicios.mueble;
 
 public class JudiasVerdes extends Verdura {
 	private boolean tieneVaina;
-
+	
 	public JudiasVerdes(String procedencia, boolean tieneVaina) {
 		super(procedencia);
 		this.tieneVaina = tieneVaina;
