@@ -10,6 +10,8 @@ public class Papa {
 		
 		Bravo b = new Alpha();
 		Bravo[] objetos = {alpha};
+		
+		metodo5(b);
 	}
 	
 	public static void metodo5(Bravo bravo) {
