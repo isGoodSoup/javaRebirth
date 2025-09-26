@@ -17,3 +17,8 @@ Los objetos tendrán la funcionalidad de las clases.
 
 ¿Como se representa?
 Te obliga a tener los métodos.
+
+La clase esté implementando la interfaz para que se pueda igualar 
+a la clase objeto.
+
+Se pueden generar arrays, por lo tanto, de tipo interfaz.

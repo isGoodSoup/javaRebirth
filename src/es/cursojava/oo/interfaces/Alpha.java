@@ -1,9 +1,15 @@
 package es.cursojava.oo.interfaces;
 
 public class Alpha implements Bravo {
-	
+
 	@Override
-	public int metodo2() {
+	public void metodo2(String nombre) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public int metodo3() {
 		// TODO Auto-generated method stub
 		return 0;
 	}
