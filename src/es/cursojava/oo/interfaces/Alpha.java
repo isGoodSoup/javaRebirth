@@ -1,6 +1,6 @@
 package es.cursojava.oo.interfaces;
 
-public class Alpha implements Bravo{
+public class Alpha implements Bravo {
 	
 	@Override
 	public int metodo2() {
