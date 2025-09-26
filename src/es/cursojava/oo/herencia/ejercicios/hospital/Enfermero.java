@@ -5,7 +5,7 @@ import org.slf4j.LoggerFactory;
 
 public class Enfermero extends EmpleadosHospital {
 	private int planta;
-	private final static Logger log = LoggerFactory.getLogger(Enfermero.class);
+	private static final Logger log = LoggerFactory.getLogger(Enfermero.class);
 	
 	public Enfermero() {}
 	

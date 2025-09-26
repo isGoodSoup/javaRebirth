@@ -15,8 +15,8 @@ public class Hospital {
 	private Enfermo[] enfermos;
 	private Enfermero[] enfermeros;
 	private Doctor[] doctores;
-	private final static Random r = new Random();
-	private final static Logger log = LoggerFactory.getLogger(Hospital.class);
+	private static final Random r = new Random();
+	private static final Logger log = LoggerFactory.getLogger(new Object() {}.getClass().getEnclosingClass());
 	
 	public static void main(String[] args) {
 		Hospital hospital = new Hospital();

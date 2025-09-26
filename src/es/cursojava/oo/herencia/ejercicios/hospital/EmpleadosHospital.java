@@ -7,8 +7,8 @@ import org.slf4j.LoggerFactory;
 
 public abstract class EmpleadosHospital extends Persona {
 	private String turno;
-	private final static Random r = new Random();
-	private final static Logger log = LoggerFactory.getLogger(EmpleadosHospital.class);
+	private static final Random r = new Random();
+	private static final Logger log = LoggerFactory.getLogger(EmpleadosHospital.class);
 	
 	public EmpleadosHospital() {}
 	

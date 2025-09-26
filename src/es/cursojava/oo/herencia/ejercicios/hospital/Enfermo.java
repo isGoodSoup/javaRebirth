@@ -9,8 +9,8 @@ import es.cursojava.utils.RandomArray;
 
 public class Enfermo extends Persona {
 	private String enfermedad;
-	private final static Random r = new Random();
-	private final static Logger log = LoggerFactory.getLogger(Enfermo.class);
+	private static final Random r = new Random();
+	private static final Logger log = LoggerFactory.getLogger(Enfermo.class);
 	
 	public Enfermo() {}
 	
