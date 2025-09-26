@@ -9,3 +9,6 @@ La clase que implemente una interfaz está obligada a sobreescribir
 los métodos de la interfaz.
 
 Las variables estáticas finales se escriben en mayúscula.
+
+Sintaxis: public class Clase implements Interfaz
+Las interfaces pueden usar herencia también.
