@@ -11,4 +11,8 @@ public class Papa {
 		Bravo b = new Alpha();
 		Bravo[] objetos = {alpha};
 	}
+	
+	public static void metodo5(Bravo bravo) {
+		bravo.metodo3();
+	}
 }
