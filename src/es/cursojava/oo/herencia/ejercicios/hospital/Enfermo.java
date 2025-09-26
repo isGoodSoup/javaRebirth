@@ -1,7 +1,5 @@
 package es.cursojava.oo.herencia.ejercicios.hospital;
 
-import java.util.Random;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -9,7 +7,6 @@ import es.cursojava.utils.RandomArray;
 
 public class Enfermo extends Persona {
 	private String enfermedad;
-	private static final Random r = new Random();
 	private static final Logger log = LoggerFactory.getLogger(Enfermo.class);
 	
 	public Enfermo() {}
