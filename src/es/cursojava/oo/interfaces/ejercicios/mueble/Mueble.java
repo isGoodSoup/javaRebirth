@@ -7,7 +7,7 @@ public abstract class Mueble implements Limpiable {
 		super();
 		this.color = color;
 	}
-
+	
 	public String getColor() {
 		return color;
 	}
@@ -17,7 +17,5 @@ public abstract class Mueble implements Limpiable {
 	}
 
 	@Override
-	public void limpiar() {
-		
-	}
+	public abstract void limpiar();
 }

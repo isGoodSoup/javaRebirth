@@ -7,6 +7,8 @@ public abstract class Verdura implements Desinfectable {
 		super();
 		this.procedencia = procedencia;
 	}
+	
+	public abstract void desinfectar();
 
 	public String getProcedencia() {
 		return procedencia;
