@@ -13,8 +13,11 @@ public class Main {
 		Desinfectable lechuga = new Lechuga("Valencia");
 		Desinfectable judias = new JudiasVerdes("Madrid", true);
 		
-		mesa.limpiar();
-		silla.limpiar();
+		Limpiable[] l = {mesa, silla, lechuga, judias};
+		
+		for (Limpiable limpiable : l) {
+			limpiable.limpiar();
+		}
 		
 		lechuga.desinfectar();
 		judias.desinfectar();

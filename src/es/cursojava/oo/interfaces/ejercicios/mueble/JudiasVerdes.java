@@ -27,6 +27,6 @@ public class JudiasVerdes extends Verdura implements Desinfectable {
 
 	@Override
 	public void limpiar() {
-		
+		log.info("Pelando y limpiando las judías verdes");
 	}
 }

@@ -23,7 +23,7 @@ public class Lechuga extends Verdura implements Desinfectable {
 
 	@Override
 	public void limpiar() {
-		
+		log.info("La lechuga se está limpiando");
 	}
 
 	public String getTipo() {
