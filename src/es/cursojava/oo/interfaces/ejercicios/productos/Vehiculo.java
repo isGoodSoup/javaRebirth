@@ -1,6 +1,6 @@
 package es.cursojava.oo.interfaces.ejercicios.productos;
 
-public abstract class Vehiculo {
+public abstract class Vehiculo extends Identificador {
 	private String nombre;
 	private int numRuedas;
 	private double precio;

@@ -6,8 +6,8 @@ public class Montahna extends Bicicleta {
 	
 	public Montahna() {}
 	
-	public Montahna(String nombre, int numRuedas, double precio, int id, int numMarchas, String marca, int numCadenas) {
-		super(nombre, numRuedas, precio, id, numMarchas);
+	public Montahna(String nombre, int numRuedas, double precio, int numMarchas, String marca, int numCadenas) {
+		super(nombre, numRuedas, precio, numMarchas);
 		this.marca = marca;
 		this.numCadenas = numCadenas;
 	}
@@ -31,6 +31,6 @@ public class Montahna extends Bicicleta {
 	@Override
 	public void createId() {
 		// TODO Auto-generated method stub
-		
+		id.createId();
 	}
 }

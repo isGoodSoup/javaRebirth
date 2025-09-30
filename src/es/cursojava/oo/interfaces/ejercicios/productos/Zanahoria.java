@@ -6,8 +6,8 @@ public class Zanahoria extends Alimentos {
 
 	public Zanahoria() {}
 	
-	public Zanahoria(int id, String fechaCaducidad, int numFrodas, String origen) {
-		super(id, fechaCaducidad);
+	public Zanahoria(String fechaCaducidad, int numFrodas, String origen) {
+		super(fechaCaducidad);
 		this.numFrodas = numFrodas;
 		this.origen = origen;
 	}
@@ -31,6 +31,6 @@ public class Zanahoria extends Alimentos {
 	@Override
 	public void createId() {
 		// TODO Auto-generated method stub
-		
+		id.createId();
 	}
 }

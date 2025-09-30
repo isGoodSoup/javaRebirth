@@ -8,24 +8,22 @@ public class Main {
 	}
 	
 	public void run() {
-		Alimentos manzana = new Manzana();
-		Alimentos baguette = new Baguette();
-		Alimentos banana = new Banana();
-		Alimentos zanahoria = new Zanahoria();
+		Capitalismo manzana = new Manzana();
+		Capitalismo baguette = new Baguette();
+		Capitalismo banana = new Banana();
+		Capitalismo zanahoria = new Zanahoria();
 		
-		Alimentos[] comida = {manzana, baguette, banana, zanahoria};
+		Capitalismo tablet = new Tablet();
+		Capitalismo movil = new Movil();
+		Capitalismo coche = new Coche();
+		Capitalismo moto = new Moto();
 		
-		Encendible tablet = new Tablet();
-		Encendible movil = new Movil();
-		Encendible coche = new Coche();
-		Encendible moto = new Moto();
-		
-		Encendible[] electronica = {tablet, movil, coche, moto};
+		Capitalismo[] electronica = {manzana, baguette, banana, zanahoria, 
+				tablet, movil, coche, moto};
 		for (int i = 0; i < electronica.length; i++) {
 			electronica[i].encender();
 			electronica[i].apagar();
+			electronica[i].createId();
 		}
-		
-		
 	}
 }

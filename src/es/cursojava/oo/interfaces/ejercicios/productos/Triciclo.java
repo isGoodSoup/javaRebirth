@@ -6,8 +6,8 @@ public class Triciclo extends Bicicleta {
 	
 	public Triciclo() {}
 	
-	public Triciclo(String nombre, int numRuedas, double precio, int id, int numMarchas, int numRuedas2, String color) {
-		super(nombre, numRuedas, precio, id, numMarchas);
+	public Triciclo(String nombre, int numRuedas, double precio, int numMarchas, int numRuedas2, String color) {
+		super(nombre, numRuedas, precio, numMarchas);
 		numRuedas = numRuedas2;
 		this.color = color;
 	}
@@ -31,6 +31,6 @@ public class Triciclo extends Bicicleta {
 	@Override
 	public void createId() {
 		// TODO Auto-generated method stub
-		
+		id.createId();
 	}
 }

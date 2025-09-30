@@ -10,8 +10,8 @@ public class Movil extends ProductosElectronicos {
 	
 	public Movil() {}
 	
-	public Movil(int id, String fechaFabricacion, int numero, String fabricaOrigen) {
-		super(id, fechaFabricacion);
+	public Movil(String fechaFabricacion, int numero, String fabricaOrigen) {
+		super(fechaFabricacion);
 		this.numero = numero;
 		this.fabricaOrigen = fabricaOrigen;
 	}
@@ -45,6 +45,6 @@ public class Movil extends ProductosElectronicos {
 	@Override
 	public void createId() {
 		// TODO Auto-generated method stub
-		
+		id.createId();
 	}
 }

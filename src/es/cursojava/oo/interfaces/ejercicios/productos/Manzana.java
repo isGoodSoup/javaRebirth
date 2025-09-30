@@ -6,8 +6,8 @@ public class Manzana extends Alimentos {
 	
 	public Manzana() {}
 	
-	public Manzana(int id, String fechaCaducidad, String color, String origen) {
-		super(id, fechaCaducidad);
+	public Manzana(String fechaCaducidad, String color, String origen) {
+		super(fechaCaducidad);
 		this.color = color;
 		this.origen = origen;
 	}
@@ -31,6 +31,6 @@ public class Manzana extends Alimentos {
 	@Override
 	public void createId() {
 		// TODO Auto-generated method stub
-		
+		id.createId();
 	}
 }

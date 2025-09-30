@@ -5,8 +5,8 @@ public class Baguette extends Alimentos {
 	
 	public Baguette() {}
 	
-	public Baguette(int id, String fechaCaducidad, String procedencia) {
-		super(id, fechaCaducidad);
+	public Baguette(String fechaCaducidad, String procedencia) {
+		super(fechaCaducidad);
 		this.procedencia = procedencia;
 	}
 
@@ -21,6 +21,6 @@ public class Baguette extends Alimentos {
 	@Override
 	public void createId() {
 		// TODO Auto-generated method stub
-		
+		id.createId();
 	}
 }

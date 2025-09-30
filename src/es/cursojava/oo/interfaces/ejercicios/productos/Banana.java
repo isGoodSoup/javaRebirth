@@ -6,8 +6,8 @@ public class Banana extends Alimentos {
 	
 	public Banana() {}
 	
-	public Banana(int id, String fechaCaducidad, double longitud, String origen) {
-		super(id, fechaCaducidad);
+	public Banana(String fechaCaducidad, double longitud, String origen) {
+		super(fechaCaducidad);
 		this.longitud = longitud;
 		this.origen = origen;
 	}
@@ -31,6 +31,6 @@ public class Banana extends Alimentos {
 	@Override
 	public void createId() {
 		// TODO Auto-generated method stub
-		
+		id.createId();
 	}
 }

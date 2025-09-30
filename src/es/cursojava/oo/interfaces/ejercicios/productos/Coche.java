@@ -10,8 +10,8 @@ public class Coche extends VehiculosMotorizado {
 	
 	public Coche() {}
 	
-	public Coche(String nombre, int numRuedas, double precio, int id, String motor, String marca, int numPuertas) {
-		super(nombre, numRuedas, precio, id, motor);
+	public Coche(String nombre, int numRuedas, double precio, String motor, String marca, int numPuertas) {
+		super(nombre, numRuedas, precio, motor);
 		this.marca = marca;
 		this.numPuertas = numPuertas;
 	}
@@ -45,6 +45,6 @@ public class Coche extends VehiculosMotorizado {
 	@Override
 	public void createId() {
 		// TODO Auto-generated method stub
-		
+		id.createId();
 	}
 }

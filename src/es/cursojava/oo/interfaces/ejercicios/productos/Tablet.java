@@ -10,8 +10,8 @@ public class Tablet extends ProductosElectronicos {
 
 	public Tablet() {}
 	
-	public Tablet(int id, String fechaFabricacion, String serial, String origen) {
-		super(id, fechaFabricacion);
+	public Tablet(String fechaFabricacion, String serial, String origen) {
+		super(fechaFabricacion);
 		this.serial = serial;
 		this.origen = origen;
 	}
@@ -45,6 +45,6 @@ public class Tablet extends ProductosElectronicos {
 	@Override
 	public void createId() {
 		// TODO Auto-generated method stub
-		
+		id.createId();
 	}
 }
