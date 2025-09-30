@@ -1,6 +1,6 @@
 package es.cursojava.oo.interfaces.ejercicios.productos;
 
-public abstract class VehiculosMotorizado extends Vehiculo {
+public abstract class VehiculosMotorizado extends Vehiculo implements Encendible, Apagable {
 	private String motor;
 
 	public VehiculosMotorizado(String nombre, int numRuedas, double precio, String motor) {

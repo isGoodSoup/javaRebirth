@@ -1,6 +1,6 @@
 package es.cursojava.oo.interfaces.ejercicios.productos;
 
-public abstract class ProductosElectronicos extends Producto {
+public abstract class ProductosElectronicos extends Producto implements Encendible, Apagable {
 	private String fechaFabricacion;
 
 	public ProductosElectronicos(String nombre, double precio, String fechaFabricacion) {
