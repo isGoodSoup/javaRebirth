@@ -21876,3 +21876,19 @@
 18:08:45.697 [main] INFO  es.cursojava.oo.interfaces.ejercicios.productos.Coche - El coche se ha apagado
 18:08:45.697 [main] INFO  es.cursojava.oo.interfaces.ejercicios.productos.Moto - La moto está encendida
 18:08:45.697 [main] INFO  es.cursojava.oo.interfaces.ejercicios.productos.Moto - La moto está apagada
+19:22:00.492 [main] INFO  es.cursojava.oo.interfaces.ejercicios.productos.Identificador - Id generado: 1516
+19:22:00.498 [main] INFO  es.cursojava.oo.interfaces.ejercicios.productos.Identificador - Id generado: 6504
+19:22:00.499 [main] INFO  es.cursojava.oo.interfaces.ejercicios.productos.Identificador - Id generado: 5416
+19:22:00.499 [main] INFO  es.cursojava.oo.interfaces.ejercicios.productos.Identificador - Id generado: 6608
+19:22:00.499 [main] INFO  es.cursojava.oo.interfaces.ejercicios.productos.Moto - La tablet está encendida
+19:22:00.499 [main] INFO  es.cursojava.oo.interfaces.ejercicios.productos.Moto - La tablet está apagada
+19:22:00.499 [main] INFO  es.cursojava.oo.interfaces.ejercicios.productos.Identificador - Id generado: 3246
+19:22:00.499 [main] INFO  es.cursojava.oo.interfaces.ejercicios.productos.Moto - El teléfono está encendido
+19:22:00.499 [main] INFO  es.cursojava.oo.interfaces.ejercicios.productos.Moto - El teléfono está apagado
+19:22:00.499 [main] INFO  es.cursojava.oo.interfaces.ejercicios.productos.Identificador - Id generado: 8768
+19:22:00.499 [main] INFO  es.cursojava.oo.interfaces.ejercicios.productos.Coche - El coche se ha encendido
+19:22:00.499 [main] INFO  es.cursojava.oo.interfaces.ejercicios.productos.Coche - El coche se ha apagado
+19:22:00.499 [main] INFO  es.cursojava.oo.interfaces.ejercicios.productos.Identificador - Id generado: 6997
+19:22:00.499 [main] INFO  es.cursojava.oo.interfaces.ejercicios.productos.Moto - La moto está encendida
+19:22:00.499 [main] INFO  es.cursojava.oo.interfaces.ejercicios.productos.Moto - La moto está apagada
+19:22:00.500 [main] INFO  es.cursojava.oo.interfaces.ejercicios.productos.Identificador - Id generado: 2696
