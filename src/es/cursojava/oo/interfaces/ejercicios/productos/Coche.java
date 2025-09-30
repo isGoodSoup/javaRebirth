@@ -4,6 +4,8 @@ public class Coche extends VehiculosMotorizado {
 	private String marca;
 	private int numPuertas;
 	
+	public Coche() {}
+	
 	public Coche(String nombre, int numRuedas, double precio, int id, String motor, String marca, int numPuertas) {
 		super(nombre, numRuedas, precio, id, motor);
 		this.marca = marca;

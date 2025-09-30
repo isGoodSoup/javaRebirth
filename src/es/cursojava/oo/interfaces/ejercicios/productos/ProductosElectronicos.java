@@ -3,7 +3,9 @@ package es.cursojava.oo.interfaces.ejercicios.productos;
 public abstract class ProductosElectronicos extends Producto implements Encendible, Apagable {
 	private int id;
 	private String fechaFabricacion;
-
+	
+	public ProductosElectronicos() {}
+	
 	public ProductosElectronicos(int id, String fechaFabricacion) {
 		super();
 		this.id = id;

@@ -3,7 +3,9 @@ package es.cursojava.oo.interfaces.ejercicios.productos;
 public abstract class VehiculosMotorizado extends Vehiculo implements Encendible, Apagable {
 	private int id;
 	private String motor;
-
+	
+	public VehiculosMotorizado() {}
+	
 	public VehiculosMotorizado(String nombre, int numRuedas, double precio, int id, String motor) {
 		super(nombre, numRuedas, precio);
 		this.id = id;

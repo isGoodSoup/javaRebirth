@@ -4,6 +4,8 @@ public class Banana extends Alimentos {
 	private double longitud;
 	private String origen;
 	
+	public Banana() {}
+	
 	public Banana(int id, String fechaCaducidad, double longitud, String origen) {
 		super(id, fechaCaducidad);
 		this.longitud = longitud;

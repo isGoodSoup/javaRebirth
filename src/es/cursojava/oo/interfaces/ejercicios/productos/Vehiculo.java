@@ -5,6 +5,8 @@ public abstract class Vehiculo {
 	private int numRuedas;
 	private double precio;
 	
+	public Vehiculo() {}
+	
 	public Vehiculo(String nombre, int numRuedas, double precio) {
 		super();
 		this.nombre = nombre;

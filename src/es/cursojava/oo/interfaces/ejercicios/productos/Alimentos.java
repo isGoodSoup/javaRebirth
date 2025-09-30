@@ -3,6 +3,8 @@ package es.cursojava.oo.interfaces.ejercicios.productos;
 public abstract class Alimentos extends Producto {
 	private int id;
 	private String fechaCaducidad;
+	
+	public Alimentos() {}
 
 	public Alimentos(int id, String fechaCaducidad) {
 		super();

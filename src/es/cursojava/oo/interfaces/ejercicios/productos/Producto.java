@@ -4,9 +4,7 @@ public abstract class Producto {
 	private String nombre;
 	private double precio;
 	
-	public Producto() {
-		
-	}
+	public Producto() {}
 	
 	public Producto(String nombre, double precio) {
 		super();

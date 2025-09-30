@@ -3,7 +3,9 @@ package es.cursojava.oo.interfaces.ejercicios.productos;
 public class Telefono extends ProductosElectronicos {
 	private int numero;
 	private String fabricaOrigen;
-
+	
+	public Telefono() {}
+	
 	public Telefono(int id, String fechaFabricacion, int numero, String fabricaOrigen) {
 		super(id, fechaFabricacion);
 		this.numero = numero;

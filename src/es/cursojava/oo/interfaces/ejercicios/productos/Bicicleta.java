@@ -3,7 +3,9 @@ package es.cursojava.oo.interfaces.ejercicios.productos;
 public abstract class Bicicleta extends Vehiculo {
 	private int id;
 	private int numMarchas;
-
+	
+	public Bicicleta() {}
+	
 	public Bicicleta(String nombre, int numRuedas, double precio, int id, int numMarchas) {
 		super(nombre, numRuedas, precio);
 		this.id = id;

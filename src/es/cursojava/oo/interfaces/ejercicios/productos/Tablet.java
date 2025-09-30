@@ -4,6 +4,8 @@ public class Tablet extends ProductosElectronicos {
 	private String serial;
 	private String origen;
 
+	public Tablet() {}
+	
 	public Tablet(int id, String fechaFabricacion, String serial, String origen) {
 		super(id, fechaFabricacion);
 		this.serial = serial;

@@ -4,6 +4,8 @@ public class Manzana extends Alimentos {
 	private String color;
 	private String origen;
 	
+	public Manzana() {}
+	
 	public Manzana(int id, String fechaCaducidad, String color, String origen) {
 		super(id, fechaCaducidad);
 		this.color = color;
