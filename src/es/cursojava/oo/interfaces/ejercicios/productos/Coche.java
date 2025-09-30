@@ -41,4 +41,10 @@ public class Coche extends VehiculosMotorizado {
 	public void apagar() {
 		log.info("El coche se ha apagado");
 	}
+
+	@Override
+	public void createId() {
+		// TODO Auto-generated method stub
+		
+	}
 }

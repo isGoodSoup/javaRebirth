@@ -21860,3 +21860,19 @@
 18:17:35.725 [main] INFO  es.cursojava.oo.interfaces.ejercicios.mueble.JudiasVerdes - Pelando y limpiando las judías verdes
 18:17:35.725 [main] INFO  es.cursojava.oo.interfaces.ejercicios.mueble.Lechuga - La lechuga de Valencia está siendo desinfectada
 18:17:35.725 [main] INFO  es.cursojava.oo.interfaces.ejercicios.mueble.JudiasVerdes - Las judías de Madridestán siendo desinfectadas
+17:48:52.479 [main] INFO  es.cursojava.oo.interfaces.ejercicios.productos.Moto - La tablet está encendida
+17:48:52.482 [main] INFO  es.cursojava.oo.interfaces.ejercicios.productos.Moto - La tablet está apagada
+17:48:52.482 [main] INFO  es.cursojava.oo.interfaces.ejercicios.productos.Moto - El teléfono está encendido
+17:48:52.482 [main] INFO  es.cursojava.oo.interfaces.ejercicios.productos.Moto - El teléfono está apagado
+17:48:52.482 [main] INFO  es.cursojava.oo.interfaces.ejercicios.productos.Coche - El coche se ha encendido
+17:48:52.482 [main] INFO  es.cursojava.oo.interfaces.ejercicios.productos.Coche - El coche se ha apagado
+17:48:52.482 [main] INFO  es.cursojava.oo.interfaces.ejercicios.productos.Moto - La moto está encendida
+17:48:52.482 [main] INFO  es.cursojava.oo.interfaces.ejercicios.productos.Moto - La moto está apagada
+18:08:45.694 [main] INFO  es.cursojava.oo.interfaces.ejercicios.productos.Moto - La tablet está encendida
+18:08:45.696 [main] INFO  es.cursojava.oo.interfaces.ejercicios.productos.Moto - La tablet está apagada
+18:08:45.696 [main] INFO  es.cursojava.oo.interfaces.ejercicios.productos.Moto - El teléfono está encendido
+18:08:45.696 [main] INFO  es.cursojava.oo.interfaces.ejercicios.productos.Moto - El teléfono está apagado
+18:08:45.697 [main] INFO  es.cursojava.oo.interfaces.ejercicios.productos.Coche - El coche se ha encendido
+18:08:45.697 [main] INFO  es.cursojava.oo.interfaces.ejercicios.productos.Coche - El coche se ha apagado
+18:08:45.697 [main] INFO  es.cursojava.oo.interfaces.ejercicios.productos.Moto - La moto está encendida
+18:08:45.697 [main] INFO  es.cursojava.oo.interfaces.ejercicios.productos.Moto - La moto está apagada

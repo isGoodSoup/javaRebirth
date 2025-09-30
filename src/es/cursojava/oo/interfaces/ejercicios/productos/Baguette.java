@@ -17,4 +17,10 @@ public class Baguette extends Alimentos {
 	public void setProcedencia(String procedencia) {
 		this.procedencia = procedencia;
 	}
+
+	@Override
+	public void createId() {
+		// TODO Auto-generated method stub
+		
+	}
 }

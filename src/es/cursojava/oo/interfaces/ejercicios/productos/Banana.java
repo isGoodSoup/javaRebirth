@@ -27,4 +27,10 @@ public class Banana extends Alimentos {
 	public void setOrigen(String origen) {
 		this.origen = origen;
 	}
+
+	@Override
+	public void createId() {
+		// TODO Auto-generated method stub
+		
+	}
 }

@@ -41,4 +41,10 @@ public class Movil extends ProductosElectronicos {
 	public void apagar() {
 		log.info("El teléfono está apagado");
 	}
+
+	@Override
+	public void createId() {
+		// TODO Auto-generated method stub
+		
+	}
 }

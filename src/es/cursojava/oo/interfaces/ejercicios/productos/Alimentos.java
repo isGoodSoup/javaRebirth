@@ -1,6 +1,6 @@
 package es.cursojava.oo.interfaces.ejercicios.productos;
 
-public abstract class Alimentos extends Producto {
+public abstract class Alimentos extends Producto implements Capitalismo {
 	private int id;
 	private String fechaCaducidad;
 	

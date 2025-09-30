@@ -25,5 +25,7 @@ public class Main {
 			electronica[i].encender();
 			electronica[i].apagar();
 		}
+		
+		
 	}
 }

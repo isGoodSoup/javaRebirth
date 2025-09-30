@@ -41,4 +41,10 @@ public class Tablet extends ProductosElectronicos {
 	public void encender() {
 		log.info("La tablet está encendida");
 	}
+
+	@Override
+	public void createId() {
+		// TODO Auto-generated method stub
+		
+	}
 }

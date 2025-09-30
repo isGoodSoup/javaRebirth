@@ -27,4 +27,10 @@ public class Montahna extends Bicicleta {
 	public void setNumCadenas(int numCadenas) {
 		this.numCadenas = numCadenas;
 	}
+
+	@Override
+	public void createId() {
+		// TODO Auto-generated method stub
+		
+	}
 }

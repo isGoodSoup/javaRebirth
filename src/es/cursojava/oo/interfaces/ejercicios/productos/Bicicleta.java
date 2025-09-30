@@ -1,6 +1,6 @@
 package es.cursojava.oo.interfaces.ejercicios.productos;
 
-public abstract class Bicicleta extends Vehiculo {
+public abstract class Bicicleta extends Vehiculo implements Capitalismo {
 	private int id;
 	private int numMarchas;
 	

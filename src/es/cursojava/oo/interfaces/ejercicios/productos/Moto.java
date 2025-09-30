@@ -31,4 +31,10 @@ public class Moto extends VehiculosMotorizado {
 	public void apagar() {
 		log.info("La moto está apagada");
 	}
+
+	@Override
+	public void createId() {
+		// TODO Auto-generated method stub
+		
+	}
 }

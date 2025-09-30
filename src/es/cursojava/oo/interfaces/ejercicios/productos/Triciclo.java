@@ -27,4 +27,10 @@ public class Triciclo extends Bicicleta {
 	public void setColor(String color) {
 		this.color = color;
 	}
+
+	@Override
+	public void createId() {
+		// TODO Auto-generated method stub
+		
+	}
 }
