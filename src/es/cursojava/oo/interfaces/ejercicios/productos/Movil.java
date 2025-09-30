@@ -3,14 +3,14 @@ package es.cursojava.oo.interfaces.ejercicios.productos;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class Telefono extends ProductosElectronicos {
+public class Movil extends ProductosElectronicos {
 	private int numero;
 	private String fabricaOrigen;
 	private static final Logger log = LoggerFactory.getLogger(Moto.class);
 	
-	public Telefono() {}
+	public Movil() {}
 	
-	public Telefono(int id, String fechaFabricacion, int numero, String fabricaOrigen) {
+	public Movil(int id, String fechaFabricacion, int numero, String fabricaOrigen) {
 		super(id, fechaFabricacion);
 		this.numero = numero;
 		this.fabricaOrigen = fabricaOrigen;
