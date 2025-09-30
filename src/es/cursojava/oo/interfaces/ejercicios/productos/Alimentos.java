@@ -1,10 +1,12 @@
 package es.cursojava.oo.interfaces.ejercicios.productos;
 
 public abstract class Alimentos extends Producto {
+	private int id;
 	private String fechaCaducidad;
 
-	public Alimentos(String nombre, double precio, String fechaCaducidad) {
-		super(nombre, precio);
+	public Alimentos(int id, String fechaCaducidad) {
+		super();
+		this.id = id;
 		this.fechaCaducidad = fechaCaducidad;
 	}
 
@@ -14,5 +16,13 @@ public abstract class Alimentos extends Producto {
 
 	public void setFechaCaducidad(String fechaCaducidad) {
 		this.fechaCaducidad = fechaCaducidad;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 }
