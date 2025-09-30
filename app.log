@@ -21892,3 +21892,17 @@
 19:22:00.499 [main] INFO  es.cursojava.oo.interfaces.ejercicios.productos.Moto - La moto está encendida
 19:22:00.499 [main] INFO  es.cursojava.oo.interfaces.ejercicios.productos.Moto - La moto está apagada
 19:22:00.500 [main] INFO  es.cursojava.oo.interfaces.ejercicios.productos.Identificador - Id generado: 2696
+01:08:13.528 [main] INFO  es.cursojava.oo.interfaces.ejercicios.pagos.PagoTarjetaCredito - La compra a nombre de Jose Luis
+01:08:13.532 [main] INFO  es.cursojava.oo.interfaces.ejercicios.pagos.PagoTarjetaCredito - Con número **** **** **** 9056
+01:08:13.532 [main] INFO  es.cursojava.oo.interfaces.ejercicios.pagos.PagoTarjetaCredito - Ha sido realizada con éxito
+01:08:13.533 [main] INFO  es.cursojava.oo.interfaces.ejercicios.pagos.PagoTarjetaCredito - Compra: 9.99
+01:08:13.541 [main] INFO  es.cursojava.oo.interfaces.ejercicios.pagos.PagoPayPal - Bienvenido, barc4best!
+01:08:13.541 [main] DEBUG es.cursojava.oo.interfaces.ejercicios.pagos.PagoPayPal - Contraseña: ***********
+01:08:13.541 [main] INFO  es.cursojava.oo.interfaces.ejercicios.pagos.PagoPayPal - Saldo actual: 159.99
+01:08:13.541 [main] INFO  es.cursojava.oo.interfaces.ejercicios.pagos.PagoPayPal - Compra: 10.99
+01:08:13.541 [main] INFO  es.cursojava.oo.interfaces.ejercicios.pagos.PagoPayPal - Saldo contable: 149.0
+01:08:13.548 [main] INFO  es.cursojava.oo.interfaces.ejercicios.pagos.PagoCriptomoneda - Bienvenido de vuelta, cryptobros4laif!
+01:08:13.548 [main] INFO  es.cursojava.oo.interfaces.ejercicios.pagos.PagoCriptomoneda - Contraseña aceptada
+01:08:13.548 [main] DEBUG es.cursojava.oo.interfaces.ejercicios.pagos.PagoCriptomoneda - Saldo actual: 250.9
+01:08:13.548 [main] INFO  es.cursojava.oo.interfaces.ejercicios.pagos.PagoCriptomoneda - Saldo contable: 229.15
+01:08:13.548 [main] INFO  es.cursojava.oo.interfaces.ejercicios.pagos.PagoCriptomoneda - Compra: 21.75
