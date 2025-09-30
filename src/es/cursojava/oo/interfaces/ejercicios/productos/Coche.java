@@ -1,8 +1,12 @@
 package es.cursojava.oo.interfaces.ejercicios.productos;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 public class Coche extends VehiculosMotorizado {
 	private String marca;
 	private int numPuertas;
+	private static final Logger log = LoggerFactory.getLogger(Coche.class);
 	
 	public Coche() {}
 	
@@ -30,11 +34,11 @@ public class Coche extends VehiculosMotorizado {
 
 	@Override
 	public void encender() {
-		
+		log.info("El coche se ha encendido");
 	}
 
 	@Override
 	public void apagar() {
-			
+		log.info("El coche se ha apagado");
 	}
 }

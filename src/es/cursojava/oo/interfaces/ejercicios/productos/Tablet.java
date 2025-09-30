@@ -1,8 +1,12 @@
 package es.cursojava.oo.interfaces.ejercicios.productos;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 public class Tablet extends ProductosElectronicos {
 	private String serial;
 	private String origen;
+	private static final Logger log = LoggerFactory.getLogger(Moto.class);
 
 	public Tablet() {}
 	
@@ -30,11 +34,11 @@ public class Tablet extends ProductosElectronicos {
 
 	@Override
 	public void apagar() {
-		
+		log.info("La tablet está apagada");
 	}
 
 	@Override
 	public void encender() {
-	
+		log.info("La tablet está encendida");
 	}
 }

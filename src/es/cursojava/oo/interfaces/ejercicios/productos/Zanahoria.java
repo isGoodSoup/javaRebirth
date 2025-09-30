@@ -4,6 +4,8 @@ public class Zanahoria extends Alimentos {
 	private int numFrodas;
 	private String origen;
 
+	public Zanahoria() {}
+	
 	public Zanahoria(int id, String fechaCaducidad, int numFrodas, String origen) {
 		super(id, fechaCaducidad);
 		this.numFrodas = numFrodas;

@@ -1,7 +1,11 @@
 package es.cursojava.oo.interfaces.ejercicios.productos;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 public class Moto extends VehiculosMotorizado {
 	private String marca;
+	private static final Logger log = LoggerFactory.getLogger(Moto.class);
 	
 	public Moto() {}
 	
@@ -20,11 +24,11 @@ public class Moto extends VehiculosMotorizado {
 
 	@Override
 	public void encender() {
-
+		log.info("La moto está encendida");
 	}
 
 	@Override
 	public void apagar() {
-			
+		log.info("La moto está apagada");
 	}
 }

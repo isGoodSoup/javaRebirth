@@ -1,8 +1,12 @@
 package es.cursojava.oo.interfaces.ejercicios.productos;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 public class Telefono extends ProductosElectronicos {
 	private int numero;
 	private String fabricaOrigen;
+	private static final Logger log = LoggerFactory.getLogger(Moto.class);
 	
 	public Telefono() {}
 	
@@ -30,11 +34,11 @@ public class Telefono extends ProductosElectronicos {
 
 	@Override
 	public void encender() {
-		
+		log.info("El teléfono está encendido");
 	}
 
 	@Override
 	public void apagar() {
-		
+		log.info("El teléfono está apagado");
 	}
 }
