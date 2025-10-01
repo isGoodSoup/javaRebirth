@@ -11,8 +11,8 @@ public class Moto extends VehiculosMotorizado implements Deletable {
 	
 	public Moto() {}
 	
-	public Moto(String nombre, int numRuedas, double precio, String motor, String marca) {
-		super(nombre, numRuedas, precio, motor);
+	public Moto(String nombre, int numRuedas, double precio, String motor, String marca, int identificador) {
+		super(nombre, numRuedas, precio, motor, identificador);
 		this.marca = marca;
 	}
 

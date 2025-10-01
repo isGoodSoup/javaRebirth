@@ -13,8 +13,8 @@ public class Coche extends VehiculosMotorizado implements Insertable, Updatable 
 	
 	public Coche() {}
 	
-	public Coche(String nombre, int numRuedas, double precio, String motor, String marca, int numPuertas) {
-		super(nombre, numRuedas, precio, motor);
+	public Coche(String nombre, int numRuedas, double precio, String motor, String marca, int numPuertas, int identificador) {
+		super(nombre, numRuedas, precio, motor, identificador);
 		this.marca = marca;
 		this.numPuertas = numPuertas;
 	}

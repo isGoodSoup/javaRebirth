@@ -9,8 +9,9 @@ public abstract class Vehiculo extends Identificador {
 	
 	public Vehiculo() {}
 	
-	public Vehiculo(String nombre, int numRuedas, double precio) {
+	public Vehiculo(int identificador, String nombre, int numRuedas, double precio) {
 		super();
+		this.identificador = identificador;
 		this.nombre = nombre;
 		this.numRuedas = numRuedas;
 		this.precio = precio;

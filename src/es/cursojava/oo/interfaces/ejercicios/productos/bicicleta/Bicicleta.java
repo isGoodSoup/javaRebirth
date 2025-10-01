@@ -10,8 +10,8 @@ public abstract class Bicicleta extends Vehiculo implements Capitalismo {
 	
 	public Bicicleta() {}
 	
-	public Bicicleta(String nombre, int numRuedas, double precio, int numMarchas) {
-		super(nombre, numRuedas, precio);
+	public Bicicleta(String nombre, int numRuedas, double precio, int numMarchas, int identificador) {
+		super(identificador, nombre, numRuedas, precio);
 		this.numMarchas = numMarchas;
 	}
 

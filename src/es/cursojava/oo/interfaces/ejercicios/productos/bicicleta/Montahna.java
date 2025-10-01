@@ -6,8 +6,8 @@ public class Montahna extends Bicicleta {
 	
 	public Montahna() {}
 	
-	public Montahna(String nombre, int numRuedas, double precio, int numMarchas, String marca, int numCadenas) {
-		super(nombre, numRuedas, precio, numMarchas);
+	public Montahna(String nombre, int numRuedas, double precio, int numMarchas, String marca, int numCadenas, int identificador) {
+		super(nombre, numRuedas, precio, numMarchas, identificador);
 		this.marca = marca;
 		this.numCadenas = numCadenas;
 	}

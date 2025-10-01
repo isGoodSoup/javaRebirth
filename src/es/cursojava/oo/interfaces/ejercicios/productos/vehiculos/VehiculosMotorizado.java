@@ -10,8 +10,8 @@ public abstract class VehiculosMotorizado extends Vehiculo implements Encendible
 	
 	public VehiculosMotorizado() {}
 	
-	public VehiculosMotorizado(String nombre, int numRuedas, double precio, String motor) {
-		super(nombre, numRuedas, precio);
+	public VehiculosMotorizado(String nombre, int numRuedas, double precio, String motor, int identificador) {
+		super(identificador, nombre, numRuedas, precio);
 		this.motor = motor;
 	}
 

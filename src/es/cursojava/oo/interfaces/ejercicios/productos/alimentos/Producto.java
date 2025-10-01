@@ -8,8 +8,9 @@ public abstract class Producto extends Identificador {
 	
 	public Producto() {}
 	
-	public Producto(String nombre, double precio) {
+	public Producto(int identificador, String nombre, double precio) {
 		super();
+		this.identificador = identificador;
 		this.nombre = nombre;
 		this.precio = precio;
 	}
