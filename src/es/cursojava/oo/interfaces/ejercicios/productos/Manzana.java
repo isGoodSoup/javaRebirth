@@ -1,6 +1,6 @@
 package es.cursojava.oo.interfaces.ejercicios.productos;
 
-public class Manzana extends Alimentos {
+public class Manzana extends Alimentos implements Consultable {
 	private String color;
 	private String origen;
 	

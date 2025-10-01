@@ -25,5 +25,27 @@ public class Main {
 			electronica[i].apagar();
 			electronica[i].createId();
 		}
+		
+		selectObject((Consultable) manzana);
+		insertObjects((Insertable) coche);
+		updateObjects((Updatable) coche);
+		deleteObjects((Deletable) moto);
+		
+	}
+	
+	public static void selectObject(Consultable consultar) {
+		consultar.select();
+	}
+	
+	public static void insertObjects(Insertable insertar) {
+		insertar.insert();
+	}
+	
+	public static void updateObjects(Updatable update) {
+		update.update();
+	}
+	
+	public static void deleteObjects(Deletable eliminar) {
+		eliminar.delete();
 	}
 }

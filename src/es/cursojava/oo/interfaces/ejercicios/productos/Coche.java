@@ -3,7 +3,7 @@ package es.cursojava.oo.interfaces.ejercicios.productos;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class Coche extends VehiculosMotorizado {
+public class Coche extends VehiculosMotorizado implements Insertable, Updatable {
 	private String marca;
 	private int numPuertas;
 	private static final Logger log = LoggerFactory.getLogger(Coche.class);
