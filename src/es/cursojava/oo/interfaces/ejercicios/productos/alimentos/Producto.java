@@ -10,7 +10,7 @@ public abstract class Producto extends Identificador {
 	
 	public Producto(int identificador, String nombre, double precio) {
 		super();
-		this.identificador = identificador;
+		this.id = identificador;
 		this.nombre = nombre;
 		this.precio = precio;
 	}
