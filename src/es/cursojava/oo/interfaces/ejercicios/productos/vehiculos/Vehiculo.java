@@ -1,4 +1,6 @@
-package es.cursojava.oo.interfaces.ejercicios.productos;
+package es.cursojava.oo.interfaces.ejercicios.productos.vehiculos;
+
+import es.cursojava.oo.interfaces.ejercicios.productos.main.Identificador;
 
 public abstract class Vehiculo extends Identificador {
 	private String nombre;

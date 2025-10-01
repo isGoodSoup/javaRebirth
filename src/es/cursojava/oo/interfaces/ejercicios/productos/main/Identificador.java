@@ -1,9 +1,15 @@
-package es.cursojava.oo.interfaces.ejercicios.productos;
+package es.cursojava.oo.interfaces.ejercicios.productos.main;
 
 import java.util.Random;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import es.cursojava.oo.interfaces.ejercicios.productos.interfaces.Capitalismo;
+import es.cursojava.oo.interfaces.ejercicios.productos.interfaces.Consultable;
+import es.cursojava.oo.interfaces.ejercicios.productos.interfaces.Deletable;
+import es.cursojava.oo.interfaces.ejercicios.productos.interfaces.Insertable;
+import es.cursojava.oo.interfaces.ejercicios.productos.interfaces.Updatable;
 
 public class Identificador implements Capitalismo, Consultable, Insertable, Updatable, Deletable {
 	protected int identificador;

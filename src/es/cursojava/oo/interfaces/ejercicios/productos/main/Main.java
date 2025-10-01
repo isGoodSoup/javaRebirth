@@ -1,4 +1,18 @@
-package es.cursojava.oo.interfaces.ejercicios.productos;
+package es.cursojava.oo.interfaces.ejercicios.productos.main;
+
+import es.cursojava.oo.interfaces.ejercicios.productos.alimentos.Baguette;
+import es.cursojava.oo.interfaces.ejercicios.productos.alimentos.Banana;
+import es.cursojava.oo.interfaces.ejercicios.productos.alimentos.Manzana;
+import es.cursojava.oo.interfaces.ejercicios.productos.alimentos.Zanahoria;
+import es.cursojava.oo.interfaces.ejercicios.productos.electronica.Movil;
+import es.cursojava.oo.interfaces.ejercicios.productos.electronica.Tablet;
+import es.cursojava.oo.interfaces.ejercicios.productos.interfaces.Capitalismo;
+import es.cursojava.oo.interfaces.ejercicios.productos.interfaces.Consultable;
+import es.cursojava.oo.interfaces.ejercicios.productos.interfaces.Deletable;
+import es.cursojava.oo.interfaces.ejercicios.productos.interfaces.Insertable;
+import es.cursojava.oo.interfaces.ejercicios.productos.interfaces.Updatable;
+import es.cursojava.oo.interfaces.ejercicios.productos.vehiculos.Coche;
+import es.cursojava.oo.interfaces.ejercicios.productos.vehiculos.Moto;
 
 public class Main {
 	

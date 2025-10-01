@@ -1,7 +1,10 @@
-package es.cursojava.oo.interfaces.ejercicios.productos;
+package es.cursojava.oo.interfaces.ejercicios.productos.vehiculos;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import es.cursojava.oo.interfaces.ejercicios.productos.interfaces.Insertable;
+import es.cursojava.oo.interfaces.ejercicios.productos.interfaces.Updatable;
 
 public class Coche extends VehiculosMotorizado implements Insertable, Updatable {
 	private String marca;

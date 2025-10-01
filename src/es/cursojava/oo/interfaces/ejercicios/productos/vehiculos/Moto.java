@@ -1,7 +1,9 @@
-package es.cursojava.oo.interfaces.ejercicios.productos;
+package es.cursojava.oo.interfaces.ejercicios.productos.vehiculos;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import es.cursojava.oo.interfaces.ejercicios.productos.interfaces.Deletable;
 
 public class Moto extends VehiculosMotorizado implements Deletable {
 	private String marca;

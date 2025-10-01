@@ -1,4 +1,6 @@
-package es.cursojava.oo.interfaces.ejercicios.productos;
+package es.cursojava.oo.interfaces.ejercicios.productos.alimentos;
+
+import es.cursojava.oo.interfaces.ejercicios.productos.main.Identificador;
 
 public abstract class Producto extends Identificador {
 	private String nombre;

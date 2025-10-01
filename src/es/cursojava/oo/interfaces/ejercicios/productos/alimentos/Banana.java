@@ -1,4 +1,4 @@
-package es.cursojava.oo.interfaces.ejercicios.productos;
+package es.cursojava.oo.interfaces.ejercicios.productos.alimentos;
 
 public class Banana extends Alimentos {
 	private double longitud;

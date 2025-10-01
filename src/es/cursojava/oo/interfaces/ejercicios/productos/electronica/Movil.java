@@ -1,7 +1,9 @@
-package es.cursojava.oo.interfaces.ejercicios.productos;
+package es.cursojava.oo.interfaces.ejercicios.productos.electronica;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import es.cursojava.oo.interfaces.ejercicios.productos.vehiculos.Moto;
 
 public class Movil extends ProductosElectronicos {
 	private int numero;

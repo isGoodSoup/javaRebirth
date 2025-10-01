@@ -1,4 +1,4 @@
-package es.cursojava.oo.interfaces.ejercicios.productos;
+package es.cursojava.oo.interfaces.ejercicios.productos.bicicleta;
 
 public class Montahna extends Bicicleta {
 	private String marca;

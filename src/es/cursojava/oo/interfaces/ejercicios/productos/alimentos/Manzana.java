@@ -1,4 +1,6 @@
-package es.cursojava.oo.interfaces.ejercicios.productos;
+package es.cursojava.oo.interfaces.ejercicios.productos.alimentos;
+
+import es.cursojava.oo.interfaces.ejercicios.productos.interfaces.Consultable;
 
 public class Manzana extends Alimentos implements Consultable {
 	private String color;
