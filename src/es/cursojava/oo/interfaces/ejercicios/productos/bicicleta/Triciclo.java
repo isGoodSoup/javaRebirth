@@ -1,4 +1,4 @@
-package es.cursojava.oo.interfaces.ejercicios.productos;
+package es.cursojava.oo.interfaces.ejercicios.productos.bicicleta;
 
 public class Triciclo extends Bicicleta {
 	private int numRuedas;
@@ -6,8 +6,8 @@ public class Triciclo extends Bicicleta {
 	
 	public Triciclo() {}
 	
-	public Triciclo(String nombre, int numRuedas, double precio, int numMarchas, int numRuedas2, String color) {
-		super(nombre, numRuedas, precio, numMarchas);
+	public Triciclo(String nombre, int numRuedas, double precio, int numMarchas, int numRuedas2, String color, int identificador) {
+		super(nombre, numRuedas, precio, numMarchas, identificador);
 		numRuedas = numRuedas2;
 		this.color = color;
 	}

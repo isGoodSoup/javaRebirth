@@ -1,4 +1,6 @@
-package es.cursojava.oo.interfaces.ejercicios.productos;
+package es.cursojava.oo.interfaces.ejercicios.productos.vehiculos;
+
+import es.cursojava.oo.interfaces.ejercicios.productos.main.Identificador;
 
 public abstract class Vehiculo extends Identificador {
 	private String nombre;
@@ -7,8 +9,9 @@ public abstract class Vehiculo extends Identificador {
 	
 	public Vehiculo() {}
 	
-	public Vehiculo(String nombre, int numRuedas, double precio) {
+	public Vehiculo(int identificador, String nombre, int numRuedas, double precio) {
 		super();
+		this.id = identificador;
 		this.nombre = nombre;
 		this.numRuedas = numRuedas;
 		this.precio = precio;

@@ -1,16 +1,18 @@
-package es.cursojava.oo.interfaces.ejercicios.productos;
+package es.cursojava.oo.interfaces.ejercicios.productos.vehiculos;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class Moto extends VehiculosMotorizado {
+import es.cursojava.oo.interfaces.ejercicios.productos.interfaces.Deletable;
+
+public class Moto extends VehiculosMotorizado implements Deletable {
 	private String marca;
 	private static final Logger log = LoggerFactory.getLogger(Moto.class);
 	
 	public Moto() {}
 	
-	public Moto(String nombre, int numRuedas, double precio, String motor, String marca) {
-		super(nombre, numRuedas, precio, motor);
+	public Moto(String nombre, int numRuedas, double precio, String motor, String marca, int identificador) {
+		super(nombre, numRuedas, precio, motor, identificador);
 		this.marca = marca;
 	}
 
