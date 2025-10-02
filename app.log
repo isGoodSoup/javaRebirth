@@ -21906,3 +21906,17 @@
 01:08:13.548 [main] DEBUG es.cursojava.oo.interfaces.ejercicios.pagos.PagoCriptomoneda - Saldo actual: 250.9
 01:08:13.548 [main] INFO  es.cursojava.oo.interfaces.ejercicios.pagos.PagoCriptomoneda - Saldo contable: 229.15
 01:08:13.548 [main] INFO  es.cursojava.oo.interfaces.ejercicios.pagos.PagoCriptomoneda - Compra: 21.75
+12:39:48.625 [main] INFO  es.cursojava.oo.interfaces.ejercicios.pagos.PagoTarjetaCredito - La compra a nombre de Jose Luis
+12:39:48.628 [main] INFO  es.cursojava.oo.interfaces.ejercicios.pagos.PagoTarjetaCredito - Con número **** **** **** 9056
+12:39:48.629 [main] INFO  es.cursojava.oo.interfaces.ejercicios.pagos.PagoTarjetaCredito - Ha sido realizada con éxito
+12:39:48.629 [main] INFO  es.cursojava.oo.interfaces.ejercicios.pagos.PagoTarjetaCredito - Compra: 9.99
+12:39:48.637 [main] INFO  es.cursojava.oo.interfaces.ejercicios.pagos.PagoPayPal - Bienvenido, barc4best!
+12:39:48.637 [main] DEBUG es.cursojava.oo.interfaces.ejercicios.pagos.PagoPayPal - Contraseña: ***********
+12:39:48.637 [main] INFO  es.cursojava.oo.interfaces.ejercicios.pagos.PagoPayPal - Saldo actual: 159.99
+12:39:48.637 [main] INFO  es.cursojava.oo.interfaces.ejercicios.pagos.PagoPayPal - Compra: 10.99
+12:39:48.637 [main] INFO  es.cursojava.oo.interfaces.ejercicios.pagos.PagoPayPal - Saldo contable: 149.0
+12:39:48.643 [main] INFO  es.cursojava.oo.interfaces.ejercicios.pagos.PagoCriptomoneda - Bienvenido de vuelta, cryptobros4laif!
+12:39:48.643 [main] INFO  es.cursojava.oo.interfaces.ejercicios.pagos.PagoCriptomoneda - Contraseña aceptada
+12:39:48.643 [main] DEBUG es.cursojava.oo.interfaces.ejercicios.pagos.PagoCriptomoneda - Saldo actual: 250.9
+12:39:48.643 [main] INFO  es.cursojava.oo.interfaces.ejercicios.pagos.PagoCriptomoneda - Saldo contable: 229.15
+12:39:48.643 [main] INFO  es.cursojava.oo.interfaces.ejercicios.pagos.PagoCriptomoneda - Compra: 21.75
