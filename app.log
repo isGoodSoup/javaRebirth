@@ -21990,3 +21990,25 @@
 18:31:10.766 [main] DEBUG es.cursojava.oo.colecciones.ejercicios.ejercicio1.Main - Zacarías González ha sacado un 9.46, excelente!
 18:31:10.767 [main] INFO  es.cursojava.oo.colecciones.ejercicios.ejercicio1.Main - Introduce el nombre
 18:31:16.987 [main] DEBUG es.cursojava.oo.colecciones.ejercicios.ejercicio1.Main - Isla King tiene una nota de 8.24
+20:12:49.893 [main] INFO  es.cursojava.oo.colecciones.ejercicios.ejercicio1.Main - Alumnos: 
+20:12:49.898 [main] INFO  es.cursojava.oo.colecciones.ejercicios.ejercicio1.Main - Wilmer Torres, 48152407V, 8.36
+20:12:49.898 [main] INFO  es.cursojava.oo.colecciones.ejercicios.ejercicio1.Main - Fernanda Young, 47692686V, 5.82
+20:12:49.898 [main] INFO  es.cursojava.oo.colecciones.ejercicios.ejercicio1.Main - Wendy Johnson, 46039596R, 0.44
+20:12:49.899 [main] INFO  es.cursojava.oo.colecciones.ejercicios.ejercicio1.Main - Olivia Torres, 47118587R, 3.84
+20:12:49.899 [main] INFO  es.cursojava.oo.colecciones.ejercicios.ejercicio1.Main - Ben Underwood, 43057288P, 0.72
+20:12:49.899 [main] INFO  es.cursojava.oo.colecciones.ejercicios.ejercicio1.Main - Alejandro Robinson, 44776692U, 3.9
+20:12:49.899 [main] INFO  es.cursojava.oo.colecciones.ejercicios.ejercicio1.Main - Mia Ramírez, 49577385G, 0.82
+20:12:49.899 [main] INFO  es.cursojava.oo.colecciones.ejercicios.ejercicio1.Main - Nota mayor que 9:
+20:12:49.899 [main] INFO  es.cursojava.oo.colecciones.ejercicios.ejercicio1.Main - Introduce el nombre
+20:12:57.359 [main] DEBUG es.cursojava.oo.colecciones.ejercicios.ejercicio1.Main - Wendy Johnson tiene una nota de 0.44
+20:13:29.645 [main] INFO  es.cursojava.oo.colecciones.ejercicios.ejercicio1.Main - Alumnos: 
+20:13:29.650 [main] INFO  es.cursojava.oo.colecciones.ejercicios.ejercicio1.Main - Charlie Alonso, 48498824W, 0.43
+20:13:29.651 [main] INFO  es.cursojava.oo.colecciones.ejercicios.ejercicio1.Main - Raúl Ybarra, 49559310E, 4.9
+20:13:29.651 [main] INFO  es.cursojava.oo.colecciones.ejercicios.ejercicio1.Main - Olivia Wenceslao, 47780214H, 6.7
+20:13:29.651 [main] INFO  es.cursojava.oo.colecciones.ejercicios.ejercicio1.Main - Daniel King, 43740491T, 1.33
+20:13:29.651 [main] INFO  es.cursojava.oo.colecciones.ejercicios.ejercicio1.Main - Wendy Ramírez, 44845301L, 3.07
+20:13:29.651 [main] INFO  es.cursojava.oo.colecciones.ejercicios.ejercicio1.Main - Wendy Underwood, 49908537B, 1.93
+20:13:29.651 [main] INFO  es.cursojava.oo.colecciones.ejercicios.ejercicio1.Main - Rachel Keller, 43495090S, 6.52
+20:13:29.651 [main] INFO  es.cursojava.oo.colecciones.ejercicios.ejercicio1.Main - Nota mayor que 9:
+20:13:29.651 [main] INFO  es.cursojava.oo.colecciones.ejercicios.ejercicio1.Main - Introduce el nombre
+20:13:34.437 [main] DEBUG es.cursojava.oo.colecciones.ejercicios.ejercicio1.Main - Rachel Keller tiene una nota de 6.52
