@@ -69,19 +69,19 @@ public class Hospital {
 		
 		salaDeEspera = new Paciente[24];
 		for (int i = 0; i < salaDeEspera.length; i++) {
-			Paciente paciente = new Paciente(NameGen.Name(), r.nextInt(100) + 1);
+			Paciente paciente = new Paciente(NameGen.name(), r.nextInt(100) + 1);
 			salaDeEspera[i] = paciente;
 		}
 		
 		enfermeros = new Enfermero[6];
 		for (int i = 0; i < enfermeros.length; i++) {
-			Enfermero enfermero = new Enfermero(NameGen.Name(), r.nextInt(100) + 1, r.nextInt(3));
+			Enfermero enfermero = new Enfermero(NameGen.name(), r.nextInt(100) + 1, r.nextInt(3));
 			enfermeros[i] = enfermero;
 		}
 		
 		doctores = new Doctor[3];
 		for (int i = 0; i < doctores.length; i++) {
-			Doctor doctor = new Doctor(NameGen.Name(), r.nextInt(100) + 1, "general");
+			Doctor doctor = new Doctor(NameGen.name(), r.nextInt(100) + 1, "general");
 			doctores[i] = doctor;
 		}
 	}

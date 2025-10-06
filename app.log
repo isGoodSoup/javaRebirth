@@ -21954,3 +21954,39 @@
 17:33:51.576 [main] INFO  es.cursojava.inicio.main.Main - [Natalia Luna, 88294244Q]
 17:33:55.257 [main] INFO  es.cursojava.inicio.main.Main - [Noah Valentine, 99325312M]
 17:33:58.566 [main] INFO  es.cursojava.inicio.main.Main - [Alice Taylor, 95449477V]
+18:25:21.864 [main] INFO  es.cursojava.oo.colecciones.ejercicios.ejercicio1.Main - Alumnos: 
+18:25:21.870 [main] INFO  es.cursojava.oo.colecciones.ejercicios.ejercicio1.Main - Thomas Taylor, 42744609L, 3.49
+18:25:21.870 [main] INFO  es.cursojava.oo.colecciones.ejercicios.ejercicio1.Main - Valeria Parker, 40652558X, 1.61
+18:25:21.870 [main] INFO  es.cursojava.oo.colecciones.ejercicios.ejercicio1.Main - Lucía Martinez, 45563327O, 2.25
+18:25:21.870 [main] INFO  es.cursojava.oo.colecciones.ejercicios.ejercicio1.Main - Grace Lopez, 43359240Z, 2.42
+18:25:21.870 [main] INFO  es.cursojava.oo.colecciones.ejercicios.ejercicio1.Main - Carmen Parker, 47109747P, 7.86
+18:25:21.870 [main] INFO  es.cursojava.oo.colecciones.ejercicios.ejercicio1.Main - Charlie Zamora, 45428996K, 2.71
+18:25:21.870 [main] INFO  es.cursojava.oo.colecciones.ejercicios.ejercicio1.Main - Helena Quinn, 49504031V, 6.18
+18:25:21.870 [main] INFO  es.cursojava.oo.colecciones.ejercicios.ejercicio1.Main - Nota mayor que 9:
+18:25:21.870 [main] INFO  es.cursojava.oo.colecciones.ejercicios.ejercicio1.Main - Introduce el nombre
+18:25:37.088 [main] DEBUG es.cursojava.oo.colecciones.ejercicios.ejercicio1.Main - Thomas Taylor tiene una nota de 3.49
+18:30:29.450 [main] INFO  es.cursojava.oo.colecciones.ejercicios.ejercicio1.Main - Alumnos: 
+18:30:29.456 [main] INFO  es.cursojava.oo.colecciones.ejercicios.ejercicio1.Main - Thomas Navarro, 44282413Z, 5.6
+18:30:29.456 [main] INFO  es.cursojava.oo.colecciones.ejercicios.ejercicio1.Main - Kevin Moreno, 41850664J, 1.37
+18:30:29.456 [main] INFO  es.cursojava.oo.colecciones.ejercicios.ejercicio1.Main - Jack Garcia, 46869486B, 9.82
+18:30:29.456 [main] INFO  es.cursojava.oo.colecciones.ejercicios.ejercicio1.Main - Natalia Smith, 41453510S, 8.47
+18:30:29.456 [main] INFO  es.cursojava.oo.colecciones.ejercicios.ejercicio1.Main - Sophie Esparza, 46280772V, 5.62
+18:30:29.456 [main] INFO  es.cursojava.oo.colecciones.ejercicios.ejercicio1.Main - Frank Nelson, 41256482B, 8.32
+18:30:29.456 [main] INFO  es.cursojava.oo.colecciones.ejercicios.ejercicio1.Main - Olivia Ortiz, 49272007D, 1.28
+18:30:29.456 [main] INFO  es.cursojava.oo.colecciones.ejercicios.ejercicio1.Main - Nota mayor que 9:
+18:30:29.457 [main] DEBUG es.cursojava.oo.colecciones.ejercicios.ejercicio1.Main - Jack Garcia ha sacado un 9.82, excelente!
+18:30:29.457 [main] INFO  es.cursojava.oo.colecciones.ejercicios.ejercicio1.Main - Introduce el nombre
+18:30:38.352 [main] DEBUG es.cursojava.oo.colecciones.ejercicios.ejercicio1.Main - Olivia Ortiz tiene una nota de 1.28
+18:31:10.760 [main] INFO  es.cursojava.oo.colecciones.ejercicios.ejercicio1.Main - Alumnos: 
+18:31:10.765 [main] INFO  es.cursojava.oo.colecciones.ejercicios.ejercicio1.Main - Wendy Johnson, 48736511E, 6.88
+18:31:10.765 [main] INFO  es.cursojava.oo.colecciones.ejercicios.ejercicio1.Main - Mia Quinn, 45546105S, 0.78
+18:31:10.765 [main] INFO  es.cursojava.oo.colecciones.ejercicios.ejercicio1.Main - Isla King, 46899490Y, 8.24
+18:31:10.765 [main] INFO  es.cursojava.oo.colecciones.ejercicios.ejercicio1.Main - Zacarías Lopez, 41097321I, 9.11
+18:31:10.765 [main] INFO  es.cursojava.oo.colecciones.ejercicios.ejercicio1.Main - Lucía Vargas, 44211203G, 8.85
+18:31:10.765 [main] INFO  es.cursojava.oo.colecciones.ejercicios.ejercicio1.Main - Frank Luna, 44568225H, 5.84
+18:31:10.766 [main] INFO  es.cursojava.oo.colecciones.ejercicios.ejercicio1.Main - Zacarías González, 45457683R, 9.46
+18:31:10.766 [main] INFO  es.cursojava.oo.colecciones.ejercicios.ejercicio1.Main - Nota mayor que 9:
+18:31:10.766 [main] DEBUG es.cursojava.oo.colecciones.ejercicios.ejercicio1.Main - Zacarías Lopez ha sacado un 9.11, excelente!
+18:31:10.766 [main] DEBUG es.cursojava.oo.colecciones.ejercicios.ejercicio1.Main - Zacarías González ha sacado un 9.46, excelente!
+18:31:10.767 [main] INFO  es.cursojava.oo.colecciones.ejercicios.ejercicio1.Main - Introduce el nombre
+18:31:16.987 [main] DEBUG es.cursojava.oo.colecciones.ejercicios.ejercicio1.Main - Isla King tiene una nota de 8.24

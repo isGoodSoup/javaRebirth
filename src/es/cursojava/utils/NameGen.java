@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class NameGen {
 	
-	public static String Name() {
+	public static String name() {
 		Random random = new Random();
 		String name = "";
 		String[] first = {
