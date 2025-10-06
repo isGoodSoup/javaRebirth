@@ -21920,3 +21920,37 @@
 12:39:48.643 [main] DEBUG es.cursojava.oo.interfaces.ejercicios.pagos.PagoCriptomoneda - Saldo actual: 250.9
 12:39:48.643 [main] INFO  es.cursojava.oo.interfaces.ejercicios.pagos.PagoCriptomoneda - Saldo contable: 229.15
 12:39:48.643 [main] INFO  es.cursojava.oo.interfaces.ejercicios.pagos.PagoCriptomoneda - Compra: 21.75
+17:27:19.035 [main] ERROR es.cursojava.inicio.main.Main - error
+17:27:19.038 [main] WARN  es.cursojava.inicio.main.Main - warn
+17:27:19.039 [main] INFO  es.cursojava.inicio.main.Main - info
+17:27:19.039 [main] DEBUG es.cursojava.inicio.main.Main - debug
+17:30:19.402 [main] ERROR es.cursojava.inicio.main.Main - error
+17:30:19.405 [main] WARN  es.cursojava.inicio.main.Main - warn
+17:30:19.405 [main] INFO  es.cursojava.inicio.main.Main - info
+17:30:19.405 [main] DEBUG es.cursojava.inicio.main.Main - debug
+17:32:27.045 [main] ERROR es.cursojava.inicio.main.Main - error
+17:32:27.047 [main] WARN  es.cursojava.inicio.main.Main - warn
+17:32:27.048 [main] INFO  es.cursojava.inicio.main.Main - info
+17:32:27.048 [main] DEBUG es.cursojava.inicio.main.Main - debug
+17:32:28.537 [main] ERROR es.cursojava.inicio.main.Main - error
+17:32:28.539 [main] WARN  es.cursojava.inicio.main.Main - warn
+17:32:28.540 [main] INFO  es.cursojava.inicio.main.Main - info
+17:32:28.540 [main] DEBUG es.cursojava.inicio.main.Main - debug
+17:32:46.021 [main] ERROR es.cursojava.inicio.main.Main - error
+17:32:46.023 [main] WARN  es.cursojava.inicio.main.Main - warn
+17:32:46.024 [main] INFO  es.cursojava.inicio.main.Main - info
+17:32:46.024 [main] DEBUG es.cursojava.inicio.main.Main - debug
+17:32:53.074 [main] ERROR es.cursojava.inicio.main.Main - error
+17:32:53.078 [main] WARN  es.cursojava.inicio.main.Main - warn
+17:32:53.078 [main] INFO  es.cursojava.inicio.main.Main - info
+17:32:53.078 [main] DEBUG es.cursojava.inicio.main.Main - debug
+17:32:57.154 [main] ERROR es.cursojava.inicio.main.Main - error
+17:32:57.156 [main] WARN  es.cursojava.inicio.main.Main - warn
+17:32:57.156 [main] INFO  es.cursojava.inicio.main.Main - info
+17:32:57.156 [main] DEBUG es.cursojava.inicio.main.Main - debug
+17:33:32.786 [main] INFO  es.cursojava.inicio.main.Main - [Ursula Young, 59072239F]
+17:33:37.174 [main] INFO  es.cursojava.inicio.main.Main - [Liam Alonso, 74157862M]
+17:33:46.375 [main] INFO  es.cursojava.inicio.main.Main - [Dolores Nelson, 97288380F]
+17:33:51.576 [main] INFO  es.cursojava.inicio.main.Main - [Natalia Luna, 88294244Q]
+17:33:55.257 [main] INFO  es.cursojava.inicio.main.Main - [Noah Valentine, 99325312M]
+17:33:58.566 [main] INFO  es.cursojava.inicio.main.Main - [Alice Taylor, 95449477V]

@@ -1,5 +1,4 @@
 package es.cursojava.inicio.main;
-import es.cursojava.utils.NameGen;
 
 public class HolaMundo {
     
@@ -13,5 +12,6 @@ public class HolaMundo {
         System.out.println("Nuevo cambio");
 
         System.out.println("Hola, Mundo");
+        
     }
 }

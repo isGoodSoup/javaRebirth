@@ -16,11 +16,14 @@ public class Listas {
 		}
 		System.out.println(lista.size());
 
-		for (Object object : lista) {
-			if(object instanceof Persona) {
-				Persona p = (Persona)object;
-				p.getNombre();
-			}
+//		for (Object object : lista) {
+//			if(object instanceof Persona) {
+//				Persona p = (Persona)object;
+//				p.getNombre();
+//			}
+//		}
+		for (Persona persona : lista) {
+			System.out.println(persona.getNombre());
 		}
 	}
 }
