@@ -27,7 +27,7 @@ public class Main implements Executable {
 	public void run() {
 		List<Alumno> alumnos = new ArrayList<Alumno>();
 		for (int i = 0; i < 7; i++) {
-			Alumno alumno = new Alumno(NameGen.name(), ID.createID(), NumGen.getDouble());
+			Alumno alumno = new Alumno(NameGen.name(), ID.createID(), NumGen.getDouble(1, 1000));
 			alumnos.add(alumno);
 		}
 		mostrarInfo(alumnos);
