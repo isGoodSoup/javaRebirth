@@ -5,7 +5,7 @@ import java.util.Random;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import es.cursojava.utils.NameGen;
+import es.cursojava.utils.Gen;
 
 public class Hospital {
 	private String nombre;
@@ -69,19 +69,19 @@ public class Hospital {
 		
 		salaDeEspera = new Paciente[24];
 		for (int i = 0; i < salaDeEspera.length; i++) {
-			Paciente paciente = new Paciente(NameGen.name(), r.nextInt(100) + 1);
+			Paciente paciente = new Paciente(Gen.name(), r.nextInt(100) + 1);
 			salaDeEspera[i] = paciente;
 		}
 		
 		enfermeros = new Enfermero[6];
 		for (int i = 0; i < enfermeros.length; i++) {
-			Enfermero enfermero = new Enfermero(NameGen.name(), r.nextInt(100) + 1, r.nextInt(3));
+			Enfermero enfermero = new Enfermero(Gen.name(), r.nextInt(100) + 1, r.nextInt(3));
 			enfermeros[i] = enfermero;
 		}
 		
 		doctores = new Doctor[3];
 		for (int i = 0; i < doctores.length; i++) {
-			Doctor doctor = new Doctor(NameGen.name(), r.nextInt(100) + 1, "general");
+			Doctor doctor = new Doctor(Gen.name(), r.nextInt(100) + 1, "general");
 			doctores[i] = doctor;
 		}
 	}

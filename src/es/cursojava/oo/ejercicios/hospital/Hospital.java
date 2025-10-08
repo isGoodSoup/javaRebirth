@@ -6,7 +6,7 @@ import java.util.Scanner;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import es.cursojava.utils.NameGen;
+import es.cursojava.utils.Gen;
 
 public class Hospital {
 	private String nombre;
@@ -46,7 +46,7 @@ public class Hospital {
 		for (int i = 0; i < pacientes.length; i++) {
 			for (int j = 0; j < pacientes[i].length; j++) {
 				edad = random.nextInt(99);
-				Paciente paciente = new Paciente(NameGen.name(), edad);
+				Paciente paciente = new Paciente(Gen.name(), edad);
 				pacientes[i][j] = paciente;
 				log.trace("Paciente en Hab " + i + j + ": " + paciente.getNombre() 
 				+ ", " + paciente.getEdad());

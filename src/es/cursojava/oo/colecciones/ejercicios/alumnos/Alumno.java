@@ -1,4 +1,4 @@
-package es.cursojava.oo.colecciones.ejercicios.ejercicio1;
+package es.cursojava.oo.colecciones.ejercicios.alumnos;
 
 public class Alumno {
 	private String nombre;

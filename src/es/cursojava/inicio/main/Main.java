@@ -2,7 +2,7 @@ package es.cursojava.inicio.main;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import es.cursojava.utils.ID;
+import es.cursojava.utils.Gen;
 
 public class Main {
 	private static final Logger log = LoggerFactory.getLogger(new Object() {}.getClass().getEnclosingClass());
@@ -17,6 +17,6 @@ public class Main {
 	}
 	
 	public void run() {
-		log.info(ID.createID());
+		log.info(Gen.createID());
 	}
 }

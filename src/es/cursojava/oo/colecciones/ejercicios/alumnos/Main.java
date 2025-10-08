@@ -1,4 +1,4 @@
-package es.cursojava.oo.colecciones.ejercicios.ejercicio1;
+package es.cursojava.oo.colecciones.ejercicios.alumnos;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,9 +8,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import es.cursojava.utils.Executable;
-import es.cursojava.utils.ID;
-import es.cursojava.utils.NameGen;
-import es.cursojava.utils.NumGen;
+import es.cursojava.utils.Gen;
 
 public class Main implements Executable {
 	private Scanner scan = new Scanner(System.in);
@@ -27,7 +25,7 @@ public class Main implements Executable {
 	public void run() {
 		List<Alumno> alumnos = new ArrayList<Alumno>();
 		for (int i = 0; i < 7; i++) {
-			Alumno alumno = new Alumno(NameGen.name(), ID.createID(), NumGen.getDouble(1, 1000));
+			Alumno alumno = new Alumno(Gen.name(), Gen.createID(), Gen.getDouble(1, 1000));
 			alumnos.add(alumno);
 		}
 		mostrarInfo(alumnos);

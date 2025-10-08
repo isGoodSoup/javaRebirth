@@ -3,7 +3,7 @@ package es.cursojava.oo.herencia.ejercicios.hospital;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import es.cursojava.utils.RandomArray;
+import es.cursojava.utils.Gen;
 
 public class Enfermo extends Persona {
 	private String enfermedad;
@@ -37,6 +37,6 @@ public class Enfermo extends Persona {
 		String[] enfermedades = {"covid-22", "muerte", "sifilis", "sida", 
 				"gripe aviar", "cáncer", "linfoma", "chron", "cáncer de páncreas", 
 				"rabia", "fiebre", "lupus", "gripe", "insuficiencia renal", "ligma"};
-		return RandomArray.toGetString(enfermedades);
+		return Gen.toGetString(enfermedades);
 	}
 }
