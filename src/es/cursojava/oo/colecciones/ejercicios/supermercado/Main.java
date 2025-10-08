@@ -10,7 +10,7 @@ import es.cursojava.oo.colecciones.ejercicios.supermercado.alimentos.Baguette;
 import es.cursojava.oo.colecciones.ejercicios.supermercado.alimentos.Manzana;
 import es.cursojava.oo.colecciones.ejercicios.supermercado.alimentos.Platano;
 import es.cursojava.utils.Executable;
-import es.cursojava.utils.Gen;
+import es.cursojava.utils.CAT;
 
 public class Main implements Executable {
 	private Supermercado market;
@@ -33,19 +33,19 @@ public class Main implements Executable {
 		log.info("Bienvenido al {}!", market.getNombre());
 		
 		List<Alimentos> car1 = new ArrayList<>();
-		Cliente c1 = new Cliente(Gen.toGetName(), Gen.toGetID(), Gen.toGetInteger(18, 80), car1);
+		Cliente c1 = new Cliente(CAT.toGetName(), CAT.toGetID(), CAT.toGetInteger(18, 80), car1);
 		clientes.add(c1);
 		
 		List<Alimentos> car2 = new ArrayList<>();
-		Cliente c2 = new Cliente(Gen.toGetName(), Gen.toGetID(), Gen.toGetInteger(18, 80), car2);
+		Cliente c2 = new Cliente(CAT.toGetName(), CAT.toGetID(), CAT.toGetInteger(18, 80), car2);
 		clientes.add(c2);
 		
 		List<Alimentos> car3 = new ArrayList<>();
-		Cliente c3 = new Cliente(Gen.toGetName(), Gen.toGetID(), Gen.toGetInteger(18, 80), car3);
+		Cliente c3 = new Cliente(CAT.toGetName(), CAT.toGetID(), CAT.toGetInteger(18, 80), car3);
 		clientes.add(c3);
 		
 		List<Alimentos> car4 = new ArrayList<>();
-		Cliente c4 = new Cliente(Gen.toGetName(), Gen.toGetID(), Gen.toGetInteger(18, 80), car4);
+		Cliente c4 = new Cliente(CAT.toGetName(), CAT.toGetID(), CAT.toGetInteger(18, 80), car4);
 		clientes.add(c4);
 		
 		Alimentos p1 = crearPlatano(new Platano("Canario"));

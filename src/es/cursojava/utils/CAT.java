@@ -4,18 +4,29 @@ import java.time.LocalTime;
 import java.util.Random;
 import java.util.Scanner;
 
-public class Gen {
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+public class CAT {
 	private static Random r = new Random();
 	private static Scanner scan = new Scanner(System.in);
+//	private static Logger log = LoggerFactory.getLogger(new Object() {}.getClass().getEnclosingClass());
 	
-	public static String toScan(int i) {
-        switch (i) {
-            case 1: return scan.nextLine();
-            case 2: return String.valueOf(scan.nextInt());
-            case 3: return String.valueOf(scan.nextDouble());
-            default: return scan.nextLine();
-        }
+	public static String toScan() {
+		return scan.nextLine();
     }
+	
+	public static int toScanInt() {
+		return scan.nextInt();
+	}
+	
+	public static Logger toLog(Class<?> cls) {
+	    return LoggerFactory.getLogger(cls);
+	}
+	
+	public static Logger toLog() {
+	    return toLog(CAT.class);
+	}
 	
 	public static String toGetID() {
 		int num = r.nextInt(40000000, 49999999);

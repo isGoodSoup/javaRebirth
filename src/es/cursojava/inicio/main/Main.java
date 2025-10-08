@@ -1,11 +1,10 @@
 package es.cursojava.inicio.main;
 import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
-import es.cursojava.utils.Gen;
+import es.cursojava.utils.CAT;
 
 public class Main {
-	private static final Logger log = LoggerFactory.getLogger(new Object() {}.getClass().getEnclosingClass());
+	private static final Logger log = CAT.toLog(Main.class);
 	
 	public static void main(String[] args) {
 //		log.error("error");
@@ -18,6 +17,8 @@ public class Main {
 	
 	public void run() {
 //		log.info(Gen.toGetID());
-		String prueba = Gen.toScan();
+		String prueba = CAT.toScan();
+		CAT.toLog(Main.class).info("Prueba con toLog()");
+		log.debug("Segunda prueba con toLog()");
 	}
 }
