@@ -17,6 +17,7 @@ public class Main {
 	}
 	
 	public void run() {
-		log.info(Gen.toGetID());
+//		log.info(Gen.toGetID());
+		String prueba = Gen.toScan();
 	}
 }
