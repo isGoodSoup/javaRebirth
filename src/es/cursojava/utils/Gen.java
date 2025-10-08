@@ -6,7 +6,7 @@ public class Gen {
 	private static Random r = new Random();
 	private static String dni;
 	
-	public static String createID() {
+	public static String toGetID() {
 		int num = r.nextInt(40000000, 49999999);
 		char[] ch = {
 				'A', 'B', 'C', 'D', 'E', 'F',
@@ -32,12 +32,20 @@ public class Gen {
 		return item;
 	}
 	
+	public static int toGetInteger() {
+		return r.nextInt();
+	}
+	
 	public static int toGetInteger(int[] i) {
 		int item = i[r.nextInt(i.length)];
 		return item;
 	}
 	
-	public static String name() {
+	public static int toGetInteger(int min, int max) {
+		return r.nextInt(min, max);
+	}
+	
+	public static String toGetName() {
 		Random random = new Random();
 		String name = "";
 		String[] first = {

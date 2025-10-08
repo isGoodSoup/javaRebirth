@@ -46,7 +46,7 @@ public class Hospital {
 		for (int i = 0; i < pacientes.length; i++) {
 			for (int j = 0; j < pacientes[i].length; j++) {
 				edad = random.nextInt(99);
-				Paciente paciente = new Paciente(Gen.name(), edad);
+				Paciente paciente = new Paciente(Gen.toGetName(), edad);
 				pacientes[i][j] = paciente;
 				log.trace("Paciente en Hab " + i + j + ": " + paciente.getNombre() 
 				+ ", " + paciente.getEdad());

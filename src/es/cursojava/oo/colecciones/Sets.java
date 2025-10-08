@@ -12,7 +12,7 @@ public class Sets {
 	public static void main(String[] args) {
 		Set<Persona> lista = new HashSet();
 		for (int i = 0; i < 6; i++) {
-			boolean anhadido = lista.add(new Persona(Gen.name(), null, Gen.createID(), 50));
+			boolean anhadido = lista.add(new Persona(Gen.toGetName(), null, Gen.toGetID(), 50));
 		}
 		
 		for (Persona persona : lista) {

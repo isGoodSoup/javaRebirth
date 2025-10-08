@@ -17,6 +17,6 @@ public class Main {
 	}
 	
 	public void run() {
-		log.info(Gen.createID());
+		log.info(Gen.toGetID());
 	}
 }
