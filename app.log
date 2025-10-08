@@ -22012,3 +22012,11 @@
 20:13:29.651 [main] INFO  es.cursojava.oo.colecciones.ejercicios.ejercicio1.Main - Nota mayor que 9:
 20:13:29.651 [main] INFO  es.cursojava.oo.colecciones.ejercicios.ejercicio1.Main - Introduce el nombre
 20:13:34.437 [main] DEBUG es.cursojava.oo.colecciones.ejercicios.ejercicio1.Main - Rachel Keller tiene una nota de 6.52
+18:29:33.485 [main] INFO  es.cursojava.oo.colecciones.ejercicios.supermercado.Main - Bienvenido al Aldi
+18:30:07.282 [main] INFO  es.cursojava.oo.colecciones.ejercicios.supermercado.Main - Bienvenido al Aldi!
+18:41:04.519 [main] INFO  es.cursojava.oo.colecciones.ejercicios.supermercado.Main - Bienvenido al Aldi!
+18:41:34.312 [main] INFO  es.cursojava.oo.colecciones.ejercicios.supermercado.Main - Bienvenido al Aldi!
+18:41:34.329 [main] DEBUG es.cursojava.oo.colecciones.ejercicios.supermercado.Main - Nuevo cliente: Ben Díaz
+18:41:34.330 [main] DEBUG es.cursojava.oo.colecciones.ejercicios.supermercado.Main - Nuevo cliente: Xander Moreno
+18:41:34.330 [main] DEBUG es.cursojava.oo.colecciones.ejercicios.supermercado.Main - Nuevo cliente: Olivia Vargas
+18:41:34.330 [main] DEBUG es.cursojava.oo.colecciones.ejercicios.supermercado.Main - Nuevo cliente: Yasmin Ybarra

@@ -1,7 +1,5 @@
 package es.cursojava.oo.colecciones.ejercicios.supermercado;
 
-import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -10,11 +8,17 @@ public class Supermercado {
 	private List<List<Alimentos>> stock;
 	private Set<Cliente> clientes;
 	
+	public Supermercado() {}
+	
+	public Supermercado(String nombre) {
+		this.nombre = nombre;
+	}
+	
 	public Supermercado(String nombre, List<List<Alimentos>> stock, Set<Cliente> clientes) {
 		super();
 		this.nombre = nombre;
-		this.stock = new ArrayList<>();
-		this.clientes = new HashSet<Cliente>();
+		this.stock = stock;
+		this.clientes = clientes;
 	}
 
 	public String getNombre() {

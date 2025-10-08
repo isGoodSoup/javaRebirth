@@ -2,22 +2,12 @@ package es.cursojava.oo.colecciones.ejercicios.supermercado.alimentos;
 
 import es.cursojava.oo.colecciones.ejercicios.supermercado.Alimentos;
 
-public class Baguette extends Alimentos {
-	private boolean isRecien;
+public class Platano extends Alimentos {
 	private String tipo;
-
-	public Baguette(boolean isRecien, String tipo) {
+	
+	public Platano(String tipo) {
 		super();
-		this.isRecien = isRecien;
 		this.tipo = tipo;
-	}
-
-	public boolean isRecien() {
-		return isRecien;
-	}
-
-	public void setRecien(boolean isRecien) {
-		this.isRecien = isRecien;
 	}
 
 	public String getTipo() {
