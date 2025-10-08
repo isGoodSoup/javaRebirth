@@ -20,7 +20,7 @@ public class Gen {
 		return dni;
 	}
 	
-	public static double getDouble(int min, int max) {
+	public static double toGetDouble(int min, int max) {
 		int n = r.nextInt(min, max);
 		double d = n/100.0;
 		return d;
