@@ -1,10 +1,10 @@
 package es.cursojava.utils;
 
+import java.time.LocalTime;
 import java.util.Random;
 
 public class Gen {
 	private static Random r = new Random();
-	private static String dni;
 	
 	public static String toGetID() {
 		int num = r.nextInt(40000000, 49999999);
@@ -14,22 +14,21 @@ public class Gen {
 				'N', 'O', 'P', 'Q', 'R', 'S', 'T', 
 				'U', 'V', 'W', 'X', 'Y', 'Z'
 		};
-		int i = r.nextInt(1, 26);
-		char letra = ch[i];
-		dni = Integer.toString(num) + letra;
-		return dni;
+		return Integer.toString(num) + ch[r.nextInt(1, 26)];
 	}
 	
 	public static double toGetDouble(int min, int max) {
-		int n = r.nextInt(min, max);
-		double d = n/100.0;
+		double d = r.nextInt(min, max)/100.0;
 		return d;
+	}
+	
+	public static boolean toGetBoolean() {
+		return r.nextBoolean();
 	}
 	
 
 	public static String toGetString(String[] s) {
-		String item = s[r.nextInt(s.length)];
-		return item;
+		return s[r.nextInt(s.length)];
 	}
 	
 	public static int toGetInteger() {
@@ -37,8 +36,7 @@ public class Gen {
 	}
 	
 	public static int toGetInteger(int[] i) {
-		int item = i[r.nextInt(i.length)];
-		return item;
+		return i[r.nextInt(i.length)];
 	}
 	
 	public static int toGetInteger(int min, int max) {
@@ -46,8 +44,6 @@ public class Gen {
 	}
 	
 	public static String toGetName() {
-		Random random = new Random();
-		String name = "";
 		String[] first = {
 	            "Alice", "Alejandro", 
 	            "Ben", "Beatriz", 
@@ -105,13 +101,10 @@ public class Gen {
 	            "Young", "Ybarra", 
 	            "Zimmerman", "Zamora"
 	    };
-	    
-	    int num = random.nextInt(first.length);
-	    int num2 = random.nextInt(last.length);
-	    String fnlfirst = first[num];
-	    String fnllast = last[num2];
-	    name = fnlfirst + " " + fnllast;
-		
-	    return name;
+	    return first[r.nextInt(first.length)] + " " + last[r.nextInt(last.length)];
+	}
+	
+	public static LocalTime toGetTime() {
+	    return LocalTime.of(r.nextInt(24), r.nextInt(60), r.nextInt(60));
 	}
 }
