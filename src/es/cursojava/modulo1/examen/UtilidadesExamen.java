@@ -1,4 +1,4 @@
-package es.cursojava.modulo1.examen.nombre.apellidos.examen;
+package es.cursojava.modulo1.examen;
 
 import java.util.Arrays;
 import java.util.Scanner;
