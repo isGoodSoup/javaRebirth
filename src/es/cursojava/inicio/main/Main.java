@@ -17,7 +17,7 @@ public class Main {
 	
 	public void run() {
 //		log.info(Gen.toGetID());
-		String prueba = CAT.toScan();
+		String prueba = CAT.toScan("Test");
 		CAT.toLog(Main.class).info("Prueba con toLog()");
 		log.debug("Segunda prueba con toLog()");
 	}
