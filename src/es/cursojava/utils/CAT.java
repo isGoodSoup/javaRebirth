@@ -12,11 +12,13 @@ public class CAT {
 	private static Scanner scan = new Scanner(System.in);
 //	private static Logger log = LoggerFactory.getLogger(new Object() {}.getClass().getEnclosingClass());
 	
-	public static String toScan() {
+	public static String toScan(String s) {
+		System.out.println(s);
 		return scan.nextLine();
     }
 	
-	public static int toScanInt() {
+	public static int toScanInt(String s) {
+		System.out.println(s);
 		return scan.nextInt();
 	}
 	

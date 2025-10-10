@@ -5,9 +5,12 @@ import java.util.List;
 public class Cliente extends Persona {
 	private List<Alimentos> carrito;
 	
-	public Cliente(String nombre, String dni, int edad, List<Alimentos> carrito) {
+	public Cliente(String nombre, String dni, int edad) {
 		super(nombre, dni, edad);
-		this.carrito = carrito;
+	}
+	
+	public void addAlimento(Alimentos alimento) {
+		this.carrito.add(alimento);
 	}
 
 	public List<Alimentos> getCarrito() {
