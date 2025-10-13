@@ -1,4 +1,4 @@
-package es.cursojava.mapas;
+package es.cursojava.oo.mapas;
 
 import java.util.HashMap;
 import java.util.Map;
