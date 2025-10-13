@@ -2,8 +2,8 @@ package es.cursojava.oo.mapas.ejercicios.aulas;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Set;
 
 import es.cursojava.utils.CAT;
@@ -16,6 +16,7 @@ public class Main {
 		main.abrirAulas(alumnos);
 		main.mostrarInfo(alumnos);
 		main.mostrarAulas(alumnos);
+		main.mostrarNotaMediaAlta(alumnos);
 	}
 
 	public Map<String, ArrayList<Alumno>> crearObjetos() {
@@ -55,14 +56,53 @@ public class Main {
 	}
 	
 	public Map<String, ArrayList<Alumno>> mostrarInfo(Map<String, ArrayList<Alumno>> alumnos) {
+		Set<Entry<String, ArrayList<Alumno>>> aulas = alumnos.entrySet();
 		CAT.toGetString("Alumnos");
-		
+		for (Entry<String, ArrayList<Alumno>> aula : aulas) {
+			for (Alumno alumno : aula.getValue()) {
+				String nombre = alumno.getNombre();
+				String dni = alumno.getDni();
+				double notaMedia = alumno.getNotaMedia();
+				
+				System.out.println("Datos: " + nombre + ", " + dni + ", " + notaMedia);
+			}
+		}
 		return alumnos;
 	}
 	
 	public Map<String, ArrayList<Alumno>> mostrarAulas(Map<String, ArrayList<Alumno>> alumnos) {
-		CAT.toGetString("Total de alumnos");
+		String aulaNombre = CAT.toScan("Introduce el nombre de la clase");
 		
+		if (alumnos.containsKey(aulaNombre)) {
+	        ArrayList<Alumno> aula = alumnos.get(aulaNombre);
+	        CAT.toGetString("Total de alumnos: " + aula.size());
+
+	        for (Alumno alumno : aula) {
+	            System.out.println(alumno.getNombre());
+	        }
+	    } else {
+	        System.out.println("El aula no existe.");
+	    }
+		return alumnos;
+	}
+	
+	public Map<String, ArrayList<Alumno>> mostrarNotaMediaAlta(Map<String, ArrayList<Alumno>> alumnos) {
+		Alumno mejor = null;
+
+	    for (Map.Entry<String, ArrayList<Alumno>> entry : alumnos.entrySet()) {
+	        for (Alumno a : entry.getValue()) {
+	            if (mejor == null || a.getNotaMedia() > mejor.getNotaMedia()) {
+	                mejor = a;
+	            }
+	        }
+	    }
+
+	    if (mejor != null) {
+	        System.out.println("Alumno con la nota más alta:");
+	        System.out.println(mejor.getNombre() + " - " + mejor.getNotaMedia());
+	    } else {
+	        System.out.println("No hay alumnos registrados.");
+	    }
 		return alumnos;
 	}
 }
