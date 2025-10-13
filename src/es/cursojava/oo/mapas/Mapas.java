@@ -19,8 +19,15 @@ public class Mapas implements Executable {
 	public void run() {
 		Map<String, Persona> personas = new HashMap<>();
 		
-		Persona persona = new Persona(CAT.toGetName(), CAT.toGetID(), CAT.toGetInteger(18, 65));
-		personas.put(persona.getDni(), persona);
+		Persona p1 = new Persona(CAT.toGetName(), CAT.toGetID(), CAT.toGetInteger(18, 65));
+		personas.put(p1.getDni(), p1);
+		
+		Persona p2 = new Persona(CAT.toGetName(), CAT.toGetID(), CAT.toGetInteger(18, 65));
+		personas.put(p1.getDni(), p2);
+		
+		String dni = CAT.toScan("Inserta un dni");
+		Persona persona = personas.get(dni);
+		System.out.println(persona.getNombre());
 	}
 
 	@Override
