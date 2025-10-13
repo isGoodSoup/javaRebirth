@@ -50,6 +50,17 @@ public class CAT {
 		return r.nextBoolean();
 	}
 	
+	public static void toGetString(String s) {
+		for (int i = 0; i < s.length(); i++) {
+			System.out.print("=");
+		}
+		System.out.print(" " + s + " ");
+		
+		for (int i = 0; i < s.length(); i++) {
+			System.out.print("=");
+		}
+		System.out.println();
+	}
 
 	public static String toGetString(String[] s) {
 		return s[r.nextInt(s.length)];

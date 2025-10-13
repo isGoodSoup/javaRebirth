@@ -3,3 +3,4 @@ Map es una interfaz, no tiene herencia y principalmente se usa
 el HashMap. En los maps se tiene una clave y un valor. (e.g. la referencia de un juguete);
 
 put() - Retorna el valor que previamente estaba asociado a esa clave.
+get() - Retorna el valor asocioado con la clave.
