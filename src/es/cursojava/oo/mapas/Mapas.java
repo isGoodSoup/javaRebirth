@@ -3,7 +3,8 @@ package es.cursojava.oo.mapas;
 import java.util.HashMap;
 import java.util.Map;
 
-import es.cursojava.oo.herencia.ejercicios.hospital.Persona;
+import es.cursojava.oo.colecciones.ejercicios.supermercado.Persona;
+import es.cursojava.utils.CAT;
 import es.cursojava.utils.Executable;
 
 public class Mapas implements Executable {
@@ -18,6 +19,8 @@ public class Mapas implements Executable {
 	public void run() {
 		Map<String, Persona> personas = new HashMap<>();
 		
+		Persona persona = new Persona(CAT.toGetName(), CAT.toGetID(), CAT.toGetInteger(18, 65));
+		personas.put(persona.getDni(), persona);
 	}
 
 	@Override
