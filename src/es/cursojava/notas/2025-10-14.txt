@@ -1,0 +1,135 @@
+	RESUMEN BASES DE DATOS RELACIONALES
+	1-- CONCEPTOS BÁSICOS
+Una base de datos relacional es un sistema organizado de almacenamiento de datos 
+que utiliza tablas para representar la informacion entre varios tipos de datos.
+
+La información contenida se distribuye en tablas, cada una en filas y columnas.
+	+ Una fila representa un registro, una instancia de la entidad en la tabla.
+	+ Una columna representa un atributo, una propiedad especifica de la entidad.
+
+Una clave primaria es un campo que identifica únicamente cada fila. No puede 
+contener valores nulos ni repetidos. 
+
+Una clave forgein es un campo que referencia a la primaria de otra tabla. Se 
+utiliza para relacionar las tablas.
+
+	1.1-- NORMALIZACIÓN
+Organiza una base de datos para reducir redundancia y asegurar integridad, 
+aplicando reglas llamadas formas normales.
+
+Las tres primeras formas normales eliminan redundancias:
+	+ 1NF evita valores repetidos.
+	+ 2NF elimina dependencias parciales.
+	+ 3NF elimina dependencias transitivas.
+
+	1.2-- CONSULTAS SQL
+Para interactuar se usa SQL (Structured Query Language), sus operaciones pueden 
+incluir y actuar en una tabla, clasificados por DML, DDL o DCL:
+	(DML)
+	+ SELECT recupera datos.
+	+ INSERT agrega registros.
+	+ UPDATE modifica registros.
+	+ DELETE elimina registros.
+	
+	(DDL)
+	+ CREATE para crear objetos como la tabla.
+	+ ALTER para editar/modificar los objetos.
+	+ DROP para eliminar los objetos.
+	+ TRUNCATE para borrar los registros sin alterar la tabla.
+	
+	(DCL)
+	+ GRANT ortorga permisos.
+	+ REVOKE revoca permisos.
+
+	1.3-- SQL
+Se divide en tres subconjuntos principales:
+	+ DML para manipular datos. Incluye comandos que manipulan los datos de 
+	las tablas sin cambiar su estructura.
+	+ DDL para definir estructuras. Incluye comandos que definen la estructura 
+	de la base de datos
+	+ DCL para controlar permisos. Incluye comandos que gestionan los permisos 
+	y el control de acceso a los datos. 
+
+	1.4-- RESTRICCIONES
+Las bases de datos relacionales mantienen la integridad con restricciones:
+	+ NOT NULL evita valores nulos.
+	+ UNIQUE impide duplicados.
+	+ CHECK valida condiciones.
+	+ FOREIGN KEY garantiza relaciones correctas entre tablas.
+
+	1.5-- INDICES Y OPTIMIZACIÓN
+Los índices aceleran las búsquedas y deben aplicarse según las necesidades del 
+sistema.
+
+	2-- TIPOS DE DATOS
+Oracle XE ofrece varios tipos de datos numéricos:
+	+ NUMBER(p,s): números con precisión definida (p dígitos totales, s decimales).
+	+ INTEGER: enteros sin decimales.
+	+ FLOAT(p): números de punto flotante con precisión en bits.
+	+ BINARY_FLOAT y BINARY_DOUBLE: punto flotante de precisión simple y doble.
+
+	2.1-- TIPOS DE DATOS DE CARACTERES
+Tipos de datos de texto en Oracle XE:
+	+ CHAR(n): cadena de longitud fija.
+	+ VARCHAR2(n): cadena de longitud variable.
+	+ NCHAR(n) y NVARCHAR2(n): versiones Unicode para caracteres multibyte.
+	
+	2.2-- TIPOS DE DATOS FECHA Y HORA
+Tipos de datos de fecha y hora en Oracle XE:
+	+ DATE: fecha y hora con precisión de segundos.
+	+ TIMESTAMP(n): fecha y hora con precisión en fracción de segundos.
+	+ TIMESTAMP WITH TIME ZONE: fecha, hora y zona horaria.
+	+ TIMESTAMP WITH LOCAL TIME ZONE: ajusta la zona horaria según el usuario.
+	+ INTERVAL YEAR TO MONTH: diferencias en años y meses.
+	+ INTERVAL DAY TO SECOND: diferencias en días, horas, minutos y segundos.
+	
+	2.3-- TIPOS DE DATOS LOB (LARGE OBJECTS)
+Tipos de datos para grandes volúmenes en Oracle XE:
+	+ CLOB: texto de hasta 128TB.
+	+ BLOB: datos binarios como imágenes o vídeos.
+	+ NCLOB: texto Unicode grande.
+	+ BFILE: referencia a archivos binarios externos.
+	
+	2.4-- TIPOS DE DATOS ESPECIALES
+	+ RAW(n) datos binarios de longitud fija.
+	+ ROWID ubicación física de una fila.
+	+ UROWID similar a ROWID, para tablas con índices.
+	
+	3-- COMANDOS SQL
+Creación de una tabla:
+	CREATE TABLE empleados ( 
+		id NUMBER(5) PRIMARY KEY,  -- Clave primaria, número de hasta 5 dígitos 
+		nombre VARCHAR2(50) NOT NULL,  -- Campo obligatorio 
+		fecha_nacimiento DATE,  -- Tipo fecha 
+		salario NUMBER(10,2) CHECK (salario > 0), -- Número con dos decimales y 
+		restricción 
+		departamento_id NUMBER(3) REFERENCES departamentos(id) -- Clave foránea 
+	);
+
+	3.1-- MODIFICACIÓN DE LA TABLA
+Añadir una nueva columna:
+	ALTER TABLE empleados ADD email VARCHAR2(100);
+
+Modificar el tipo de un campo:
+	ALTER TABLE empleados MODIFY salario NUMBER(12,2);
+
+Eliminar una columna:
+	ALTER TABLE empleados DROP COLUMN email;
+	
+	3.2-- TRUNCAR LA TABLA
+Elimina todos los registros de la tabla, pero mantiene la estructura.
+	TRUNCATE TABLE empleados;
+
+	3.3-- BORRAR LA TABLA
+Elimina completamente la tabla y su estructura.
+	DROP TABLE empleados;
+	
+	4-- CONSTRAINTS
+En Oracle XE, las restricciones garantizan la integridad de los datos:
+	+ PRIMARY KEY: valor único y no nulo; puede ser simple o compuesta.
+	+ FOREIGN KEY: asegura integridad referencial entre tablas; opcional `ON DELETE CASCADE`.
+	+ NOT NULL: impide valores nulos.
+	+ UNIQUE: valores únicos; permite NULL; una tabla puede tener varias.
+	+ CHECK: define condiciones que los valores deben cumplir.
+	+ DEFAULT: asigna un valor por defecto si no se especifica.
+	+ IDENTITY/SEQUENCE: genera valores secuenciales automáticamente.
