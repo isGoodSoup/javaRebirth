@@ -24,10 +24,10 @@ public class Main {
 		List<Libro> a3_libros = new ArrayList<>();
 		List<Libro> a4_libros = new ArrayList<>();
 		
-		Autor a1 = new Autor(CAT.toGetName(), "español");
-		Autor a2 = new Autor(CAT.toGetName(), "chileno");
-		Autor a3 = new Autor(CAT.toGetName(), "austriaco");
-		Autor a4 = new Autor(CAT.toGetName(), "inglés");
+		Autor a1 = new Autor(CAT.toGetName(), "española");
+		Autor a2 = new Autor(CAT.toGetName(), "chilena");
+		Autor a3 = new Autor(CAT.toGetName(), "austriaca");
+		Autor a4 = new Autor(CAT.toGetName(), "inglesa");
 		
 		Libro l1 = new Libro(CAT.toGetTitle(), CAT.toGetInteger(9790, 9799) + CAT.toGetInteger(100000000, 999999999), CAT.toGetInteger(1985, 2015));
 		Libro l2 = new Libro(CAT.toGetTitle(), CAT.toGetInteger(9780, 9789) + CAT.toGetInteger(100000000, 999999999), CAT.toGetInteger(1985, 2015));
@@ -52,12 +52,24 @@ public class Main {
 	}
 	
 	public Map<Autor, List<Libro>> mostrarNacionalidades(Map<Autor, List<Libro>> biblioteca) {
-		CAT.toGetString("");
+		CAT.toGetString("Nacionalidades");
+		for(Map.Entry<Autor, List<Libro>> biblio : biblioteca.entrySet()) {
+			Autor a = biblio.getKey();
+			System.out.println(a.getNombre() + " es de nacionalidad " + a.getNacionalidad());
+		}
 		return biblioteca;
 	}
 	
 	public Map<Autor, List<Libro>> mostrarTitulos(Map<Autor, List<Libro>> biblioteca) {
-		
+		CAT.toGetString("Titulos");
+		for(Map.Entry<Autor, List<Libro>> biblio : biblioteca.entrySet()) {
+			List<Libro> l = biblio.getValue();
+			for (int i = 0; i < l.size(); i++) {
+				if(l.get(i).getAnio() > 2010) {
+					System.out.println(l.get(i).getTitulo() + " salió post-2010");
+				}
+			}
+		}
 		return biblioteca;
 	}
 	
