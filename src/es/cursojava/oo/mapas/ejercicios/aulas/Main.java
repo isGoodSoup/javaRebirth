@@ -2,8 +2,10 @@ package es.cursojava.oo.mapas.ejercicios.aulas;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.OptionalDouble;
 import java.util.Set;
 
 import es.cursojava.utils.CAT;
@@ -16,7 +18,8 @@ public class Main {
 		main.abrirAulas(alumnos);
 		main.mostrarInfo(alumnos);
 		main.mostrarAulas(alumnos);
-		main.mostrarNotaMediaAlta(alumnos);
+		Map<Map<String, ArrayList<Alumno>>, Colegio> colegios = main.abrirColegios(alumnos);
+		main.mostrarInfoColegios(colegios);
 	}
 
 	public Map<String, ArrayList<Alumno>> crearObjetos() {
@@ -49,7 +52,7 @@ public class Main {
 	public Map<String, ArrayList<Alumno>> abrirAulas(Map<String, ArrayList<Alumno>> alumnos) {
 		Set<String> aulas = alumnos.keySet();
 		CAT.toGetString("Aulas");
-		for (String aula : aulas) {
+		for(String aula : aulas) {
 			System.out.println(aula);
 		}
 		return alumnos;
@@ -58,8 +61,8 @@ public class Main {
 	public Map<String, ArrayList<Alumno>> mostrarInfo(Map<String, ArrayList<Alumno>> alumnos) {
 		Set<Entry<String, ArrayList<Alumno>>> aulas = alumnos.entrySet();
 		CAT.toGetString("Alumnos");
-		for (Entry<String, ArrayList<Alumno>> aula : aulas) {
-			for (Alumno alumno : aula.getValue()) {
+		for(Entry<String, ArrayList<Alumno>> aula : aulas) {
+			for(Alumno alumno : aula.getValue()) {
 				String nombre = alumno.getNombre();
 				String dni = alumno.getDni();
 				double notaMedia = alumno.getNotaMedia();
@@ -73,11 +76,11 @@ public class Main {
 	public Map<String, ArrayList<Alumno>> mostrarAulas(Map<String, ArrayList<Alumno>> alumnos) {
 		String aulaNombre = CAT.toScan("Introduce el nombre de la clase");
 		
-		if (alumnos.containsKey(aulaNombre)) {
+		if(alumnos.containsKey(aulaNombre)) {
 	        ArrayList<Alumno> aula = alumnos.get(aulaNombre);
 	        CAT.toGetString("Total de alumnos: " + aula.size());
 
-	        for (Alumno alumno : aula) {
+	        for(Alumno alumno : aula) {
 	            System.out.println(alumno.getNombre());
 	        }
 	    } else {
@@ -86,23 +89,37 @@ public class Main {
 		return alumnos;
 	}
 	
-	public Map<String, ArrayList<Alumno>> mostrarNotaMediaAlta(Map<String, ArrayList<Alumno>> alumnos) {
-		Alumno mejor = null;
-
-	    for (Map.Entry<String, ArrayList<Alumno>> entry : alumnos.entrySet()) {
-	        for (Alumno a : entry.getValue()) {
-	            if (mejor == null || a.getNotaMedia() > mejor.getNotaMedia()) {
-	                mejor = a;
-	            }
-	        }
-	    }
-
-	    if (mejor != null) {
-	        System.out.println("Alumno con la nota más alta:");
-	        System.out.println(mejor.getNombre() + " - " + mejor.getNotaMedia());
-	    } else {
-	        System.out.println("No hay alumnos registrados.");
-	    }
-		return alumnos;
+	public Map<Map<String, ArrayList<Alumno>>, Colegio> abrirColegios(Map<String, ArrayList<Alumno>> alumnos) {
+		Map<Map<String, ArrayList<Alumno>>, Colegio> colegios = new HashMap<>();
+		colegios.put(alumnos, new Colegio("Colegio " + CAT.toGetName(), "Av. " + CAT.toGetName() + " " + CAT.toGetInteger(1, 50)));
+		colegios.put(alumnos, new Colegio("Colegio " + CAT.toGetName(), "Av. " + CAT.toGetName() + " " + CAT.toGetInteger(1, 50)));
+		colegios.put(alumnos, new Colegio("Colegio " + CAT.toGetName(), "Av. " + CAT.toGetName() + " " + CAT.toGetInteger(1, 50)));
+		return colegios;
+	}
+	
+	public Map<Map<String, ArrayList<Alumno>>, Colegio> mostrarInfoColegios(Map<Map<String, ArrayList<Alumno>>, Colegio> colegios) {
+		CAT.toGetString("Colegios");
+		List<Double> nm = new ArrayList<>();
+		
+		for(Map.Entry<Map<String, ArrayList<Alumno>>, Colegio> e : colegios.entrySet()) {
+			Map<String, ArrayList<Alumno>> ie = e.getKey();
+			Colegio colegio = e.getValue();
+			System.out.println(colegio.getNombre() + ", " + colegio.getDireccion());
+			for(Map.Entry<String, ArrayList<Alumno>> c : ie.entrySet()) {
+				ArrayList<Alumno> alumnos = c.getValue();
+				for(Alumno a : alumnos) {
+					System.out.println(a.getNombre() + ", " + a.getDni() + " con " + a.getNotaMedia());
+					nm.add(a.getNotaMedia());
+				}
+			}
+		}
+		CAT.toGetString("Nota media más alta");
+		OptionalDouble max = nm.stream()
+                .mapToDouble(Double::doubleValue)
+                .max();
+		if(max.isPresent()) {
+			System.out.println("La nota media más alta es " + max.getAsDouble());
+		}
+		return colegios;
 	}
 }

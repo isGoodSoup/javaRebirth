@@ -18,31 +18,15 @@ public class Alumno {
 		return nombre;
 	}
 
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
-
 	public String getDni() {
 		return dni;
-	}
-
-	public void setDni(String dni) {
-		this.dni = dni;
 	}
 
 	public double getNotaMedia() {
 		return notaMedia;
 	}
 
-	public void setNotaMedia(double notaMedia) {
-		this.notaMedia = notaMedia;
-	}
-
 	public int getCreditos() {
 		return creditos;
-	}
-
-	public void setCreditos(int creditos) {
-		this.creditos = creditos;
 	}
 }

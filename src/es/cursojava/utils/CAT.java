@@ -78,6 +78,10 @@ public class CAT {
 		return r.nextInt(min, max);
 	}
 	
+	public static long toGetLong(long min, long max) {
+		return r.nextLong(min, max);
+	}
+	 
 	public static String toGetName() {
 		String[] first = {
 	            "Alice", "Alejandro", 
@@ -137,6 +141,30 @@ public class CAT {
 	            "Zimmerman", "Zamora"
 	    };
 	    return first[r.nextInt(first.length)] + " " + last[r.nextInt(last.length)];
+	}
+	
+	public static String toGetTitle() {
+	    String[] a = {
+	        "Oscuro", "Misterioso", "Increíble", "Perdido", "Eterno",
+	        "Secreto", "Invisible", "Fantástico", "Siniestro", "Radiante"
+	    };
+
+	    String[] s = {
+	        "Bosque", "Destino", "Viaje", "Reino", "Mundo",
+	        "Labyrinth", "Sueño", "Enigma", "Secreto", "Guardian"
+	    };
+
+	    String[] c = {
+	        "del Alba", "de la Noche", "del Más Allá", "de los Sueños",
+	        "de la Tormenta", "del Olvido", "de la Mente", "del Corazón",
+	        "de las Sombras", "de la Esperanza"
+	    };
+
+	    String adj = toGetString(a);
+	    String sust = toGetString(s);
+	    String com = toGetString(c);
+
+	    return adj + " " + sust + " " + com;
 	}
 	
 	public static LocalTime toGetTime() {

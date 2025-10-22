@@ -1,0 +1,68 @@
+package es.cursojava.oo.mapas.ejercicios.biblioteca;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import es.cursojava.utils.CAT;
+
+public class Main {
+	
+	public static void main(String[] args) {
+		Main main = new Main();
+		Map<Autor, List<Libro>> biblioteca = main.crearObjetos();
+		main.mostrarNacionalidades(biblioteca);
+		main.mostrarTitulos(biblioteca);
+		main.mostrarAutor(biblioteca);
+	}
+	
+	public Map<Autor, List<Libro>> crearObjetos() {
+		Map<Autor, List<Libro>> biblio = new HashMap<>();
+		List<Libro> a1_libros = new ArrayList<>();
+		List<Libro> a2_libros = new ArrayList<>();
+		List<Libro> a3_libros = new ArrayList<>();
+		List<Libro> a4_libros = new ArrayList<>();
+		
+		Autor a1 = new Autor(CAT.toGetName(), "español");
+		Autor a2 = new Autor(CAT.toGetName(), "chileno");
+		Autor a3 = new Autor(CAT.toGetName(), "austriaco");
+		Autor a4 = new Autor(CAT.toGetName(), "inglés");
+		
+		Libro l1 = new Libro(CAT.toGetTitle(), CAT.toGetInteger(9790, 9799) + CAT.toGetInteger(100000000, 999999999), CAT.toGetInteger(1985, 2015));
+		Libro l2 = new Libro(CAT.toGetTitle(), CAT.toGetInteger(9780, 9789) + CAT.toGetInteger(100000000, 999999999), CAT.toGetInteger(1985, 2015));
+		Libro l3 = new Libro(CAT.toGetTitle(), CAT.toGetInteger(9780, 9789) + CAT.toGetInteger(100000000, 999999999), CAT.toGetInteger(1985, 2015));
+		Libro l4 = new Libro(CAT.toGetTitle(), CAT.toGetInteger(9780, 9789) + CAT.toGetInteger(100000000, 999999999), CAT.toGetInteger(1985, 2015));
+		Libro l5 = new Libro(CAT.toGetTitle(), CAT.toGetInteger(9790, 9799) + CAT.toGetInteger(100000000, 999999999), CAT.toGetInteger(1985, 2015));
+		Libro l6 = new Libro(CAT.toGetTitle(), CAT.toGetInteger(9780, 9789) + CAT.toGetInteger(100000000, 999999999), CAT.toGetInteger(1985, 2015));
+		Libro l7 = new Libro(CAT.toGetTitle(), CAT.toGetInteger(9790, 9799) + CAT.toGetInteger(100000000, 999999999), CAT.toGetInteger(1985, 2015));
+		Libro l8 = new Libro(CAT.toGetTitle(), CAT.toGetInteger(9780, 9789) + CAT.toGetInteger(100000000, 999999999), CAT.toGetInteger(1985, 2015));
+		Libro l9 = new Libro(CAT.toGetTitle(), CAT.toGetInteger(9790, 9799) + CAT.toGetInteger(100000000, 999999999), CAT.toGetInteger(1985, 2015));
+		
+		a1_libros.add(l1); a1_libros.add(l2); a1_libros.add(l3);
+		a2_libros.add(l4); a2_libros.add(l5); a2_libros.add(l6); 
+		a3_libros.add(l7);
+		a4_libros.add(l8); a4_libros.add(l9);
+		
+		biblio.put(a1, a1_libros);
+		biblio.put(a2, a2_libros);
+		biblio.put(a3, a3_libros);
+		biblio.put(a4, a4_libros);
+		return biblio;
+	}
+	
+	public Map<Autor, List<Libro>> mostrarNacionalidades(Map<Autor, List<Libro>> biblioteca) {
+		CAT.toGetString("");
+		return biblioteca;
+	}
+	
+	public Map<Autor, List<Libro>> mostrarTitulos(Map<Autor, List<Libro>> biblioteca) {
+		
+		return biblioteca;
+	}
+	
+	public Map<Autor, List<Libro>> mostrarAutor(Map<Autor, List<Libro>> biblioteca) {
+		
+		return biblioteca;
+	}
+}
