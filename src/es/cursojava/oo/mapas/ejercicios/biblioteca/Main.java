@@ -51,7 +51,7 @@ public class Main {
 		return biblio;
 	}
 	
-	public Map<Autor, List<Libro>> mostrarNacionalidades(Map<Autor, List<Libro>> biblioteca) {
+	private Map<Autor, List<Libro>> mostrarNacionalidades(Map<Autor, List<Libro>> biblioteca) {
 		CAT.toGetString("Nacionalidades");
 		for(Map.Entry<Autor, List<Libro>> biblio : biblioteca.entrySet()) {
 			Autor a = biblio.getKey();
@@ -60,7 +60,7 @@ public class Main {
 		return biblioteca;
 	}
 	
-	public Map<Autor, List<Libro>> mostrarTitulos(Map<Autor, List<Libro>> biblioteca) {
+	private Map<Autor, List<Libro>> mostrarTitulos(Map<Autor, List<Libro>> biblioteca) {
 		CAT.toGetString("Titulos");
 		for(Map.Entry<Autor, List<Libro>> biblio : biblioteca.entrySet()) {
 			List<Libro> l = biblio.getValue();
@@ -73,8 +73,18 @@ public class Main {
 		return biblioteca;
 	}
 	
-	public Map<Autor, List<Libro>> mostrarAutor(Map<Autor, List<Libro>> biblioteca) {
-		
+	private Map<Autor, List<Libro>> mostrarAutor(Map<Autor, List<Libro>> biblioteca) {
+		CAT.toGetString("Autores con 2+ libros");
+		for (Map.Entry<Autor, List<Libro>> biblio : biblioteca.entrySet()) {
+		    Autor autor = biblio.getKey();
+		    List<Libro> libros = biblio.getValue();
+		    if(libros.size() > 2) {
+		    	System.out.println(autor.getNombre());
+			    for (Libro libro : libros) {
+			    	System.out.println(libro.getTitulo() + " (" + libro.getAnio() + ")");
+			    }
+		    }
+		}
 		return biblioteca;
 	}
 }
