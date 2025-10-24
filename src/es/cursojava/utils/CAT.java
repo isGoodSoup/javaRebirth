@@ -22,6 +22,16 @@ public class CAT {
 		return scan.nextInt();
 	}
 	
+	public static long toScanLong(String s) {
+		System.out.println(s);
+		return scan.nextLong();
+	}
+	
+	public static double toScanDouble(String s) {
+		System.out.println(s);
+		return scan.nextDouble();
+	}
+	
 	public static Logger toLog(Class<?> cls) {
 	    return LoggerFactory.getLogger(cls);
 	}
