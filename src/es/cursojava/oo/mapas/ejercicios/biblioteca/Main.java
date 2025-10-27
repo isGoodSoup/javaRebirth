@@ -128,13 +128,13 @@ public class Main {
 	    List<Libro> librosAutor = biblioteca.get(autorEncontrado);
 	    librosAutor.add(new Libro(tituloLibro, isbnLibro, anhoLibro));
 
-	    librosAutor.removeIf(libro -> {
-	        if(libro.getIsbn() == isbnLibro) {
-	            System.out.println(libro.getTitulo() + " se ha eliminado");
-	            return true;
-	        }
-	        return false;
-	    });
+//	    librosAutor.removeIf(libro -> {
+//	        if(libro.getIsbn() == isbnLibro) {
+//	            System.out.println(libro.getTitulo() + " se ha eliminado");
+//	            return true;
+//	        }
+//	        return false;
+//	    });
 
 	    if(autorEncontrado == null) {
 	        String nombre = CAT.toScan("Nombre:");
