@@ -91,6 +91,12 @@ public class CAT {
 	public static long toGetLong(long min, long max) {
 		return r.nextLong(min, max);
 	}
+	
+	public long toTime(Runnable task) {
+        long start = System.currentTimeMillis();
+        task.run();
+        return System.currentTimeMillis() - start;
+    }
 	 
 	public static String toGetName() {
 		String[] first = {
@@ -176,10 +182,4 @@ public class CAT {
 
 	    return adj + " " + sust + " " + com;
 	}
-	
-	public static long toTime(Runnable task) {
-        long start = System.currentTimeMillis();
-        task.run();
-        return System.currentTimeMillis() - start;
-    }
 }
