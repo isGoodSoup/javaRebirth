@@ -1,6 +1,5 @@
 package es.cursojava.utils;
 
-import java.time.LocalTime;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -10,7 +9,6 @@ import org.slf4j.LoggerFactory;
 public class CAT {
 	private static Random r = new Random();
 	private static Scanner scan = new Scanner(System.in);
-//	private static Logger log = LoggerFactory.getLogger(new Object() {}.getClass().getEnclosingClass());
 	
 	public static String toScan(String s) {
 		System.out.print(s + ": ");
