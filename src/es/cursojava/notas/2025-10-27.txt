@@ -1,0 +1,8 @@
+	Excepciones
+Hay un error en el código post-compilación y salta, se controla con
+mecanismos de Java que evitan que se detenga el programa.
+	+ try-catch: 
+		es como un edificio, donde se tiran pelotas de color. El try son 
+		las pelotas de color y el catch somos los desarrolladores intentando 
+		cazarlo
+	+ finally: todo lo que se ejecuta se ejecuta siempre.

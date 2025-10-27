@@ -27,7 +27,7 @@ public class Main {
 		
 		Autor a1 = new Autor(CAT.toGetName(), "española");
 		Autor a2 = new Autor(CAT.toGetName(), "chilena");
-		Autor a3 = new Autor(CAT.toGetName(), "austriaca");
+		Autor a3 = new Autor(CAT.toGetName(), null);
 		Autor a4 = new Autor(CAT.toGetName(), "inglesa");
 		
 		Libro l1 = new Libro(CAT.toGetTitle(), CAT.toGetLong(9790000000000L, 9799999999999L), CAT.toGetInteger(1985, 2015));
@@ -56,7 +56,13 @@ public class Main {
 		CAT.toGetString("Nacionalidades");
 		for(Map.Entry<Autor, List<Libro>> biblio : biblioteca.entrySet()) {
 			Autor a = biblio.getKey();
-			System.out.println(a.getNombre() + " es de nacionalidad " + a.getNacionalidad());
+			try {
+				System.out.println(a.getNombre() + " es de nacionalidad " + a.getNacionalidad().substring(0, 3));
+			} catch(NullPointerException e) {
+				e.printStackTrace();
+			} finally {
+				// Es código que se ejecuta incondicionalmente
+			}
 		}
 		return biblioteca;
 	}
