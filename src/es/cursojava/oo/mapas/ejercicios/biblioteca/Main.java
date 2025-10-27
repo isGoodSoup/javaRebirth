@@ -59,7 +59,7 @@ public class Main {
 			try {
 				System.out.println(a.getNombre() + " es de nacionalidad " + a.getNacionalidad().substring(0, 3));
 			} catch(NullPointerException e) {
-				e.printStackTrace();
+				System.err.println(e.getMessage());
 			} finally {
 				// Es código que se ejecuta incondicionalmente
 			}
