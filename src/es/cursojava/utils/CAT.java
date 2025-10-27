@@ -13,22 +13,22 @@ public class CAT {
 //	private static Logger log = LoggerFactory.getLogger(new Object() {}.getClass().getEnclosingClass());
 	
 	public static String toScan(String s) {
-		System.out.println(s);
+		System.out.print(s + ": ");
 		return scan.nextLine();
     }
 	
 	public static int toScanInt(String s) {
-		System.out.println(s);
+		System.out.print(s + ": ");
 		return scan.nextInt();
 	}
 	
 	public static long toScanLong(String s) {
-		System.out.println(s);
+		System.out.print(s + ": ");
 		return scan.nextLong();
 	}
 	
 	public static double toScanDouble(String s) {
-		System.out.println(s);
+		System.out.print(s + ": ");
 		return scan.nextDouble();
 	}
 	
@@ -177,7 +177,9 @@ public class CAT {
 	    return adj + " " + sust + " " + com;
 	}
 	
-	public static LocalTime toGetTime() {
-	    return LocalTime.of(r.nextInt(24), r.nextInt(60), r.nextInt(60));
-	}
+	public static long toTime(Runnable task) {
+        long start = System.currentTimeMillis();
+        task.run();
+        return System.currentTimeMillis() - start;
+    }
 }

@@ -69,13 +69,18 @@ public class Main {
 	
 	private Map<Autor, List<Libro>> mostrarTitulos(Map<Autor, List<Libro>> biblioteca) {
 		CAT.toGetString("Titulos");
+		int lib = 0;
 		for(Map.Entry<Autor, List<Libro>> biblio : biblioteca.entrySet()) {
 			List<Libro> l = biblio.getValue();
 			for (int i = 0; i < l.size(); i++) {
 				if(l.get(i).getAnio() > 2010) {
-					System.out.println(l.get(i).getTitulo() + " salió post-2010");
+					System.out.println(l.get(i).getTitulo() + " (" + l.get(i).getAnio() + ")");
+					lib++;
 				}
 			}
+		}
+		if(lib == 0) {
+			System.out.println("No hay libros post-2010");
 		}
 		return biblioteca;
 	}
@@ -106,10 +111,10 @@ public class Main {
 	            System.out.println("ISBN: " + libro.getIsbn());
 	        }
 	    }
-	    String tituloLibro = CAT.toScan("-- Qué libro buscas?");
-	    String autorLibro = CAT.toScan("-- Qué autor buscas?");
-	    long isbnLibro = CAT.toScanLong("-- Qué ISBN buscas?");
-	    int anhoLibro = CAT.toScanInt("-- En qué año se escribió " + tituloLibro.toUpperCase() + "?");
+	    String tituloLibro = CAT.toScan("Qué libro buscas?");
+	    String autorLibro = CAT.toScan("Qué autor buscas?");
+	    long isbnLibro = CAT.toScanLong("Qué ISBN buscas?");
+	    int anhoLibro = CAT.toScanInt("En qué año se escribió " + tituloLibro.toUpperCase() + "?");
 
 	    Autor autorEncontrado = null;
 
