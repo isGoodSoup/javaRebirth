@@ -1,0 +1,21 @@
+	Normalización SQL
+0FN (Forma Normal)
+	+ Evitar listas de datos
+	+ Eliminar la redundancia
+1FN (Primera Forma Normal) solo puede tener atributos multivalorados, deber ser de valor atómico.
+	+ Un atributo multivalorado es aquel que puede tener varios valores para una misma entidad
+2FN (Segunda Forma Normal) requiere estar en 1FN.
+	+ No existen dependencias parciales.
+3FN (Tercera Forma Normal) debe estar en 2FN.
+	+ No existen dependencias parciales.
+	+ No hay dependencias transitivas
+Ejercicio e.g.:
+	Empleado(ID, Nombre, Dpto, Idioma)   <--->  Idiomas(ID, Idioma)   <--->  Dpto(DID, Nombre)
+			[1FN]				   [2FN]		      [3FN]
+
+        Empleado		Departamento	        Idiomas
+ ID  |  NOMBRE  |  ID_DEP      DID  |  NOMBRE	     IID  |  NOMBRE
+-------------------------    ------------------	   --------------------
+ 1   |  PEPE    |  D1	       D1   |  RRHH          I1   |  INGLES
+
+Si no está en 3FN una tabla, está mal.
