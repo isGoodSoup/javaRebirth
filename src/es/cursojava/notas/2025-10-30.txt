@@ -1,0 +1,45 @@
+	JOINs SQL Repaso
+	
++ CROSS JOIN, devuelve todas las combinaciones posibles de filas entre dos tablas.
+
+	SELECT COUNT(*) 
+	FROM COUNTRIES CROSS JOIN REGIONS;
+	
++ NATURAL JOIN, que combina automáticamente las filas de dos tablas usando las 
+columnas que tienen el mismo nombre y tipo de datos.
+
+	SELECT * FROM REGIONS NATURAL JOIN COUNTRIES
+	ORDER BY REGION_NAME, COUNTRY_NAME
+	
++ INNER JOIN, join por defecto
+	
+	SELECT * FROM REGIONS INNER JOIN COUNTRIES USING(REGION_ID);
+
++ LEFT OUTER JOIN, devuelve todas las filas de la tabla izquierda, y las filas 
+coincidentes de la tabla derecha. Si no hay coincidencia en la tabla derecha, 
+el resultado muestra NULL en sus columnas.
+
+	SELECT * FROM REGIONS LEFT OUTER JOIN COUNTRIES USING(REGION_ID);
+	
+	SELECT * FROM REGIONS LEFT OUTER JOIN COUNTRIES ON REGIONS.REGION_ID = COUNTRIES.REGION_ID;
+	
++ RIGHT OUTER JOIN, devuelve todas las filas de la tabla derecha, y las filas 
+coincidentes de la tabla izquierda. Si no hay coincidencia en la tabla izquierda, 
+el resultado muestra NULL en sus columnas.
+
+	SELECT * FROM REGIONS RIGHT OUTER JOIN COUNTRIES USING(REGION_ID);
+	
+	SELECT * FROM REGIONS RIGHT OUTER JOIN COUNTRIES ON REGIONS.REGION_ID = COUNTRIES.REGION_ID;
+
++ FULL OUTER JOIN, devuelve todas las filas que cumplen: las que coinciden 
+según la condición (ON o USING) y las que no tienen coincidencia, rellenando 
+con NULL las columnas faltantes.
+
+	SELECT * FROM REGIONS FULL OUTER JOIN COUNTRIES USING(REGION_ID);
+	
+	SELECT * FROM REGIONS FULL OUTER JOIN COUNTRIES ON REGIONS.REGION_ID = COUNTRIES.REGION_ID;
+	
++ ANTI JOIN, devuelve todas las filas de una tabla que no tienen coincidencias 
+en otra tabla según una condición de unión. Es decir, solo los registros que no coinciden.
+
+	SELECT * FROM REGIONS r WHERE NOT EXISTS(SELECT 1 FROM COUNTRIES c WHERE c.REGION_ID = r.REGION_ID);
