@@ -1,8 +1,9 @@
 package es.cursojava.modulo2.examen.main;
 
 import es.cursojava.modulo2.examen.interfaces.Imprimible;
+import es.cursojava.modulo2.examen.interfaces.Participable;
 
-public class Apostante extends Persona implements Imprimible {
+public class Apostante extends Persona implements Participable, Imprimible {
 	private double saldo;
 
 	public Apostante(String nombre, int edad, double saldo) {
@@ -10,6 +11,11 @@ public class Apostante extends Persona implements Imprimible {
 		this.saldo = saldo;
 	}
 	
+	@Override
+	public String getIdentificador() {
+		return null;
+	}
+
 	@Override
 	public String imprimeDatos() {
 

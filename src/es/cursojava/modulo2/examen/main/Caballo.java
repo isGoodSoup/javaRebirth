@@ -2,8 +2,9 @@ package es.cursojava.modulo2.examen.main;
 
 import es.cursojava.modulo2.examen.interfaces.Avanzable;
 import es.cursojava.modulo2.examen.interfaces.Imprimible;
+import es.cursojava.modulo2.examen.interfaces.Participable;
 
-public class Caballo implements Avanzable, Imprimible {
+public class Caballo implements Participable, Avanzable, Imprimible {
 	private String nombre;
 	private double peso;
 	private double velocidad;
@@ -20,6 +21,11 @@ public class Caballo implements Avanzable, Imprimible {
 		this.experiencia = experiencia;
 		this.jinete = jinete;
 		this.metrosRecorridos = metrosRecorridos;
+	}
+	
+	@Override
+	public String getIdentificador() {
+		return null;
 	}
 	
 	public void resetear() {
