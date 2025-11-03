@@ -1,7 +1,6 @@
 package es.cursojava.modulo2.examen.main;
 
 import es.cursojava.modulo2.examen.interfaces.Participable;
-import es.cursojava.utils.CAT;
 
 public class Jinete extends Persona implements Participable {
 	private int aniosExperiencia;
@@ -16,11 +15,6 @@ public class Jinete extends Persona implements Participable {
 		return Participable.super.getIdentificador();
 	}
 	
-	public static Jinete crearJinete() {
-		Jinete jinete = new Jinete(CAT.toGetName(), CAT.toGetInteger(40, 100), CAT.toGetInteger(20, 100));
-		return jinete;
-	}
-
 	public int getAniosExperiencia() {
 		return aniosExperiencia;
 	}

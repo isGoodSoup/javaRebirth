@@ -22,40 +22,51 @@ public class GranPremio {
 		this.apostantes = new ArrayList<>();
 	}
 	
-	public void empezarGranPremio() {
+	public void init() {
 		System.out.println("Bienvenido al " + this.getNombre());
-		carreras = crearCarreras();
-		apostantes = crearApostantes();
-		String[] menu = {
-				carreras.get(0).getNombre(), 
-				carreras.get(1).getNombre(),
-				carreras.get(2).getNombre()
-		};
-		
+		this.carreras = crearCarreras();
+		this.apostantes = crearApostantes();
 		for (int i = 0; i < apostantes.size(); i++) {
+			double saldo = CAT.toScanDouble("Introduce tu saldo");
 			do {
-				Menu.printMenu(menu);
+				Menu.printMenu(Menu.getMenuCarreras(this.carreras));
 				opcion = CAT.toScanInt("Elige una carrera para apostar");
 				switch(opcion) {
-					case 1 -> { 
-						carrera = carreras.get(0); 
-						SimUtils.mostrarLista();
-						
-					}
+					case 1 -> { carrera = carreras.get(0); }
 					case 2 -> { carrera = carreras.get(1); }
 					case 3 -> { carrera = carreras.get(2); }
 				}
-			} while(apostantes.get(i).getSaldo() > 0 || opcion < 3);
+			} while(saldo > 0 && opcion < 3);
+			
+			do {
+				Menu.printMenu(Menu.getMenuCaballos(this.carrera.getCaballos()));
+				opcion = CAT.toScanInt("Elige un caballo para apostar");
+				switch(opcion) {
+					case 1 -> { 
+						Apostante apos = this.apostantes.get(i);
+						Caballo caballo = this.carrera.getCaballos().get(opcion);
+						double importe = CAT.toScanDouble("Introduce tu apuesta");
+						
+						Apuesta apuesta = new Apuesta(apos, caballo, importe);
+						if(apuesta.getImporte() > saldo) System.err.println();
+					}
+				}
+			} while(saldo > 0 && opcion < 7);
 		}
 		mostrarResumen();
 	}
 	
 	private List<Carrera> crearCarreras() {
-		Carrera c1 = new Carrera("4000 metros", 4100.0);
+		List<Caballo> caballos1 = crearCaballos();
+		Carrera c1 = new Carrera("4000 metros", 4100.0, caballos1);
 		carreras.add(c1);
-		Carrera c2 = new Carrera("2500 metros", 2560.0);
+		
+		List<Caballo> caballos2 = crearCaballos();
+		Carrera c2 = new Carrera("2500 metros", 2560.0, caballos2);
 		carreras.add(c2);
-		Carrera c3 = new Carrera("3000 metros", 3020.0);
+		
+		List<Caballo> caballos3 = crearCaballos();
+		Carrera c3 = new Carrera("3000 metros", 3020.0, caballos3);
 		carreras.add(c3);
 		return carreras;
 	}
@@ -70,10 +81,14 @@ public class GranPremio {
 		return apostantes;
 	}
 	
-	private Apuesta crearApuesta(Apostante apos, Caballo caballo, double importe) {
-		
-		Apuesta apuesta = new Apuesta(apos, caballo, importe);
-		return apuesta;
+	private List<Caballo> crearCaballos() {
+		List<Caballo> caballos = new ArrayList<>();
+		for (int i = 0; i < 6; i++) {
+			Jinete jinete = SimUtils.crearJinete();
+			Caballo caballo = SimUtils.crearCaballoAleatorio(nombre, jinete);
+			caballos.add(caballo);
+		}
+		return caballos;
 	}
 	
 	private void mostrarResumen() {
@@ -110,5 +125,13 @@ public class GranPremio {
 
 	public void setApostantes(List<Apostante> apostantes) {
 		this.apostantes = apostantes;
+	}
+
+	public Jinete getJinete() {
+		return jinete;
+	}
+
+	public void setJinete(Jinete jinete) {
+		this.jinete = jinete;
 	}
 }

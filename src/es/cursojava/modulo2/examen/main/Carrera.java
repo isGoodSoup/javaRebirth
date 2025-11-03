@@ -6,14 +6,14 @@ import java.util.List;
 public class Carrera {
 	private String nombre;
 	private double distanciaObjetivo;
-	private List<Caballo> participantes;
+	private List<Caballo> caballos;
 	private List<Apuesta> apuestas;
 	
-	public Carrera(String nombre, double distanciaObjetivo) {
+	public Carrera(String nombre, double distanciaObjetivo, List<Caballo> caballos) {
 		super();
 		this.nombre = nombre;
 		this.distanciaObjetivo = distanciaObjetivo;
-		this.participantes = new ArrayList<>();
+		this.caballos = caballos;
 		this.apuestas = new ArrayList<>();
 	}
 
@@ -33,12 +33,12 @@ public class Carrera {
 		this.distanciaObjetivo = distanciaObjetivo;
 	}
 
-	public List<Caballo> getParticipantes() {
-		return participantes;
+	public List<Caballo> getCaballos() {
+		return caballos;
 	}
 
-	public void setParticipantes(List<Caballo> participantes) {
-		this.participantes = participantes;
+	public void setCaballos(List<Caballo> participantes) {
+		this.caballos = participantes;
 	}
 
 	public List<Apuesta> getApuestas() {

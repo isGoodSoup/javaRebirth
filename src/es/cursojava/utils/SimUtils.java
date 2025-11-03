@@ -1,5 +1,7 @@
 package es.cursojava.utils;
 
+import java.util.List;
+
 import es.cursojava.modulo2.examen.main.Caballo;
 import es.cursojava.modulo2.examen.main.Jinete;
 
@@ -15,10 +17,14 @@ public class SimUtils {
 		return caballo;
 	}
 	
-	public static void mostrarLista() {
-		Caballo[] caballos = new Caballo[10];
-		for (int i = 0; i < caballos.length; i++) {
-			
+	public static Jinete crearJinete() {
+		Jinete jinete = new Jinete(CAT.toGetName(), CAT.toGetInteger(40, 100), CAT.toGetInteger(20, 100));
+		return jinete;
+	}
+	
+	public static void mostrarLista(List<Caballo> caballos) {
+		for (int i = 0; i < caballos.size(); i++) {
+			System.out.println(i + 1 + ") " + caballos.get(i).getNombre());
 		}
 	}
 	

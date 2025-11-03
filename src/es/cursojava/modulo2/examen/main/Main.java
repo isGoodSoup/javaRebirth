@@ -14,6 +14,6 @@ public class Main {
 	
 	public void run() {
 		GranPremio premio = new GranPremio("Gran Premio de Madrid");
-		premio.empezarGranPremio();
+		premio.init();
 	}
 }
