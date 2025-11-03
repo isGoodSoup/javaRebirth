@@ -13,7 +13,7 @@ public class Jinete extends Persona implements Participable {
 	
 	@Override
 	public String getIdentificador() {
-		return null;
+		return Participable.super.getIdentificador();
 	}
 	
 	public static Jinete crearJinete() {

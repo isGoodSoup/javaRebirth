@@ -13,7 +13,7 @@ public class Apostante extends Persona implements Participable, Imprimible {
 	
 	@Override
 	public String getIdentificador() {
-		return null;
+		return Participable.super.getIdentificador();
 	}
 
 	@Override

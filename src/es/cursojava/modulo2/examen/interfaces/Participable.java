@@ -1,5 +1,9 @@
 package es.cursojava.modulo2.examen.interfaces;
 
+import es.cursojava.utils.CAT;
+
 public interface Participable {
-	abstract String getIdentificador();
+	default public String getIdentificador() {
+		return CAT.toGetID();
+	}
 }

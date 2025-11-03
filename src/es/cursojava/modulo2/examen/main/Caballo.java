@@ -12,6 +12,16 @@ public class Caballo implements Participable, Avanzable, Imprimible {
 	private Jinete jinete;
 	private double metrosRecorridos;
 	
+	public Caballo(String nombre, double peso, double velocidad,
+			int experiencia, double metrosRecorridos) {
+		super();
+		this.nombre = nombre;
+		this.peso = peso;
+		this.velocidad = velocidad;
+		this.experiencia = experiencia;
+		this.metrosRecorridos = metrosRecorridos;
+	}
+
 	public Caballo(String nombre, double peso, double velocidad, int experiencia, Jinete jinete,
 			double metrosRecorridos) {
 		super();
@@ -25,15 +35,15 @@ public class Caballo implements Participable, Avanzable, Imprimible {
 	
 	@Override
 	public String getIdentificador() {
-		return null;
+		return Participable.super.getIdentificador();
 	}
 	
 	public void resetear() {
-		
+		this.metrosRecorridos = 0;
 	}
 	
 	public void sumarExperiencia(int puntos) {
-		
+		this.experiencia += puntos;
 	}
 	
 	@Override
@@ -44,8 +54,7 @@ public class Caballo implements Participable, Avanzable, Imprimible {
 
 	@Override
 	public void aplicarAvance(double metros) {
-
-		
+		this.velocidad += metros;
 	}
 	
 	@Override
