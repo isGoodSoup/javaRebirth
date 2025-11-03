@@ -1,10 +1,8 @@
 package es.cursojava.modulo2.examen.main;
 
-import es.cursojava.modulo2.examen.interfaces.Avanzable;
-import es.cursojava.modulo2.examen.interfaces.Imprimible;
-import es.cursojava.modulo2.examen.interfaces.Participable;
+import es.cursojava.modulo2.examen.interfaces.Cabalgable;
 
-public class Caballo implements Participable, Avanzable, Imprimible {
+public class Caballo implements Cabalgable {
 	private String nombre;
 	private double peso;
 	private double velocidad;
@@ -35,7 +33,7 @@ public class Caballo implements Participable, Avanzable, Imprimible {
 	
 	@Override
 	public String getIdentificador() {
-		return Participable.super.getIdentificador();
+		return Cabalgable.super.getIdentificador();
 	}
 	
 	public void resetear() {
@@ -58,9 +56,15 @@ public class Caballo implements Participable, Avanzable, Imprimible {
 	}
 	
 	@Override
-	public String imprimeDatos() {
-		
-		return null;
+	public void imprimeDatos() {
+		System.out.println(this);
+	}
+	
+	@Override
+	public String toString() {
+		return "Caballo [nombre=" + nombre + ", peso=" + peso + ", velocidad="
+				+ velocidad + ", experiencia=" + experiencia + ", jinete="
+				+ jinete + ", metrosRecorridos=" + metrosRecorridos + "]";
 	}
 
 	public String getNombre() {

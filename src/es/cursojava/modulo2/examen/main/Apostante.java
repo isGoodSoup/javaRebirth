@@ -17,11 +17,16 @@ public class Apostante extends Persona implements Participable, Imprimible {
 	}
 
 	@Override
-	public String imprimeDatos() {
-
-		return null;
+	public void imprimeDatos() {
+		System.out.println(this);
 	}
-	
+
+	@Override
+	public String toString() {
+		return "Apostante [saldo=" + saldo + ", getNombre()=" + getNombre()
+				+ ", getEdad()=" + getEdad() + "]";
+	}
+
 	public void substractSaldo(double saldo) {
 		this.saldo -= saldo;
 	}
