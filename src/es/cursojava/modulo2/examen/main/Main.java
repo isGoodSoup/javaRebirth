@@ -9,7 +9,7 @@ public class Main {
 	}
 	
 	public String getNombre() {
-		return "Diego Díaz Penichet";
+		return "DDP";
 	}
 	
 	public void run() {
