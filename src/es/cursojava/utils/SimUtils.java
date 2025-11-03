@@ -6,15 +6,12 @@ import es.cursojava.modulo2.examen.main.Jinete;
 public class SimUtils {
 	
 	public static Caballo crearCaballoAleatorio(String nombreBase, Jinete j) {
-		Jinete jinete = Jinete.crearJinete();
-		Caballo caballo = new Caballo(
-				nombreCaballo(), 
-				CAT.toGetDouble(400, 1000), 
-				CAT.toGetDouble(100, 1000), 
-				CAT.toGetInteger(8, 1000),
-				jinete,
-				CAT.toGetDouble(500, 1000)
-		);
+		double peso = CAT.toGetDouble(400, 1000);
+		double velocidad = CAT.toGetDouble(20, 90);
+		int xp = CAT.toGetInteger(1, 10);
+		double metros = 0;
+		
+		Caballo caballo = new Caballo(nombreCaballo(), peso, velocidad, xp, j, metros);
 		return caballo;
 	}
 	
