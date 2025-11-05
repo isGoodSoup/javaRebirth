@@ -4,7 +4,7 @@ import es.cursojava.utils.Dexter;
 import es.cursojava.utils.Executable;
 
 public class ArraysExcepciones implements Executable {
-	private Dexter u = new Dexter();
+	private Dexter dex = new Dexter();
 	
 	public static void main(String[] args) {
 		ArraysExcepciones main = new ArraysExcepciones();
@@ -26,11 +26,14 @@ public class ArraysExcepciones implements Executable {
 			array[i] = nuevoNum;
 		}
 		
+		int pos = 0;
 		try {
-			int pos = Dexter.toScanInt("Solicita la posición en el array");
-			
+			do {
+				pos = Dexter.toScanInt("Solicita la posición en el array");
+				System.out.println("Valor: " + array[pos]);
+			} while(pos > array.length);
 		} catch(ArrayIndexOutOfBoundsException e) {
-			u.printException(e);
+			dex.printException(e);
 		}
 	}
 }

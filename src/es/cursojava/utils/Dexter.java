@@ -91,7 +91,7 @@ public class Dexter {
 	}
 	
 	public void printException(Exception e) {
-		System.err.println(e.getClass().getName() + ": " + e.getMessage());
+		System.err.println(e.getClass().getSimpleName() + ": " + e.getMessage());
 	}
 	
 	public long toTime(Runnable task) {
