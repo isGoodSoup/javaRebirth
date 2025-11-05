@@ -6,7 +6,7 @@ import java.util.Scanner;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class CAT {
+public class Utils {
 	private static Random r = new Random();
 	private static Scanner scan = new Scanner(System.in);
 	
@@ -35,7 +35,7 @@ public class CAT {
 	}
 	
 	public static Logger toLog() {
-	    return toLog(CAT.class);
+	    return toLog(Utils.class);
 	}
 	
 	public static String toGetID() {

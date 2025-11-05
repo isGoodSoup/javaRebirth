@@ -6,7 +6,7 @@ import java.util.Set;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import es.cursojava.utils.CAT;
+import es.cursojava.utils.Utils;
 import es.cursojava.utils.Executable;
 
 public class Main implements Executable {
@@ -23,10 +23,10 @@ public class Main implements Executable {
 	public void run() {}
 	
 	public Supermercado abrirSupermercado() {
-		Cliente c1 = new Cliente(CAT.toGetName(), CAT.toGetID(), CAT.toGetInteger(18, 80));
-		Cliente c2 = new Cliente(CAT.toGetName(), CAT.toGetID(), CAT.toGetInteger(18, 80));
-		Cliente c3 = new Cliente(CAT.toGetName(), CAT.toGetID(), CAT.toGetInteger(18, 80));
-		Cliente c4 = new Cliente(CAT.toGetName(), CAT.toGetID(), CAT.toGetInteger(18, 80));
+		Cliente c1 = new Cliente(Utils.toGetName(), Utils.toGetID(), Utils.toGetInteger(18, 80));
+		Cliente c2 = new Cliente(Utils.toGetName(), Utils.toGetID(), Utils.toGetInteger(18, 80));
+		Cliente c3 = new Cliente(Utils.toGetName(), Utils.toGetID(), Utils.toGetInteger(18, 80));
+		Cliente c4 = new Cliente(Utils.toGetName(), Utils.toGetID(), Utils.toGetInteger(18, 80));
 		Supermercado supermercado = new Supermercado("ALDI");
 		
 		supermercado.addCliente(c1);
@@ -51,8 +51,8 @@ public class Main implements Executable {
 			}
 			String respuesta = "";
 			do {
-				String producto = CAT.toScan("Cuál producto deseas?");
-				int ctd = CAT.toScanInt("Cuántos quieres");
+				String producto = Utils.toScan("Cuál producto deseas?");
+				int ctd = Utils.toScanInt("Cuántos quieres");
 				
 				for(List<Alimentos> alimento : alimentos) {
 					String productoParsado = alimentos.getFirst().getClass().getSimpleName();
@@ -65,7 +65,7 @@ public class Main implements Executable {
 						alimentos.removeAll(cliente.getCarrito());
 					}
 				}
-				respuesta = CAT.toScan("Deseas algo más?");
+				respuesta = Utils.toScan("Deseas algo más?");
 			} while(!respuesta.equalsIgnoreCase("si"));
 		}
 	}

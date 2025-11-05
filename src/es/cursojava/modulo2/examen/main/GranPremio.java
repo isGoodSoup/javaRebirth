@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-import es.cursojava.utils.CAT;
+import es.cursojava.utils.Utils;
 import es.cursojava.utils.Menu;
 import es.cursojava.utils.SimUtils;
 
@@ -49,11 +49,11 @@ public class GranPremio {
 	}
 	
 	private List<Apostante> crearApostantes() {
-		Apostante a1 = new Apostante(CAT.toGetName(), CAT.toGetInteger(80, 100), 500);
+		Apostante a1 = new Apostante(Utils.toGetName(), Utils.toGetInteger(80, 100), 500);
 		apostantes.add(a1);
-		Apostante a2 = new Apostante(CAT.toGetName(), CAT.toGetInteger(80, 100), 700);
+		Apostante a2 = new Apostante(Utils.toGetName(), Utils.toGetInteger(80, 100), 700);
 		apostantes.add(a2);
-		Apostante a3 = new Apostante(CAT.toGetName(), CAT.toGetInteger(80, 100), 800);
+		Apostante a3 = new Apostante(Utils.toGetName(), Utils.toGetInteger(80, 100), 800);
 		apostantes.add(a3);
 		return apostantes;
 	}
@@ -101,24 +101,24 @@ public class GranPremio {
 		int[] apuestas = new int[apostantes.size()];
 		for (int i = 0; i < apostantes.size(); i++) {
 			Apostante apos = apostantes.get(i);
-			double saldo = CAT.toScanDouble("\n" + apos.getNombre() + ", introduce tu saldo");
+			double saldo = Utils.toScanDouble("\n" + apos.getNombre() + ", introduce tu saldo");
 			apos.setSaldo(saldo);
 			
 			do {
 			    Menu.printMenu(Menu.getMenuCarreras(this.carreras));
-			    opcion = CAT.toScanInt("Elige una carrera para apostar");
+			    opcion = Utils.toScanInt("Elige una carrera para apostar");
 			} while(opcion < 1 || opcion > carreras.size());
 			carrera = carreras.get(opcion - 1);
 			
 			do {
 			    Menu.printMenu(Menu.getMenuCaballos(this.carrera.getCaballos()));
-			    opcion = CAT.toScanInt("Elige un caballo para apostar");
+			    opcion = Utils.toScanInt("Elige un caballo para apostar");
 			} while(opcion < 1 || opcion > carrera.getCaballos().size());
 			
 			apuestas[i] = opcion;
 
 			do {
-	            this.importe = CAT.toScanDouble("Introduce tu apuesta");
+	            this.importe = Utils.toScanDouble("Introduce tu apuesta");
 	            if (importe > saldo)
 	                System.err.println("No puedes apostar más de lo que tienes!");
 	        } while (importe > saldo);

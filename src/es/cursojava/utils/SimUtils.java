@@ -8,9 +8,9 @@ import es.cursojava.modulo2.examen.main.Jinete;
 public class SimUtils {
 	
 	public static Caballo crearCaballoAleatorio(String nombreBase, Jinete j) {
-		double peso = CAT.toGetDouble(400, 1000);
-		double velocidad = CAT.toGetDouble(20, 90);
-		int xp = CAT.toGetInteger(1, 10);
+		double peso = Utils.toGetDouble(400, 1000);
+		double velocidad = Utils.toGetDouble(20, 90);
+		int xp = Utils.toGetInteger(1, 10);
 		double metros = 0;
 		
 		Caballo caballo = new Caballo(nombreCaballo(), peso, velocidad, xp, j, metros);
@@ -18,7 +18,7 @@ public class SimUtils {
 	}
 	
 	public static Jinete crearJinete() {
-		Jinete jinete = new Jinete(CAT.toGetName(), CAT.toGetInteger(40, 100), CAT.toGetInteger(20, 100));
+		Jinete jinete = new Jinete(Utils.toGetName(), Utils.toGetInteger(40, 100), Utils.toGetInteger(20, 100));
 		return jinete;
 	}
 	
@@ -43,6 +43,6 @@ public class SimUtils {
 			"Gabriel",
 			"Troya"
 		};
-		return CAT.toGetString(nombres);
+		return Utils.toGetString(nombres);
 	}
 }
