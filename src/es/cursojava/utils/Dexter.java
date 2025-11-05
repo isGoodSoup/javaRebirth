@@ -10,6 +10,11 @@ public class Dexter {
 	private static Random r = new Random();
 	private static Scanner scan = new Scanner(System.in);
 	
+	public static void printException(Exception e) {
+		System.err.println(e.getClass().getSimpleName() + 
+				" at line " + e.getStackTrace()[0].getLineNumber() + " " + e.getMessage());
+	}
+	
 	public static String toScan(String s) {
 		System.out.print(s + ": ");
 		return scan.nextLine();
@@ -17,7 +22,13 @@ public class Dexter {
 	
 	public static int toScanInt(String s) {
 		System.out.print(s + ": ");
-		return scan.nextInt();
+		try {
+			return scan.nextInt();
+		} catch (Exception e) {
+			printException(e);
+			scan.nextLine();
+		}
+		return 0;
 	}
 	
 	public static long toScanLong(String s) {
@@ -88,10 +99,6 @@ public class Dexter {
 	
 	public static long toGetLong(long min, long max) {
 		return r.nextLong(min, max);
-	}
-	
-	public void printException(Exception e) {
-		System.err.println(e.getClass().getSimpleName() + ": " + e.getMessage());
 	}
 	
 	public long toTime(Runnable task) {

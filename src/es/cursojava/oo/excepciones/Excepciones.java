@@ -3,7 +3,6 @@ package es.cursojava.oo.excepciones;
 import es.cursojava.utils.Dexter;
 
 public class Excepciones {
-	private Dexter dex = new Dexter();
 	
 	public static void main(String[] args) {
 		Excepciones main = new Excepciones();
@@ -25,7 +24,7 @@ public class Excepciones {
 			int[] numeros = {1, 2, 3};
 			System.out.println(numeros[3]);
 		} catch(ArrayIndexOutOfBoundsException e) {
-			dex.printException(e);
+			Dexter.printException(e);
 		}
 	}
 	
@@ -35,7 +34,7 @@ public class Excepciones {
 			String text = null;
 			text.substring(1, 2);
 		} catch(NullPointerException e) {
-			dex.printException(e);
+			Dexter.printException(e);
 		}
 	}
 	
@@ -45,7 +44,7 @@ public class Excepciones {
 	        int num = Integer.parseInt(invalidNumber);
 	        System.out.println(num);
 		} catch(NumberFormatException e) {
-			dex.printException(e);
+			Dexter.printException(e);
 		}
 	}
 	
@@ -54,7 +53,7 @@ public class Excepciones {
 			Thread thread = new Thread();
 	        thread.setPriority(-1);
 		} catch(IllegalArgumentException e) {
-			dex.printException(e);
+			Dexter.printException(e);
 		}
 	}
 	
@@ -62,7 +61,7 @@ public class Excepciones {
 		try {
 			throw new RuntimeException();
 		} catch(RuntimeException e) {
-			dex.printException(e);
+			Dexter.printException(e);
 		}
 	}
 	
@@ -72,7 +71,7 @@ public class Excepciones {
 			int result = num/0;
 			System.out.println(result);
 		} catch(ArithmeticException e) {
-			dex.printException(e);
+			Dexter.printException(e);
 		}
 	}
 }
