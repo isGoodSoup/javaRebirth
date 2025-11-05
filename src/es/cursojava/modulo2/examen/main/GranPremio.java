@@ -15,6 +15,7 @@ public class GranPremio {
 	private Carrera carrera;
 	private Jinete jinete;
 	private int opcion;
+	private double importe;
 	private Random random = new Random();
 	
 	public GranPremio(String nombre) {
@@ -28,6 +29,7 @@ public class GranPremio {
 		System.out.println("Bienvenido al " + this.getNombre());
 		this.carreras = crearCarreras();
 		this.apostantes = crearApostantes();
+		int[] apuestas = new int[apostantes.size()];
 		for (int i = 0; i < apostantes.size(); i++) {
 			double saldo = CAT.toScanDouble(apostantes.get(i).getNombre() + ", introduce tu saldo");
 			do {
@@ -39,12 +41,12 @@ public class GranPremio {
 			do {
 			    Menu.printMenu(Menu.getMenuCaballos(this.carrera.getCaballos()));
 			    opcion = CAT.toScanInt("Elige un caballo para apostar");
+			    opcion = apuestas[i];
 			} while(opcion < 1 || opcion > carrera.getCaballos().size());
 
 			Caballo caballo = carrera.getCaballos().get(opcion - 1);
-			double importe;
 			do {
-			    importe = CAT.toScanDouble("Introduce tu apuesta");
+			    this.importe = CAT.toScanDouble("Introduce tu apuesta");
 			    if(importe > saldo) System.err.println("No puedes apostar más de lo que tienes!");
 			} while(importe > saldo);
 
@@ -53,15 +55,20 @@ public class GranPremio {
 			apos.restarSaldo(importe);
 			carrera.addApuesta(apuesta);
 			mostrarResumen(apos, caballo, importe);
-			System.out.println("Empezando carrera de " + carreras.get(i));
-			int ganador = random.nextInt();
-			if(ganador == opcion) {
-				
-			}
 		}
 		
-		for (int i = 0; i < carreras.get(i).getCaballos().size(); i++) {
-			
+		for (int i = 0; i < carreras.size(); i++) {
+			System.out.println("Empezando carrera de " + carreras.get(i).getNombre());
+			boolean haTerminadoCarrera = false;
+			do {
+				for (Caballo caballo : carreras.get(i).getCaballos()) {
+					caballo.aplicarAvance(caballo.calcularAvanceTurno());
+					
+					if(carreras.get(i).getDistanciaObjetivo() == caballo.getMetrosRecorridos()) {
+						haTerminadoCarrera = true;
+					}
+				}
+			} while(!haTerminadoCarrera);
 		}
 	}
 	
@@ -147,5 +154,13 @@ public class GranPremio {
 
 	public void setJinete(Jinete jinete) {
 		this.jinete = jinete;
+	}
+
+	public Random getRandom() {
+		return random;
+	}
+
+	public void setRandom(Random random) {
+		this.random = random;
 	}
 }

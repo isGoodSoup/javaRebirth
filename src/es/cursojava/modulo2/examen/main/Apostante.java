@@ -27,10 +27,6 @@ public class Apostante extends Persona implements Participable, Imprimible {
 				+ ", getEdad()=" + getEdad() + "]";
 	}
 
-	public void substractSaldo(double saldo) {
-		this.saldo -= saldo;
-	}
-
 	public double getSaldo() {
 		return saldo;
 	}
@@ -41,5 +37,9 @@ public class Apostante extends Persona implements Participable, Imprimible {
 	
 	public void restarSaldo(double importe) {
 		this.saldo -= importe;
+	}
+	
+	public void multiplicarSaldo(double importe) {
+		this.saldo += importe * 5;
 	}
 }

@@ -46,8 +46,9 @@ public class Caballo implements Cabalgable {
 	
 	@Override
 	public double calcularAvanceTurno() {
-
-		return 0;
+		double avance = Math.random() * 100 + (Math.random() * 10) * velocidad 
+				+ (Math.random() * 10) * experiencia - (Math.random() * 3) * peso;
+		return avance;
 	}
 
 	@Override
