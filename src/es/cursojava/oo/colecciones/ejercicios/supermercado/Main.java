@@ -6,7 +6,7 @@ import java.util.Set;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import es.cursojava.utils.Charlie;
+import es.cursojava.utils.Dexter;
 
 public class Main {
 	private static final Logger log = LoggerFactory.getLogger(Main.class);
@@ -18,10 +18,10 @@ public class Main {
 	}
 	
 	public Supermercado abrirSupermercado() {
-		Cliente c1 = new Cliente(Charlie.toGetName(), Charlie.toGetID(), Charlie.toGetInteger(18, 80));
-		Cliente c2 = new Cliente(Charlie.toGetName(), Charlie.toGetID(), Charlie.toGetInteger(18, 80));
-		Cliente c3 = new Cliente(Charlie.toGetName(), Charlie.toGetID(), Charlie.toGetInteger(18, 80));
-		Cliente c4 = new Cliente(Charlie.toGetName(), Charlie.toGetID(), Charlie.toGetInteger(18, 80));
+		Cliente c1 = new Cliente(Dexter.toGetName(), Dexter.toGetID(), Dexter.toGetInteger(18, 80));
+		Cliente c2 = new Cliente(Dexter.toGetName(), Dexter.toGetID(), Dexter.toGetInteger(18, 80));
+		Cliente c3 = new Cliente(Dexter.toGetName(), Dexter.toGetID(), Dexter.toGetInteger(18, 80));
+		Cliente c4 = new Cliente(Dexter.toGetName(), Dexter.toGetID(), Dexter.toGetInteger(18, 80));
 		Supermercado supermercado = new Supermercado("ALDI");
 		
 		supermercado.addCliente(c1);
@@ -46,8 +46,8 @@ public class Main {
 			}
 			String respuesta = "";
 			do {
-				String producto = Charlie.toScan("Cuál producto deseas?");
-				int ctd = Charlie.toScanInt("Cuántos quieres");
+				String producto = Dexter.toScan("Cuál producto deseas?");
+				int ctd = Dexter.toScanInt("Cuántos quieres");
 				
 				for(List<Alimentos> alimento : alimentos) {
 					String productoParsado = alimentos.getFirst().getClass().getSimpleName();
@@ -60,7 +60,7 @@ public class Main {
 						alimentos.removeAll(cliente.getCarrito());
 					}
 				}
-				respuesta = Charlie.toScan("Deseas algo más?");
+				respuesta = Dexter.toScan("Deseas algo más?");
 			} while(!respuesta.equalsIgnoreCase("si"));
 		}
 	}

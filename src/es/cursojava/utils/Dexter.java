@@ -6,7 +6,7 @@ import java.util.Scanner;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class Charlie {
+public class Dexter {
 	private static Random r = new Random();
 	private static Scanner scan = new Scanner(System.in);
 	
@@ -35,7 +35,7 @@ public class Charlie {
 	}
 	
 	public static Logger toLog() {
-	    return toLog(Charlie.class);
+	    return toLog(Dexter.class);
 	}
 	
 	public static String toGetID() {
@@ -90,7 +90,7 @@ public class Charlie {
 		return r.nextLong(min, max);
 	}
 	
-	public static void printException(Exception e) {
+	public void printException(Exception e) {
 		System.err.println(e.getClass().getName() + ": " + e.getMessage());
 	}
 	

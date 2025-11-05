@@ -1,9 +1,9 @@
 package es.cursojava.modulo2.examen.interfaces;
 
-import es.cursojava.utils.Charlie;
+import es.cursojava.utils.Dexter;
 
 public interface Participable {
 	default public String getIdentificador() {
-		return Charlie.toGetID();
+		return Dexter.toGetID();
 	}
 }

@@ -5,14 +5,14 @@ import java.util.Iterator;
 import java.util.Set;
 
 import es.cursojava.oo.Persona;
-import es.cursojava.utils.Charlie;
+import es.cursojava.utils.Dexter;
 
 public class Sets {
 	
 	public static void main(String[] args) {
 		Set<Persona> lista = new HashSet();
 		for (int i = 0; i < 6; i++) {
-			boolean anhadido = lista.add(new Persona(Charlie.toGetName(), null, Charlie.toGetID(), 50));
+			boolean anhadido = lista.add(new Persona(Dexter.toGetName(), null, Dexter.toGetID(), 50));
 		}
 		
 		for (Persona persona : lista) {

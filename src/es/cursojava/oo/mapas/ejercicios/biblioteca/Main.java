@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import es.cursojava.utils.Charlie;
+import es.cursojava.utils.Dexter;
 
 public class Main {
 	
@@ -25,20 +25,20 @@ public class Main {
 		List<Libro> a3_libros = new ArrayList<>();
 		List<Libro> a4_libros = new ArrayList<>();
 		
-		Autor a1 = new Autor(Charlie.toGetName(), "española");
-		Autor a2 = new Autor(Charlie.toGetName(), "chilena");
-		Autor a3 = new Autor(Charlie.toGetName(), null);
-		Autor a4 = new Autor(Charlie.toGetName(), "inglesa");
+		Autor a1 = new Autor(Dexter.toGetName(), "española");
+		Autor a2 = new Autor(Dexter.toGetName(), "chilena");
+		Autor a3 = new Autor(Dexter.toGetName(), null);
+		Autor a4 = new Autor(Dexter.toGetName(), "inglesa");
 		
-		Libro l1 = new Libro(Charlie.toGetTitle(), Charlie.toGetLong(9790000000000L, 9799999999999L), Charlie.toGetInteger(1985, 2015));
-		Libro l2 = new Libro(Charlie.toGetTitle(), Charlie.toGetLong(9780000000000L, 9789999999999L), Charlie.toGetInteger(1985, 2015));
-		Libro l3 = new Libro(Charlie.toGetTitle(), Charlie.toGetLong(9780000000000L, 9789999999999L), Charlie.toGetInteger(1985, 2015));
-		Libro l4 = new Libro(Charlie.toGetTitle(), Charlie.toGetLong(9780000000000L, 9789999999999L), Charlie.toGetInteger(1985, 2015));
-		Libro l5 = new Libro(Charlie.toGetTitle(), Charlie.toGetLong(9790000000000L, 9799999999999L), Charlie.toGetInteger(1985, 2015));
-		Libro l6 = new Libro(Charlie.toGetTitle(), Charlie.toGetLong(9790000000000L, 9799999999999L), Charlie.toGetInteger(1985, 2015));
-		Libro l7 = new Libro(Charlie.toGetTitle(), Charlie.toGetLong(9780000000000L, 9789999999999L), Charlie.toGetInteger(1985, 2015));
-		Libro l8 = new Libro(Charlie.toGetTitle(), Charlie.toGetLong(9790000000000L, 9799999999999L), Charlie.toGetInteger(1985, 2015));
-		Libro l9 = new Libro(Charlie.toGetTitle(), Charlie.toGetLong(9790000000000L, 9799999999999L), Charlie.toGetInteger(1985, 2015));
+		Libro l1 = new Libro(Dexter.toGetTitle(), Dexter.toGetLong(9790000000000L, 9799999999999L), Dexter.toGetInteger(1985, 2015));
+		Libro l2 = new Libro(Dexter.toGetTitle(), Dexter.toGetLong(9780000000000L, 9789999999999L), Dexter.toGetInteger(1985, 2015));
+		Libro l3 = new Libro(Dexter.toGetTitle(), Dexter.toGetLong(9780000000000L, 9789999999999L), Dexter.toGetInteger(1985, 2015));
+		Libro l4 = new Libro(Dexter.toGetTitle(), Dexter.toGetLong(9780000000000L, 9789999999999L), Dexter.toGetInteger(1985, 2015));
+		Libro l5 = new Libro(Dexter.toGetTitle(), Dexter.toGetLong(9790000000000L, 9799999999999L), Dexter.toGetInteger(1985, 2015));
+		Libro l6 = new Libro(Dexter.toGetTitle(), Dexter.toGetLong(9790000000000L, 9799999999999L), Dexter.toGetInteger(1985, 2015));
+		Libro l7 = new Libro(Dexter.toGetTitle(), Dexter.toGetLong(9780000000000L, 9789999999999L), Dexter.toGetInteger(1985, 2015));
+		Libro l8 = new Libro(Dexter.toGetTitle(), Dexter.toGetLong(9790000000000L, 9799999999999L), Dexter.toGetInteger(1985, 2015));
+		Libro l9 = new Libro(Dexter.toGetTitle(), Dexter.toGetLong(9790000000000L, 9799999999999L), Dexter.toGetInteger(1985, 2015));
 		
 		a1_libros.add(l1); a1_libros.add(l2); a1_libros.add(l3);
 		a2_libros.add(l4); a2_libros.add(l5); a2_libros.add(l6); 
@@ -53,7 +53,7 @@ public class Main {
 	}
 	
 	private Map<Autor, List<Libro>> mostrarNacionalidades(Map<Autor, List<Libro>> biblioteca) {
-		Charlie.toGetString("Nacionalidades");
+		Dexter.toGetString("Nacionalidades");
 		for(Map.Entry<Autor, List<Libro>> biblio : biblioteca.entrySet()) {
 			Autor a = biblio.getKey();
 			try {
@@ -68,7 +68,7 @@ public class Main {
 	}
 	
 	private Map<Autor, List<Libro>> mostrarTitulos(Map<Autor, List<Libro>> biblioteca) {
-		Charlie.toGetString("Titulos");
+		Dexter.toGetString("Titulos");
 		int lib = 0;
 		for(Map.Entry<Autor, List<Libro>> biblio : biblioteca.entrySet()) {
 			List<Libro> l = biblio.getValue();
@@ -86,7 +86,7 @@ public class Main {
 	}
 	
 	private Map<Autor, List<Libro>> mostrarAutor(Map<Autor, List<Libro>> biblioteca) {
-		Charlie.toGetString("Autores con 2+ libros");
+		Dexter.toGetString("Autores con 2+ libros");
 		for(Map.Entry<Autor, List<Libro>> biblio : biblioteca.entrySet()) {
 		    Autor autor = biblio.getKey();
 		    List<Libro> libros = biblio.getValue();
@@ -101,7 +101,7 @@ public class Main {
 	}
 	
 	private Map<Autor, List<Libro>> solicitarDatos(Map<Autor, List<Libro>> biblioteca) {
-	    Charlie.toGetString("Solicitar datos");
+	    Dexter.toGetString("Solicitar datos");
 	    for(Map.Entry<Autor, List<Libro>> entry : biblioteca.entrySet()) {
 	        Autor autor = entry.getKey();
 	        List<Libro> libros = entry.getValue();
@@ -111,10 +111,10 @@ public class Main {
 	            System.out.println("ISBN: " + libro.getIsbn());
 	        }
 	    }
-	    String tituloLibro = Charlie.toScan("Qué libro buscas?");
-	    String autorLibro = Charlie.toScan("Qué autor buscas?");
-	    long isbnLibro = Charlie.toScanLong("Qué ISBN buscas?");
-	    int anhoLibro = Charlie.toScanInt("En qué año se escribió " + tituloLibro.toUpperCase() + "?");
+	    String tituloLibro = Dexter.toScan("Qué libro buscas?");
+	    String autorLibro = Dexter.toScan("Qué autor buscas?");
+	    long isbnLibro = Dexter.toScanLong("Qué ISBN buscas?");
+	    int anhoLibro = Dexter.toScanInt("En qué año se escribió " + tituloLibro.toUpperCase() + "?");
 
 	    Autor autorEncontrado = null;
 
@@ -137,8 +137,8 @@ public class Main {
 //	    });
 
 	    if(autorEncontrado == null) {
-	        String nombre = Charlie.toScan("Nombre:");
-	        String nacionalidad = Charlie.toScan("Nacionalidad:");
+	        String nombre = Dexter.toScan("Nombre:");
+	        String nacionalidad = Dexter.toScan("Nacionalidad:");
 	        autorEncontrado = new Autor(nombre, nacionalidad);
 	        biblioteca.put(autorEncontrado, new ArrayList<>());
 	        System.out.println("Nuevo autor añadido");

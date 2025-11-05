@@ -8,7 +8,7 @@ import java.util.Map.Entry;
 import java.util.OptionalDouble;
 import java.util.Set;
 
-import es.cursojava.utils.Charlie;
+import es.cursojava.utils.Dexter;
 
 public class Main {
 	
@@ -23,13 +23,13 @@ public class Main {
 	}
 
 	public Map<String, ArrayList<Alumno>> crearObjetos() {
-		Alumno a1 = new Alumno(Charlie.toGetName(), Charlie.toGetID(), Charlie.toGetDouble(300, 1000), Charlie.toGetInteger(100, 400));
-		Alumno a2 = new Alumno(Charlie.toGetName(), Charlie.toGetID(), Charlie.toGetDouble(300, 1000), Charlie.toGetInteger(100, 400));
-		Alumno a3 = new Alumno(Charlie.toGetName(), Charlie.toGetID(), Charlie.toGetDouble(300, 1000), Charlie.toGetInteger(100, 400));
-		Alumno a4 = new Alumno(Charlie.toGetName(), Charlie.toGetID(), Charlie.toGetDouble(300, 1000), Charlie.toGetInteger(100, 400));
-		Alumno a5 = new Alumno(Charlie.toGetName(), Charlie.toGetID(), Charlie.toGetDouble(300, 1000), Charlie.toGetInteger(100, 400));
-		Alumno a6 = new Alumno(Charlie.toGetName(), Charlie.toGetID(), Charlie.toGetDouble(300, 1000), Charlie.toGetInteger(100, 400));
-		Alumno a7 = new Alumno(Charlie.toGetName(), Charlie.toGetID(), Charlie.toGetDouble(300, 1000), Charlie.toGetInteger(100, 400));
+		Alumno a1 = new Alumno(Dexter.toGetName(), Dexter.toGetID(), Dexter.toGetDouble(300, 1000), Dexter.toGetInteger(100, 400));
+		Alumno a2 = new Alumno(Dexter.toGetName(), Dexter.toGetID(), Dexter.toGetDouble(300, 1000), Dexter.toGetInteger(100, 400));
+		Alumno a3 = new Alumno(Dexter.toGetName(), Dexter.toGetID(), Dexter.toGetDouble(300, 1000), Dexter.toGetInteger(100, 400));
+		Alumno a4 = new Alumno(Dexter.toGetName(), Dexter.toGetID(), Dexter.toGetDouble(300, 1000), Dexter.toGetInteger(100, 400));
+		Alumno a5 = new Alumno(Dexter.toGetName(), Dexter.toGetID(), Dexter.toGetDouble(300, 1000), Dexter.toGetInteger(100, 400));
+		Alumno a6 = new Alumno(Dexter.toGetName(), Dexter.toGetID(), Dexter.toGetDouble(300, 1000), Dexter.toGetInteger(100, 400));
+		Alumno a7 = new Alumno(Dexter.toGetName(), Dexter.toGetID(), Dexter.toGetDouble(300, 1000), Dexter.toGetInteger(100, 400));
 		
 		ArrayList<Alumno> aula1 = new ArrayList<>();
 		ArrayList<Alumno> aula2 = new ArrayList<>();
@@ -51,7 +51,7 @@ public class Main {
 
 	public Map<String, ArrayList<Alumno>> abrirAulas(Map<String, ArrayList<Alumno>> alumnos) {
 		Set<String> aulas = alumnos.keySet();
-		Charlie.toGetString("Aulas");
+		Dexter.toGetString("Aulas");
 		for(String aula : aulas) {
 			System.out.println(aula);
 		}
@@ -60,7 +60,7 @@ public class Main {
 	
 	public Map<String, ArrayList<Alumno>> mostrarInfo(Map<String, ArrayList<Alumno>> alumnos) {
 		Set<Entry<String, ArrayList<Alumno>>> aulas = alumnos.entrySet();
-		Charlie.toGetString("Alumnos");
+		Dexter.toGetString("Alumnos");
 		for(Entry<String, ArrayList<Alumno>> aula : aulas) {
 			for(Alumno alumno : aula.getValue()) {
 				String nombre = alumno.getNombre();
@@ -74,11 +74,11 @@ public class Main {
 	}
 	
 	public Map<String, ArrayList<Alumno>> mostrarAulas(Map<String, ArrayList<Alumno>> alumnos) {
-		String aulaNombre = Charlie.toScan("Introduce el nombre de la clase");
+		String aulaNombre = Dexter.toScan("Introduce el nombre de la clase");
 		
 		if(alumnos.containsKey(aulaNombre)) {
 	        ArrayList<Alumno> aula = alumnos.get(aulaNombre);
-	        Charlie.toGetString("Total de alumnos: " + aula.size());
+	        Dexter.toGetString("Total de alumnos: " + aula.size());
 
 	        for(Alumno alumno : aula) {
 	            System.out.println(alumno.getNombre());
@@ -91,14 +91,14 @@ public class Main {
 	
 	public Map<Map<String, ArrayList<Alumno>>, Colegio> abrirColegios(Map<String, ArrayList<Alumno>> alumnos) {
 		Map<Map<String, ArrayList<Alumno>>, Colegio> colegios = new HashMap<>();
-		colegios.put(alumnos, new Colegio("Colegio " + Charlie.toGetName(), "Av. " + Charlie.toGetName() + " " + Charlie.toGetInteger(1, 50)));
-		colegios.put(alumnos, new Colegio("Colegio " + Charlie.toGetName(), "Av. " + Charlie.toGetName() + " " + Charlie.toGetInteger(1, 50)));
-		colegios.put(alumnos, new Colegio("Colegio " + Charlie.toGetName(), "Av. " + Charlie.toGetName() + " " + Charlie.toGetInteger(1, 50)));
+		colegios.put(alumnos, new Colegio("Colegio " + Dexter.toGetName(), "Av. " + Dexter.toGetName() + " " + Dexter.toGetInteger(1, 50)));
+		colegios.put(alumnos, new Colegio("Colegio " + Dexter.toGetName(), "Av. " + Dexter.toGetName() + " " + Dexter.toGetInteger(1, 50)));
+		colegios.put(alumnos, new Colegio("Colegio " + Dexter.toGetName(), "Av. " + Dexter.toGetName() + " " + Dexter.toGetInteger(1, 50)));
 		return colegios;
 	}
 	
 	public Map<Map<String, ArrayList<Alumno>>, Colegio> mostrarInfoColegios(Map<Map<String, ArrayList<Alumno>>, Colegio> colegios) {
-		Charlie.toGetString("Colegios");
+		Dexter.toGetString("Colegios");
 		List<Double> nm = new ArrayList<>();
 		
 		for(Map.Entry<Map<String, ArrayList<Alumno>>, Colegio> e : colegios.entrySet()) {
@@ -113,7 +113,7 @@ public class Main {
 				}
 			}
 		}
-		Charlie.toGetString("Nota media más alta");
+		Dexter.toGetString("Nota media más alta");
 		OptionalDouble max = nm.stream()
                 .mapToDouble(Double::doubleValue)
                 .max();

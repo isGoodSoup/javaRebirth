@@ -8,7 +8,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import es.cursojava.utils.Executable;
-import es.cursojava.utils.Charlie;
+import es.cursojava.utils.Dexter;
 
 public class Main implements Executable {
 	private Scanner scan = new Scanner(System.in);
@@ -24,7 +24,7 @@ public class Main implements Executable {
 	public void init() {
 		List<Alumno> alumnos = new ArrayList<Alumno>();
 		for (int i = 0; i < 7; i++) {
-			Alumno alumno = new Alumno(Charlie.toGetName(), Charlie.toGetID(), Charlie.toGetDouble(1, 1000));
+			Alumno alumno = new Alumno(Dexter.toGetName(), Dexter.toGetID(), Dexter.toGetDouble(1, 1000));
 			alumnos.add(alumno);
 		}
 		mostrarInfo(alumnos);

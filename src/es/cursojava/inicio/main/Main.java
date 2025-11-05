@@ -1,10 +1,10 @@
 package es.cursojava.inicio.main;
 import org.slf4j.Logger;
 
-import es.cursojava.utils.Charlie;
+import es.cursojava.utils.Dexter;
 
 public class Main {
-	private static final Logger log = Charlie.toLog(Main.class);
+	private static final Logger log = Dexter.toLog(Main.class);
 	
 	public static void main(String[] args) {
 //		log.error("error");
@@ -17,8 +17,8 @@ public class Main {
 	
 	public void run() {
 //		log.info(Gen.toGetID());
-		String prueba = Charlie.toScan("Test");
-		Charlie.toLog(Main.class).info("Prueba con toLog()");
+		String prueba = Dexter.toScan("Test");
+		Dexter.toLog(Main.class).info("Prueba con toLog()");
 		log.debug("Segunda prueba con toLog()");
 	}
 }

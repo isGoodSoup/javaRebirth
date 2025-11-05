@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-import es.cursojava.utils.Charlie;
+import es.cursojava.utils.Dexter;
 import es.cursojava.utils.Menu;
 import es.cursojava.utils.SimUtils;
 
@@ -49,11 +49,11 @@ public class GranPremio {
 	}
 	
 	private List<Apostante> crearApostantes() {
-		Apostante a1 = new Apostante(Charlie.toGetName(), Charlie.toGetInteger(80, 100), 500);
+		Apostante a1 = new Apostante(Dexter.toGetName(), Dexter.toGetInteger(80, 100), 500);
 		apostantes.add(a1);
-		Apostante a2 = new Apostante(Charlie.toGetName(), Charlie.toGetInteger(80, 100), 700);
+		Apostante a2 = new Apostante(Dexter.toGetName(), Dexter.toGetInteger(80, 100), 700);
 		apostantes.add(a2);
-		Apostante a3 = new Apostante(Charlie.toGetName(), Charlie.toGetInteger(80, 100), 800);
+		Apostante a3 = new Apostante(Dexter.toGetName(), Dexter.toGetInteger(80, 100), 800);
 		apostantes.add(a3);
 		return apostantes;
 	}
@@ -101,24 +101,24 @@ public class GranPremio {
 		int[] apuestas = new int[apostantes.size()];
 		for (int i = 0; i < apostantes.size(); i++) {
 			Apostante apos = apostantes.get(i);
-			double saldo = Charlie.toScanDouble("\n" + apos.getNombre() + ", introduce tu saldo");
+			double saldo = Dexter.toScanDouble("\n" + apos.getNombre() + ", introduce tu saldo");
 			apos.setSaldo(saldo);
 			
 			do {
 			    Menu.printMenu(Menu.getMenuCarreras(this.carreras));
-			    opcion = Charlie.toScanInt("Elige una carrera para apostar");
+			    opcion = Dexter.toScanInt("Elige una carrera para apostar");
 			} while(opcion < 1 || opcion > carreras.size());
 			carrera = carreras.get(opcion - 1);
 			
 			do {
 			    Menu.printMenu(Menu.getMenuCaballos(this.carrera.getCaballos()));
-			    opcion = Charlie.toScanInt("Elige un caballo para apostar");
+			    opcion = Dexter.toScanInt("Elige un caballo para apostar");
 			} while(opcion < 1 || opcion > carrera.getCaballos().size());
 			
 			apuestas[i] = opcion;
 
 			do {
-	            this.importe = Charlie.toScanDouble("Introduce tu apuesta");
+	            this.importe = Dexter.toScanDouble("Introduce tu apuesta");
 	            if (importe > saldo)
 	                System.err.println("No puedes apostar más de lo que tienes!");
 	        } while (importe > saldo);
