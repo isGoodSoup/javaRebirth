@@ -5,7 +5,7 @@ import java.util.Random;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import es.cursojava.utils.Utils;
+import es.cursojava.utils.Charlie;
 
 public class Hospital {
 	private String nombre;
@@ -69,19 +69,19 @@ public class Hospital {
 		
 		salaDeEspera = new Paciente[24];
 		for (int i = 0; i < salaDeEspera.length; i++) {
-			Paciente paciente = new Paciente(Utils.toGetName(), r.nextInt(100) + 1);
+			Paciente paciente = new Paciente(Charlie.toGetName(), r.nextInt(100) + 1);
 			salaDeEspera[i] = paciente;
 		}
 		
 		enfermeros = new Enfermero[6];
 		for (int i = 0; i < enfermeros.length; i++) {
-			Enfermero enfermero = new Enfermero(Utils.toGetName(), r.nextInt(100) + 1, r.nextInt(3));
+			Enfermero enfermero = new Enfermero(Charlie.toGetName(), r.nextInt(100) + 1, r.nextInt(3));
 			enfermeros[i] = enfermero;
 		}
 		
 		doctores = new Doctor[3];
 		for (int i = 0; i < doctores.length; i++) {
-			Doctor doctor = new Doctor(Utils.toGetName(), r.nextInt(100) + 1, "general");
+			Doctor doctor = new Doctor(Charlie.toGetName(), r.nextInt(100) + 1, "general");
 			doctores[i] = doctor;
 		}
 	}
