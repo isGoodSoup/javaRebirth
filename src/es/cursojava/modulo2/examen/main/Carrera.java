@@ -16,7 +16,7 @@ public class Carrera {
 		this.caballos = caballos;
 		this.apuestas = new ArrayList<>();
 	}
-
+	
 	public String getNombre() {
 		return nombre;
 	}
@@ -47,5 +47,9 @@ public class Carrera {
 
 	public void setApuestas(List<Apuesta> apuestas) {
 		this.apuestas = apuestas;
+	}
+	
+	public void addApuesta(Apuesta apuesta) {
+		if(apuesta != null) apuestas.add(apuesta);
 	}
 }

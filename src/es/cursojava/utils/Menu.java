@@ -23,7 +23,12 @@ public class Menu {
 	
 	public static String[] getMenuCaballos(List<Caballo> caballos) {
 		return new String[] {
-				
+				caballos.get(0).getNombre(),
+				caballos.get(1).getNombre(),
+				caballos.get(2).getNombre(),
+				caballos.get(3).getNombre(),
+				caballos.get(4).getNombre(),
+				caballos.get(5).getNombre(),
 		};
 	}
 }

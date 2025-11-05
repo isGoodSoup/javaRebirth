@@ -38,4 +38,8 @@ public class Apostante extends Persona implements Participable, Imprimible {
 	public void setSaldo(double saldo) {
 		this.saldo = saldo;
 	}
+	
+	public void restarSaldo(double importe) {
+		this.saldo -= importe;
+	}
 }
