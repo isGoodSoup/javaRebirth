@@ -2,6 +2,7 @@ package es.cursojava.modulo2.examen.main;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 import es.cursojava.utils.CAT;
 import es.cursojava.utils.Menu;
@@ -14,6 +15,7 @@ public class GranPremio {
 	private Carrera carrera;
 	private Jinete jinete;
 	private int opcion;
+	private Random random = new Random();
 	
 	public GranPremio(String nombre) {
 		super();
@@ -51,6 +53,11 @@ public class GranPremio {
 			apos.restarSaldo(importe);
 			carrera.addApuesta(apuesta);
 			mostrarResumen(apos, caballo, importe);
+			System.out.println("Empezando carrera de " + carreras.get(i));
+			int ganador = random.nextInt();
+			if(ganador == opcion) {
+				
+			}
 		}
 		
 		for (int i = 0; i < carreras.get(i).getCaballos().size(); i++) {
