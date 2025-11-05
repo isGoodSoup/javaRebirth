@@ -29,47 +29,8 @@ public class GranPremio {
 		System.out.println("Bienvenido al " + this.getNombre());
 		this.carreras = crearCarreras();
 		this.apostantes = crearApostantes();
-		int[] apuestas = new int[apostantes.size()];
-		for (int i = 0; i < apostantes.size(); i++) {
-			double saldo = CAT.toScanDouble(apostantes.get(i).getNombre() + ", introduce tu saldo");
-			do {
-			    Menu.printMenu(Menu.getMenuCarreras(this.carreras));
-			    opcion = CAT.toScanInt("Elige una carrera para apostar");
-			} while(opcion < 1 || opcion > carreras.size());
-			
-			carrera = carreras.get(opcion - 1);
-			do {
-			    Menu.printMenu(Menu.getMenuCaballos(this.carrera.getCaballos()));
-			    opcion = CAT.toScanInt("Elige un caballo para apostar");
-			    opcion = apuestas[i];
-			} while(opcion < 1 || opcion > carrera.getCaballos().size());
-
-			Caballo caballo = carrera.getCaballos().get(opcion - 1);
-			do {
-			    this.importe = CAT.toScanDouble("Introduce tu apuesta");
-			    if(importe > saldo) System.err.println("No puedes apostar más de lo que tienes!");
-			} while(importe > saldo);
-
-			Apostante apos = apostantes.get(i);
-			Apuesta apuesta = new Apuesta(apos, caballo, importe);
-			apos.restarSaldo(importe);
-			carrera.addApuesta(apuesta);
-			mostrarResumen(apos, caballo, importe);
-		}
-		
-		for (int i = 0; i < carreras.size(); i++) {
-			System.out.println("Empezando carrera de " + carreras.get(i).getNombre());
-			boolean haTerminadoCarrera = false;
-			do {
-				for (Caballo caballo : carreras.get(i).getCaballos()) {
-					caballo.aplicarAvance(caballo.calcularAvanceTurno());
-					
-					if(carreras.get(i).getDistanciaObjetivo() == caballo.getMetrosRecorridos()) {
-						haTerminadoCarrera = true;
-					}
-				}
-			} while(!haTerminadoCarrera);
-		}
+		this.carreras = iniciarApuestas();
+		this.carreras = empezarCarreras();
 	}
 	
 	private List<Carrera> crearCarreras() {
@@ -97,6 +58,80 @@ public class GranPremio {
 		return apostantes;
 	}
 	
+	public List<Carrera> empezarCarreras() {
+	    for (Carrera c : carreras) {
+	        System.out.println("\nEmpezando carrera: " + c.getNombre());
+	        boolean haTerminadoCarrera = false;
+	        Caballo ganador = null;
+	        int turnos = 0;
+
+	        while (!haTerminadoCarrera && turnos < 10000) {
+	            for (Caballo caballo : c.getCaballos()) {
+	                caballo.aplicarAvance(caballo.calcularAvanceTurno());
+
+	                if (caballo.getMetrosRecorridos() >= c.getDistanciaObjetivo()) {
+	                    ganador = caballo;
+	                    haTerminadoCarrera = true;
+	                    break;
+	                }
+	            }
+	            turnos++;
+	        }
+
+	        if (!haTerminadoCarrera) {
+	            ganador = c.getCaballos().get(random.nextInt(c.getCaballos().size()));
+	            System.out.println("Ningún caballo terminó, se elige ganador aleatorio: " + ganador.getNombre());
+	            return carreras;
+	        }
+
+	        System.out.println("Ganador: " + ganador.getNombre());
+	        for (Apuesta apuesta : c.getApuestas()) {
+	            if (apuesta.getCaballo().equals(ganador)) {
+	                double premio = apuesta.getImporte() * 2;
+	                apuesta.getApostante().sumarSaldo(premio);
+	                System.out.println(apuesta.getApostante().getNombre() + " gana " + premio + "€!");
+	            }
+	        }
+	        System.out.println("=====================================");
+	    }
+	    return carreras;
+	}
+
+	public List<Carrera> iniciarApuestas() {
+		int[] apuestas = new int[apostantes.size()];
+		for (int i = 0; i < apostantes.size(); i++) {
+			Apostante apos = apostantes.get(i);
+			double saldo = CAT.toScanDouble("\n" + apos.getNombre() + ", introduce tu saldo");
+			apos.setSaldo(saldo);
+			
+			do {
+			    Menu.printMenu(Menu.getMenuCarreras(this.carreras));
+			    opcion = CAT.toScanInt("Elige una carrera para apostar");
+			} while(opcion < 1 || opcion > carreras.size());
+			carrera = carreras.get(opcion - 1);
+			
+			do {
+			    Menu.printMenu(Menu.getMenuCaballos(this.carrera.getCaballos()));
+			    opcion = CAT.toScanInt("Elige un caballo para apostar");
+			} while(opcion < 1 || opcion > carrera.getCaballos().size());
+			
+			apuestas[i] = opcion;
+
+			do {
+	            this.importe = CAT.toScanDouble("Introduce tu apuesta");
+	            if (importe > saldo)
+	                System.err.println("No puedes apostar más de lo que tienes!");
+	        } while (importe > saldo);
+
+			Caballo caballo = carrera.getCaballos().get(opcion - 1);
+	        Apuesta apuesta = new Apuesta(apos, caballo, importe);
+	        apos.restarSaldo(importe);
+	        carrera.addApuesta(apuesta);
+	        mostrarResumen(apos, caballo, importe);
+		}
+		return this.carreras;
+	}
+	
 	private List<Caballo> crearCaballos() {
 		List<Caballo> caballos = new ArrayList<>();
 		while (caballos.size() < 6) {
@@ -112,7 +147,7 @@ public class GranPremio {
 	
 	private void mostrarResumen(Apostante apos, Caballo caballo, double importe) {
 		System.out.println("Apuesta registrada: " + apos.getNombre() +
-                " apostó " + importe + "€ al caballo " + caballo.getNombre() +
+                " apostó " + importe + "€ \nal caballo " + caballo.getNombre() +
                 " en la carrera de " + carrera.getNombre());
 	}
 	
