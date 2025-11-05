@@ -11,8 +11,9 @@ public class Dexter {
 	private static Scanner scan = new Scanner(System.in);
 	
 	public static void printException(Exception e) {
-		System.err.println(e.getClass().getSimpleName() + 
-				" at line " + e.getStackTrace()[0].getLineNumber() + " " + e.getMessage());
+		System.err.println(e.getClass().getSimpleName() + " at line " 
+						+ e.getStackTrace()[e.getStackTrace().length - 3]
+						.getLineNumber() + ": " + e.getMessage());
 	}
 	
 	public static String toScan(String s) {
@@ -21,14 +22,17 @@ public class Dexter {
     }
 	
 	public static int toScanInt(String s) {
-		System.out.print(s + ": ");
-		try {
-			return scan.nextInt();
-		} catch (Exception e) {
-			printException(e);
-			scan.nextLine();
-		}
-		return 0;
+	    while (true) {
+	        System.out.print(s + ": ");
+	        try {
+	            int num = scan.nextInt();
+	            scan.nextLine();
+	            return num;
+	        } catch (Exception e) {
+	            printException(e);
+	            scan.nextLine();
+	        }
+	    }
 	}
 	
 	public static long toScanLong(String s) {
