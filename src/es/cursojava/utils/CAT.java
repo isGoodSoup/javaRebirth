@@ -90,12 +90,16 @@ public class CAT {
 		return r.nextLong(min, max);
 	}
 	
+	public void printException(Exception e) {
+		System.err.println(e.getClass().getName() + ": " + e.getMessage());
+	}
+	
 	public long toTime(Runnable task) {
         long start = System.currentTimeMillis();
         task.run();
         return System.currentTimeMillis() - start;
     }
-	 
+	
 	public static String toGetName() {
 		String[] first = {
 	            "Alice", "Alejandro", 

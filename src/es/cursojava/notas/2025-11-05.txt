@@ -1,0 +1,16 @@
+	Excepciones
+Una excepción es una clase, un error a tiempo de ejecución.
+Todas heredan de Throwable, de la cual nacen Error y Exception.
+	+ Error: OutOfMemoryError, StackOverFlowError, LinkageError
+	+ Exception: RunTimeException, IOException, IllegalArgumentException, 
+	  IndexOutOfBoundsException, NullPointerException, FileNotFoundException, 
+	  NumberFormatException, ArithmeticException, SocketException
+	  
+Como son objetos, se pueden instanciar, se pueden "lanzar".
+	+ Unchecked: son las que no te obligan a controlar.
+	+ Checked: son las que SÍ te obligan a controlar.
+		* controlar: try-catch
+
+Errores de ficheros: IOException, FileNotFoundException
+
+	Try-Catch
