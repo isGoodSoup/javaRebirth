@@ -14,12 +14,11 @@ public class Mapas implements Executable {
 	
 	public static void main(String[] args) {
 		Mapas main = new Mapas();
-		main.run();
-		main.exit();
+		main.init();
 	}
 	
 	@Override
-	public void run() {
+	public void init() {
 		Map<String, Persona> personas = new HashMap<>();
 		
 		for (int i = 0; i < 5; i++) {
@@ -56,10 +55,4 @@ public class Mapas implements Executable {
 			System.out.println(entry.getKey() + " " + entry.getValue().getNombre());
 		}
 	}
-
-	@Override
-	public void test() {}
-
-	@Override
-	public void exit() { System.exit(0);}
 }

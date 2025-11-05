@@ -7,20 +7,15 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import es.cursojava.utils.Charlie;
-import es.cursojava.utils.Executable;
 
-public class Main implements Executable {
+public class Main {
 	private static final Logger log = LoggerFactory.getLogger(Main.class);
 	
 	public static void main(String[] args) {
 		Main main = new Main();
 		Supermercado supermercado = main.abrirSupermercado();
 		main.iniciarCompras(supermercado);
-		main.exit();
 	}
-
-	@Override
-	public void run() {}
 	
 	public Supermercado abrirSupermercado() {
 		Cliente c1 = new Cliente(Charlie.toGetName(), Charlie.toGetID(), Charlie.toGetInteger(18, 80));
@@ -68,13 +63,5 @@ public class Main implements Executable {
 				respuesta = Charlie.toScan("Deseas algo más?");
 			} while(!respuesta.equalsIgnoreCase("si"));
 		}
-	}
-	
-	@Override
-	public void test() {}
-
-	@Override
-	public void exit() {
-		System.exit(0);
 	}
 }

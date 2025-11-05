@@ -17,12 +17,11 @@ public class Main implements Executable {
 	
 	public static void main(String[] args) {
 		Main main = new Main();
-		main.run();
-		main.exit();
+		main.init();
 	}
 	
 	@Override
-	public void run() {
+	public void init() {
 		List<Alumno> alumnos = new ArrayList<Alumno>();
 		for (int i = 0; i < 7; i++) {
 			Alumno alumno = new Alumno(Charlie.toGetName(), Charlie.toGetID(), Charlie.toGetDouble(1, 1000));
@@ -32,14 +31,6 @@ public class Main implements Executable {
 		excelente(alumnos);
 		nombreComun(alumnos);
 		eliminarAlumno(alumnos);
-	}
-	
-	@Override
-	public void test() {}
-
-	@Override
-	public void exit() {
-		System.exit(0);
 	}
 	
 	public void mostrarInfo(List<Alumno> alumnos) {
