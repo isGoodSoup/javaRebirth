@@ -1,50 +1,66 @@
 package es.cursojava.oo.excepciones.ejercicios.ejercicio1;
 
 import java.util.Arrays;
+import java.util.Random;
 
 import es.cursojava.utils.Dexter;
 import es.cursojava.utils.Executable;
 
-public class ArrayEx implements Executable {
-	private int pos = 0;	
+public class ArrayEncadenado implements Executable {
+	private int pos = 0;
+	private Random random = new Random();
 	
 	public static void main(String[] args) {
-		ArrayEx main = new ArrayEx();
+		ArrayEncadenado main = new ArrayEncadenado();
 		main.init();
 	}
 
 	@Override
 	public void init() {
-		ArrayEx main = new ArrayEx();
+		boolean toggle = false;
+		ArrayEncadenado main = new ArrayEncadenado();
 		int[] array = main.nuevoArray();
-		main.popularArray(array);
-		main.solicitarPosArray(array);
+		main.popularArray(array, toggle);
+		main.solicitarPosArray(array, toggle);
 		main.mostrarArray(array);
 		main.mostrarGrafico(array);
 		main.mediaArray(array);
 	}
 	
-	private int[] nuevoArray() {
+	public int[] nuevoArray() {
 		Dexter.toGetString("NUEVO ARRAY");
 		int num = Dexter.toScanInt("Inserta un tamaño para el array");
 		int[] array = new int[num];
 		return array;
 	}
 	
-	private int[] popularArray(int[] array) {
+	public int[] popularArray(int[] array, boolean esRandom) {
+		int nuevoNum = 0;
 		Dexter.toGetString("POPULAR ARRAY");
 		for (int i = 0; i < array.length; i++) {
-			int nuevoNum = Dexter.toScanInt("Inserta un número");
+			if(esRandom) {
+				System.out.print("Inserta un número: ");
+				nuevoNum = random.nextInt(1, 32);
+				System.out.println(nuevoNum);
+			} else {
+				nuevoNum = Dexter.toScanInt("Inserta un número");
+			}
 			array[i] = nuevoNum;
 		}
 		return array;
 	}
 	
-	private int[] solicitarPosArray(int[] array) {
+	public int[] solicitarPosArray(int[] array, boolean esRandom) {
 		Dexter.toGetString("SOLICITAR POS");
 		do {
 			try {
-				pos = Dexter.toScanInt("Solicita la posición en el array");
+				if(esRandom) {
+					System.out.print("Solicita la posición en el array: ");
+					pos = random.nextInt(1, array.length);
+					System.out.println(pos);
+				} else {
+					pos = Dexter.toScanInt("Solicita la posición en el array");
+				}
 				System.out.println("Valor = " + array[pos]);
 			} catch(ArrayIndexOutOfBoundsException e) {
 				Dexter.printException(e);
