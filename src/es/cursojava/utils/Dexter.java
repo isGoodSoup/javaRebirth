@@ -10,10 +10,10 @@ public class Dexter {
 	private static Random r = new Random();
 	private static Scanner scan = new Scanner(System.in);
 	
-	public static String printException(Exception e) {
-		return e.getClass().getSimpleName() + " at line " 
+	public static void printException(Exception e) {
+		System.err.println(e.getClass().getSimpleName() + " at line " 
 						+ e.getStackTrace()[e.getStackTrace().length - 3]
-						.getLineNumber() + ": " + e.getMessage();
+						.getLineNumber() + ": " + e.getMessage());
 	}
 	
 	public static String toScan(String s) {
@@ -50,6 +50,10 @@ public class Dexter {
 	public static double toScanDouble(String s) {
 		System.out.print(s + ": ");
 		return scan.nextDouble();
+	}
+	
+	public static void cleanBuffer() {
+		scan.nextLine();
 	}
 	
 	public static Logger toLog(Class<?> cls) {
