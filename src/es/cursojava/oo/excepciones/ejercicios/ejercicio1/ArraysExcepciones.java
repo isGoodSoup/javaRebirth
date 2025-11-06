@@ -20,6 +20,7 @@ public class ArraysExcepciones implements Executable {
 		main.popularArray(array);
 		main.solicitarPosArray(array);
 		main.mostrarArray(array);
+		main.mostrarGrafico(array);
 	}
 	
 	public int[] nuevoArray() {
@@ -54,6 +55,17 @@ public class ArraysExcepciones implements Executable {
 	public int[] mostrarArray(int[] array) {
 		Dexter.toGetString("MOSTRAR ARRAY");
 		System.out.println(Arrays.toString(array));
+		return array;
+	}
+	
+	public int[] mostrarGrafico(int[] array) {
+		Dexter.toGetString("MOSTRAR ARRAY (GRÁFICO)");
+		for (int i = 0; i < array.length; i++) {
+			for (int j = 0; j < array[i]; j++) {
+				System.out.print("#");
+			}
+			System.out.println();
+		}
 		return array;
 	}
 }
