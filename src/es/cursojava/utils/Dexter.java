@@ -10,10 +10,10 @@ public class Dexter {
 	private static Random r = new Random();
 	private static Scanner scan = new Scanner(System.in);
 	
-	public static void printException(Exception e) {
-		System.err.println(e.getClass().getSimpleName() + " at line " 
+	public static String printException(Exception e) {
+		return e.getClass().getSimpleName() + " at line " 
 						+ e.getStackTrace()[e.getStackTrace().length - 3]
-						.getLineNumber() + ": " + e.getMessage());
+						.getLineNumber() + ": " + e.getMessage();
 	}
 	
 	public static String toScan(String s) {

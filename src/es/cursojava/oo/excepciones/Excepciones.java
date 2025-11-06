@@ -17,6 +17,11 @@ public class Excepciones {
 		main.illegalArgument();
 		main.runtime();
 		main.arithmetic();
+		try {
+			main.wtf();
+		} catch (WhatTheFuckException e) {
+			Dexter.printException(e);
+		}
 	}
 	
 	public void arrayIndexOutOfBounds() {
@@ -73,5 +78,10 @@ public class Excepciones {
 		} catch(ArithmeticException e) {
 			Dexter.printException(e);
 		}
+	}
+	
+	public void wtf() throws WhatTheFuckException {
+		WhatTheFuckException e = new WhatTheFuckException("Wtf did you do?");
+		throw e;
 	}
 }
