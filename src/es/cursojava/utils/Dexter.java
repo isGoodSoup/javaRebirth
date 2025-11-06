@@ -17,20 +17,27 @@ public class Dexter {
 	}
 	
 	public static String toScan(String s) {
-		System.out.print(s + ": ");
-		return scan.nextLine();
+		String line = "";
+		do {
+    		System.out.print(s + ": ");
+    		line = scan.nextLine().trim();
+    	} while(line.isEmpty());
+		return line;
     }
 	
 	public static int toScanInt(String s) {
+		String line = "";
 	    while (true) {
-	        System.out.print(s + ": ");
 	        try {
-	            int num = scan.nextInt();
-	            scan.nextLine();
+	        	do {
+	        		System.out.print(s + ": ");
+	        		line = scan.nextLine().trim();
+	        	} while(line.isEmpty());
+	        	
+	            int num = Integer.parseInt(line);
 	            return num;
 	        } catch (Exception e) {
 	            printException(e);
-	            scan.nextLine();
 	        }
 	    }
 	}

@@ -1,6 +1,8 @@
 package es.cursojava.oo.excepciones.ejercicios.ejercicio1;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Random;
 
 import es.cursojava.utils.Dexter;
@@ -8,6 +10,8 @@ import es.cursojava.utils.Executable;
 
 public class ArrayEncadenado implements Executable {
 	private int pos = 0;
+	private int max = 0;
+	private int min = 0;
 	private Random random = new Random();
 	
 	public static void main(String[] args) {
@@ -17,24 +21,26 @@ public class ArrayEncadenado implements Executable {
 
 	@Override
 	public void init() {
-		boolean toggle = false;
+		boolean toggle = true;
 		ArrayEncadenado main = new ArrayEncadenado();
 		int[] array = main.nuevoArray();
 		main.popularArray(array, toggle);
 		main.solicitarPosArray(array, toggle);
 		main.mostrarArray(array);
-		main.mostrarGrafico(array);
 		main.mediaArray(array);
+		main.absolutosArray(array);
+		main.primosArray(array);
+		main.mostrarGrafico(array);
 	}
 	
-	public int[] nuevoArray() {
+	private int[] nuevoArray() {
 		Dexter.toGetString("NUEVO ARRAY");
 		int num = Dexter.toScanInt("Inserta un tamaño para el array");
 		int[] array = new int[num];
 		return array;
 	}
 	
-	public int[] popularArray(int[] array, boolean esRandom) {
+	private int[] popularArray(int[] array, boolean esRandom) {
 		int nuevoNum = 0;
 		Dexter.toGetString("POPULAR ARRAY");
 		for (int i = 0; i < array.length; i++) {
@@ -50,7 +56,7 @@ public class ArrayEncadenado implements Executable {
 		return array;
 	}
 	
-	public int[] solicitarPosArray(int[] array, boolean esRandom) {
+	private int[] solicitarPosArray(int[] array, boolean esRandom) {
 		Dexter.toGetString("SOLICITAR POS");
 		do {
 			try {
@@ -69,14 +75,53 @@ public class ArrayEncadenado implements Executable {
 		return array;
 	}
 	
-	public int[] mostrarArray(int[] array) {
+	private int[] mostrarArray(int[] array) {
 		Dexter.toGetString("MOSTRAR ARRAY");
 		System.out.println(Arrays.toString(array));
 		return array;
 	}
 	
-	public int[] mostrarGrafico(int[] array) {
-	    Dexter.toGetString("MOSTRAR ARRAY (GRÁFICO VERTICAL)");
+	private int[] mediaArray(int[] array) {
+		Dexter.toGetString("TOTAL Y MEDIA");
+		double total = 0;
+		for (int i = 0; i < array.length; i++) {
+			total += array[i];
+		}
+		double media = total/array.length;
+		System.out.println("Total = " + total);
+		System.out.println("Media = " + media);
+		return array;
+	}
+	
+	private int[] absolutosArray(int[] array) {
+		Dexter.toGetString("MÁXIMO Y MÍNIMO");
+		max = Arrays.stream(array).max().getAsInt();
+		min = Arrays.stream(array).min().getAsInt();
+		System.out.println("Max = " + max);
+		System.out.println("Min = " + min);
+		return array;
+	}
+	
+	private int[] primosArray(int[] array) {
+	    Dexter.toGetString("NÚMEROS PRIMOS");
+	    List<Integer> primos = new ArrayList<>();
+	    for (int i = 0; i < array.length; i++) {
+	        int num = array[i];
+	        if (esPrimo(num) && !primos.contains(num)) {
+	            primos.add(num);
+	        }
+	    }
+	    if(!primos.isEmpty()) {
+	    	System.out.println(primos);
+	    } else {
+	    	System.err.println("No hay números primos");
+	    }
+	    return array;
+	}
+
+	
+	private int[] mostrarGrafico(int[] array) {
+	    Dexter.toGetString("MOSTRAR ARRAY (GRÁFICO)");
 	    int max = Arrays.stream(array).max().getAsInt();
 	    for (int nivel = max; nivel > 0; nivel--) {
 	        for (int i = 0; i < array.length; i++) {
@@ -88,21 +133,22 @@ public class ArrayEncadenado implements Executable {
 	        }
 	        System.out.println();
 	    }
+	    
 	    for (int i = 0; i < array.length; i++) {
 	        System.out.print("--");
 	    }
 	    System.out.println();
-	    
 	    return array;
 	}
 	
-	public int[] mediaArray(int[] array) {
-		double total = 0;
-		for (int i = 0; i < array.length; i++) {
-			total += array[i];
-		}
-		double media = total/array.length;
-		System.out.println("Media = " + media);
-		return array;
+	private boolean esPrimo(int num) {
+	    if (num <= 1) return false;
+	    if (num == 2) return true;
+	    if (num % 2 == 0) return false;
+	    for (int i = 3; i <= Math.sqrt(num); i += 2) {
+	        if (num % i == 0) return false;
+	    }
+	    return true;
 	}
+
 }
