@@ -5,32 +5,33 @@ import java.util.Arrays;
 import es.cursojava.utils.Dexter;
 import es.cursojava.utils.Executable;
 
-public class ArraysExcepciones implements Executable {
+public class ArrayEx implements Executable {
 	private int pos = 0;	
 	
 	public static void main(String[] args) {
-		ArraysExcepciones main = new ArraysExcepciones();
+		ArrayEx main = new ArrayEx();
 		main.init();
 	}
 
 	@Override
 	public void init() {
-		ArraysExcepciones main = new ArraysExcepciones();
+		ArrayEx main = new ArrayEx();
 		int[] array = main.nuevoArray();
 		main.popularArray(array);
 		main.solicitarPosArray(array);
 		main.mostrarArray(array);
 		main.mostrarGrafico(array);
+		main.mediaArray(array);
 	}
 	
-	public int[] nuevoArray() {
+	private int[] nuevoArray() {
 		Dexter.toGetString("NUEVO ARRAY");
 		int num = Dexter.toScanInt("Inserta un tamaño para el array");
 		int[] array = new int[num];
 		return array;
 	}
 	
-	public int[] popularArray(int[] array) {
+	private int[] popularArray(int[] array) {
 		Dexter.toGetString("POPULAR ARRAY");
 		for (int i = 0; i < array.length; i++) {
 			int nuevoNum = Dexter.toScanInt("Inserta un número");
@@ -39,12 +40,12 @@ public class ArraysExcepciones implements Executable {
 		return array;
 	}
 	
-	public int[] solicitarPosArray(int[] array) {
+	private int[] solicitarPosArray(int[] array) {
 		Dexter.toGetString("SOLICITAR POS");
 		do {
 			try {
 				pos = Dexter.toScanInt("Solicita la posición en el array");
-				System.out.println("Valor: " + array[pos]);
+				System.out.println("Valor = " + array[pos]);
 			} catch(ArrayIndexOutOfBoundsException e) {
 				Dexter.printException(e);
 			}
@@ -59,13 +60,33 @@ public class ArraysExcepciones implements Executable {
 	}
 	
 	public int[] mostrarGrafico(int[] array) {
-		Dexter.toGetString("MOSTRAR ARRAY (GRÁFICO)");
+	    Dexter.toGetString("MOSTRAR ARRAY (GRÁFICO VERTICAL)");
+	    int max = Arrays.stream(array).max().getAsInt();
+	    for (int nivel = max; nivel > 0; nivel--) {
+	        for (int i = 0; i < array.length; i++) {
+	            if (array[i] >= nivel) {
+	                System.out.print("# ");
+	            } else {
+	                System.out.print("  ");
+	            }
+	        }
+	        System.out.println();
+	    }
+	    for (int i = 0; i < array.length; i++) {
+	        System.out.print("--");
+	    }
+	    System.out.println();
+	    
+	    return array;
+	}
+	
+	public int[] mediaArray(int[] array) {
+		double total = 0;
 		for (int i = 0; i < array.length; i++) {
-			for (int j = 0; j < array[i]; j++) {
-				System.out.print("#");
-			}
-			System.out.println();
+			total += array[i];
 		}
+		double media = total/array.length;
+		System.out.println("Media = " + media);
 		return array;
 	}
 }
