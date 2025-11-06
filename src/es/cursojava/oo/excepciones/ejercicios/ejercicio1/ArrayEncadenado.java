@@ -107,7 +107,7 @@ public class ArrayEncadenado implements Executable {
 	    List<Integer> primos = new ArrayList<>();
 	    for (int i = 0; i < array.length; i++) {
 	        int num = array[i];
-	        if (esPrimo(num) && !primos.contains(num)) {
+	        if (Dexter.isPrime(num) && !primos.contains(num)) {
 	            primos.add(num);
 	        }
 	    }
@@ -140,15 +140,4 @@ public class ArrayEncadenado implements Executable {
 	    System.out.println();
 	    return array;
 	}
-	
-	private boolean esPrimo(int num) {
-	    if (num <= 1) return false;
-	    if (num == 2) return true;
-	    if (num % 2 == 0) return false;
-	    for (int i = 3; i <= Math.sqrt(num); i += 2) {
-	        if (num % i == 0) return false;
-	    }
-	    return true;
-	}
-
 }

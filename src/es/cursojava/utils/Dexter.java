@@ -108,6 +108,16 @@ public class Dexter {
 		return r.nextInt(min, max);
 	}
 	
+	public static boolean isPrime(int num) {
+	    if (num <= 1) return false;
+	    if (num == 2) return true;
+	    if (num % 2 == 0) return false;
+	    for (int i = 3; i <= Math.sqrt(num); i += 2) {
+	        if (num % i == 0) return false;
+	    }
+	    return true;
+	}
+	
 	public static long toGetLong(long min, long max) {
 		return r.nextLong(min, max);
 	}
