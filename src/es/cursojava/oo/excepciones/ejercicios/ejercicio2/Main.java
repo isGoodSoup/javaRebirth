@@ -29,20 +29,21 @@ public class Main implements Executable {
 	    	Dexter.toGetString("ALUMNO " + alumnos.size());
 	    	nombre = Dexter.toScan("Nombre");
 	    	dni = Dexter.toScan("DNI");
-	    	edad = Dexter.toScanInt("Edad");
 
-	    	boolean notaValida = false;
-	        while (!notaValida) {
-		    	try {
-		    		nota = Dexter.toScanDouble("Nota media");
-			    	Alumno a = new Alumno(nombre, dni, edad, nota);
-			    	alumnos.add(a);
-			    	notaValida = true;
-			    } catch(NotaInvalidaException e) {
-			    	System.err.println(e.getClass().getSimpleName() + ": " + e.getMessage());
-			    }
-	        }
+	    	boolean alumnoCreado = false;
+	    	while(!alumnoCreado) {
+	    	    try {
+	    	        edad = Dexter.toScanInt("Edad");
+	    	        nota = Dexter.toScanDouble("Nota Media");
+	    	        Alumno a = new Alumno(nombre, dni, edad, nota);
+	    	        alumnos.add(a);
+	    	        alumnoCreado = true;
+	    	    } catch(IllegalArgumentException | NotaInvalidaException e) {
+	    	        Dexter.printException(e);
+	    	    }
+	    	}
 	    }
+	    System.out.println("Alumnos creados correctamente");
 	    return alumnos;
 	}
 

@@ -15,7 +15,7 @@ public class Alumno {
 		this.notaMedia = notaMedia;
 		
 		if(this.edad < 0) {
-			throw new IllegalArgumentException();
+			throw new IllegalArgumentException("La edad " + this.getEdad() + " es inválida");
 		}
 		
 		if(this.notaMedia < 0 || this.notaMedia > 10) {
