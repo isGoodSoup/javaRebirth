@@ -1,4 +1,4 @@
-package es.cursojava.oo.interfaces.ejercicios.productos.vehiculos;
+package es.cursojava.oo.interfaces.ejercicios.productos.pojos;
 
 import es.cursojava.oo.interfaces.ejercicios.productos.interfaces.Capitalismo;
 import es.cursojava.oo.interfaces.ejercicios.productos.interfaces.Encendible;

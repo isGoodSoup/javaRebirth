@@ -1,8 +1,8 @@
 package es.cursojava.oo.colecciones.ejercicios.supermercado;
 
-import es.cursojava.oo.interfaces.ejercicios.productos.alimentos.Producto;
 import es.cursojava.oo.interfaces.ejercicios.productos.interfaces.Capitalismo;
 import es.cursojava.oo.interfaces.ejercicios.productos.main.Identificador;
+import es.cursojava.oo.interfaces.ejercicios.productos.pojos.Producto;
 
 public abstract class Alimentos extends Producto implements Capitalismo {
 	protected Identificador id = new Identificador();

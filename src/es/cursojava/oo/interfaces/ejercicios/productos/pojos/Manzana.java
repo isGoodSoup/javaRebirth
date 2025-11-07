@@ -1,4 +1,4 @@
-package es.cursojava.oo.interfaces.ejercicios.productos.alimentos;
+package es.cursojava.oo.interfaces.ejercicios.productos.pojos;
 
 import es.cursojava.oo.interfaces.ejercicios.productos.interfaces.Consultable;
 

@@ -1,4 +1,4 @@
-package es.cursojava.oo.interfaces.ejercicios.productos.bicicleta;
+package es.cursojava.oo.interfaces.ejercicios.productos.pojos;
 
 public class Triciclo extends Bicicleta {
 	private int numRuedas;

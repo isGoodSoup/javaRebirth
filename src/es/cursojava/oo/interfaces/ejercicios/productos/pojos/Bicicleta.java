@@ -1,8 +1,7 @@
-package es.cursojava.oo.interfaces.ejercicios.productos.bicicleta;
+package es.cursojava.oo.interfaces.ejercicios.productos.pojos;
 
 import es.cursojava.oo.interfaces.ejercicios.productos.interfaces.Capitalismo;
 import es.cursojava.oo.interfaces.ejercicios.productos.main.Identificador;
-import es.cursojava.oo.interfaces.ejercicios.productos.vehiculos.Vehiculo;
 
 public abstract class Bicicleta extends Vehiculo implements Capitalismo {
 	protected Identificador id = new Identificador();

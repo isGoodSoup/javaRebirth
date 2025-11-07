@@ -1,4 +1,4 @@
-package es.cursojava.oo.colecciones.ejercicios.supermercado.alimentos;
+package es.cursojava.oo.colecciones.ejercicios.supermercado.pojos;
 
 import es.cursojava.oo.colecciones.ejercicios.supermercado.Alimentos;
 

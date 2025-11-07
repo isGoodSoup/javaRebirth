@@ -1,4 +1,4 @@
-package es.cursojava.oo.interfaces.ejercicios.productos.alimentos;
+package es.cursojava.oo.interfaces.ejercicios.productos.pojos;
 
 public class Zanahoria extends Alimentos {
 	private int numFrodas;

@@ -1,4 +1,4 @@
-package es.cursojava.oo.interfaces.ejercicios.productos.alimentos;
+package es.cursojava.oo.interfaces.ejercicios.productos.pojos;
 
 public class Baguette extends Alimentos {
 	private String procedencia;

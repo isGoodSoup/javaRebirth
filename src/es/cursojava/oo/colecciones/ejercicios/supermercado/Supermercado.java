@@ -5,9 +5,9 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import es.cursojava.oo.colecciones.ejercicios.supermercado.alimentos.Baguette;
-import es.cursojava.oo.colecciones.ejercicios.supermercado.alimentos.Manzana;
-import es.cursojava.oo.colecciones.ejercicios.supermercado.alimentos.Platano;
+import es.cursojava.oo.colecciones.ejercicios.supermercado.pojos.Baguette;
+import es.cursojava.oo.colecciones.ejercicios.supermercado.pojos.Manzana;
+import es.cursojava.oo.colecciones.ejercicios.supermercado.pojos.Platano;
 
 public class Supermercado {
 	private String nombre;

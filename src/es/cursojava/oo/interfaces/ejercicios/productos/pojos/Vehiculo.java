@@ -1,17 +1,19 @@
-package es.cursojava.oo.interfaces.ejercicios.productos.alimentos;
+package es.cursojava.oo.interfaces.ejercicios.productos.pojos;
 
 import es.cursojava.oo.interfaces.ejercicios.productos.main.Identificador;
 
-public abstract class Producto extends Identificador {
+public abstract class Vehiculo extends Identificador {
 	private String nombre;
+	private int numRuedas;
 	private double precio;
 	
-	public Producto() {}
+	public Vehiculo() {}
 	
-	public Producto(int identificador, String nombre, double precio) {
+	public Vehiculo(int identificador, String nombre, int numRuedas, double precio) {
 		super();
 		this.id = identificador;
 		this.nombre = nombre;
+		this.numRuedas = numRuedas;
 		this.precio = precio;
 	}
 
@@ -21,6 +23,14 @@ public abstract class Producto extends Identificador {
 
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
+	}
+
+	public int getNumRuedas() {
+		return numRuedas;
+	}
+
+	public void setNumRuedas(int numRuedas) {
+		this.numRuedas = numRuedas;
 	}
 
 	public double getPrecio() {

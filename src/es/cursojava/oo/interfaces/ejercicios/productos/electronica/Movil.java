@@ -3,7 +3,7 @@ package es.cursojava.oo.interfaces.ejercicios.productos.electronica;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import es.cursojava.oo.interfaces.ejercicios.productos.vehiculos.Moto;
+import es.cursojava.oo.interfaces.ejercicios.productos.pojos.Moto;
 
 public class Movil extends ProductosElectronicos {
 	private int numero;
