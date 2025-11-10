@@ -1,7 +1,5 @@
 package es.cursojava.oo.excepciones.ejercicios.ejercicio3.pojos;
 
-import org.slf4j.Logger;
-
 import es.cursojava.oo.excepciones.ejercicios.ejercicio3.excepciones.ExtremeTemperatureException;
 
 public class ClienteAsiduo extends Cliente {
@@ -33,10 +31,5 @@ public class ClienteAsiduo extends Cliente {
 	@Override
 	public void beberCafe() {
 		super.beberCafe();
-	}
-
-	@Override
-	public void setLogger(Logger logger) {
-		// TODO Auto-generated method stub
 	}
 }

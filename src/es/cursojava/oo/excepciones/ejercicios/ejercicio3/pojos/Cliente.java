@@ -1,17 +1,14 @@
 package es.cursojava.oo.excepciones.ejercicios.ejercicio3.pojos;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import es.cursojava.oo.excepciones.ejercicios.ejercicio3.interfaces.Cafeable;
-import es.cursojava.utils.interfaces.Loggable;
+import es.cursojava.utils.Dexter;
 
-public abstract class Cliente implements Cafeable, Loggable {
+public abstract class Cliente implements Cafeable {
 	private String nombre;
 	private String dni;
 	private int edad;
 	private TazaCafe taza;
-	protected Logger log = LoggerFactory.getLogger(getClass().getSimpleName());
+	protected Dexter dex = new Dexter(getClass());
 	
 	public Cliente(String nombre, String dni, int edad, TazaCafe taza) {
 		super();
@@ -62,7 +59,7 @@ public abstract class Cliente implements Cafeable, Loggable {
 	
 	@Override
 	public void beberCafe() {
-		log.info(this.nombre + " comienza a beber el cafe");
+		dex.toLog(1, this.nombre + " comienza a beber el cafe");
 	}
 }
 

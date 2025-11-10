@@ -1,7 +1,5 @@
 package es.cursojava.oo.excepciones.ejercicios.ejercicio3.pojos;
 
-import org.slf4j.Logger;
-
 public class Huesped extends Cliente {
 
 	public Huesped(String nombre, String dni, int edad, TazaCafe taza) {
@@ -14,11 +12,6 @@ public class Huesped extends Cliente {
 	
 	@Override
 	public void beberCafe() {
-		super.log.info(this.getNombre() + " no puede tomar cafe");
-	}
-
-	@Override
-	public void setLogger(Logger logger) {
-		this.log = logger;
+		dex.toLog(1, this.getNombre() + " no puede tomar cafe");
 	}
 }

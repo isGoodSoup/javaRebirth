@@ -22035,3 +22035,15 @@
 17:51:06.816 [main] INFO  Huesped - Jimena Moreno no puede tomar cafe
 17:51:06.816 [main] INFO  Comensal - Kevin Zimmerman comienza a beber el cafe
 17:51:06.816 [main] INFO  ClienteAsiduo - Victor Underwood comienza a beber el cafe
+18:06:31.271 [main] ERROR Dexter - ExtremeTemperatureException at line 44: Temperatura de la taza muy baja
+18:06:31.280 [main] ERROR Dexter - ExtremeTemperatureException at line 58: Temperatura de la taza muy baja
+18:06:31.280 [main] INFO  Dexter - Mia Moreno no puede tomar cafe
+18:06:31.281 [main] INFO  Dexter - Noah Parker comienza a beber el cafe
+18:10:24.832 [main] ERROR Bar - ExtremeTemperatureException at line 44: Temperatura de la taza muy alta
+18:10:24.834 [main] ERROR Bar - ExtremeTemperatureException at line 72: Temperatura de la taza muy alta
+18:10:24.834 [main] INFO  Cliente - Ben Torres no puede tomar cafe
+18:10:24.834 [main] INFO  Cliente - Valeria Nelson comienza a beber el cafe
+18:15:53.513 [main] INFO  es.cursojava.oo.excepciones.ejercicios.ejercicio3.pojos.Huesped - Dolores Pérez no puede tomar cafe
+18:15:53.515 [main] INFO  es.cursojava.oo.excepciones.ejercicios.ejercicio3.pojos.Comensal - Victor Oliver comienza a beber el cafe
+18:15:53.515 [main] INFO  es.cursojava.oo.excepciones.ejercicios.ejercicio3.pojos.ClienteAsiduo - Fernanda Keller comienza a beber el cafe
+18:15:53.515 [main] INFO  es.cursojava.oo.excepciones.ejercicios.ejercicio3.pojos.ClienteAsiduo - Yasmin Jiménez comienza a beber el cafe

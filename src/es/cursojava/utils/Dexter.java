@@ -11,7 +11,13 @@ import es.cursojava.utils.interfaces.Loggable;
 public class Dexter implements Loggable {
 	private static Random r = new Random();
 	private static Scanner scan = new Scanner(System.in);
-	private Logger log = LoggerFactory.getLogger(getClass().getSimpleName());
+	private Logger log;
+	
+	public Dexter() {}
+	
+	public Dexter(Class<?> c) {
+		this.log = LoggerFactory.getLogger(c);
+	}
 	
 	public void printException(Exception e) {
 		log.error(e.getClass().getSimpleName() + " at line " 
@@ -22,6 +28,21 @@ public class Dexter implements Loggable {
 	@Override
 	public void setLogger(Logger logger) {
 		this.log = logger;
+	}
+	
+	public void toLog(int var, String s) {
+		switch(var) {
+			case 0 -> log.trace(s);
+			case 1 -> log.info(s);
+			case 2 -> log.debug(s);
+			case 3 -> log.warn(s);
+			case 4 -> log.error(s);
+			default -> log.info(s);
+		}
+	}
+	
+	public void toLog(String s) {
+		log.info(s);
 	}
 	
 	public static String toScan(String s) {
