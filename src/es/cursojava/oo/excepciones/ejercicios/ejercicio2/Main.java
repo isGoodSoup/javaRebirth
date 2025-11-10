@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import es.cursojava.utils.Dexter;
-import es.cursojava.utils.Executable;
+import es.cursojava.utils.interfaces.Executable;
 
 public class Main implements Executable {
 	private String nombre;

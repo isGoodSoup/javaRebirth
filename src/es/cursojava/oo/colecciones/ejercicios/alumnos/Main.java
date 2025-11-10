@@ -7,8 +7,8 @@ import java.util.Scanner;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import es.cursojava.utils.Executable;
 import es.cursojava.utils.Dexter;
+import es.cursojava.utils.interfaces.Executable;
 
 public class Main implements Executable {
 	private Scanner scan = new Scanner(System.in);

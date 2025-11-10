@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Random;
 
 import es.cursojava.utils.Dexter;
-import es.cursojava.utils.Executable;
+import es.cursojava.utils.interfaces.Executable;
 
 public class ArrayEncadenado implements Executable {
 	private int pos = 0;
