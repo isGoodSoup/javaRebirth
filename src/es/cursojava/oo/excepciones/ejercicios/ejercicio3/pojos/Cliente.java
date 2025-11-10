@@ -2,10 +2,19 @@ package es.cursojava.oo.excepciones.ejercicios.ejercicio3.pojos;
 
 import es.cursojava.oo.excepciones.ejercicios.ejercicio3.interfaces.Cafeable;
 
-public class Cliente implements Cafeable {
+public abstract class Cliente implements Cafeable {
 	private String nombre;
 	private String dni;
 	private int edad;
+	private TazaCafe taza;
+	
+	public Cliente(String nombre, String dni, int edad, TazaCafe taza) {
+		super();
+		this.nombre = nombre;
+		this.dni = dni;
+		this.edad = edad;
+		this.taza = taza;
+	}
 	
 	public Cliente(String nombre, String dni, int edad) {
 		super();
@@ -13,10 +22,10 @@ public class Cliente implements Cafeable {
 		this.dni = dni;
 		this.edad = edad;
 	}
-	
+
 	@Override
 	public void beberCafe() {
-		
+		System.out.println(this.nombre + " comienza a beber el cafe");
 	}
 
 	public String getNombre() {
@@ -41,6 +50,14 @@ public class Cliente implements Cafeable {
 
 	public void setEdad(int edad) {
 		this.edad = edad;
+	}
+
+	public TazaCafe getTaza() {
+		return taza;
+	}
+
+	public void setTaza(TazaCafe taza) {
+		this.taza = taza;
 	}
 }
 
