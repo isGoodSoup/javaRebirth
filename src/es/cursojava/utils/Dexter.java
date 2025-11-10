@@ -153,6 +153,23 @@ public class Dexter implements Loggable {
         return System.currentTimeMillis() - start;
     }
 	
+	public final void clearConsole() {
+	    try {
+	        final String os = System.getProperty("os.name");
+	        if (os.contains("Windows")) {
+	            Runtime.getRuntime().exec("cls");
+	        }
+	        else {
+	            Runtime.getRuntime().exec("clear");
+	        }
+	    }
+	    catch (final Exception e) {
+	    	log.error(e.getClass().getSimpleName() + " at line " 
+					+ e.getStackTrace()[e.getStackTrace().length - 3]
+					.getLineNumber() + ": " + e.getMessage());
+	    }
+	}
+	
 	public static String toGetName() {
 		String[] first = {
 	            "Alice", "Alejandro", 
