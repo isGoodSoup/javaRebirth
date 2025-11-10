@@ -1,4 +1,4 @@
-package es.cursojava.oo.herencia.ejercicios.hospital;
+package es.cursojava.oo.herencia.ejercicios.hospital.pojos;
 
 public class Habitacion {
 	private int numero;

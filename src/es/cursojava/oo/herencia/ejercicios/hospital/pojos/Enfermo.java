@@ -1,13 +1,11 @@
-package es.cursojava.oo.herencia.ejercicios.hospital;
+package es.cursojava.oo.herencia.ejercicios.hospital.pojos;
 
 import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import es.cursojava.utils.Dexter;
 
 public class Enfermo extends Persona {
 	private String enfermedad;
-	private static final Logger log = LoggerFactory.getLogger(Enfermo.class);
 	
 	public Enfermo() {}
 	
@@ -30,7 +28,7 @@ public class Enfermo extends Persona {
 	}
 	
 	public void comer() {
-		log.info(super.getNombre() + " está comiendo en la habitación");
+		super.log.info(super.getNombre() + " está comiendo en la habitación");
 	}
 	
 	public String enfermedadAleatoria() {
@@ -38,5 +36,11 @@ public class Enfermo extends Persona {
 				"gripe aviar", "cáncer", "linfoma", "chron", "cáncer de páncreas", 
 				"rabia", "fiebre", "lupus", "gripe", "insuficiencia renal", "ligma"};
 		return Dexter.toGetString(enfermedades);
+	}
+
+	@Override
+	public void setLogger(Logger logger) {
+		// TODO Auto-generated method stub
+		
 	}
 }

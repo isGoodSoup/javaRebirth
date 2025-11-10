@@ -11,6 +11,7 @@ public class Main implements Executable {
 	private String dni;
 	private int edad;
 	private double nota;
+	private Dexter dex = new Dexter();
 	
 	public static void main(String[] args) {
 		Main main = new Main();
@@ -39,7 +40,7 @@ public class Main implements Executable {
 	    	        alumnos.add(a);
 	    	        alumnoCreado = true;
 	    	    } catch(IllegalArgumentException | NotaInvalidaException e) {
-	    	        Dexter.printException(e);
+	    	        dex.printException(e);
 	    	    }
 	    	}
 	    }

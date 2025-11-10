@@ -1,8 +1,14 @@
-package es.cursojava.oo.herencia.ejercicios.hospital;
+package es.cursojava.oo.herencia.ejercicios.hospital.pojos;
 
-public abstract class Persona {
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import es.cursojava.utils.interfaces.Loggable;
+
+public abstract class Persona implements Loggable {
 	private String nombre;
 	private int edad;
+	protected Logger log = LoggerFactory.getLogger(getClass().getSimpleName());
 	
 	public Persona() {}
 	

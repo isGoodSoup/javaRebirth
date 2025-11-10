@@ -22025,3 +22025,13 @@
 18:21:57.016 [main] INFO  es.cursojava.oo.colecciones.ejercicios.supermercado.Main - Bienvenido al ALDI Disfruta de tu instancia, []! 
 18:22:15.392 [main] INFO  es.cursojava.oo.colecciones.ejercicios.supermercado.Main - Bienvenido al ALDI Disfruta de tu instancia, Wendy Jiménez! 
 18:24:02.380 [main] INFO  es.cursojava.oo.colecciones.ejercicios.supermercado.Main - Bienvenido al ALDI Disfruta de tu instancia, Rachel Santos! 
+17:38:19.963 [main] INFO  Huesped - Jimena Parker no puede tomar cafe
+17:38:19.966 [main] INFO  Comensal - Alice Smith comienza a beber el cafe
+17:47:56.017 [main] ERROR Dexter - ExtremeTemperatureException at line 58: Temperatura de la taza muy baja
+17:47:56.019 [main] ERROR Dexter - ExtremeTemperatureException at line 72: Temperatura de la taza muy alta
+17:47:56.019 [main] INFO  Huesped - Zoe Young no puede tomar cafe
+17:47:56.020 [main] INFO  Comensal - Ignacio Smith comienza a beber el cafe
+17:51:06.814 [main] ERROR Dexter - ExtremeTemperatureException at line 58: Temperatura de la taza muy alta
+17:51:06.816 [main] INFO  Huesped - Jimena Moreno no puede tomar cafe
+17:51:06.816 [main] INFO  Comensal - Kevin Zimmerman comienza a beber el cafe
+17:51:06.816 [main] INFO  ClienteAsiduo - Victor Underwood comienza a beber el cafe

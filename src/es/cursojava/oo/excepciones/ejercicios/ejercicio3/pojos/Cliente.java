@@ -1,12 +1,17 @@
 package es.cursojava.oo.excepciones.ejercicios.ejercicio3.pojos;
 
-import es.cursojava.oo.excepciones.ejercicios.ejercicio3.interfaces.Cafeable;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-public abstract class Cliente implements Cafeable {
+import es.cursojava.oo.excepciones.ejercicios.ejercicio3.interfaces.Cafeable;
+import es.cursojava.utils.interfaces.Loggable;
+
+public abstract class Cliente implements Cafeable, Loggable {
 	private String nombre;
 	private String dni;
 	private int edad;
 	private TazaCafe taza;
+	protected Logger log = LoggerFactory.getLogger(getClass().getSimpleName());
 	
 	public Cliente(String nombre, String dni, int edad, TazaCafe taza) {
 		super();
@@ -22,12 +27,7 @@ public abstract class Cliente implements Cafeable {
 		this.dni = dni;
 		this.edad = edad;
 	}
-
-	@Override
-	public void beberCafe() {
-		System.out.println(this.nombre + " comienza a beber el cafe");
-	}
-
+	
 	public String getNombre() {
 		return nombre;
 	}
@@ -58,6 +58,11 @@ public abstract class Cliente implements Cafeable {
 
 	public void setTaza(TazaCafe taza) {
 		this.taza = taza;
+	}
+	
+	@Override
+	public void beberCafe() {
+		log.info(this.nombre + " comienza a beber el cafe");
 	}
 }
 

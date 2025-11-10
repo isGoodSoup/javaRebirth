@@ -1,14 +1,16 @@
-package es.cursojava.oo.herencia.ejercicios.hospital;
+package es.cursojava.oo.herencia.ejercicios.hospital.pojos;
 
 import java.util.Random;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public abstract class EmpleadosHospital extends Persona {
+import es.cursojava.utils.interfaces.Loggable;
+
+public abstract class EmpleadosHospital extends Persona implements Loggable {
 	private String turno;
 	private static final Random r = new Random();
-	private static final Logger log = LoggerFactory.getLogger(EmpleadosHospital.class);
+	protected Logger log = LoggerFactory.getLogger(getClass().getSimpleName());
 	
 	public EmpleadosHospital() {}
 	
@@ -27,6 +29,11 @@ public abstract class EmpleadosHospital extends Persona {
 
 	public void setTurno(String turno) {
 		this.turno = turno;
+	}
+	
+	@Override
+	public void setLogger(Logger logger) {
+		this.log = logger;
 	}
 	
 	public void fichar() {

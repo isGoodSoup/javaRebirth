@@ -1,13 +1,18 @@
-package es.cursojava.oo.herencia.ejercicios.hospital;
+package es.cursojava.oo.herencia.ejercicios.hospital.main;
 
 import java.util.Random;
 
 import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
+import es.cursojava.oo.herencia.ejercicios.hospital.pojos.Doctor;
+import es.cursojava.oo.herencia.ejercicios.hospital.pojos.Enfermero;
+import es.cursojava.oo.herencia.ejercicios.hospital.pojos.Enfermo;
+import es.cursojava.oo.herencia.ejercicios.hospital.pojos.Habitacion;
+import es.cursojava.oo.herencia.ejercicios.hospital.pojos.Paciente;
 import es.cursojava.utils.Dexter;
+import es.cursojava.utils.interfaces.Loggable;
 
-public class Hospital {
+public class Hospital implements Loggable {
 	private String nombre;
 	private Habitacion[] habitaciones;
 	private Paciente[] salaDeEspera;
@@ -16,7 +21,7 @@ public class Hospital {
 	private Enfermero[] enfermeros;
 	private Doctor[] doctores;
 	private static final Random r = new Random();
-	private static final Logger log = LoggerFactory.getLogger(new Object() {}.getClass().getEnclosingClass());
+	private Logger log;
 	
 	public static void main(String[] args) {
 		Hospital hospital = new Hospital();
@@ -34,6 +39,11 @@ public class Hospital {
 		this.nombre = nombre;
 		this.habitaciones = habitaciones;
 		this.salaDeEspera = salaDeEspera;
+	}
+	
+	@Override
+	public void setLogger(Logger logger) {
+		this.log = logger;
 	}
 
 	public String getNombre() {

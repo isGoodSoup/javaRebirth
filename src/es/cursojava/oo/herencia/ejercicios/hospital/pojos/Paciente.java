@@ -1,14 +1,12 @@
-package es.cursojava.oo.herencia.ejercicios.hospital;
+package es.cursojava.oo.herencia.ejercicios.hospital.pojos;
 
 import java.util.Random;
 
 import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 public class Paciente extends Persona {
 	private String[] sintomas;
 	private static final Random r = new Random();
-	private static final Logger log = LoggerFactory.getLogger(Paciente.class);
 	
 	public Paciente() {}
 
@@ -28,13 +26,19 @@ public class Paciente extends Persona {
 	public void setSintomas(String[] sintomas) {
 		this.sintomas = sintomas;
 	}
-	
+
 	public void comer() {
-		log.info(super.getNombre() + " está comiendo en la cafetería a las 13:" + minutos());
+		super.log.info(super.getNombre() + " está comiendo en la cafetería a las 13:" + minutos());
 	}
 	
 	public int minutos() {
 		int minutos = r.nextInt(10, 60);
 		return minutos;
+	}
+
+	@Override
+	public void setLogger(Logger logger) {
+		// TODO Auto-generated method stub
+		
 	}
 }

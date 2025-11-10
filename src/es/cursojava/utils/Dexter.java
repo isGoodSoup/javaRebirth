@@ -6,14 +6,22 @@ import java.util.Scanner;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class Dexter {
+import es.cursojava.utils.interfaces.Loggable;
+
+public class Dexter implements Loggable {
 	private static Random r = new Random();
 	private static Scanner scan = new Scanner(System.in);
+	private Logger log = LoggerFactory.getLogger(getClass().getSimpleName());
 	
-	public static void printException(Exception e) {
-		System.err.println(e.getClass().getSimpleName() + " at line " 
+	public void printException(Exception e) {
+		log.error(e.getClass().getSimpleName() + " at line " 
 						+ e.getStackTrace()[e.getStackTrace().length - 3]
 						.getLineNumber() + ": " + e.getMessage());
+	}
+
+	@Override
+	public void setLogger(Logger logger) {
+		this.log = logger;
 	}
 	
 	public static String toScan(String s) {
@@ -37,7 +45,7 @@ public class Dexter {
 	            int num = Integer.parseInt(line);
 	            return num;
 	        } catch (Exception e) {
-	            printException(e);
+	            new Dexter().printException(e);
 	        }
 	    }
 	}
@@ -54,14 +62,6 @@ public class Dexter {
 	
 	public static void cleanBuffer() {
 		scan.nextLine();
-	}
-	
-	public static Logger toLog(Class<?> cls) {
-	    return LoggerFactory.getLogger(cls);
-	}
-	
-	public static Logger toLog() {
-	    return toLog(Dexter.class);
 	}
 	
 	public static String toGetID() {

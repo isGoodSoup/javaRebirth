@@ -13,6 +13,7 @@ public class ArrayEncadenado implements Executable {
 	private int max = 0;
 	private int min = 0;
 	private Random random = new Random();
+	private Dexter dex = new Dexter();
 	
 	public static void main(String[] args) {
 		ArrayEncadenado main = new ArrayEncadenado();
@@ -69,7 +70,7 @@ public class ArrayEncadenado implements Executable {
 				}
 				System.out.println("Valor = " + array[pos]);
 			} catch(ArrayIndexOutOfBoundsException e) {
-				Dexter.printException(e);
+				dex.printException(e);
 			}
 		} while(pos > array.length);
 		return array;

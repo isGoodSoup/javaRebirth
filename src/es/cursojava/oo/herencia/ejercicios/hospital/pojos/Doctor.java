@@ -1,14 +1,10 @@
-package es.cursojava.oo.herencia.ejercicios.hospital;
+package es.cursojava.oo.herencia.ejercicios.hospital.pojos;
 
 import java.util.Random;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 public class Doctor extends EmpleadosHospital {
 	private String especialidad;
 	private static final Random r = new Random();
-	private static final Logger log = LoggerFactory.getLogger(Doctor.class);
 	
 	public Doctor() {}
 	
@@ -28,13 +24,13 @@ public class Doctor extends EmpleadosHospital {
 	public boolean diagnosticarPaciente(Paciente paciente) {
 		int num = r.nextInt(10) + 1;
 		if(num > 8) {
-			log.trace(super.getNombre() + " está enfermo");
+			super.log.trace(super.getNombre() + " está enfermo");
 			return true;
 		}
 		return false;
 	}
 	
 	public void cobrar() {
-		log.info("El doctor, " + super.getNombre() + " está cobrando");
+		super.log.info("El doctor, " + super.getNombre() + " está cobrando");
 	}
 }
