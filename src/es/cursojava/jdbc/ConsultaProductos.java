@@ -4,11 +4,13 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.Date;
 
 import es.cursojava.utils.UtilsDB;
 
 public class ConsultaProductos {
-    private static final String CONSULTA_PRODUCTOS=""+
+    private static final String CONSULTA_PRODUCTOS="SELECT NOMBRE, CATEGORIA, PRECIO, STOCK, FECHA_ALTA, ESTADO, CODIGO_SKU, CREADO_POR, IVA\n"
+    		+ "FROM TB_PRODUCTOS_PROFE"+
                     " ";
     public static void main(String[] args) {
     	consultaProductos();
@@ -21,15 +23,30 @@ public class ConsultaProductos {
         try {
             st = conexion.createStatement();
             rs = st.executeQuery(CONSULTA_PRODUCTOS);
-            while(rs.next()){
-                int id = rs.getInt("ID");
+            while (rs.next()) {
                 String nombre = rs.getString("NOMBRE");
-                int edad = rs.getInt("EDAD");
-                double salario = rs.getDouble("SALARIO");
+                String categoria = rs.getString("CATEGORIA");
+                double precio = rs.getDouble("PRECIO");
+                int stock = rs.getInt("STOCK");
+                Date fechaAlta = rs.getDate("FECHA_ALTA");
+                String estado = rs.getString("ESTADO");
+                String codigoSku = rs.getString("CODIGO_SKU");
+                String creadoPor = rs.getString("CREADO_POR");
+                double iva = rs.getDouble("IVA");
 
-                System.out.println("Registro.[ id: "+ id + ", nombre: "+ nombre
-                        + ", edad: " + edad + ", salario: "+salario+ "]");
+                System.out.println(
+                    "Producto: " + nombre +
+                    " | Categoría: " + categoria +
+                    " | Precio: " + precio +
+                    " | Stock: " + stock +
+                    " | Fecha alta: " + fechaAlta +
+                    " | Estado: " + estado +
+                    " | SKU: " + codigoSku +
+                    " | Creado por: " + creadoPor +
+                    " | IVA: " + iva
+                );
             }
+
         } catch (SQLException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();

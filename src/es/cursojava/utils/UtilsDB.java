@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class UtilsDB {
-    private static final String URL_DB_ORACLE = "jdbc:oracle:thin:@localhost:1522/XEPDB1";
+    private static final String URL_DB_ORACLE = "jdbc:oracle:thin:@//localhost:1521/XEPDB1";
     private static final String USER_DB_ORACLE = "HR";
     private static final String PASSWORD_DB_ORACLE="HR";
     private static Connection conn = null;
