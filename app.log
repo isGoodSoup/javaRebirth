@@ -22049,3 +22049,4 @@
 18:15:53.515 [main] INFO  es.cursojava.oo.excepciones.ejercicios.ejercicio3.pojos.ClienteAsiduo - Yasmin Jiménez comienza a beber el cafe
 19:53:52.403 [main] INFO  es.cursojava.jdbc.ConexionBaseDatos - Connection stablished to db
 20:05:49.425 [main] INFO  es.cursojava.jdbc.ConexionBaseDatos - Conexión establecida
+20:13:14.638 [main] INFO  es.cursojava.jdbc.ConexionBaseDatos - Conexión establecida
