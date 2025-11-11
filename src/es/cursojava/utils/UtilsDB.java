@@ -10,12 +10,12 @@ public class UtilsDB {
     private static final String PASSWORD_DB_ORACLE="HR";
     private static Connection conn = null;
 
-    public static Connection crearConexion (){
+    public static Connection crearConexion() {
         conn = crearConexion(URL_DB_ORACLE, USER_DB_ORACLE, PASSWORD_DB_ORACLE);
         return conn;
     }
 
-    public static Connection crearConexion (String url, String user, String password){
+    public static Connection crearConexion(String url, String user, String password){
         try {
             conn = DriverManager.getConnection(url, user, password);
         } catch (SQLException e) {
@@ -30,8 +30,6 @@ public class UtilsDB {
         } catch (SQLException e) {
             System.err.println("Error al cerrar la sesión "+ e.getMessage());
         }
-
     }
-
 }
 
