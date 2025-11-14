@@ -24,7 +24,6 @@ public class FicheroEjemplo {
 			b.newLine();
 			b.append("Tres tristes tigres comen trigo en un trigal");
 			b.newLine();
-			
 		} catch (IOException e) {
 			new Dexter().printException(e);
 		}
