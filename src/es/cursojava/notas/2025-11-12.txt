@@ -1,0 +1,280 @@
+📚 APUNTES COMPLETOS - JDBC, SQL Y FICHEROS EN JAVA
+📅 Resumen del día - Todos los temas vistos en clase
+
+==============================================
+1. JDBC - CONEXIÓN JAVA CON BASE DE DATOS
+==============================================
+
+🔹 ¿QUÉ ES JDBC?
+- Java Database Connectivity - API para conectar Java con BD
+- Arquitectura: App Java → JDBC API → Driver JDBC → Base de Datos
+- Provee métodos para conexiones, consultas SQL y procesamiento de resultados
+
+🔹 COMPONENTES JDBC:
+- JDBC API: Interfaces y clases para ejecutar SQL
+- JDBC Driver Manager: Gestiona los controladores
+- JDBC Drivers: Implementaciones específicas para cada BD
+
+🔹 TIPOS DE DRIVERS:
+- Tipo 1: JDBC-ODBC Bridge
+- Tipo 2: Native-API/parcialmente Java
+- Tipo 3: Net-protocol/todo Java
+- Tipo 4: Native-protocol/todo Java (más común)
+
+🔹 CONFIGURACIÓN ORACLE XE:
+HOST (Windows) ←→ MV (Ubuntu Server) ←→ Oracle XE
+Puerto Host: 1522 → Puerto MV: 1521
+Directorio datos: /opt/oracle/oradata
+
+🔹 URL CONEXIÓN JDBC:
+String url = "jdbc:oracle:thin:@//localhost:1522/XEPDB1";
+
+==============================================
+2. PRINCIPIO ACID - BASES DE DATOS RELACIONALES
+==============================================
+
+🔹 A - ATOMICIDAD (Atomicity):
+- Las transacciones son "TODO o NADA"
+- Si una parte falla, toda la transacción se revierte
+- Ejemplo: Transferencia bancaria (restar de una cuenta y sumar a otra)
+
+🔹 C - CONSISTENCIA (Consistency):
+- La BD siempre pasa de un estado válido a otro
+- Se garantiza con restricciones: PRIMARY KEY, FOREIGN KEY, CHECK
+- Ejemplo: No se pueden insertar pedidos de clientes que no existen
+
+🔹 I - AISLAMIENTO (Isolation):
+- Las transacciones concurrentes no interfieren entre sí
+- Hasta que no se hace COMMIT, otras transacciones no ven los cambios
+
+🔹 D - DURABILIDAD (Durability):
+- Las transacciones confirmadas son permanentes
+- Sobreviven a fallos del sistema, cortes de luz, etc.
+
+==============================================
+3. DDL vs DML - TIPOS DE COMANDOS SQL
+==============================================
+
+🔹 DDL (DATA DEFINITION LANGUAGE):
+- Define la estructura de la base de datos
+- Comandos: CREATE, ALTER, DROP, TRUNCATE
+- Ejemplo:
+  CREATE TABLE TB_PRODUCTOS_PROFE (
+      id NUMBER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+      nombre VARCHAR2(100) NOT NULL,
+      categoria VARCHAR2(50) NOT NULL,
+      precio NUMBER(8,2) CHECK (precio >= 0)
+  );
+
+🔹 DML (DATA MANIPULATION LANGUAGE):
+- Manipula datos dentro de las estructuras
+- Comandos: INSERT, UPDATE, DELETE, SELECT
+- Ejemplo:
+  INSERT INTO TB_PRODUCTOS_PROFE (nombre, categoria, precio)
+  VALUES ('Portátil 14"', 'TECNOLOGIA', 799.9);
+
+==============================================
+4. STATEMENT vs PREPAREDSTATEMENT
+==============================================
+
+🔹 STATEMENT (Básico):
+- Para consultas simples sin parámetros
+- Vulnerable a SQL Injection
+- Ejemplo:
+  Statement st = conexion.createStatement();
+  ResultSet rs = st.executeQuery("SELECT * FROM productos");
+
+🔹 PREPAREDSTATEMENT (Recomendado):
+- Para consultas con parámetros
+- Más seguro y eficiente
+- Ejemplo:
+  String sql = "SELECT * FROM productos WHERE categoria = ?";
+  PreparedStatement ps = conexion.prepareStatement(sql);
+  ps.setString(1, "TECNOLOGIA");
+  ResultSet rs = ps.executeQuery();
+
+==============================================
+5. BATCH OPERATIONS - OPERACIONES MASIVAS
+==============================================
+
+🔹 DEFINICIÓN:
+- Conjunto de operaciones SQL que se envían juntas a la BD
+- Mucho más eficiente que ejecutar una por una
+
+🔹 EJEMPLO BATCH INSERT:
+try (Connection conexion = UtilidadesBD.crearConexion();
+     PreparedStatement ps = conexion.prepareStatement(
+         "INSERT INTO productos VALUES (?, ?, ?)")) {
+    
+    conexion.setAutoCommit(false);
+    
+    for (Producto p : productos) {
+        ps.setInt(1, p.getId());
+        ps.setString(2, p.getNombre());
+        ps.setDouble(3, p.getPrecio());
+        ps.addBatch(); // Añadir al batch
+        
+        if (contador % 1000 == 0) {
+            ps.executeBatch(); // Ejecutar cada 1000
+        }
+    }
+    
+    ps.executeBatch(); // Batch final
+    conexion.commit();
+}
+
+🔹 BENEFICIOS DEL BATCH:
+- 10x-100x más rápido
+- Menos tráfico de red
+- Atomicidad (todo o nada)
+- Mejor escalabilidad
+
+==============================================
+6. TRABAJO CON FICHEROS EN JAVA
+==============================================
+
+🔹 CLASE FILE:
+- Representa archivos y directorios
+- No abre archivos, solo información de metadatos
+
+🔹 MÉTODOS IMPORTANTES:
+- exists(), isFile(), isDirectory()
+- canRead(), canWrite()
+- mkdir(), mkdirs(), createNewFile(), delete()
+- getName(), getAbsolutePath(), length()
+
+🔹 EJEMPLO CREACIÓN DIRECTORIOS:
+File directorio = new File("mi_directorio");
+if (!directorio.exists()) {
+    directorio.mkdir(); // Crear un directorio
+    // o directorio.mkdirs() para crear jerarquía completa
+}
+
+==============================================
+7. RUTAS ABSOLUTAS vs RELATIVAS
+==============================================
+
+🔹 RUTA ABSOLUTA:
+- Completa desde la raíz del sistema
+- Ejemplo: "C:\\Users\\Usuario\\proyecto\\archivo.txt"
+- ❌ NO USAR EN PROYECTOS - No es portable
+
+🔹 RUTA RELATIVA:
+- Parcial desde el directorio actual
+- Ejemplo: "src/main/resources/config.properties"
+- ✅ RECOMENDADO PARA PROYECTOS - Portable
+
+🔹 DIFERENCIAS:
+- getPath(): Ruta como se creó
+- getAbsolutePath(): Convierte a absoluta
+- getCanonicalPath(): Resuelve . y ..
+
+==============================================
+8. LISTADO Y ELIMINACIÓN DE FICHEROS
+==============================================
+
+🔹 LISTAR CONTENIDO:
+// Solo nombres
+String[] nombres = directorio.list();
+
+// Objetos File completos
+File[] archivos = directorio.listFiles();
+
+🔹 ELIMINACIÓN SEGURA:
+public static boolean eliminarSeguramente(File archivo) {
+    try {
+        if (!archivo.canWrite()) {
+            System.err.println("Sin permisos: " + archivo.getName());
+            return false;
+        }
+        return archivo.delete();
+    } catch (SecurityException e) {
+        System.err.println("Error seguridad: " + archivo.getName());
+        return false;
+    }
+}
+
+==============================================
+9. CÓDIGO COMPLETO JDBC - CONSULTA PRODUCTOS
+==============================================
+
+public class ConsultaProductos {
+    private static final String CONSULTA = "SELECT ID, NOMBRE, CATEGORIA, PRECIO FROM TB_PRODUCTOS_PROFE";
+    
+    public static void consultaProducts() {
+        Connection conexion = UtilidadesBD.createConexion();
+        Statement st = null;
+        ResultSet rs = null;
+        
+        try {
+            st = conexion.createStatement();
+            rs = st.executeQuery(CONSULTA);
+            
+            while(rs.next()) {
+                int id = rs.getInt("ID");
+                String nombre = rs.getString("NOMBRE");
+                String categoria = rs.getString("CATEGORIA");
+                double precio = rs.getDouble("PRECIO");
+                
+                System.out.printf("ID: %d | Nombre: %s | Categoría: %s | Precio: %.2f%n",
+                    id, nombre, categoria, precio);
+            }
+            
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (rs != null) rs.close();
+                if (st != null) st.close();
+                if (conexion != null) conexion.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+}
+
+==============================================
+10. BUENAS PRÁCTICAS RESUMIDAS
+==============================================
+
+🔹 JDBC:
+- Usar PreparedStatement en lugar de Statement
+- Cerrar recursos en finally o usar try-with-resources
+- Usar transacciones para operaciones múltiples
+- Manejar excepciones SQLException
+
+🔹 FICHEROS:
+- Usar rutas relativas, nunca absolutas
+- Verificar null en list() y listFiles()
+- Usar mkdirs() para crear jerarquías
+- Manejar IOException y SecurityException
+
+🔹 GENERAL:
+- Usar constantes para consultas SQL
+- Loggear errores con información útil
+- Validar datos antes de operaciones
+- Usar batch para inserciones masivas
+
+==============================================
+🚀 PARA EL EXAMEN - PUNTOS CLAVE
+==============================================
+
+1. JDBC: Saber flujo completo (Connection → Statement → ResultSet)
+2. ACID: Definir cada principio con ejemplos
+3. DDL vs DML: Diferenciar y ejemplificar
+4. PreparedStatement: Ventajas sobre Statement
+5. Batch: Saber implementar operaciones masivas
+6. File: Conocer métodos principales y diferencias rutas
+7. Try-catch-finally: Manejo correcto de excepciones
+
+==============================================
+📞 RECURSOS ADICIONALES
+==============================================
+
+- Documentación Oracle JDBC
+- Java API: java.io.File, java.sql.*
+- Patrones: DAO (Data Access Object)
+- Próximos temas: Transacciones, Pool de conexiones
+
+¡ÉXITO EN EL EXAMEN! 🎯
