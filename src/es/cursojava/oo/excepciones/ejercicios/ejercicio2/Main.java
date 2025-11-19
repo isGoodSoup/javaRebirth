@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import es.cursojava.utils.Dexter;
-import es.cursojava.utils.interfaces.Executable;
+import es.cursojava.utils.interfaces.Iniciable;
 
-public class Main implements Executable {
+public class Main implements Iniciable {
 	private String nombre;
 	private String dni;
 	private int edad;

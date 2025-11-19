@@ -1,5 +1,5 @@
 package es.cursojava.utils.interfaces;
 
-public interface Executable {
+public interface Iniciable {
 	void init();
 }

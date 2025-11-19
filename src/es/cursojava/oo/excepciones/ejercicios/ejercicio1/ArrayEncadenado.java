@@ -6,9 +6,9 @@ import java.util.List;
 import java.util.Random;
 
 import es.cursojava.utils.Dexter;
-import es.cursojava.utils.interfaces.Executable;
+import es.cursojava.utils.interfaces.Iniciable;
 
-public class ArrayEncadenado implements Executable {
+public class ArrayEncadenado implements Iniciable {
 	private int pos = 0;
 	private int max = 0;
 	private int min = 0;

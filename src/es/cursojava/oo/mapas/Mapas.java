@@ -8,9 +8,9 @@ import java.util.Set;
 
 import es.cursojava.oo.colecciones.ejercicios.supermercado.Persona;
 import es.cursojava.utils.Dexter;
-import es.cursojava.utils.interfaces.Executable;
+import es.cursojava.utils.interfaces.Iniciable;
 
-public class Mapas implements Executable {
+public class Mapas implements Iniciable {
 	
 	public static void main(String[] args) {
 		Mapas main = new Mapas();
