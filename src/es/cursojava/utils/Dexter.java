@@ -1,9 +1,21 @@
 package es.cursojava.utils;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.Random;
 import java.util.Scanner;
 
 public class Dexter {
+	private static List<String> lines = new ArrayList<>();
+	private static Map<Integer, String> map = new HashMap<>();
+	private static int counter = 0;
+	private static int characters = 0;
 	private static Random r = new Random();
 	private static Scanner scan = new Scanner(System.in);
 	
@@ -136,6 +148,28 @@ public class Dexter {
 //					.getLineNumber() + ": " + e.getMessage());
 //	    }
 //	}
+	
+	public static String toLeerArchivo(String archivo) throws IOException{
+		Path ruta = Paths.get(archivo);
+		StringBuilder builder = new StringBuilder();
+		
+		lines = Files.readAllLines(ruta);
+		for(String linea : lines) {
+			builder.append(linea+"\n");
+			map.put(counter, linea);
+			counter++;
+		}
+		
+		for(Map.Entry<Integer, String> linea : map.entrySet()) {
+			Integer numLines = linea.getKey();
+			String content = linea.getValue();
+			System.out.println("La línea " + numLines + 
+					" tiene " + content.length() + " caracteres");
+			characters += content.length();
+		}
+		System.out.println("Total = " + characters + " caracteres");
+		return builder.toString();
+	}
 	
 	public static String toGetName() {
 		String[] first = {

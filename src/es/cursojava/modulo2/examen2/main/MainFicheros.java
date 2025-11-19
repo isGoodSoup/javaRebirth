@@ -17,6 +17,7 @@ public class MainFicheros implements Iniciable {
 	private int contador = 0;
 	private int javas = 0;
 	private int javaPorLinea = 0;
+	private int charsTotales;
 	
 	public static void main(String[] args) {
 		MainFicheros main = new MainFicheros();
@@ -26,7 +27,7 @@ public class MainFicheros implements Iniciable {
 	@Override
 	public void init() {
 		try {
-			this.leerArchivo("C:\\Users\\Tardes\\eclipse-workspace\\ExamenDiego\\application.log");
+			this.leerArchivo("./application.log");
 		} catch (IOException e) {
 			new Dexter().printException(e);
 		}
@@ -58,8 +59,10 @@ public class MainFicheros implements Iniciable {
 			}
 			System.out.println("La línea " + numLinea + 
 					" tiene " + contenido.length() + " caracteres");
+			charsTotales += contenido.length();
 			javaPorLinea = 0;
 		}
+		System.out.println("Total = " + charsTotales + " caracteres");
 		return builder.toString();
 	}
 }
