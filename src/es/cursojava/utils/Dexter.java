@@ -9,8 +9,7 @@ public class Dexter {
 	
 	public void printException(Exception e) {
 		System.err.println(e.getClass().getSimpleName() + " at line " 
-						+ e.getStackTrace()[e.getStackTrace().length - 3]
-						.getLineNumber() + ": " + e.getMessage());
+						+ e.getStackTrace()[0].getLineNumber() + ": " + e.getMessage());
 	}
 	
 	public static String toScan(String s) {

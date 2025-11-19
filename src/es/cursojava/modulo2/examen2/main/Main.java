@@ -4,11 +4,13 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+import es.cursojava.modulo2.examen2.excepciones.MissingMasterException;
 import es.cursojava.utils.Dexter;
 import es.cursojava.utils.Loggable;
 import es.cursojava.utils.interfaces.Iniciable;
 
 public class Main extends Loggable implements Iniciable {
+	private Dexter dex = new Dexter();
 	
 	public static void main(String[] args) {
 		Main main = new Main();
@@ -30,30 +32,28 @@ public class Main extends Loggable implements Iniciable {
 			System.out.println(master);
 		}
 
-		int codigo = Dexter.toScanInt("Inserta el código del curso");
-//		for (Master master : masters) {
-//			if(codigo == master.getCodigo()) {
-//				masters.remove(master);
-//			}
-//		}
-
-//		for(Iterator<Master> iterator = masters.iterator(); iterator.hasNext();) {
-//			Master master = (Master) iterator.next();
-//			if(codigo == master.getCodigo()) {
-//				iterator.remove();
-//			}
-//		}
-		
+		int codigo = Dexter.toScanInt("Inserta el código del curso");	
 		Iterator<Master> ite = masters.iterator();
-		while(ite.hasNext()) {
-			Master master = (Master) ite.next();
-			if(codigo == master.getCodigo()) {
-				try {
-					ite.remove();
-				} catch(UnsupportedOperationException e) {
-					new Dexter().printException(e);
-				}
-			}
+		boolean isFound = false;
+		while (ite.hasNext()) {
+		    Master master = ite.next();
+		    if (codigo == master.getCodigo()) {
+		        try {
+		            ite.remove();
+		            isFound = true;
+		            break;
+		        } catch (UnsupportedOperationException e) {
+		            dex.printException(e);
+		        }
+		    }
+		}
+		
+		if (!isFound) {
+		    try {
+		        throw new MissingMasterException("El master que se especifica no se encuentra");
+		    } catch (MissingMasterException e) {
+		        dex.printException(e);
+		    }
 		}
 		
 		for (Master master : masters) {
@@ -62,6 +62,7 @@ public class Main extends Loggable implements Iniciable {
 	}
 	
 	private Master crearMaster(boolean isOficial, String curso, int codigo, int cupo) {
-		return new Master(isOficial, "Master de " + curso, codigo, cupo);
+		Master master = new Master(isOficial, "Master de " + curso, codigo, cupo);
+		return master;
 	}
 }
