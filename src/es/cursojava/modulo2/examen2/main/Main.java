@@ -5,9 +5,10 @@ import java.util.Iterator;
 import java.util.List;
 
 import es.cursojava.utils.Dexter;
+import es.cursojava.utils.Loggable;
 import es.cursojava.utils.interfaces.Iniciable;
 
-public class Main implements Iniciable {
+public class Main extends Loggable implements Iniciable {
 	
 	public static void main(String[] args) {
 		Main main = new Main();

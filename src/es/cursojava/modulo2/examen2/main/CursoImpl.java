@@ -1,8 +1,9 @@
 package es.cursojava.modulo2.examen2.main;
 
+import es.cursojava.utils.Loggable;
 import es.cursojava.utils.interfaces.Curso;
 
-public class CursoImpl implements Curso {
+public class CursoImpl extends Loggable implements Curso {
 
 	@Override
 	public String getCurso() {
