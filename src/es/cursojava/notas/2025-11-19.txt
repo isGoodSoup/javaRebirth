@@ -1,0 +1,12 @@
+	HIBERNATE (JAVA FRAMEWORK)
+Para aplicar el uso de Hibernate, se require:
+	+ Un constructor vacío
+	+ @Entity
+	+ Librerías
+
+Las librerías deben estar actualizadas con el proyecto.
+La mayor ventaja de Hibernate es que habla todos los lenguajes de SQL--
+
+Igual que en Maven se usa un fichero llamado pom.xml para configurarlo, 
+Hibernate tiene un fichero llamado hibernate-cfg.xml para todo lo configurable
+de Hibernate.
