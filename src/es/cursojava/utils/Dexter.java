@@ -3,46 +3,14 @@ package es.cursojava.utils;
 import java.util.Random;
 import java.util.Scanner;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import es.cursojava.utils.interfaces.Loggable;
-
-public class Dexter implements Loggable {
+public class Dexter {
 	private static Random r = new Random();
 	private static Scanner scan = new Scanner(System.in);
-	private Logger log;
-	
-	public Dexter() {}
-	
-	public Dexter(Class<?> c) {
-		this.log = LoggerFactory.getLogger(c);
-	}
 	
 	public void printException(Exception e) {
-		log.error(e.getClass().getSimpleName() + " at line " 
+		System.err.println(e.getClass().getSimpleName() + " at line " 
 						+ e.getStackTrace()[e.getStackTrace().length - 3]
 						.getLineNumber() + ": " + e.getMessage());
-	}
-
-	@Override
-	public void setLogger(Logger logger) {
-		this.log = logger;
-	}
-	
-	public void toLog(int var, String s) {
-		switch(var) {
-			case 0 -> log.trace(s);
-			case 1 -> log.info(s);
-			case 2 -> log.debug(s);
-			case 3 -> log.warn(s);
-			case 4 -> log.error(s);
-			default -> log.info(s);
-		}
-	}
-	
-	public void toLog(String s) {
-		log.info(s);
 	}
 	
 	public static String toScan(String s) {
@@ -153,22 +121,22 @@ public class Dexter implements Loggable {
         return System.currentTimeMillis() - start;
     }
 	
-	public final void clearConsole() {
-	    try {
-	        final String os = System.getProperty("os.name");
-	        if (os.contains("Windows")) {
-	            Runtime.getRuntime().exec("cls");
-	        }
-	        else {
-	            Runtime.getRuntime().exec("clear");
-	        }
-	    }
-	    catch (final Exception e) {
-	    	log.error(e.getClass().getSimpleName() + " at line " 
-					+ e.getStackTrace()[e.getStackTrace().length - 3]
-					.getLineNumber() + ": " + e.getMessage());
-	    }
-	}
+//	public final void clearConsole() {
+//	    try {
+//	        final String os = System.getProperty("os.name");
+//	        if (os.contains("Windows")) {
+//	            Runtime.getRuntime().exec("cls");
+//	        }
+//	        else {
+//	            Runtime.getRuntime().exec("clear");
+//	        }
+//	    }
+//	    catch (final Exception e) {
+//	    	log.error(e.getClass().getSimpleName() + " at line " 
+//					+ e.getStackTrace()[e.getStackTrace().length - 3]
+//					.getLineNumber() + ": " + e.getMessage());
+//	    }
+//	}
 	
 	public static String toGetName() {
 		String[] first = {

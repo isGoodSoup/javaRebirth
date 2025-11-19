@@ -12,6 +12,6 @@ public class Huesped extends Cliente {
 	
 	@Override
 	public void beberCafe() {
-		dex.toLog(1, this.getNombre() + " no puede tomar cafe");
+		log.info(this.getNombre() + " no puede tomar cafe");
 	}
 }

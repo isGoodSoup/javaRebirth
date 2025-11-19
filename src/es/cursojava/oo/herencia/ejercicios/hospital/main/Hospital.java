@@ -2,17 +2,15 @@ package es.cursojava.oo.herencia.ejercicios.hospital.main;
 
 import java.util.Random;
 
-import org.slf4j.Logger;
-
 import es.cursojava.oo.herencia.ejercicios.hospital.pojos.Doctor;
 import es.cursojava.oo.herencia.ejercicios.hospital.pojos.Enfermero;
 import es.cursojava.oo.herencia.ejercicios.hospital.pojos.Enfermo;
 import es.cursojava.oo.herencia.ejercicios.hospital.pojos.Habitacion;
 import es.cursojava.oo.herencia.ejercicios.hospital.pojos.Paciente;
 import es.cursojava.utils.Dexter;
-import es.cursojava.utils.interfaces.Loggable;
+import es.cursojava.utils.Loggable;
 
-public class Hospital implements Loggable {
+public class Hospital extends Loggable {
 	private String nombre;
 	private Habitacion[] habitaciones;
 	private Paciente[] salaDeEspera;
@@ -21,7 +19,6 @@ public class Hospital implements Loggable {
 	private Enfermero[] enfermeros;
 	private Doctor[] doctores;
 	private static final Random r = new Random();
-	private Logger log;
 	
 	public static void main(String[] args) {
 		Hospital hospital = new Hospital();
@@ -39,11 +36,6 @@ public class Hospital implements Loggable {
 		this.nombre = nombre;
 		this.habitaciones = habitaciones;
 		this.salaDeEspera = salaDeEspera;
-	}
-	
-	@Override
-	public void setLogger(Logger logger) {
-		this.log = logger;
 	}
 
 	public String getNombre() {
@@ -97,7 +89,7 @@ public class Hospital implements Loggable {
 	}
 	
 	public void ficharEmpleados() {
-		log.debug("Fichando empleados");
+		LOG.debug("Fichando empleados");
 		for (Enfermero e : enfermeros) {
 			e.fichar();
 		}
@@ -108,7 +100,7 @@ public class Hospital implements Loggable {
 	}
 	
 	public void horaDeComer() {
-		log.debug("Hora de comer");
+		LOG.debug("Hora de comer");
 		for (Paciente p: salaDeEspera) {
 			p.comer();
 		}
@@ -129,7 +121,7 @@ public class Hospital implements Loggable {
 			Enfermero enfermeroAsignado = enfermeros[i % enfermeros.length];
 			Doctor doctorAsignado = doctores[i % doctores.length];
 			atendidos[i] = salaDeEspera[i];
-			log.debug(salaDeEspera[i].getNombre() + " ha sido atendido por " 
+			LOG.debug(salaDeEspera[i].getNombre() + " ha sido atendido por " 
 					+ enfermeroAsignado.getNombre());
 			salaDeEspera[i] = null;
 			if(doctorAsignado.diagnosticarPaciente(atendidos[i])) {
@@ -140,28 +132,28 @@ public class Hospital implements Loggable {
 				String enfermedad = temp.enfermedadAleatoria();
 				Enfermo enfermo = new Enfermo(enfermedad);
 				enfermos[i] = enfermo;
-				log.warn("Al paciente " + atendidos[i].getNombre() + 
+				LOG.warn("Al paciente " + atendidos[i].getNombre() + 
 						" se le diagnosticó " + enfermos[i].getEnfermedad());
 				for (int j = 0; j < habitaciones.length; j++) {
 					if(habitaciones[j].isLibre()) {
 						Habitacion habitacion = new Habitacion();
 						habitacion.setEnfermo(enfermo);
 						habitaciones[j] = habitacion;
-						log.info(atendidos[i].getNombre() + " tiene ahora habitación");
+						LOG.info(atendidos[i].getNombre() + " tiene ahora habitación");
 						break;
 					} else {
-						log.info("La habitación está ocupada");
+						LOG.info("La habitación está ocupada");
 					}
 				}
 			} else {
-				log.info("El paciente " + atendidos[i].getNombre() + " está sano");
+				LOG.info("El paciente " + atendidos[i].getNombre() + " está sano");
 			}
 		}
 		
 	}
 	
 	public void horaDeCobrar() {
-		log.debug("Hora de cobrar");
+		LOG.debug("Hora de cobrar");
 		for (Enfermero e : enfermeros) {
 			e.cobrar();
 		}

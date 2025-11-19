@@ -1,7 +1,5 @@
 package es.cursojava.oo.herencia.ejercicios.hospital.pojos;
 
-import org.slf4j.Logger;
-
 import es.cursojava.utils.Dexter;
 
 public class Enfermo extends Persona {
@@ -36,11 +34,5 @@ public class Enfermo extends Persona {
 				"gripe aviar", "cáncer", "linfoma", "chron", "cáncer de páncreas", 
 				"rabia", "fiebre", "lupus", "gripe", "insuficiencia renal", "ligma"};
 		return Dexter.toGetString(enfermedades);
-	}
-
-	@Override
-	public void setLogger(Logger logger) {
-		// TODO Auto-generated method stub
-		
 	}
 }

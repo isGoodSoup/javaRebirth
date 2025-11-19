@@ -6,7 +6,6 @@ public class Enfermero extends EmpleadosHospital {
 	public Enfermero() {}
 	
 	public Enfermero(String nombre, int edad, int planta) {
-		super(nombre, edad);
 		this.planta = planta;
 	}
 

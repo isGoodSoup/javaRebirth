@@ -4,10 +4,13 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import es.cursojava.utils.Dexter;
 
 public class ConexionBaseDatos {
-    private static Dexter d = new Dexter(ConexionBaseDatos.class);	
+	private final static Logger log = LoggerFactory.getLogger(ConexionBaseDatos.class);
 	
 	public static void main(String[] args) {
         conectaOracle();
@@ -20,10 +23,10 @@ public class ConexionBaseDatos {
 
 		try(Connection connection = DriverManager.getConnection(url_oracle, username, password)) {
 			if(connection != null) {
-				d.toLog("Conexión establecida");
+				log.info("Conexión establecida");
 			}
 		} catch(SQLException e) {
-			d.printException(e);
+			new Dexter().printException(e);
 		}
     }
 	

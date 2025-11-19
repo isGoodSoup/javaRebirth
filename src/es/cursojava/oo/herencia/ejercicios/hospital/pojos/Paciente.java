@@ -2,8 +2,6 @@ package es.cursojava.oo.herencia.ejercicios.hospital.pojos;
 
 import java.util.Random;
 
-import org.slf4j.Logger;
-
 public class Paciente extends Persona {
 	private String[] sintomas;
 	private static final Random r = new Random();
@@ -34,11 +32,5 @@ public class Paciente extends Persona {
 	public int minutos() {
 		int minutos = r.nextInt(10, 60);
 		return minutos;
-	}
-
-	@Override
-	public void setLogger(Logger logger) {
-		// TODO Auto-generated method stub
-		
 	}
 }
