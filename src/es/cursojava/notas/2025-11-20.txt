@@ -1,0 +1,4 @@
+@2025-11-19.txt
+	Hibernate II
+Hibernate traduce automáticamente Java a la base de datos elegida.
+La propiedad hibernate.hbm2ddl.auto se establece a create y se cambia a update.
