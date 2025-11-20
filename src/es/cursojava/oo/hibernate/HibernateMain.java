@@ -1,6 +1,7 @@
 package es.cursojava.oo.hibernate;
 
 import java.util.Calendar;
+import java.util.List;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -26,8 +27,14 @@ public class HibernateMain {
     		
     		session.persist(empresa1);
     		session.persist(empresa2);
+    		
     		tx.commit();
-                     
+    		List<Empresa> empresas = session.createQuery("from Empresa", Empresa.class).list();
+            
+    		for (Empresa empresa : empresas) {
+				System.out.println(empresa);
+			}
+    		
         } catch (Throwable ex) {
             System.err.println("Error al crear la SessionFactory." + ex);
             throw new ExceptionInInitializerError(ex);

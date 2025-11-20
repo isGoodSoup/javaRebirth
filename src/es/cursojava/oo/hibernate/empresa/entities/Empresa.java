@@ -94,4 +94,11 @@ public class Empresa {
 	public void setFecha(Date fecha) {
 		this.fecha = fecha;
 	}
+
+	@Override
+	public String toString() {
+		return "Empresa [id=" + id + ", nombre=" + nombre + ", sociedad="
+				+ sociedad + ", cif=" + cif + ", actividad=" + actividad
+				+ ", fecha=" + fecha + "]";
+	}
 }
