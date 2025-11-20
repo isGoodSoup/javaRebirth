@@ -1,4 +1,4 @@
-package es.cursojava.oo.hibernate.empresa;
+package es.cursojava.oo.hibernate.empresa.entities;
 
 import java.util.Date;
 
@@ -8,6 +8,7 @@ import jakarta.persistence.*;
 @Table(name = "TB_EMPRESA")
 public class Empresa {
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "ID")
 	private long id;
 	@Column(length = 30)
@@ -21,10 +22,24 @@ public class Empresa {
 	@Column(name = "FECHA")
 	private Date fecha;
 	
+	public Empresa() {
+		super();
+	}
+
 	public Empresa(long id, String nombre, String sociedad, String cif,
 			String actividad, Date fecha) {
 		super();
 		this.id = id;
+		this.nombre = nombre;
+		this.sociedad = sociedad;
+		this.cif = cif;
+		this.actividad = actividad;
+		this.fecha = fecha;
+	}
+	
+	public Empresa(String nombre, String sociedad, String cif, String actividad,
+			Date fecha) {
+		super();
 		this.nombre = nombre;
 		this.sociedad = sociedad;
 		this.cif = cif;
