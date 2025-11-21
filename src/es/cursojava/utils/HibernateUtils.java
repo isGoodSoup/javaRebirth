@@ -24,7 +24,7 @@ public class HibernateUtils {
         return session;
 	}
 	
-	public static Transaction insert(Class<?> insertable) {
+	public static Transaction insert(Object insertable) {
 		Transaction tx = null;
         try {
 			SessionFactory sessionFactory = new Configuration()
