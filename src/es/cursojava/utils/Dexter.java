@@ -132,6 +132,18 @@ public class Dexter {
         return System.currentTimeMillis() - start;
     }
 	
+	public static void toGetProgress(String ch, int total, int sleep) {
+		for (int i = 0; i <= total; i++) {
+	        System.out.print(ch);
+	        try {
+				Thread.sleep(sleep);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+	    }
+	    System.out.println();
+	}
+	
 //	public final void clearConsole() {
 //	    try {
 //	        final String os = System.getProperty("os.name");
