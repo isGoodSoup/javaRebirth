@@ -15,7 +15,6 @@ import es.cursojava.oo.hibernate.ejercicios.ejercicio1.entities.Curso;
  * obtenerCursoPorId
  * obtenerTodosLosCursos
  */
-
 public class CursoDAO {
 	private Session session;
 	
