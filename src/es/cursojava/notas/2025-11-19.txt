@@ -1,12 +1,89 @@
-	HIBERNATE (JAVA FRAMEWORK)
-Para aplicar el uso de Hibernate, se require:
-	+ Un constructor vacío
-	+ @Entity
-	+ @Id
+@2025-11-19
+HIBERNATE (JAVA FRAMEWORK)
+Hibernate I
+
+Para aplicar el uso de Hibernate, se requiere:
+
+* Un constructor vacío (obligatorio para que Hibernate pueda instanciar objetos).
+* La anotación @Entity para indicar que la clase es una tabla.
+* La anotación @Id para indicar la clave primaria.
+
+Opcionalmente también se usan con frecuencia:
+
+* @Table para personalizar el nombre de la tabla.
+* @Column para configurar columnas.
+* @GeneratedValue para autoincrementar la clave primaria.
 
 Las librerías deben estar actualizadas con el proyecto.
-La mayor ventaja de Hibernate es que habla todos los lenguajes de SQL--
 
-Igual que en Maven se usa un fichero llamado pom.xml para configurarlo, 
-Hibernate tiene un fichero llamado hibernate-cfg.xml para todo lo configurable
-de Hibernate.
+La mayor ventaja de Hibernate es que permite trabajar con objetos Java en lugar de SQL, 
+y además genera automáticamente el SQL apropiado para cualquier base de datos, por lo 
+que es independiente del motor (MySQL, Oracle, PostgreSQL, etc.).
+Igual que Maven usa el fichero pom.xml, Hibernate utiliza el fichero de configuración:
+hibernate.cfg.xml. Para configurar:
+
+* conexión a la base de datos
+* usuario y contraseña
+* dialecto SQL a utilizar
+* entidades mapeadas
+* opciones de hbm2ddl
+
+Ejemplo de conexión de Hibernate:
+		public static Session connect() {
+			Session session = null;
+	        try {
+				SessionFactory sessionFactory = new Configuration()
+		                .configure() // Carga hibernate.cfg.xml
+		                .buildSessionFactory();
+				
+		        session = sessionFactory.openSession();
+		        System.out.println(session);
+		        
+			} catch (Throwable e) {
+		        System.err.println("Error al crear la SessionFactory." + e);
+		        throw new ExceptionInInitializerError(e);
+		    }
+	        return session;
+		}
+
+@2025-11-20
+Hibernate II
+
+Hibernate traduce automáticamente las clases Java a tablas en la base de datos elegida 
+(ORM: Object–Relational Mapping). La propiedad hibernate.hbm2ddl.auto controla qué hace 
+Hibernate con las tablas. Valores más usados:
+
+* create -> crea las tablas cada vez (borra las anteriores).
+* update -> actualiza las tablas sin borrarlas.
+* create-drop -> crea las tablas y las elimina al cerrar la sesión.
+* validate -> verifica que las tablas existen, pero no modifica nada.
+
+El valor habitual en desarrollo es: update.
+En producción normalmente se usa: validate o nada.
+
+Para hacer una consulta (en HQL):
+
+* Se crea una lista del tipo objeto elegido
+* Es de session.createQuery(from <nombre de tabla>, Entity.class).list
+
+@2025-11-25
+Hibernate III
+
+Si ocurre un error dentro de una transacción, se ejecuta rollback, que revierte todas 
+las operaciones realizadas dentro de esa transacción. Esto mantiene la consistencia y 
+evita resultados parciales. Reglas importantes del rollback:
+
+* Solo afecta a lo que ocurre dentro de la transacción actual.
+* Después de un rollback, la sesión puede quedar inválida, por lo que normalmente se cierra y se abre otra.
+* Un commit hace permanentes todos los cambios.
+* Si se lanza una excepción de SQL o Hibernate, es obligatorio hacer rollback.
+
+Uso típico:
+	Transaction tx = session.beginTransaction();
+	
+	try {
+	    // operaciones
+	    tx.commit();
+	} catch (Exception e) {
+	    tx.rollback(); // deshacer cambios
+	}
