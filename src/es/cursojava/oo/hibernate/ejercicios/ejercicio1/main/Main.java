@@ -9,6 +9,14 @@ import es.cursojava.oo.hibernate.ejercicios.ejercicio1.entities.Curso;
 import es.cursojava.utils.HibernateUtils;
 import es.cursojava.utils.interfaces.Iniciable;
 
+/*
+ * Crear una clase Main que realice las siguientes acciones:
+ * 1. Crear una lista de cursos con al menos 4 cursos (utilizando los constructores definidos en la clase Curso).
+ * 2. Insertar los cursos en la base de datos utilizando Hibernate.
+ * 3. Imprimir todos los cursos almacenados en la base de datos.
+ * 4. Imprimir solo los cursos que están activos.
+ */
+
 public class Main implements Iniciable {
 	
 	public static void main(String[] args) {
@@ -24,6 +32,10 @@ public class Main implements Iniciable {
 		this.imprimirCursosActivos(cursos);
 	}
 	
+	/*
+	 * Crear una lista de cursos con al menos 4 cursos 
+	 * (utilizando los constructores definidos en la clase Curso).
+	 */
 	public List<Curso> crearCursos() {
 		Curso c1 = new Curso(
 			    1, 101, "Java Básico", "Introducción a Java",
@@ -55,18 +67,27 @@ public class Main implements Iniciable {
 		return cursos;
 	}
 	
+	/*
+	 * Insertar los cursos en la base de datos utilizando Hibernate.
+	 */
 	public void insertarCursos(List<Curso> cursos) {
 		for (Curso curso : cursos) {
 			HibernateUtils.insert(curso);
 		}
 	}
 	
+	/*
+	 * Imprimir todos los cursos almacenados en la base de datos.
+	 */
 	public void imprimirCursos(List<Curso> cursos) {
 		for (Curso curso : cursos) {
 			System.out.println(curso);
 		}
 	}
 	
+	/*
+	 * Imprimir solo los cursos que están activos.
+	 */
 	public void imprimirCursosActivos(List<Curso> cursos) {
 		for (Curso curso : cursos) {
 			if(curso.isActivo()) {

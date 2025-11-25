@@ -87,3 +87,8 @@ Uso típico:
 	} catch (Exception e) {
 	    tx.rollback(); // deshacer cambios
 	}
+
+DAO (DATA ACCESS OBJECT) PATTERN
+El patrón DAO separa la lógica de acceso a datos de la lógica de negocio.
+Cada entidad tiene su propia clase DAO que maneja las operaciones CRUD (Create, Read, Update, Delete).
+

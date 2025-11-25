@@ -11,6 +11,18 @@ import java.util.Map;
 import java.util.Random;
 import java.util.Scanner;
 
+/*
+ * Clase de utilidades varias para diferentes propósitos.
+ * - Manejo de excepciones.
+ * - Entrada de datos desde consola.
+ * - Generación de datos aleatorios.
+ * - Medición de tiempo de ejecución.
+ * - Lectura de archivos.
+ * - Progreso visual.
+ * - Validación de números primos.
+ * - Generación de nombres y títulos aleatorios.
+ * - Otros métodos útiles.
+ */
 public class Dexter {
 	private static List<String> lines = new ArrayList<>();
 	private static Map<Integer, String> map = new HashMap<>();
@@ -19,11 +31,23 @@ public class Dexter {
 	private static Random r = new Random();
 	private static Scanner scan = new Scanner(System.in);
 	
+	/*
+	 * Manejo de excepciones: Imprime el tipo de excepción,
+	 * la línea donde ocurrió y el mensaje asociado.
+	 * @param e La excepción a manejar.
+	 */
 	public void printException(Exception e) {
 		System.err.println(e.getClass().getSimpleName() + " at line " 
 						+ e.getStackTrace()[0].getLineNumber() + ": " + e.getMessage());
 	}
 	
+	/*
+	 * Entrada de datos desde consola: Solicita al usuario
+	 * una cadena no vacía.
+	 * @param s El mensaje a mostrar al usuario.
+	 * @return La cadena ingresada por el usuario.
+	 * @throws IOException
+	 */
 	public static String toScan(String s) {
 		String line = "";
 		do {
@@ -33,6 +57,13 @@ public class Dexter {
 		return line;
     }
 	
+	/*
+	 * Entrada de datos desde consola: Solicita al usuario
+	 * un entero válido.
+	 * @param s El mensaje a mostrar al usuario.
+ 	 * @return El entero ingresado por el usuario.
+ 	 * @throws IOException
+	 */
 	public static int toScanInt(String s) {
 		String line = "";
 	    while (true) {
@@ -50,20 +81,42 @@ public class Dexter {
 	    }
 	}
 	
+	/*
+	 * Entrada de datos desde consola: Solicita al usuario
+	 * un long válido.
+	 * @param s El mensaje a mostrar al usuario.
+ 	 * @return El long ingresado por el usuario.
+ 	 * @throws IOException
+	 */
 	public static long toScanLong(String s) {
 		System.out.print(s + ": ");
 		return scan.nextLong();
 	}
 	
+	/*
+	 * Entrada de datos desde consola: Solicita al usuario
+	 * un double válido.
+	 * @param s El mensaje a mostrar al usuario.
+ 	 * @return El double ingresado por el usuario.
+ 	 * @throws IOException
+	 */
 	public static double toScanDouble(String s) {
 		System.out.print(s + ": ");
 		return scan.nextDouble();
 	}
 	
+	/*
+	 * Limpia el buffer del scanner.
+	 */
 	public static void cleanBuffer() {
 		scan.nextLine();
 	}
 	
+	/*
+	 * Genera un ID aleatorio compuesto por un número
+	 * de 8 dígitos seguido de una letra mayúscula.
+	 * @return El ID generado.
+	 */
 	public static String toGetID() {
 		int num = r.nextInt(40000000, 49999999);
 		char[] ch = {
@@ -75,15 +128,29 @@ public class Dexter {
 		return Integer.toString(num) + ch[r.nextInt(1, 26)];
 	}
 	
+	/*
+	 * Genera un número double aleatorio entre min y max.
+	 * @param min El valor mínimo (inclusive).
+	 * @param max El valor máximo (exclusive).
+	 * @return El número double generado.
+	 */
 	public static double toGetDouble(int min, int max) {
 		double d = r.nextInt(min, max)/100.0;
 		return d;
 	}
 	
+	/*
+	 * Genera un valor booleano aleatorio.
+	 * @return El valor booleano generado.
+	 */
 	public static boolean toGetBoolean() {
 		return r.nextBoolean();
 	}
 	
+	/*
+	 * Imprime una cadena rodeada de signos iguales.
+	 * @param s La cadena a imprimir.
+	 */	
 	public static void toGetString(String s) {
 		for (int i = 0; i < s.length(); i++) {
 			System.out.print("=");
@@ -95,23 +162,48 @@ public class Dexter {
 		}
 		System.out.println();
 	}
-
+	
+	/*
+	 * Selecciona aleatoriamente una cadena de un array dado.
+	 * @param s El array de cadenas.
+	 * @return La cadena seleccionada.
+	 */
 	public static String toGetString(String[] s) {
 		return s[r.nextInt(s.length)];
 	}
 	
+	/*
+	 * Genera un número entero aleatorio.
+	 * @return El número entero generado.
+	 */
 	public static int toGetInteger() {
 		return r.nextInt();
 	}
 	
+	/*
+	 * Selecciona aleatoriamente un entero de un array dado.
+	 * @param i El array de enteros.
+	 * @return El entero seleccionado.
+	 */
 	public static int toGetInteger(int[] i) {
 		return i[r.nextInt(i.length)];
 	}
 	
+	/*
+	 * Genera un número entero aleatorio entre min y max.
+	 * @param min El valor mínimo (inclusive).
+	 * @param max El valor máximo (exclusive).
+	 * @return El número entero generado.
+	 */
 	public static int toGetInteger(int min, int max) {
 		return r.nextInt(min, max);
 	}
 	
+	/*
+	 * Verifica si un número es primo.
+	 * @param num El número a verificar.
+	 * @return true si el número es primo, false en caso contrario.
+	 */
 	public static boolean isPrime(int num) {
 	    if (num <= 1) return false;
 	    if (num == 2) return true;
@@ -122,16 +214,33 @@ public class Dexter {
 	    return true;
 	}
 	
+	/*
+	 * Genera un número long aleatorio entre min y max.
+	 * @param min El valor mínimo (inclusive).
+	 * @param max El valor máximo (exclusive).
+	 * @return El número long generado.
+	 */
 	public static long toGetLong(long min, long max) {
 		return r.nextLong(min, max);
 	}
 	
+	/*
+	 * Mide el tiempo de ejecución de una tarea dada.
+	 * @param task La tarea a medir.
+	 * @return El tiempo de ejecución en milisegundos.
+	 */
 	public long toTime(Runnable task) {
         long start = System.currentTimeMillis();
         task.run();
         return System.currentTimeMillis() - start;
     }
 	
+	/*
+	 * Muestra un progreso visual en la consola.
+	 * @param ch El carácter a utilizar para el progreso.
+	 * @param total El total de pasos en el progreso.
+	 * @param sleep El tiempo de espera entre pasos en milisegundos.
+	 */
 	public static void toGetProgress(String ch, int total, int sleep) {
 		for (int i = 0; i <= total; i++) {
 	        System.out.print(ch);
@@ -144,23 +253,12 @@ public class Dexter {
 	    System.out.println();
 	}
 	
-//	public final void clearConsole() {
-//	    try {
-//	        final String os = System.getProperty("os.name");
-//	        if (os.contains("Windows")) {
-//	            Runtime.getRuntime().exec("cls");
-//	        }
-//	        else {
-//	            Runtime.getRuntime().exec("clear");
-//	        }
-//	    }
-//	    catch (final Exception e) {
-//	    	log.error(e.getClass().getSimpleName() + " at line " 
-//					+ e.getStackTrace()[e.getStackTrace().length - 3]
-//					.getLineNumber() + ": " + e.getMessage());
-//	    }
-//	}
-	
+	/*
+	 * Lee un archivo y cuenta los caracteres por línea.
+	 * @param archivo La ruta del archivo a leer.
+	 * @return El contenido del archivo como una cadena.
+	 * @throws IOException
+	 */
 	public static String toLeerArchivo(String archivo) throws IOException{
 		Path ruta = Paths.get(archivo);
 		StringBuilder builder = new StringBuilder();
@@ -183,6 +281,10 @@ public class Dexter {
 		return builder.toString();
 	}
 	
+	/*
+	 * Genera un nombre completo aleatorio.
+	 * @return El nombre generado.
+	 */
 	public static String toGetName() {
 		String[] first = {
 	            "Alice", "Alejandro", 
@@ -244,6 +346,11 @@ public class Dexter {
 	    return first[r.nextInt(first.length)] + " " + last[r.nextInt(last.length)];
 	}
 	
+	/*
+	 * Genera un título aleatorio compuesto por un
+	 * adjetivo, un sustantivo y un complemento.
+	 * @return El título generado.
+	 */
 	public static String toGetTitle() {
 	    String[] a = {
 	        "Oscuro", "Misterioso", "Increíble", "Perdido", "Eterno",
