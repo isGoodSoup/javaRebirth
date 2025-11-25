@@ -16,7 +16,6 @@ import es.cursojava.utils.interfaces.Iniciable;
  * 3. Imprimir todos los cursos almacenados en la base de datos.
  * 4. Imprimir solo los cursos que están activos.
  */
-
 public class Main implements Iniciable {
 	
 	public static void main(String[] args) {
@@ -24,6 +23,13 @@ public class Main implements Iniciable {
 		main.init();
 	}
 	
+	/*
+	 * Método principal que ejecuta las acciones definidas.
+	 * 1. Crear una lista de cursos.
+	 * 2. Insertar los cursos en la base de datos.
+	 * 3. Imprimir todos los cursos.
+	 * 4. Imprimir solo los cursos activos.
+	 */
 	@Override
 	public void init() {
 		List<Curso> cursos = crearCursos();
