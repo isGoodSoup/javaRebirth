@@ -10,6 +10,7 @@ import org.hibernate.cfg.Configuration;
  * Métodos:
  * connect: Establece una conexión con la base de datos y devuelve una sesión.
  * insert: Inserta un objeto en la base de datos.
+ * getSession: Obtiene una nueva sesión de Hibernate.
  */
 public class HibernateUtils {
 	
@@ -57,5 +58,16 @@ public class HibernateUtils {
 	        throw new ExceptionInInitializerError(e);
 	    }
         return tx;
+	}
+	
+	/*
+	 * Obtiene una nueva sesión de Hibernate.
+	 * @return Session - La nueva sesión de Hibernate.
+	 */
+	public static Session getSession() {
+		SessionFactory sessionFactory = new Configuration()
+                .configure() // Carga hibernate.cfg.xml
+                .buildSessionFactory();
+		return sessionFactory.openSession();
 	}
 }
