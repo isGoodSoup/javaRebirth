@@ -2,7 +2,7 @@
 Para aplicar el uso de Hibernate, se require:
 	+ Un constructor vacío
 	+ @Entity
-	+ Librerías
+	+ @Id
 
 Las librerías deben estar actualizadas con el proyecto.
 La mayor ventaja de Hibernate es que habla todos los lenguajes de SQL--
