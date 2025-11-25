@@ -19,6 +19,7 @@ public class Main implements Iniciable {
 	@Override
 	public void init() {
 		List<Curso> cursos = crearCursos();
+		this.insertarCursos(cursos);
 		this.imprimirCursos(cursos);
 		this.imprimirCursosActivos(cursos);
 	}
