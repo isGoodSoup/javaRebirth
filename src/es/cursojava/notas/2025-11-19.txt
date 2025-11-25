@@ -92,3 +92,22 @@ DAO (DATA ACCESS OBJECT) PATTERN
 El patrón DAO separa la lógica de acceso a datos de la lógica de negocio.
 Cada entidad tiene su propia clase DAO que maneja las operaciones CRUD (Create, Read, Update, Delete).
 
+SINGLETON
+El patrón Singleton asegura que una clase tenga solo una instancia y proporciona un punto de acceso global a ella.
+Se implementa con:
+public class MiSingleton {
+    private static MiSingleton instancia;
+
+    private MiSingleton() {
+        // constructor privado
+    }
+
+    public static MiSingleton getInstancia() {
+        if (instancia == null) {
+            instancia = new MiSingleton();
+        }
+        return instancia;
+    }
+}
+Esto es útil para gestionar recursos compartidos, como conexiones a bases de datos.
+
