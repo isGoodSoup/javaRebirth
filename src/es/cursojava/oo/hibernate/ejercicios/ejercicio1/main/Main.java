@@ -5,7 +5,7 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-import es.cursojava.oo.hibernate.ejercicios.ejercicio1.Curso;
+import es.cursojava.oo.hibernate.ejercicios.ejercicio1.entities.Curso;
 import es.cursojava.utils.HibernateUtils;
 import es.cursojava.utils.interfaces.Iniciable;
 

@@ -30,7 +30,7 @@ public class HibernateUtils {
 			SessionFactory sessionFactory = new Configuration()
 	                .configure() // Carga hibernate.cfg.xml
 	                .buildSessionFactory();
-			
+
 	        Session session = sessionFactory.openSession();
 	        tx = session.beginTransaction();
 	        session.persist(insertable);
