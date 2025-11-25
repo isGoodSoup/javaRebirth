@@ -6,68 +6,54 @@ import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
 /*
- * Clase de utilidades para manejar la conexión y operaciones básicas con Hibernate.
+ * Clase de utilidad para gestionar la sesión de Hibernate.
+ * Proporciona métodos para obtener sesiones y realizar operaciones básicas.
  * Métodos:
- * connect: Establece una conexión con la base de datos y devuelve una sesión.
- * insert: Inserta un objeto en la base de datos.
- * getSession: Obtiene una nueva sesión de Hibernate.
+ * - getSession(): Obtiene una nueva sesión de Hibernate.
+ * - insert(Object insertable): Inserta un objeto en la base de datos.
+ * - shutdown(): Cierra la fábrica de sesiones.
  */
 public class HibernateUtils {
-	
-	/*
-	 * Establece una conexión con la base de datos y devuelve una sesión.
-	 * @return Session - La sesión de Hibernate para interactuar con la base de datos.
+    private static final SessionFactory sessionFactory = buildSessionFactory();
+    
+    /*
+	 * Construye la fábrica de sesiones utilizando la configuración de Hibernate.
+	 * @return La fábrica de sesiones.
 	 */
-	public static Session connect() {
-		Session session = null;
+    private static SessionFactory buildSessionFactory() {
         try {
-			SessionFactory sessionFactory = new Configuration()
-	                .configure() // Carga hibernate.cfg.xml
-	                .buildSessionFactory();
-			
-	        session = sessionFactory.openSession();
-	        System.out.println(session);
-	        
-		} catch (Throwable e) {
-	        System.err.println("Error al crear la SessionFactory." + e);
-	        throw new ExceptionInInitializerError(e);
-	    }
-        return session;
-	}
-	
-	/*
-	 * Inserta un objeto en la base de datos.
-	 * @param insertable - El objeto a insertar en la base de datos.
-	 * @return
-	 * Transaction - La transacción realizada.
-	 */
-	public static Transaction insert(Object insertable) {
-		Transaction tx = null;
-        try {
-			SessionFactory sessionFactory = new Configuration()
-	                .configure() // Carga hibernate.cfg.xml
-	                .buildSessionFactory();
+            return new Configuration().configure().buildSessionFactory();
+        } catch (Throwable e) {
+            System.err.println("Error creando SessionFactory: " + e.getMessage());
+            throw new ExceptionInInitializerError(e);
+        }
+    }
+    
+    /*
+     * Obtiene una nueva sesión de Hibernate.
+     * @return Una nueva sesión de Hibernate.
+     */
+    public static Session getSession() {
+        return sessionFactory.openSession();
+    }
 
-	        Session session = sessionFactory.openSession();
-	        tx = session.beginTransaction();
-	        session.persist(insertable);
-	        
-	        tx.commit();
-		} catch (Throwable e) {
-	        System.err.println("Error al crear la SessionFactory." + e);
-	        throw new ExceptionInInitializerError(e);
-	    }
-        return tx;
-	}
-	
-	/*
-	 * Obtiene una nueva sesión de Hibernate.
-	 * @return Session - La nueva sesión de Hibernate.
+    /*
+	 * Inserta un objeto en la base de datos.
+	 * @param insertable El objeto a insertar.
 	 */
-	public static Session getSession() {
-		SessionFactory sessionFactory = new Configuration()
-                .configure() // Carga hibernate.cfg.xml
-                .buildSessionFactory();
-		return sessionFactory.openSession();
-	}
+    public static void insert(Object insertable) {
+        Transaction tx = null;
+        try (Session session = getSession()) {
+            tx = session.beginTransaction();
+            session.persist(insertable);
+            tx.commit();
+        } catch (Exception e) {
+            if (tx != null) tx.rollback();
+            System.err.println("Error insertando objeto: " + e.getMessage());
+        }
+    }
+
+    public static void shutdown() {
+        sessionFactory.close();
+    }
 }

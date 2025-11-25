@@ -38,27 +38,35 @@ public class Main implements Iniciable {
 	 */
 	public List<Curso> crearCursos() {
 		Curso c1 = new Curso(
-			    1, 101, "Java Básico", "Introducción a Java",
+			    101, "Java Básico", "Introducción a Java",
 			    40, true, "Inicial", "Programación",
 			    120.0, LocalDate.now(), LocalDate.now().plusMonths(1),
 			    LocalDateTime.now()
 			);
 
 		Curso c2 = new Curso(
-			    2, "Spring Boot Avanzado", "Spring Boot con microservicios",
+			    202, "Spring Boot Avanzado", "Spring Boot con microservicios",
 			    60, true, "Avanzado", "Backend",
 			    220.0, LocalDate.now().plusDays(10), LocalDate.now().plusMonths(2),
 			    LocalDateTime.now()
 		);
 
 		Curso c3 = new Curso(
-			    3, 303, "Bases de Datos", "Fundamentos de SQL y modelado",
-			    50, false,
+			    303,
+			    "Bases de Datos",
+			    "Fundamentos de SQL y modelado",
+			    50,
+			    false,
+			    "Inicial",
+			    "BBDD",
+			    200.0,
+			    LocalDate.now(),
+			    LocalDate.now().plusDays(30),
 			    LocalDateTime.now()
 		);
 
 		Curso c4 = new Curso(
-			    4, "Angular Profesional", "Frontend avanzado con Angular",
+			    404, "Angular Profesional", "Frontend avanzado con Angular",
 			    80, true, "Intermedio", "Frontend",
 			    250.0, LocalDate.now(), LocalDate.now().plusMonths(3),
 			    LocalDateTime.now()
