@@ -52,7 +52,10 @@ public class HibernateUtils {
             System.err.println("Error insertando objeto: " + e.getMessage());
         }
     }
-
+    
+    /*
+     * Cierra la fábrica de sesiones.
+     */
     public static void shutdown() {
         sessionFactory.close();
     }

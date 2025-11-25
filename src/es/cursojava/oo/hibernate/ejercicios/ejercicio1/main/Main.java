@@ -38,16 +38,29 @@ public class Main implements Iniciable {
 	 */
 	public List<Curso> crearCursos() {
 		Curso c1 = new Curso(
-			    101, "Java Básico", "Introducción a Java",
-			    40, true, "Inicial", "Programación",
-			    120.0, LocalDate.now(), LocalDate.now().plusMonths(1),
+			    101, 
+			    "Java Básico", 
+			    "Introducción a Java",
+			    40, 
+			    true, 
+			    "Inicial", 
+			    "Programación",
+			    120.0, LocalDate.now(), 
+			    LocalDate.now().plusMonths(1),
 			    LocalDateTime.now()
 			);
 
 		Curso c2 = new Curso(
-			    202, "Spring Boot Avanzado", "Spring Boot con microservicios",
-			    60, true, "Avanzado", "Backend",
-			    220.0, LocalDate.now().plusDays(10), LocalDate.now().plusMonths(2),
+			    202, 
+			    "Spring Boot Avanzado", 
+			    "Spring Boot con microservicios",
+			    60, 
+			    true, 
+			    "Avanzado", 
+			    "Backend",
+			    220.0, 
+			    LocalDate.now().plusDays(10), 
+			    LocalDate.now().plusMonths(2),
 			    LocalDateTime.now()
 		);
 
@@ -67,8 +80,12 @@ public class Main implements Iniciable {
 
 		Curso c4 = new Curso(
 			    404, "Angular Profesional", "Frontend avanzado con Angular",
-			    80, true, "Intermedio", "Frontend",
-			    250.0, LocalDate.now(), LocalDate.now().plusMonths(3),
+			    80, 
+			    true, 
+			    "Intermedio", 
+			    "Frontend",
+			    250.0, LocalDate.now(),
+			    LocalDate.now().plusMonths(3),
 			    LocalDateTime.now()
 		);
 		List<Curso> cursos = new ArrayList<>(List.of(c1, c2, c3, c4));
