@@ -74,7 +74,8 @@ las operaciones realizadas dentro de esa transacción. Esto mantiene la consiste
 evita resultados parciales. Reglas importantes del rollback:
 
 * Solo afecta a lo que ocurre dentro de la transacción actual.
-* Después de un rollback, la sesión puede quedar inválida, por lo que normalmente se cierra y se abre otra.
+* Después de un rollback, la sesión puede quedar inválida, por lo que normalmente 
+se cierra y se abre otra.
 * Un commit hace permanentes todos los cambios.
 * Si se lanza una excepción de SQL o Hibernate, es obligatorio hacer rollback.
 
@@ -93,8 +94,8 @@ El patrón DAO separa la lógica de acceso a datos de la lógica de negocio.
 Cada entidad tiene su propia clase DAO que maneja las operaciones CRUD (Create, Read, Update, Delete).
 
 SINGLETON
-El patrón Singleton asegura que una clase tenga solo una instancia y proporciona un punto de acceso global a ella.
-Se implementa con:
+El patrón Singleton asegura que una clase tenga solo una instancia y proporciona un punto de acceso 
+global a ella. Se implementa con:
 public class MiSingleton {
     private static MiSingleton instancia;
 
@@ -111,3 +112,50 @@ public class MiSingleton {
 }
 Esto es útil para gestionar recursos compartidos, como conexiones a bases de datos.
 
+@2025-11-26
+Hibernate IV
+
+* @Id y @Entity son anotaciones esenciales en Hibernate para mapear clases Java a tablas de bases de datos.
+* @Entity indica que una clase es una entidad persistente y se mapea a una tabla en la base de datos.
+* @GeneratedValue(strategy = GenerationType.IDENTITY) se usa junto con @Id para indicar que el valor de 
+la clave primaria se genera automáticamente por la base de datos.
+* @Table(name = "nombre_tabla") permite personalizar el nombre de la tabla en la base de datos.
+* @Column(name = "nombre_columna", nullable = false, length = 100) permite personalizar 
+el nombre de la columna.
+** nullable = false indica que la columna no puede ser nula.
+** length = 100 establece la longitud máxima para campos de tipo String.
+* @Size(min = 2, max = 50) es una anotación de validación que asegura que el tamaño.
+    del campo esté entre 2 y 50 caracteres.
+* @NotNull asegura que el campo no sea nulo.
+* @SequenceGenerator se usa para definir una secuencia personalizada para la generación de claves primarias.
+* @Email valida que el campo tenga un formato de correo electrónico válido.
+* @Pattern(regexp = "expresión_regular") valida que el campo coincida con la expresión regular dada.
+* @Min(0) y @Max(100) validan que un valor numérico esté dentro de los límites especificados.
+* @Temporal(TemporalType.DATE) se usa para mapear campos de tipo Date y especificar
+    cómo se almacenan en la base de datos (DATE, TIME, TIMESTAMP).
+* @Lob se usa para mapear campos que almacenan grandes objetos, como textos largos o imágenes.
+
+Ejemplo de uso combinado:
+	@Entity
+	@Table(name = "usuarios")
+	public class Usuario {
+	    @Id
+	    @GeneratedValue(strategy = GenerationType.IDENTITY)
+	    private Long id;
+	
+	    @Column(name = "nombre", nullable = false, length = 50)
+	    @Size(min = 2, max = 50)
+	    private String nombre;
+	
+	    @Column(name = "email", nullable = false, unique = true)
+	    @NotNull
+	    @Email
+	    private String email;
+	
+	    @Column(name = "fecha_registro")
+	    @Temporal(TemporalType.DATE)
+	    private LocalDateTime fechaRegistro;
+	
+	    //Constructor vacío, getters y setters
+	}
+Estas anotaciones ayudan a definir la estructura de la base de datos y a validar los datos
