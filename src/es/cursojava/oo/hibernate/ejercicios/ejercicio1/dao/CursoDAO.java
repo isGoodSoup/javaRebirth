@@ -3,64 +3,56 @@ package es.cursojava.oo.hibernate.ejercicios.ejercicio1.dao;
 import java.util.List;
 
 import org.hibernate.Session;
+import org.hibernate.Transaction;
 
 import es.cursojava.oo.hibernate.ejercicios.ejercicio1.entities.Curso;
+import es.cursojava.utils.HibernateUtils;
 
 /*
- * Métodos CRUD (Create, Read, Update, Delete):
- * guardarCurso
- * obtenerCurso
- * actualizarCurso
- * eliminarCurso
- * obtenerCursoPorId
- * obtenerTodosLosCursos
+ * Clase DAO para la entidad Curso.
+ * Proporciona métodos para realizar operaciones CRUD en la base de datos.
+ * Métodos incluidos:
+ * - guardarCurso: Guarda un nuevo curso en la base de datos.
+ * - eliminarCurso: Elimina un curso de la base de datos.
+ * - actualizarCurso: Actualiza un curso existente en la base de datos.
+ * - obtenerCursoPorId: Obtiene un curso por su ID.
+ * - obtenerTodosLosCursos: Obtiene una lista de todos los cursos en la base de datos.
+ * - commitTransaction: Confirma la transacción actual.
  */
 public class CursoDAO {
+	
 	private Session session;
+	private Transaction transaction;
 	
 	public CursoDAO() {
-		super();
+		session = HibernateUtils.getSession();
+		transaction = session.beginTransaction();
 	}
 	
-	/*
-	 * Guardar un nuevo curso en la base de datos.
-	 */
 	public void guardarCurso(Curso curso) {
 		session.persist(curso);
 	}
 	
-	/*
-	 * Obtener un curso de la base de datos.
-	 */
-	public void obtenerCurso() {
+	public void eliminarCurso() {
 		
 	}
-	
-	/*
-	 * Actualizar los detalles de un curso existente.
-	 */
+
 	public void actualizarCurso() {
 		
 	}
 	
-	/*
-	 * Eliminar un curso de la base de datos.
-	 */
-	public void eliminarCurso() {
-		
+	public Curso obtenerCursoPorId(Long id) {
+		return session.get(Curso.class, id);
 	}
 	
-	/*
-	 * Obtener un curso por su ID.
-	 */
-	public void obtenerCursoPorId() {
-		
-	}
-	
-	/*
-	 * Obtener todos los cursos de la base de datos.
-	 */
 	public List<Curso> obtenerTodosLosCursos() {
-		return session.createQuery("FROM Curso", Curso.class).list();
+		return session.createQuery("from Curso", Curso.class).list();
 	}
+
+	public void commitTransaction() {
+		transaction.commit();
+	}
+	
+	
+	
 }

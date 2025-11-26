@@ -36,7 +36,7 @@ public class Dexter {
 	 * la línea donde ocurrió y el mensaje asociado.
 	 * @param e La excepción a manejar.
 	 */
-	public void printException(Exception e) {
+	public static void printException(Exception e) {
 		System.err.println(e.getClass().getSimpleName() + " at line " 
 						+ e.getStackTrace()[0].getLineNumber() + ": " + e.getMessage());
 	}
@@ -76,7 +76,7 @@ public class Dexter {
 	            int num = Integer.parseInt(line);
 	            return num;
 	        } catch (Exception e) {
-	            new Dexter().printException(e);
+	            printException(e);
 	        }
 	    }
 	}

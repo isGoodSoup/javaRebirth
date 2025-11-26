@@ -8,7 +8,6 @@ import es.cursojava.utils.Dexter;
 
 public class Bar {
 	private String nombre;
-	private Dexter dex = new Dexter();
 
 	public Bar(String nombre) {
 		super();
@@ -50,7 +49,7 @@ public class Bar {
 					);
 			clientes.add(comensal);
 		} catch (ExtremeTemperatureException e) {
-			dex.printException(e);
+			Dexter.printException(e);
 		}
 		
 		ClienteAsiduo cliente;
@@ -64,7 +63,7 @@ public class Bar {
 					);
 			clientes.add(cliente);
 		} catch (ExtremeTemperatureException e) {
-			dex.printException(e);
+			Dexter.printException(e);
 		}
 		
 		ClienteAsiduo cliente2;
@@ -78,7 +77,7 @@ public class Bar {
 					);
 			clientes.add(cliente2);
 		} catch (ExtremeTemperatureException e) {
-			dex.printException(e);
+			Dexter.printException(e);
 		}
 		return clientes;
 	}

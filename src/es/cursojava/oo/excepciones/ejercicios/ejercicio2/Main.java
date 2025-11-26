@@ -11,7 +11,6 @@ public class Main implements Iniciable {
 	private String dni;
 	private int edad;
 	private double nota;
-	private Dexter dex = new Dexter();
 	
 	public static void main(String[] args) {
 		Main main = new Main();
@@ -40,7 +39,7 @@ public class Main implements Iniciable {
 	    	        alumnos.add(a);
 	    	        alumnoCreado = true;
 	    	    } catch(IllegalArgumentException | NotaInvalidaException e) {
-	    	        dex.printException(e);
+	    	    	Dexter.printException(e);
 	    	    }
 	    	}
 	    }
