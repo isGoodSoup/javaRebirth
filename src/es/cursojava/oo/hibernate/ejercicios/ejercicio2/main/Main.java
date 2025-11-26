@@ -4,9 +4,9 @@ import java.io.IOException;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
-import es.cursojava.oo.hibernate.ejercicios.ejercicio1.dao.CursoDAO;
 import es.cursojava.oo.hibernate.ejercicios.ejercicio1.entities.Curso;
 import es.cursojava.utils.Dexter;
+import es.cursojava.utils.HibernateUtils;
 import es.cursojava.utils.interfaces.Iniciable;
 
 /*
@@ -15,7 +15,7 @@ import es.cursojava.utils.interfaces.Iniciable;
  * 2. Insertar cada curso en la base de datos utilizando Hibernate.
  */
 public class Main implements Iniciable {
-	private CursoDAO dao = new CursoDAO();
+//	private CursoDAO dao = new CursoDAO();
 	
 	public static void main(String[] args) {
 		Main main = new Main();
@@ -36,9 +36,9 @@ public class Main implements Iniciable {
 	            if (linea.isEmpty()) continue;
 	            String[] valores = linea.split("\\|");
 	            Curso curso = crearCurso(valores);
-//	            HibernateUtils.insert(curso);
-	            dao.guardarCurso(curso);
-	            dao.commitTransaction();
+	            HibernateUtils.commit(HibernateUtils.insert(curso));
+//	            dao.guardarCurso(curso);
+//	            dao.commitTransaction();
 	        }
 	    } catch (IOException e) {
 	        Dexter.printException(e);
