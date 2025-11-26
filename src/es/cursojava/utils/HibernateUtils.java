@@ -41,20 +41,15 @@ public class HibernateUtils {
 	 * Inserta un objeto en la base de datos.
 	 * @param insertable El objeto a insertar.
 	 */
-    public static Transaction insert(Object insertable) {
+    public static void insert(Object insertable) {
     	Transaction tx = null;
         try (Session session = getSession()) {
         	tx = session.beginTransaction();
             session.persist(insertable);
-            commit(tx);
+            tx.commit();
         } catch (Exception e) {
             System.err.println("Error insertando objeto: " + e.getMessage());
         }
-        return tx;
-    }
-    
-    public static void commit(Transaction tx) {
-    	tx.commit();
     }
     
     /*
