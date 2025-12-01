@@ -4,15 +4,15 @@ Hibernate I
 
 Para aplicar el uso de Hibernate, se requiere:
 
-* Un constructor vacío (obligatorio para que Hibernate pueda instanciar objetos).
-* La anotación @Entity para indicar que la clase es una tabla.
-* La anotación @Id para indicar la clave primaria.
+	* Un constructor vacío (obligatorio para que Hibernate pueda instanciar objetos).
+	* La anotación @Entity para indicar que la clase es una tabla.
+	* La anotación @Id para indicar la clave primaria.
 
 Opcionalmente también se usan con frecuencia:
 
-* @Table para personalizar el nombre de la tabla.
-* @Column para configurar columnas.
-* @GeneratedValue para autoincrementar la clave primaria.
+	* @Table para personalizar el nombre de la tabla.
+	* @Column para configurar columnas.
+	* @GeneratedValue para autoincrementar la clave primaria.
 
 Las librerías deben estar actualizadas con el proyecto.
 
@@ -22,11 +22,11 @@ que es independiente del motor (MySQL, Oracle, PostgreSQL, etc.).
 Igual que Maven usa el fichero pom.xml, Hibernate utiliza el fichero de configuración:
 hibernate.cfg.xml. Para configurar:
 
-* conexión a la base de datos
-* usuario y contraseña
-* dialecto SQL a utilizar
-* entidades mapeadas
-* opciones de hbm2ddl
+	* conexión a la base de datos
+	* usuario y contraseña
+	* dialecto SQL a utilizar
+	* entidades mapeadas
+	* opciones de hbm2ddl
 
 Ejemplo de conexión de Hibernate:
 		public static Session connect() {
@@ -53,18 +53,18 @@ Hibernate traduce automáticamente las clases Java a tablas en la base de datos 
 (ORM: Object–Relational Mapping). La propiedad hibernate.hbm2ddl.auto controla qué hace 
 Hibernate con las tablas. Valores más usados:
 
-* create -> crea las tablas cada vez (borra las anteriores).
-* update -> actualiza las tablas sin borrarlas.
-* create-drop -> crea las tablas y las elimina al cerrar la sesión.
-* validate -> verifica que las tablas existen, pero no modifica nada.
+	* create -> crea las tablas cada vez (borra las anteriores).
+	* update -> actualiza las tablas sin borrarlas.
+	* create-drop -> crea las tablas y las elimina al cerrar la sesión.
+	* validate -> verifica que las tablas existen, pero no modifica nada.
 
 El valor habitual en desarrollo es: update.
 En producción normalmente se usa: validate o nada.
 
 Para hacer una consulta (en HQL):
 
-* Se crea una lista del tipo objeto elegido
-* Es de session.createQuery(from <nombre de tabla>, Entity.class).list
+	* Se crea una lista del tipo objeto elegido
+	* Es de session.createQuery(from <nombre de tabla>, Entity.class).list
 
 @2025-11-25
 Hibernate III
@@ -73,11 +73,11 @@ Si ocurre un error dentro de una transacción, se ejecuta rollback, que revierte
 las operaciones realizadas dentro de esa transacción. Esto mantiene la consistencia y 
 evita resultados parciales. Reglas importantes del rollback:
 
-* Solo afecta a lo que ocurre dentro de la transacción actual.
-* Después de un rollback, la sesión puede quedar inválida, por lo que normalmente 
-se cierra y se abre otra.
-* Un commit hace permanentes todos los cambios.
-* Si se lanza una excepción de SQL o Hibernate, es obligatorio hacer rollback.
+	* Solo afecta a lo que ocurre dentro de la transacción actual.
+	* Después de un rollback, la sesión puede quedar inválida, por lo que normalmente 
+	se cierra y se abre otra.
+	* Un commit hace permanentes todos los cambios.
+	* Si se lanza una excepción de SQL o Hibernate, es obligatorio hacer rollback.
 
 Uso típico:
 	Transaction tx = session.beginTransaction();
@@ -115,25 +115,25 @@ Esto es útil para gestionar recursos compartidos, como conexiones a bases de da
 @2025-11-26
 Hibernate IV
 
-* @Id y @Entity son anotaciones esenciales en Hibernate para mapear clases Java a tablas de bases de datos.
-* @Entity indica que una clase es una entidad persistente y se mapea a una tabla en la base de datos.
-* @GeneratedValue(strategy = GenerationType.IDENTITY) se usa junto con @Id para indicar que el valor de 
-la clave primaria se genera automáticamente por la base de datos.
-* @Table(name = "nombre_tabla") permite personalizar el nombre de la tabla en la base de datos.
-* @Column(name = "nombre_columna", nullable = false, length = 100) permite personalizar 
-el nombre de la columna.
-** nullable = false indica que la columna no puede ser nula.
-** length = 100 establece la longitud máxima para campos de tipo String.
-* @Size(min = 2, max = 50) es una anotación de validación que asegura que el tamaño.
+	* @Id y @Entity son anotaciones esenciales en Hibernate para mapear clases Java a tablas de bases de datos.
+	* @Entity indica que una clase es una entidad persistente y se mapea a una tabla en la base de datos.
+	* @GeneratedValue(strategy = GenerationType.IDENTITY) se usa junto con @Id para indicar que el valor de 
+		la clave primaria se genera automáticamente por la base de datos.
+	* @Table(name = "nombre_tabla") permite personalizar el nombre de la tabla en la base de datos.
+	* @Column(name = "nombre_columna", nullable = false, length = 100) permite personalizar 
+	el nombre de la columna.
+		** nullable = false indica que la columna no puede ser nula.
+		** length = 100 establece la longitud máxima para campos de tipo String.
+	* @Size(min = 2, max = 50) es una anotación de validación que asegura que el tamaño.
     del campo esté entre 2 y 50 caracteres.
-* @NotNull asegura que el campo no sea nulo.
-* @SequenceGenerator se usa para definir una secuencia personalizada para la generación de claves primarias.
-* @Email valida que el campo tenga un formato de correo electrónico válido.
-* @Pattern(regexp = "expresión_regular") valida que el campo coincida con la expresión regular dada.
-* @Min(0) y @Max(100) validan que un valor numérico esté dentro de los límites especificados.
-* @Temporal(TemporalType.DATE) se usa para mapear campos de tipo Date y especificar
+	* @NotNull asegura que el campo no sea nulo.
+	* @SequenceGenerator se usa para definir una secuencia personalizada para la generación de claves primarias.
+	* @Email valida que el campo tenga un formato de correo electrónico válido.
+	* @Pattern(regexp = "expresión_regular") valida que el campo coincida con la expresión regular dada.
+	* @Min(0) y @Max(100) validan que un valor numérico esté dentro de los límites especificados.
+	* @Temporal(TemporalType.DATE) se usa para mapear campos de tipo Date y especificar
     cómo se almacenan en la base de datos (DATE, TIME, TIMESTAMP).
-* @Lob se usa para mapear campos que almacenan grandes objetos, como textos largos o imágenes.
+    * @Lob se usa para mapear campos que almacenan grandes objetos, como textos largos o imágenes.
 
 Ejemplo de uso combinado:
 	@Entity
@@ -159,3 +159,18 @@ Ejemplo de uso combinado:
 	    //Constructor vacío, getters y setters
 	}
 Estas anotaciones ayudan a definir la estructura de la base de datos y a validar los datos
+
+@2025-12-01
+Hibernate V
+
+DTO (DATA TRANSPORT OBJECT) PATTERN
+El patrón DTO se utiliza para transferir datos entre diferentes capas de una aplicación.
+	* Una capa puede ser la capa de persistencia (DAO) y otra la capa de servicio o presentación.
+Un DTO es una clase simple que contiene atributos y sus getters/setters, sin lógica de negocio.
+Se crea un DTO para cada entidad que se desea transferir.
+
+Paquetes comunes en una aplicación con Hibernate:
+	* Paquete DAO
+	* Paquete DTO
+	* Paquete ENTITIES
+	* Paquete SERVICE
