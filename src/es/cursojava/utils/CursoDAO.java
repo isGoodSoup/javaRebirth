@@ -3,9 +3,9 @@ package es.cursojava.utils;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
-import es.cursojava.utils.interfaces.DataAccessObject;
+import es.cursojava.utils.interfaces.DAO;
 
-public class CursoDAO implements DataAccessObject {
+public class CursoDAO implements DAO {
 	private Session session;
 	private Transaction transaction;
 	

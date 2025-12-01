@@ -5,7 +5,7 @@ package es.cursojava.utils.interfaces;
  * para la gestión de entidades en una base de datos.
  * Métodos CRUD: Crear, Leer, Actualizar, Eliminar.
  */
-public interface DataAccessObject {
+public interface DAO {
 	void guardar(Object obj);
 	void leer(Object obj);
 	void actualizar(Object obj);
