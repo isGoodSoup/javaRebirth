@@ -174,3 +174,30 @@ Paquetes comunes en una aplicación con Hibernate:
 	* Paquete DTO
 	* Paquete ENTITIES
 	* Paquete SERVICE
+	
+@2025-12-03
+Hibernate VI
+
+CICLO DE VIDA DE UNA ENTIDAD EN HIBERNATE
+1. Transient (Transitorio): La entidad se crea con el operador 'new' y no está asociada a ninguna 
+sesión de Hibernate. No tiene representación en la base de datos.
+2. Persistent (Persistente): La entidad está asociada a una sesión de Hibernate. Puede ser guardada, 
+actualizada o eliminada en la base de datos.
+3. Detached (Desacoplado): La entidad estuvo asociada a una sesión de Hibernate, pero esa sesión 
+se cerró. La entidad ya no está gestionada por Hibernate.
+4. Removed (Eliminado): La entidad está marcada para ser eliminada de la base de datos en la próxima 
+sincronización con la base de datos (commit).
+
+La anotación @OneToMany se utiliza para definir una relación uno a muchos entre dos entidades.
+Por ejemplo, una entidad "Autor" puede tener muchos "Libros". La anotación se coloca en la
+entidad que tiene la colección (en este caso, "Autor") y se especifica el atributo "mappedBy"
+para indicar el campo que posee la relación en la entidad "Libro".
+
+La anotacion @OneToOne se utiliza para definir una relación uno a uno entre dos entidades.
+Por ejemplo, una entidad "Persona" puede tener un "Pasaporte". La anotación se coloca en
+la entidad que posee la relación y se puede usar junto con @JoinColumn para especificar
+la columna de unión en la base de datos.
+
+Tipos de carga de relaciones en Hibernate:
+	* Eager: Carga inmediata de la relación al cargar la entidad principal.
+	* Lazy: Carga diferida de la relación, solo se carga cuando se accede a ella.
