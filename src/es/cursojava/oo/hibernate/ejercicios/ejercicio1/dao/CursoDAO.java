@@ -25,8 +25,8 @@ public class CursoDAO {
 	private Transaction transaction;
 	
 	public CursoDAO() {
-		session = HibernateUtils.getSession();
-		transaction = session.beginTransaction();
+		this.session = HibernateUtils.getSession();
+		this.transaction = session.beginTransaction();
 	}
 	
 	public void guardarCurso(Curso curso) {

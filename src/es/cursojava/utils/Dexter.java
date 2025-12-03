@@ -1,6 +1,7 @@
 package es.cursojava.utils;
 
 import java.io.IOException;
+import java.math.BigDecimal;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -345,7 +346,28 @@ public class Dexter {
 	    };
 	    return first[r.nextInt(first.length)] + " " + last[r.nextInt(last.length)];
 	}
-	
+	/* * Genera un departamento aleatorio.
+	 * @return El departamento generado.
+	 */
+	public static String toGetDepartment() {
+		String[] departments = {
+				"Ventas", "Marketing", "Recursos Humanos",
+				"Desarrollo", "Finanzas", "Atención al Cliente",
+				"Operaciones", "IT", "Legal", "Compras"
+		};
+		return toGetString(departments);
+	}
+	/*
+	 * Genera un salario aleatorio.
+	 * @return El salario generado.
+	 */
+	public static int toGetSalary() {
+		int[] salaries = { 
+				30000, 35000, 40000, 45000, 50000,
+				55000, 60000, 65000, 70000, 75000
+		};
+		return toGetInteger(salaries);
+	}
 	/*
 	 * Genera un título aleatorio compuesto por un
 	 * adjetivo, un sustantivo y un complemento.

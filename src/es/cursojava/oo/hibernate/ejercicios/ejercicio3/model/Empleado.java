@@ -1,4 +1,4 @@
-package es.cursojava.oo.hibernate.ejercicios.ejercicio3.main;
+package es.cursojava.oo.hibernate.ejercicios.ejercicio3.model;
 
 import java.math.BigDecimal;
 
@@ -82,5 +82,11 @@ public class Empleado {
 
 	public void setSalario(BigDecimal salario) {
 		this.salario = salario;
+	}
+
+	@Override
+	public String toString() {
+		return "ID = " + id + ", NIF = " + nif + ", NOMBRE = " + nombre + 
+				", DEPARTAMENTO = " + departamento + ", SALARIO = " + salario;
 	}
 }
