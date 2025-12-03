@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
-import es.cursojava.oo.hibernate.ejercicios.ejercicio3.model.Empleado;
+import es.cursojava.oo.hibernate.ejercicios.ejercicio3.entities.Empleado;
 import es.cursojava.utils.Dexter;
 import es.cursojava.utils.interfaces.Iniciable;
 

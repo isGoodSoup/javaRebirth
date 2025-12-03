@@ -31,6 +31,8 @@
         <!-- Entidad mapeada -->
         <mapping class="es.cursojava.oo.hibernate.empresa.entities.Empresa" />
         <mapping class="es.cursojava.oo.hibernate.ejercicios.ejercicio1.entities.Curso" />
-        <mapping class="es.cursojava.oo.hibernate.ejercicios.ejercicio3.main.Empleado" />
+        <mapping class="es.cursojava.oo.hibernate.ejercicios.ejercicio3.entities.Empleado" />
+        <mapping class="es.cursojava.oo.hibernate.ejercicios.ejercicio4.entities.Estudiante" />
+        <mapping class="es.cursojava.oo.hibernate.ejercicios.ejercicio4.entities.CarnetBiblioteca" />
     </session-factory>
 </hibernate-configuration>

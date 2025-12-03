@@ -1,7 +1,6 @@
 package es.cursojava.utils;
 
 import java.io.IOException;
-import java.math.BigDecimal;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -345,6 +344,23 @@ public class Dexter {
 	            "Zimmerman", "Zamora"
 	    };
 	    return first[r.nextInt(first.length)] + " " + last[r.nextInt(last.length)];
+	}
+	/*
+	 * Genera un correo electrónico aleatorio basado en un nombre.
+	 * @return El correo electrónico generado.
+	 */
+	public static String toGetEmail(String name) {
+		name = toGetName().toLowerCase();
+		name.replace(" ", "");
+		String[] domains = {
+				"gmail.com", "yahoo.com", "outlook.com",
+				"hotmail.com", "aol.com", "icloud.com",
+				"mail.com", "protonmail.com", "zoho.com",
+				"gmx.com"
+		};
+		String domain = domains[r.nextInt(domains.length)];
+		String emailName = name.toLowerCase().replace(" ", ".");
+		return emailName + "@" + domain;
 	}
 	/* * Genera un departamento aleatorio.
 	 * @return El departamento generado.

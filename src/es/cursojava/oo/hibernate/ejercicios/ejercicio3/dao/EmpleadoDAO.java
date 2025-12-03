@@ -50,7 +50,7 @@ public class EmpleadoDAO implements DAO {
 
 	@Override
 	public List<Object> encontrarTodos() {
-		return session.createQuery("from Curso", Object.class).list();
+		return session.createQuery("from TB_EMPLEADO", Object.class).list();
 	}
 
 	@Override
