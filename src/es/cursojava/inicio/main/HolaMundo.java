@@ -1,5 +1,7 @@
 package es.cursojava.inicio.main;
 
+import com.loggerfactory.main.AppLogger;
+
 public class HolaMundo {
     
     public static void main( String[] args ) {
@@ -13,5 +15,7 @@ public class HolaMundo {
 
         System.out.println("Hola, Mundo");
         
+        AppLogger logger = new AppLogger(5000);
+        logger.init();
     }
 }
