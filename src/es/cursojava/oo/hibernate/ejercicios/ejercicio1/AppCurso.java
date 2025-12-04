@@ -5,8 +5,8 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
+import es.cursojava.oo.hibernate.ejercicios.ejercicio1.dao.CursoDAO;
 import es.cursojava.oo.hibernate.ejercicios.ejercicio1.entities.Curso;
-import es.cursojava.utils.HibernateUtils;
 import es.cursojava.utils.interfaces.Iniciable;
 
 /*
@@ -17,6 +17,7 @@ import es.cursojava.utils.interfaces.Iniciable;
  * 4. Imprimir solo los cursos que están activos.
  */
 public class AppCurso implements Iniciable {
+	private CursoDAO dao = new CursoDAO();
 	
 	public static void main(String[] args) {
 		AppCurso main = new AppCurso();
@@ -103,7 +104,7 @@ public class AppCurso implements Iniciable {
 	 */
 	public void insertarCursos(List<Curso> cursos) {
 		for (Curso curso : cursos) {
-			HibernateUtils.insert(curso);
+			dao.guardarCurso(curso);
 		}
 	}
 	

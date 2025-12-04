@@ -12,12 +12,6 @@ public class CursoService {
 	public CursoService() {
 		super();
 		this.aula = new Aula();
-		int capacidad = aula.getCapacidad();
-		if(capacidad < 0) {
-			throw new IllegalArgumentException("La capacidad del aula debe ser mayor que 0.");
-		}
-		
-		// No se pueda asignar una misma aula a dos cursos (verificar en BD).
 	}
 
 	public Aula getAula() {
@@ -26,6 +20,18 @@ public class CursoService {
 
 	public void setAula(Aula aula) {
 		this.aula = aula;
+	}
+	
+	public void validarCapacidad(CursoDTO curso) {
+		if(curso.getAulaDTO().getCapacidad() < 0) {
+			throw new IllegalArgumentException("La capacidad del aula debe ser mayor que 0.");
+		}
+	}
+	
+	public void validarAulaUnica(Curso curso, Aula aula) {
+		if(curso.getAula() != null) {
+			throw new IllegalStateException("El curso ya tiene un aula asignada.");
+		}
 	}
 	
 	public CursoDTO crearCursoConAula(CursoDTO cursoDTO, AulaDTO aulaDTO) {
