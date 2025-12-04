@@ -32,8 +32,8 @@ public class Curso {
 	private LocalDate fecha_inicio;
 	private LocalDate fecha_fin;
 	private LocalDateTime fecha_creacion;
-	@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    @JoinColumn(name = "FK_Aula")
+	@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JoinColumn(name = "Aula_ID")
     private Aula aula;
 	
 	public Curso() {
@@ -183,5 +183,13 @@ public class Curso {
 
 	public void setFecha_creacion(LocalDateTime fecha_creacion) {
 		this.fecha_creacion = fecha_creacion;
+	}
+
+	public Aula getAula() {
+		return aula;
+	}
+
+	public void setAula(Aula aula) {
+		this.aula = aula;
 	}
 }

@@ -16,10 +16,10 @@ import es.cursojava.utils.interfaces.Iniciable;
  * 3. Imprimir todos los cursos almacenados en la base de datos.
  * 4. Imprimir solo los cursos que están activos.
  */
-public class Main implements Iniciable {
+public class AppCurso implements Iniciable {
 	
 	public static void main(String[] args) {
-		Main main = new Main();
+		AppCurso main = new AppCurso();
 		main.init();
 	}
 	

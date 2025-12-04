@@ -5,19 +5,13 @@ import java.util.List;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
+import es.cursojava.oo.hibernate.ejercicios.ejercicio1.entities.Aula;
 import es.cursojava.oo.hibernate.ejercicios.ejercicio1.entities.Curso;
 import es.cursojava.utils.HibernateUtils;
 
 /*
- * Clase DAO para la entidad Curso.
- * Proporciona métodos para realizar operaciones CRUD en la base de datos.
- * Métodos incluidos:
- * - guardarCurso: Guarda un nuevo curso en la base de datos.
- * - eliminarCurso: Elimina un curso de la base de datos.
- * - actualizarCurso: Actualiza un curso existente en la base de datos.
- * - obtenerCursoPorId: Obtiene un curso por su ID.
- * - obtenerTodosLosCursos: Obtiene una lista de todos los cursos en la base de datos.
- * - commitTransaction: Confirma la transacción actual.
+ * Clase DAO para la entidad Curso que maneja las operaciones CRUD utilizando Hibernate.
+ * 
  */
 public class CursoDAO {
 	
@@ -33,12 +27,12 @@ public class CursoDAO {
 		session.persist(curso);
 	}
 	
-	public void eliminarCurso() {
-		
+	public void eliminarCurso(Curso curso) {
+		session.remove(curso);
 	}
 
-	public void actualizarCurso() {
-		
+	public void actualizarCurso(Curso curso) {
+		session.merge(curso);
 	}
 	
 	public Curso obtenerCursoPorId(Long id) {
@@ -53,6 +47,11 @@ public class CursoDAO {
 		transaction.commit();
 	}
 	
+	public void setAulaCurso(Aula aula, Curso curso) {
+		curso.setAula(aula);
+	}
 	
-	
+	public Aula getAulaCurso(Curso curso) {
+		return curso.getAula();
+	}
 }

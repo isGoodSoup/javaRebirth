@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
-public class CursoDTOReq {
+public class CursoDTO {
 	private String nombre;
 	private Integer codigo;
 	private String descripcion;
@@ -16,11 +16,12 @@ public class CursoDTOReq {
 	private LocalDate fechaInicio;
 	private LocalDate fechaFin;
 	private LocalDateTime fechaCreacion;
+	private AulaDTO aulaDTO;
 	
-	public CursoDTOReq(String nombre, Integer codigo, String descripcion,
+	public CursoDTO(String nombre, Integer codigo, String descripcion,
 			Integer duracionHoras, Boolean isActivo, String nivel,
 			String categoria, BigDecimal precio, LocalDate fechaInicio,
-			LocalDate fechaFin, LocalDateTime fechaCreacion) {
+			LocalDate fechaFin, LocalDateTime fechaCreacion, AulaDTO aulaDTO) {
 		super();
 		this.nombre = nombre;
 		this.codigo = codigo;
@@ -33,6 +34,7 @@ public class CursoDTOReq {
 		this.fechaInicio = fechaInicio;
 		this.fechaFin = fechaFin;
 		this.fechaCreacion = fechaCreacion;
+		this.aulaDTO = aulaDTO;
 	}
 
 	public String getNombre() {
@@ -67,11 +69,11 @@ public class CursoDTOReq {
 		this.duracionHoras = duracionHoras;
 	}
 
-	public Boolean getIsActivo() {
+	public Boolean IsActivo() {
 		return isActivo;
 	}
 
-	public void setIsActivo(Boolean isActivo) {
+	public void setActivo(Boolean isActivo) {
 		this.isActivo = isActivo;
 	}
 
@@ -121,5 +123,13 @@ public class CursoDTOReq {
 
 	public void setFechaCreacion(LocalDateTime fechaCreacion) {
 		this.fechaCreacion = fechaCreacion;
+	}
+
+	public AulaDTO getAulaDTO() {
+		return aulaDTO;
+	}
+
+	public void setAulaDTO(AulaDTO aulaDTO) {
+		this.aulaDTO = aulaDTO;
 	}
 }
