@@ -3,8 +3,8 @@ package es.cursojava.oo.excepciones.ejercicios.ejercicio2;
 import java.util.ArrayList;
 import java.util.List;
 
-import es.cursojava.utils.Dexter;
 import es.cursojava.utils.interfaces.Iniciable;
+import utils.Dexter;
 
 public class Main implements Iniciable {
 	private String nombre;

@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-import es.cursojava.utils.Dexter;
 import es.cursojava.utils.Menu;
 import es.cursojava.utils.SimUtils;
+import utils.Dexter;
 
 public class GranPremio {
 	private String nombre;

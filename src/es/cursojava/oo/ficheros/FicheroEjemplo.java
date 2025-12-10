@@ -5,7 +5,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
-import es.cursojava.utils.Dexter;
+import utils.Dexter;
 
 public class FicheroEjemplo {
 	
@@ -25,7 +25,7 @@ public class FicheroEjemplo {
 			b.append("Tres tristes tigres comen trigo en un trigal");
 			b.newLine();
 		} catch (IOException e) {
-			new Dexter().printException(e);
+			Dexter.printException(e);
 		}
 	}
 }

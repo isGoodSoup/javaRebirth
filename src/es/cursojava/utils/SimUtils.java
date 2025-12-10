@@ -4,6 +4,7 @@ import java.util.List;
 
 import es.cursojava.modulo2.examen.main.Caballo;
 import es.cursojava.modulo2.examen.main.Jinete;
+import utils.Dexter;
 
 public class SimUtils {
 	

@@ -1,6 +1,6 @@
 package es.cursojava.oo.herencia.ejercicios.hospital.pojos;
 
-import es.cursojava.utils.Dexter;
+import utils.Dexter;
 
 public class Enfermo extends Persona {
 	private String enfermedad;

@@ -6,8 +6,8 @@ import java.time.LocalDateTime;
 
 import es.cursojava.oo.hibernate.ejercicios.ejercicio1.entities.Curso;
 import es.cursojava.utils.CursoDAO;
-import es.cursojava.utils.Dexter;
 import es.cursojava.utils.interfaces.Iniciable;
+import utils.Dexter;
 
 /*
  * Crear una clase Main que realice las siguientes acciones:

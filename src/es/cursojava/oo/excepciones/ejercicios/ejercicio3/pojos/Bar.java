@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import es.cursojava.oo.excepciones.ejercicios.ejercicio3.excepciones.ExtremeTemperatureException;
-import es.cursojava.utils.Dexter;
+import utils.Dexter;
 
 public class Bar {
 	private String nombre;

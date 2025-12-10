@@ -7,7 +7,7 @@ import java.sql.SQLException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import es.cursojava.utils.Dexter;
+import utils.Dexter;
 
 public class ConexionBaseDatos {
 	private final static Logger log = LoggerFactory.getLogger(ConexionBaseDatos.class);
@@ -26,7 +26,7 @@ public class ConexionBaseDatos {
 				log.info("Conexión establecida");
 			}
 		} catch(SQLException e) {
-			new Dexter().printException(e);
+			Dexter.printException(e);
 		}
     }
 	

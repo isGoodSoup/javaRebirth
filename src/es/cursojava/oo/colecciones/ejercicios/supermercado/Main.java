@@ -6,7 +6,7 @@ import java.util.Set;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import es.cursojava.utils.Dexter;
+import utils.Dexter;
 
 public class Main {
 	private static final Logger log = LoggerFactory.getLogger(Main.class);

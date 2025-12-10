@@ -5,7 +5,7 @@ import java.util.Iterator;
 import java.util.Set;
 
 import es.cursojava.oo.Persona;
-import es.cursojava.utils.Dexter;
+import utils.Dexter;
 
 public class Sets {
 	

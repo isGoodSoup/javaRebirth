@@ -8,8 +8,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import es.cursojava.utils.Dexter;
 import es.cursojava.utils.interfaces.Iniciable;
+import utils.Dexter;
 
 public class MainFicheros implements Iniciable {
 	private List<String> lineas;
@@ -29,7 +29,7 @@ public class MainFicheros implements Iniciable {
 		try {
 			this.leerArchivo("./application.log");
 		} catch (IOException e) {
-			new Dexter().printException(e);
+			Dexter.printException(e);
 		}
 	}
 	

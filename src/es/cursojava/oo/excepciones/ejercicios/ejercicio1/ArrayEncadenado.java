@@ -5,8 +5,8 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
-import es.cursojava.utils.Dexter;
 import es.cursojava.utils.interfaces.Iniciable;
+import utils.Dexter;
 
 public class ArrayEncadenado implements Iniciable {
 	private int pos = 0;

@@ -7,8 +7,8 @@ import java.util.Map.Entry;
 import java.util.Set;
 
 import es.cursojava.oo.colecciones.ejercicios.supermercado.Persona;
-import es.cursojava.utils.Dexter;
 import es.cursojava.utils.interfaces.Iniciable;
+import utils.Dexter;
 
 public class Mapas implements Iniciable {
 	

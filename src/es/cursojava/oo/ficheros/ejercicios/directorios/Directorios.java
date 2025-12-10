@@ -2,7 +2,7 @@ package es.cursojava.oo.ficheros.ejercicios.directorios;
 
 import java.io.File;
 
-import es.cursojava.utils.Dexter;
+import utils.Dexter;
 
 public class Directorios {
 	

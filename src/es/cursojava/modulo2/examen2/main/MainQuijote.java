@@ -2,8 +2,8 @@ package es.cursojava.modulo2.examen2.main;
 
 import java.io.IOException;
 
-import es.cursojava.utils.Dexter;
 import es.cursojava.utils.interfaces.Iniciable;
+import utils.Dexter;
 
 public class MainQuijote implements Iniciable {
 	
@@ -16,7 +16,7 @@ public class MainQuijote implements Iniciable {
 		try {
 			Dexter.toLeerArchivo("./don-quijote.txt");
 		} catch (IOException e) {
-			new Dexter().printException(e);
+			Dexter.printException(e);
 		}
 	}
 }

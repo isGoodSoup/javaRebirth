@@ -5,12 +5,11 @@ import java.util.Iterator;
 import java.util.List;
 
 import es.cursojava.modulo2.examen2.excepciones.MissingMasterException;
-import es.cursojava.utils.Dexter;
 import es.cursojava.utils.Loggable;
 import es.cursojava.utils.interfaces.Iniciable;
+import utils.Dexter;
 
 public class Main extends Loggable implements Iniciable {
-	private Dexter dex = new Dexter();
 	
 	public static void main(String[] args) {
 		Main main = new Main();
@@ -43,7 +42,7 @@ public class Main extends Loggable implements Iniciable {
 		            isFound = true;
 		            break;
 		        } catch (UnsupportedOperationException e) {
-		            dex.printException(e);
+		            Dexter.printException(e);
 		        }
 		    }
 		}
@@ -52,7 +51,7 @@ public class Main extends Loggable implements Iniciable {
 		    try {
 		        throw new MissingMasterException("El master que se especifica no se encuentra");
 		    } catch (MissingMasterException e) {
-		        dex.printException(e);
+		       Dexter.printException(e);
 		    }
 		}
 		

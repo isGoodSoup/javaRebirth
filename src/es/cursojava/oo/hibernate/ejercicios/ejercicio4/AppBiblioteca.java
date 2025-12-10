@@ -11,9 +11,9 @@ import org.hibernate.Transaction;
 import es.cursojava.oo.hibernate.ejercicios.ejercicio4.dao.EstudianteDAO;
 import es.cursojava.oo.hibernate.ejercicios.ejercicio4.entities.CarnetBiblioteca;
 import es.cursojava.oo.hibernate.ejercicios.ejercicio4.entities.Estudiante;
-import es.cursojava.utils.Dexter;
 import es.cursojava.utils.HibernateUtils;
 import es.cursojava.utils.interfaces.Iniciable;
+import utils.Dexter;
 
 public class AppBiblioteca implements Iniciable {
 	private EstudianteDAO dao = new EstudianteDAO();

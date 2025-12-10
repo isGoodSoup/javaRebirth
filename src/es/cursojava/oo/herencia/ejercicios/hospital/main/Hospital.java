@@ -7,8 +7,8 @@ import es.cursojava.oo.herencia.ejercicios.hospital.pojos.Enfermero;
 import es.cursojava.oo.herencia.ejercicios.hospital.pojos.Enfermo;
 import es.cursojava.oo.herencia.ejercicios.hospital.pojos.Habitacion;
 import es.cursojava.oo.herencia.ejercicios.hospital.pojos.Paciente;
-import es.cursojava.utils.Dexter;
 import es.cursojava.utils.Loggable;
+import utils.Dexter;
 
 public class Hospital extends Loggable {
 	private String nombre;

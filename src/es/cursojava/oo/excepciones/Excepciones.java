@@ -1,6 +1,6 @@
 package es.cursojava.oo.excepciones;
 
-import es.cursojava.utils.Dexter;
+import utils.Dexter;
 
 public class Excepciones {
 	

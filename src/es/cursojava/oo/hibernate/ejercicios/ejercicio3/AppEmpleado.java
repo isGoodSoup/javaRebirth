@@ -5,8 +5,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import es.cursojava.oo.hibernate.ejercicios.ejercicio3.entities.Empleado;
-import es.cursojava.utils.Dexter;
 import es.cursojava.utils.interfaces.Iniciable;
+import utils.Dexter;
 
 public class AppEmpleado implements Iniciable {
 
