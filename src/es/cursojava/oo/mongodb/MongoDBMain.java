@@ -12,6 +12,7 @@ import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoDatabase;
 
 import es.cursojava.utils.interfaces.Iniciable;
+import utils.Dexter;
 
 /**
  * Clase de MongoDB para establecer la conexión entre el mismo y Java por un
@@ -40,7 +41,7 @@ public class MongoDBMain implements Iniciable {
 				database.runCommand(new Document("ping", 1));
 				System.out.println("Conexión establecida");
 			} catch (MongoException e) {
-				e.printStackTrace();
+				Dexter.printException(e);
 			}
 		}
 	}
