@@ -12,6 +12,7 @@ import jakarta.persistence.Table;
 public class Aula {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "AULA_ID")
 	private Long id;
 	@Column(name = "NOMBRE", unique = true, nullable = false, length = 50)
 	private String nombre;
@@ -23,6 +24,13 @@ public class Aula {
 	public Aula() {}
 	
 	public Aula(String nombre, String ubicacion, Integer capacidad) {
+		super();
+		this.nombre = nombre;
+		this.ubicacion = ubicacion;
+		this.capacidad = capacidad;
+	}
+	
+	public Aula(String nombre, Integer capacidad, String ubicacion) {
 		super();
 		this.nombre = nombre;
 		this.ubicacion = ubicacion;

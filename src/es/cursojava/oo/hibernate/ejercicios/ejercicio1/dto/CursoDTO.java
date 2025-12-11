@@ -4,7 +4,9 @@ import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
-public class CursoDTO {
+import es.cursojava.oo.hibernate.ejercicios.ejercicio1.entities.Curso;
+
+public class CursoDTO extends Curso {
 	private String nombre;
 	private Integer codigo;
 	private String descripcion;
@@ -18,6 +20,8 @@ public class CursoDTO {
 	private LocalDateTime fechaCreacion;
 	private AulaDTO aulaDTO;
 	
+	public CursoDTO() {}
+
 	public CursoDTO(String nombre, Integer codigo, String descripcion,
 			Integer duracionHoras, Boolean isActivo, String nivel,
 			String categoria, BigDecimal precio, LocalDate fechaInicio,

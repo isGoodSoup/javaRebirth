@@ -1,10 +1,14 @@
 package es.cursojava.oo.hibernate.ejercicios.ejercicio1.dto;
 
-public class AulaDTO {
+import es.cursojava.oo.hibernate.ejercicios.ejercicio1.entities.Aula;
+
+public class AulaDTO extends Aula {
 	private Long id;
 	private String nombre;
 	private String ubicacion;
 	private Integer capacidad;
+	
+	public AulaDTO() {}
 	
 	public AulaDTO(String nombre, String ubicacion, Integer capacidad) {
 		super();
@@ -16,6 +20,13 @@ public class AulaDTO {
 	public AulaDTO(Long id, String nombre, String ubicacion, Integer capacidad) {
 		super();
 		this.id = id;
+		this.nombre = nombre;
+		this.ubicacion = ubicacion;
+		this.capacidad = capacidad;
+	}
+	
+	public AulaDTO(String nombre, Integer capacidad, String ubicacion) {
+		super();
 		this.nombre = nombre;
 		this.ubicacion = ubicacion;
 		this.capacidad = capacidad;

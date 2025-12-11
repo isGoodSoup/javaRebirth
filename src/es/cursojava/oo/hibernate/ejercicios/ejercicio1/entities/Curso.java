@@ -1,8 +1,12 @@
 package es.cursojava.oo.hibernate.ejercicios.ejercicio1.entities;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
+import es.cursojava.oo.hibernate.ejercicios.ejercicio5.entities.Alumno;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -11,6 +15,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 
@@ -19,30 +24,43 @@ import jakarta.persistence.Table;
 public class Curso {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "ID")
+	@Column(name = "ID_CURSO")
 	private long id;
+	@Column(name = "CODIGO", nullable = false)
 	private int codigo;
+	@Column(name = "NOMBRE", length = 100, nullable = false)
 	private String nombre;
+	@Column(name = "DESCRIPCION", length = 500)
 	private String descripcion;
+	@Column(name = "HORAS_TOTALES")
 	private int horas_totales;
+	@Column(name = "IS_ACTIVO")
 	private boolean isActivo;
+	@Column(name = "NIVEL", length = 50)
 	private String nivel;
+	@Column(name = "CATEGORIA", length = 100)
 	private String categoria;
-	private double precio;
+	@Column(name = "PRECIO")
+	private BigDecimal precio;
+	@Column(name = "FECHA_INICIO")
 	private LocalDate fecha_inicio;
+	@Column(name = "FECHA_FIN")
 	private LocalDate fecha_fin;
+	@Column(name = "FECHA_CREACION", nullable = true)
 	private LocalDateTime fecha_creacion;
 	@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    @JoinColumn(name = "Aula_ID")
-    private Aula aula;
-	
+	@JoinColumn(name = "AULA_ID")
+	private Aula aula;
+	@OneToMany(mappedBy = "curso", fetch = FetchType.LAZY)
+	private List<Alumno> alumnos = new ArrayList<>();
+
 	public Curso() {
 		super();
 	}
 
 	public Curso(long id, int codigo, String nombre, String descripcion,
 			int horas_totales, boolean isActivo, String nivel, String categoria,
-			double precio, LocalDate fecha_inicio, LocalDate fecha_fin,
+			BigDecimal precio, LocalDate fecha_inicio, LocalDate fecha_fin,
 			LocalDateTime fecha_creacion) {
 		super();
 		this.id = id;
@@ -61,7 +79,7 @@ public class Curso {
 
 	public Curso(int codigo, String nombre, String descripcion,
 			int horas_totales, boolean isActivo, String nivel, String categoria,
-			double precio, LocalDate fecha_inicio, LocalDate fecha_fin,
+			BigDecimal precio, LocalDate fecha_inicio, LocalDate fecha_fin,
 			LocalDateTime fecha_creacion) {
 		super();
 		this.codigo = codigo;
@@ -76,7 +94,7 @@ public class Curso {
 		this.fecha_fin = fecha_fin;
 		this.fecha_creacion = fecha_creacion;
 	}
-	
+
 	public Curso(long id, int codigo, String nombre, String descripcion,
 			int horas_totales, boolean isActivo, LocalDateTime fecha_creacion) {
 		super();
@@ -97,7 +115,7 @@ public class Curso {
 		this.id = id;
 	}
 
-	public int getCodigo() {
+	public Integer getCodigo() {
 		return codigo;
 	}
 
@@ -153,11 +171,11 @@ public class Curso {
 		this.categoria = categoria;
 	}
 
-	public double getPrecio() {
+	public BigDecimal getPrecio() {
 		return precio;
 	}
 
-	public void setPrecio(double precio) {
+	public void setPrecio(BigDecimal precio) {
 		this.precio = precio;
 	}
 
@@ -191,5 +209,13 @@ public class Curso {
 
 	public void setAula(Aula aula) {
 		this.aula = aula;
+	}
+
+	public List<Alumno> getAlumnos() {
+		return alumnos;
+	}
+
+	public void setAlumnos(List<Alumno> alumnos) {
+		this.alumnos = alumnos;
 	}
 }

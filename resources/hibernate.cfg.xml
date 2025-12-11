@@ -35,5 +35,6 @@
         <mapping class="es.cursojava.oo.hibernate.ejercicios.ejercicio3.entities.Empleado" />
         <mapping class="es.cursojava.oo.hibernate.ejercicios.ejercicio4.entities.Estudiante" />
         <mapping class="es.cursojava.oo.hibernate.ejercicios.ejercicio4.entities.CarnetBiblioteca" />
+        <mapping class="es.cursojava.oo.hibernate.ejercicios.ejercicio5.entities.Alumno"/>
     </session-factory>
 </hibernate-configuration>

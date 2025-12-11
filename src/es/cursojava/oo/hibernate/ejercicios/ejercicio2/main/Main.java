@@ -1,6 +1,7 @@
 package es.cursojava.oo.hibernate.ejercicios.ejercicio2.main;
 
 import java.io.IOException;
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
@@ -57,7 +58,7 @@ public class Main implements Iniciable {
 	    boolean activo = Boolean.parseBoolean(valores[4]);
 	    String nivel = valores[5];
 	    String categoria = valores[6];
-	    double precio = Double.parseDouble(valores[7]);
+	    BigDecimal precio = new BigDecimal(valores[7]);
 	    LocalDate inicio = LocalDate.parse(valores[8]);
 	    LocalDate fin = LocalDate.parse(valores[9]);
 	    LocalDateTime creacion = LocalDateTime.now();

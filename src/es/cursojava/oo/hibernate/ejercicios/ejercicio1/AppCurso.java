@@ -1,5 +1,6 @@
 package es.cursojava.oo.hibernate.ejercicios.ejercicio1;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -52,7 +53,7 @@ public class AppCurso implements Iniciable {
 			    true, 
 			    "Inicial", 
 			    "Programación",
-			    120.0, LocalDate.now(), 
+			    new BigDecimal("120.0"), LocalDate.now(), 
 			    LocalDate.now().plusMonths(1),
 			    LocalDateTime.now()
 			);
@@ -65,7 +66,7 @@ public class AppCurso implements Iniciable {
 			    true, 
 			    "Avanzado", 
 			    "Backend",
-			    220.0, 
+			    new BigDecimal("250.0"), 
 			    LocalDate.now().plusDays(10), 
 			    LocalDate.now().plusMonths(2),
 			    LocalDateTime.now()
@@ -79,7 +80,7 @@ public class AppCurso implements Iniciable {
 			    false,
 			    "Inicial",
 			    "BBDD",
-			    200.0,
+			    new BigDecimal("200.0"),
 			    LocalDate.now(),
 			    LocalDate.now().plusDays(30),
 			    LocalDateTime.now()
@@ -91,7 +92,7 @@ public class AppCurso implements Iniciable {
 			    true, 
 			    "Intermedio", 
 			    "Frontend",
-			    250.0, LocalDate.now(),
+			    new BigDecimal("250.0"), LocalDate.now(),
 			    LocalDate.now().plusMonths(3),
 			    LocalDateTime.now()
 		);
