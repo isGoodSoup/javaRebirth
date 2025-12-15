@@ -10,11 +10,15 @@ import org.hibernate.Session;
 
 import com.filereader.utils.FileReader;
 
+import es.cursojava.oo.hibernate.ejercicios.ejercicio1.dto.AulaDTO;
+import es.cursojava.oo.hibernate.ejercicios.ejercicio1.dto.CursoDTO;
 import es.cursojava.oo.hibernate.ejercicios.ejercicio1.entities.Aula;
 import es.cursojava.oo.hibernate.ejercicios.ejercicio1.entities.Curso;
+import es.cursojava.oo.hibernate.ejercicios.ejercicio5.dto.AlumnoDTO;
 import es.cursojava.oo.hibernate.ejercicios.ejercicio5.entities.Alumno;
 import es.cursojava.utils.HibernateUtils;
 import es.cursojava.utils.interfaces.Iniciable;
+import utils.Dexter;
 
 public class AppAlumnos implements Iniciable {
 	private List<String> alumnosCursoTxt;
@@ -45,8 +49,8 @@ public class AppAlumnos implements Iniciable {
 		for (String linea : aulasTxt) {
 			if (linea.startsWith("codigoAula"))
 				continue;
-			String[] p = linea.split(";");
-			Aula aula = new Aula(p[0], p[1], Integer.parseInt(p[1]));
+			String[] p = linea.split(Dexter.SEMICOLON);
+			AulaDTO aula = new AulaDTO(p[0], p[1], Integer.parseInt(p[1]));
 			session.persist(aula);
 			aulas.add(aula);
 		}
@@ -55,8 +59,8 @@ public class AppAlumnos implements Iniciable {
 		for (String linea : cursosAulaTxt) {
 			if (linea.startsWith("código"))
 				continue;
-			String[] p = linea.split(";");
-			Curso curso = new Curso();
+			String[] p = linea.split(Dexter.SEMICOLON);
+			CursoDTO curso = new CursoDTO();
 			curso.setCodigo(Integer.parseInt(p[0]));
 			curso.setNombre(p[1]);
 			curso.setDescripcion(p[2]);
@@ -83,8 +87,8 @@ public class AppAlumnos implements Iniciable {
 		for (String linea : alumnosCursoTxt) {
 			if (linea.startsWith("nombre"))
 				continue;
-			String[] p = linea.split(";");
-			Alumno alumno = new Alumno(p[0], p[1], Integer.parseInt(p[2]));
+			String[] p = linea.split(Dexter.SEMICOLON);
+			AlumnoDTO alumno = new AlumnoDTO(p[0], p[1], Integer.parseInt(p[2]));
 			int codigoCurso = Integer.parseInt(p[3]);
 			Curso curso = cursos.stream()
 					.filter(c -> c.getCodigo() == codigoCurso).findFirst()

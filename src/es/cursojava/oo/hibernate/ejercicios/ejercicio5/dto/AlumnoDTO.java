@@ -2,6 +2,8 @@ package es.cursojava.oo.hibernate.ejercicios.ejercicio5.dto;
 
 import es.cursojava.oo.hibernate.ejercicios.ejercicio1.entities.Curso;
 import es.cursojava.oo.hibernate.ejercicios.ejercicio5.entities.Alumno;
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
 
 public class AlumnoDTO extends Alumno {
 	private Long id;
@@ -29,6 +31,13 @@ public class AlumnoDTO extends Alumno {
 		this.email = email;
 		this.edad = edad;
 		this.codigo_curso = codigo_curso;
+	}
+	
+	public AlumnoDTO(String nombre, String email, @Min(18) @Max(90) int edad) {
+		super();
+		this.nombre = nombre;
+		this.email = email;
+		this.edad = edad;
 	}
 
 	public Long getId() {
