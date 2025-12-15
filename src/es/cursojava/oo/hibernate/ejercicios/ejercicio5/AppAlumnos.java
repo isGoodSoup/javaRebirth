@@ -31,9 +31,9 @@ public class AppAlumnos implements Iniciable {
 	public void init() {
 		FileReader fr = new FileReader();
 		try {
-			alumnosCursoTxt = fr.readFile("./alumnos_curso.txt");
-			aulasTxt = fr.readFile("./aulas.txt");
-			cursosAulaTxt = fr.readFile("./cursos_aula.txt");
+			alumnosCursoTxt  = fr.readFile("./alumnos_curso.txt");
+			aulasTxt		 = fr.readFile("./aulas.txt");
+			cursosAulaTxt 	 = fr.readFile("./cursos_aula.txt");
 		} catch (IOException e) {
 			throw new RuntimeException(e);
 		}
