@@ -5,128 +5,112 @@ import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 import org.hibernate.Session;
 
 import com.filereader.utils.FileReader;
 
-import es.cursojava.oo.hibernate.ejercicios.ejercicio1.dto.CursoDTO;
 import es.cursojava.oo.hibernate.ejercicios.ejercicio1.entities.Aula;
 import es.cursojava.oo.hibernate.ejercicios.ejercicio1.entities.Curso;
-import es.cursojava.oo.hibernate.ejercicios.ejercicio5.dao.AlumnoDAO;
 import es.cursojava.oo.hibernate.ejercicios.ejercicio5.entities.Alumno;
 import es.cursojava.utils.HibernateUtils;
 import es.cursojava.utils.interfaces.Iniciable;
-import utils.Dexter;
 
 public class AppAlumnos implements Iniciable {
-	private AlumnoDAO dao = new AlumnoDAO();
-	private List<String> alumnos_curso;
-	private List<Alumno> alumnos = new ArrayList<>();
-	private List<String> aulas_txt;
-	private List<Aula> aulas = new ArrayList<>();
-	private List<String> cursos_aula;
-	private List<Curso> cursos = new ArrayList<>();
+	private List<String> alumnosCursoTxt;
+	private List<String> aulasTxt;
+	private List<String> cursosAulaTxt;
 	
 	public static void main(String[] args) {
 		AppAlumnos alumnos = new AppAlumnos();
 		alumnos.init();
 		alumnos.getAlumno100();
 	}
-
+	
 	@Override
 	public void init() {
 		FileReader fr = new FileReader();
 		try {
-			alumnos_curso = fr.readFile("./alumnos_curso.txt");
-			aulas_txt = fr.readFile("./aulas.txt");
-			cursos_aula = fr.readFile("./cursos_aula.txt");
+			alumnosCursoTxt = fr.readFile("./alumnos_curso.txt");
+			aulasTxt = fr.readFile("./aulas.txt");
+			cursosAulaTxt = fr.readFile("./cursos_aula.txt");
 		} catch (IOException e) {
-			Dexter.printException(e);
+			throw new RuntimeException(e);
 		}
-		
-		for (String linea : alumnos_curso) {
-			if(linea.startsWith("nombre")) { continue; }
-			String[] partes = linea.trim().split(";");
-			Alumno alumno = new Alumno(
-					partes[0], 
-					partes[1], 
-					Integer.parseInt(partes[2])
-			);
-			alumnos.add(alumno);
-		}
-		System.out.println("Alumnos creados");
-		
-		for (String linea : aulas_txt) {
-			if(linea.startsWith("codigoAula")) { continue; }
-			String[] partes = linea.trim().split(";");
-			Aula aula = new Aula(
-					partes[0],
-					Integer.parseInt(partes[1]),
-					partes[2]
-			);
+
+		Session session = HibernateUtils.getSession();
+		session.beginTransaction();
+
+		List<Aula> aulas = new ArrayList<>();
+		for (String linea : aulasTxt) {
+			if (linea.startsWith("codigoAula"))
+				continue;
+			String[] p = linea.split(";");
+			Aula aula = new Aula(p[0], p[1], Integer.parseInt(p[1]));
+			session.persist(aula);
 			aulas.add(aula);
 		}
-		System.out.println("Aulas creadas");
-		
-		for (String linea : cursos_aula) {
-			if(linea.startsWith("código")) { continue; }
-			String[] partes = linea.trim().split(";");
-			Curso curso = new CursoDTO();
-			curso.setCodigo(Integer.parseInt(partes[0]));
-			curso.setNombre(partes[1]);
-			curso.setDescripcion(partes[2]);
-			curso.setHoras_totales(Integer.parseInt(partes[3]));
-			curso.setActivo(Boolean.parseBoolean(partes[4]));
-			curso.setNivel(partes[5]);
-			curso.setCategoria(partes[6]);
-			curso.setPrecio(new BigDecimal(partes[7]));
-			curso.setFecha_inicio(LocalDate.parse(partes[8]));
-			curso.setFecha_fin(LocalDate.parse(partes[9]));
+
+		List<Curso> cursos = new ArrayList<>();
+		for (String linea : cursosAulaTxt) {
+			if (linea.startsWith("código"))
+				continue;
+			String[] p = linea.split(";");
+			Curso curso = new Curso();
+			curso.setCodigo(Integer.parseInt(p[0]));
+			curso.setNombre(p[1]);
+			curso.setDescripcion(p[2]);
+			curso.setHoras_totales(Integer.parseInt(p[3]));
+			curso.setActivo(Boolean.parseBoolean(p[4]));
+			curso.setNivel(p[5]);
+			curso.setCategoria(p[6]);
+			curso.setPrecio(new BigDecimal(p[7]));
+			curso.setFecha_inicio(LocalDate.parse(p[8]));
+			curso.setFecha_fin(LocalDate.parse(p[9]));
 			curso.setFecha_creacion(null);
-			String nombreAula = partes[11];
+
+			String nombreAula = p[11];
 			Aula aulaAsignada = aulas.stream()
-			        .filter(a -> a.getNombre().equals(nombreAula))
-			        .findFirst()
-			        .orElse(null);
+					.filter(a -> a.getNombre().equals(nombreAula)).findFirst()
+					.orElse(null);
+
 			curso.setAula(aulaAsignada);
+
+			session.persist(curso);
 			cursos.add(curso);
 		}
-		System.out.println("Cursos creados");
-		
-		for (int i = 0; i < alumnos.size(); i++) {
-		    Alumno alumno = alumnos.get(i);
-		    int codigoCurso = Integer.parseInt(alumnos_curso.get(i + 1).split(";")[3]); // +1 si hay encabezado
-		    Curso curso = cursos.stream()
-		            .filter(c -> Objects.equals(c.getCodigo(), codigoCurso))
-		            .findFirst()
-		            .orElse(null);
-		    if (curso != null) {
-		        alumno.setCurso(curso);
-		        curso.getAlumnos().add(alumno);
-		    }
+
+		for (String linea : alumnosCursoTxt) {
+			if (linea.startsWith("nombre"))
+				continue;
+			String[] p = linea.split(";");
+			Alumno alumno = new Alumno(p[0], p[1], Integer.parseInt(p[2]));
+			int codigoCurso = Integer.parseInt(p[3]);
+			Curso curso = cursos.stream()
+					.filter(c -> c.getCodigo() == codigoCurso).findFirst()
+					.orElse(null);
+			if (curso != null) {
+				curso.addAlumno(alumno);
+			}
 		}
-		System.out.println("Cursos asignados");
-		
-		for (Alumno alumno : alumnos) {
-			dao.guardar(alumno);
-		}
-		dao.commit();
-		System.out.println("Alumnos añadidos");
+		session.getTransaction().commit();
+		session.close();
+		System.out.println("Datos importados correctamente");
 	}
-	
+
 	public void getAlumno100() {
-	    try (Session session = HibernateUtils.getSession()) {
-	    	Alumno alumno = session.createQuery(
-	    		    "FROM Alumno a WHERE a.nombre = :nombreAlumno", Alumno.class)
-	    		    .setParameter("nombreAlumno", "alumno100")
-	    		    .uniqueResult();
-	        if (alumno != null) {
-	            System.out.println(alumno.getNombre() + " - " + alumno.getEmail() + " - " + alumno.getEdad());
-	        } else {
-	            System.out.println("Alumno no encontrado");
-	        }
-	    }
+		try (Session session = HibernateUtils.getSession()) {
+			Alumno alumno = session
+					.createQuery("FROM Alumno a WHERE a.nombre = :nombre",
+							Alumno.class)
+					.setParameter("nombre", "alumno100").getResultStream()
+					.findFirst().orElse(null);
+			if (alumno != null) {
+				System.out.println(alumno.getNombre() + " - "
+						+ alumno.getEmail() + " - " + alumno.getEdad());
+			} else {
+				System.out.println("Alumno no encontrado");
+			}
+		}
 	}
 }

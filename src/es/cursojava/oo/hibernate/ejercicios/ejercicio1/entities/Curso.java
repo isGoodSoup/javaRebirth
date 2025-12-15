@@ -17,15 +17,17 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
+import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "TB_CURSO")
 public class Curso {
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "ID_CURSO")
-	private long id;
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "CURSO_SEQ")
+	@SequenceGenerator(name = "CURSO_SEQ", sequenceName = "SEQ_CURSO", allocationSize = 1)
+	@Column(name = "ID")
+	private Long id;
 	@Column(name = "CODIGO", nullable = false)
 	private int codigo;
 	@Column(name = "NOMBRE", length = 100, nullable = false)
@@ -51,7 +53,7 @@ public class Curso {
 	@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
 	@JoinColumn(name = "AULA_ID")
 	private Aula aula;
-	@OneToMany(mappedBy = "curso", fetch = FetchType.LAZY)
+	@OneToMany( mappedBy = "curso", cascade = CascadeType.ALL, orphanRemoval = true)
 	private List<Alumno> alumnos = new ArrayList<>();
 
 	public Curso() {
@@ -218,4 +220,14 @@ public class Curso {
 	public void setAlumnos(List<Alumno> alumnos) {
 		this.alumnos = alumnos;
 	}
+	
+	public void addAlumno(Alumno alumno) {
+        alumnos.add(alumno);
+        alumno.setCurso(this);
+    }
+
+    public void removeAlumno(Alumno alumno) {
+        alumnos.remove(alumno);
+        alumno.setCurso(null);
+    }
 }
