@@ -18,9 +18,8 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Tardes/git/javaRebirth/lib/LoggerFactory.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Tardes/eclipse-workspace/FileReader/lib/FileReader.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Tardes/git/javaRebirth/lib/FileReader.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Tardes/git/javaRebirth/lib/DexterLib.jar"/>
+	<classpathentry kind="lib" path="C:/Users/diego/git/javaRebirth/lib/DexterLib.jar"/>
+	<classpathentry kind="lib" path="C:/Users/diego/git/javaRebirth/lib/FileReader.jar"/>
+	<classpathentry kind="lib" path="C:/Users/diego/git/javaRebirth/lib/LoggerFactory.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
